@@ -1,0 +1,48 @@
+﻿baseURL: "http://localhost:1313/"
+languageCode: "en-us"
+title: "My Lab"
+theme: "PaperMod"
+
+enableInlineShortcodes: true
+
+# 1. PARAMS SECTION
+params:
+  defaultTheme: dark
+  assets:
+    disableHLJS: true
+  # This tries to load CSS via the theme (Method 1)
+  custom_css: ["css/lab-style.css"]
+
+# 2. MENU SECTION
+menu:
+  main:
+    - identifier: research
+      name: Research
+      url: /research/
+      weight: 10
+    - identifier: software
+      name: Software
+      url: /software/
+      weight: 20
+    - identifier: people
+      name: People
+      url: /people/
+      weight: 30
+    - identifier: gallery
+      name: Gallery
+      url: /gallery/
+      weight: 40
+    - identifier: join
+      name: Join Us
+      url: /join-us/
+      weight: 50
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 60
+
+# 3. MARKUP SECTION (Must be at the far left, NOT indented!)
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

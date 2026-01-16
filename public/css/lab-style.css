@@ -1,0 +1,133 @@
+/* STAR WARS TICKER */
+.star-wars-stage {
+  perspective: 400px;
+  height: 50vh;
+  background: #1d1e20; /* Matches PaperMod Dark Mode */
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.star-wars-crawl {
+  position: relative;
+  top: 60%; 
+  width: 80%;
+  color: #feda4a;
+  font-family: sans-serif; /* Keep it simple or import font */
+  font-weight: bold;
+  font-size: 150%;
+  text-align: justify;
+  transform-origin: 50% 100%;
+  transform: rotateX(25deg);
+}
+
+/* RESEARCH FLASH CARDS */
+/* RESEARCH GRID LAYOUT */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+/* THE CARD CONTAINER */
+.flash-card {
+  background-color: transparent;
+  width: 100%;
+  height: 300px; /* Fixed height is required for 3D flips */
+  perspective: 1000px; /* This gives the 3D depth */
+}
+
+/* THE INNER WRAPPER (This is what actually rotates) */
+.flash-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+/* THE HOVER TRIGGER */
+.flash-card:hover .flash-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* COMMON STYLES FOR FRONT AND BACK */
+.flash-card-front, .flash-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden; /* Hides the back when facing away */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding doesn't break size */
+}
+
+/* FRONT DESIGN */
+.flash-card-front {
+  background-color: #2e2e33; /* Dark Grey (Matches PaperMod) */
+  color: white;
+  border: 1px solid #444;
+}
+
+/* BACK DESIGN (The Hidden Side) */
+.flash-card-back {
+  background-color: #feda4a; /* Yellow */
+  color: black;
+  transform: rotateY(180deg); /* Start flipped */
+}
+
+/* --- PEOPLE CARDS --- */
+.people-section { margin-bottom: 40px; }
+.people-section h2 { border-bottom: 2px solid #444; padding-bottom: 10px; margin-bottom: 20px; }
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.person-card {
+  text-align: center;
+  background: #25262b; /* Slightly lighter than background */
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.person-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #feda4a; /* Star Wars Yellow Accent */
+}
+
+.social-links a { margin: 0 5px; text-decoration: none; font-size: 0.9em; color: #aaa; }
+.social-links a:hover { color: #fff; }
+
+/* --- GALLERY --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.gallery-item img:hover { transform: scale(1.05); }

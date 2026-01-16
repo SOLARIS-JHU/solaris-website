@@ -1,0 +1,38 @@
+- title: "Neural Operators"
+  summary: "Accelerating CFD solvers by 1000x using Fourier Neural Operators."
+  category: "AI + Physics"
+  lead: "Dr. Jane Doe"
+  funding: "NSF Grant #2024"
+  links:
+    - text: "Code"
+      url: "https://github.com/..."
+      color: "#feda4a" # Yellow
+    - text: "Paper"
+      url: "https://arxiv.org/..."
+      color: "#fff"    # White
+
+- title: "Quantum Turbulence"
+  summary: "Simulating superfluids using quantum-inspired algorithms."
+  category: "HPC & Quantum"
+  lead: "Bob Coder"
+  funding: "Under Review"
+  links:
+    - text: "GitHub"
+      url: "#"
+      color: "#feda4a"
+    - text: "Preprint"
+      url: "#"
+      color: "#fff"
+
+- title: "Bio-Locomotion"
+  summary: "Modeling fish swimming patterns to design efficient underwater drones."
+  category: "Robotics"
+  lead: "Alice Researcher"
+  funding: "DARPA"
+  links:
+    - text: "Demo"
+      url: "#"
+      color: "#feda4a"
+    - text: "Paper"
+      url: "#"
+      color: "#fff"

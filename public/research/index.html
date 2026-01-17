@@ -5,12 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Our Research | My Lab</title>
+<title>Our Research | Solaris Lab</title>
 <meta name="keywords" content="">
 <meta name="description" content="
 
+
+  
   
     
+      
       
         Neural Operators
         Accelerating CFD solvers by 1000x using Fourier Neural Operators.">
@@ -46,7 +49,9 @@
     <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="//localhost:1313/" accesskey="h" title="My Lab (Alt + H)">My Lab</a>
+            <a href="//localhost:1313/" accesskey="h" title="Solaris Lab (Alt + H)">
+                <img src="//localhost:1313/images/lab-logo.png" alt="" aria-label="logo"
+                    height="35">Solaris Lab</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -71,6 +76,11 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="//localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
             <li>
                 <a href="//localhost:1313/research/" title="Research">
                     <span class="active">Research</span>
@@ -111,19 +121,14 @@
   </h1>
 </header>
 <div class="post-content"><style>
-  /* 1. THE GRID (Mobile First) */
   .research-grid {
     display: grid;
-    grid-template-columns: 1fr; /* 1 column on phones */
+    grid-template-columns: 1fr;
     gap: 30px;
     padding: 20px 0;
   }
-
-  /* 2. FORCE 3 COLUMNS ON DESKTOP (Screens wider than 900px) */
   @media (min-width: 900px) {
-    .research-grid {
-      grid-template-columns: repeat(3, 1fr); 
-    }
+    .research-grid { grid-template-columns: repeat(3, 1fr); }
   }
 
   .flash-card {
@@ -141,9 +146,8 @@
     transform-style: preserve-3d;
     cursor: pointer;
   }
-  .flash-card:hover .flash-card-inner {
-    transform: rotateY(180deg);
-  }
+  .flash-card:hover .flash-card-inner { transform: rotateY(180deg); }
+  
   .flash-card-front, .flash-card-back {
     position: absolute;
     width: 100%;
@@ -169,65 +173,104 @@
     transform: rotateY(180deg);
   }
 </style>
+
 <div class="research-grid">
+  
   <div class="flash-card">
     <div class="flash-card-inner">
+      
       <div class="flash-card-front">
         <h3 style="margin-bottom: 10px;">Neural Operators</h3>
         <p>Accelerating CFD solvers by 1000x using Fourier Neural Operators.</p>
-        <small style="color: #888;">AI + Physics</small>
+        <small style="color: #888;">AI &#43; Physics</small>
       </div>
+      
       <div class="flash-card-back">
         <p><strong>Lead:</strong> Dr. Jane Doe</p>
         <p><strong>Funding:</strong> NSF Grant #2024</p>
+        
         <div style="margin-top: 15px;">
-           <a href="#" style="color: #feda4a; margin-right: 10px;">[Code]</a>
-           <a href="#" style="color: #fff; text-decoration: underline;">[Paper]</a>
+           
+             <a href="https://github.com/..." style="color: #feda4a; margin: 0 5px; text-decoration: underline;">
+               [Code]
+             </a>
+           
+             <a href="https://arxiv.org/..." style="color: #fff; margin: 0 5px; text-decoration: underline;">
+               [Paper]
+             </a>
+           
         </div>
       </div>
+
     </div>
   </div>
+  
   <div class="flash-card">
     <div class="flash-card-inner">
+      
       <div class="flash-card-front">
         <h3 style="margin-bottom: 10px;">Quantum Turbulence</h3>
         <p>Simulating superfluids using quantum-inspired algorithms.</p>
-        <small style="color: #888;">HPC & Quantum</small>
+        <small style="color: #888;">HPC &amp; Quantum</small>
       </div>
+      
       <div class="flash-card-back">
         <p><strong>Lead:</strong> Bob Coder</p>
-        <p><strong>Status:</strong> Under Review</p>
+        <p><strong>Funding:</strong> Under Review</p>
+        
         <div style="margin-top: 15px;">
-           <a href="#" style="color: #feda4a; margin-right: 10px;">[GitHub]</a>
-           <a href="#" style="color: #fff; text-decoration: underline;">[Preprint]</a>
+           
+             <a href="#" style="color: #feda4a; margin: 0 5px; text-decoration: underline;">
+               [GitHub]
+             </a>
+           
+             <a href="#" style="color: #fff; margin: 0 5px; text-decoration: underline;">
+               [Preprint]
+             </a>
+           
         </div>
       </div>
+
     </div>
   </div>
+  
   <div class="flash-card">
     <div class="flash-card-inner">
+      
       <div class="flash-card-front">
         <h3 style="margin-bottom: 10px;">Bio-Locomotion</h3>
         <p>Modeling fish swimming patterns to design efficient underwater drones.</p>
         <small style="color: #888;">Robotics</small>
       </div>
+      
       <div class="flash-card-back">
         <p><strong>Lead:</strong> Alice Researcher</p>
         <p><strong>Funding:</strong> DARPA</p>
+        
         <div style="margin-top: 15px;">
-           <a href="#" style="color: #feda4a; margin-right: 10px;">[Demo]</a>
-           <a href="#" style="color: #fff; text-decoration: underline;">[Paper]</a>
+           
+             <a href="#" style="color: #feda4a; margin: 0 5px; text-decoration: underline;">
+               [Demo]
+             </a>
+           
+             <a href="#" style="color: #fff; margin: 0 5px; text-decoration: underline;">
+               [Paper]
+             </a>
+           
         </div>
       </div>
+
     </div>
   </div>
+  
 </div>
+
 
 </div>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="//localhost:1313/">My Lab</a></span> · 
+        <span>&copy; 2026 <a href="//localhost:1313/">Solaris Lab</a></span> · 
 
     <span>
         Powered by

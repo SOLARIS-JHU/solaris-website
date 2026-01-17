@@ -1,6 +1,6 @@
 ﻿baseURL: "http://localhost:1313/"
 languageCode: "en-us"
-title: "My Lab"
+title: "Solaris Lab"
 theme: "PaperMod"
 
 enableInlineShortcodes: true
@@ -12,10 +12,18 @@ params:
     disableHLJS: true
   # This tries to load CSS via the theme (Method 1)
   custom_css: ["css/lab-style.css"]
+  label:
+    text: "Solaris Lab"           # The text next to the logo
+    icon: "/images/lab-logo.png"  # Path to your file
+    iconHeight: 35           # Size of the logo
 
 # 2. MENU SECTION
 menu:
   main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 5
     - identifier: research
       name: Research
       url: /research/

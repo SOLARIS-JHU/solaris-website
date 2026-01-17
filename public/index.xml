@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Welcome to the Lab on My Lab</title>
+    <title>Welcome to the Lab on Solaris Lab</title>
     <link>//localhost:1313/</link>
-    <description>Recent content in Welcome to the Lab on My Lab</description>
+    <description>Recent content in Welcome to the Lab on Solaris Lab</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>en-us</language>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
@@ -77,20 +77,16 @@ University of Science&lt;br&gt;
       <link>//localhost:1313/software/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/software/</guid>
-      <description>&lt;style&gt;
-  /* 1. THE GRID (Mobile First) */
+      <description>&lt;p&gt;We believe in open science. All our tools are available on GitHub.&lt;/p&gt;
+&lt;style&gt;
   .research-grid {
     display: grid;
-    grid-template-columns: 1fr; /* 1 column on phones */
+    grid-template-columns: 1fr;
     gap: 30px;
     padding: 20px 0;
   }
-
-  /* 2. FORCE 3 COLUMNS ON DESKTOP */
   @media (min-width: 900px) {
-    .research-grid {
-      grid-template-columns: repeat(3, 1fr); 
-    }
+    .research-grid { grid-template-columns: repeat(3, 1fr); }
   }
 
   .flash-card {
@@ -108,9 +104,8 @@ University of Science&lt;br&gt;
     transform-style: preserve-3d;
     cursor: pointer;
   }
-  .flash-card:hover .flash-card-inner {
-    transform: rotateY(180deg);
-  }
+  .flash-card:hover .flash-card-inner { transform: rotateY(180deg); }
+  
   .flash-card-front, .flash-card-back {
     position: absolute;
     width: 100%;
@@ -136,7 +131,15 @@ University of Science&lt;br&gt;
     transform: rotateY(180deg);
   }
 &lt;/style&gt;
-&lt;p&gt;We believe in open science. All our tools are available on GitHub.&lt;/p&gt;</description>
+
+&lt;div class=&#34;research-grid&#34;&gt;
+  
+  &lt;div class=&#34;flash-card&#34;&gt;
+    &lt;div class=&#34;flash-card-inner&#34;&gt;
+      
+      &lt;div class=&#34;flash-card-front&#34;&gt;
+        &lt;h3 style=&#34;margin-bottom: 10px;&#34;&gt;PyFluids-AI&lt;/h3&gt;
+        &lt;p&gt;Python Library for CFD &amp;#43; ML&lt;/p&gt;</description>
     </item>
     <item>
       <title>Our Team</title>
@@ -144,7 +147,6 @@ University of Science&lt;br&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/people/</guid>
       <description>&lt;style&gt;
-/* NUCLEAR OPTION: PEOPLE CSS */
 .people-section { margin-bottom: 40px; }
 .people-section h2 { border-bottom: 2px solid #444; padding-bottom: 10px; margin-bottom: 20px; }
 
@@ -168,15 +170,19 @@ University of Science&lt;br&gt;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
-  border: 3px solid #feda4a; /* Star Wars Yellow Accent */
+  border: 3px solid #feda4a;  
 }
 
+.social-links { margin-top: 10px; }
 .social-links a { margin: 0 5px; text-decoration: none; font-size: 0.9em; color: #aaa; }
-.social-links a:hover { color: #fff; }
+.social-links a:hover { color: #fff; text-decoration: underline; }
 &lt;/style&gt;
+
+
 &lt;div class=&#34;people-section&#34;&gt;
   &lt;h2&gt;Principal Investigator&lt;/h2&gt;
   &lt;div class=&#34;people-grid&#34;&gt;
+    
     &lt;div class=&#34;person-card&#34;&gt;
       &lt;img src=&#34;https://via.placeholder.com/150&#34; class=&#34;person-img&#34;&gt;
       &lt;h3&gt;Dr. Jane Doe&lt;/h3&gt;

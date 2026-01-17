@@ -1,0 +1,30 @@
+pi:
+  - name: "Dr. Jane Doe"
+    role: "Associate Professor"
+    focus: "AI & Fluid Dynamics"
+    image: "https://via.placeholder.com/150"
+    links:
+      - text: "CV"
+        url: "#"
+      - text: "Scholar"
+        url: "#"
+
+postdocs:
+  - name: "Dr. John Smith"
+    role: "Ph.D. MIT"
+    focus: "Turbulence Modeling"
+    image: "https://via.placeholder.com/150"
+    links:
+      - text: "Website"
+        url: "#"
+
+students:
+  - name: "Alice Researcher"
+    role: "PhD Student (Joined 2024)"
+    focus: "Bio-Locomotion"
+    image: "https://via.placeholder.com/150"
+  
+  - name: "Bob Coder"
+    role: "PhD Student (Joined 2025)"
+    focus: "Quantum Algorithms"
+    image: "https://via.placeholder.com/150"

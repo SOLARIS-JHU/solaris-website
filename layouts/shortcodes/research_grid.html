@@ -1,0 +1,82 @@
+<style>
+  .research-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px 0;
+  }
+  @media (min-width: 900px) {
+    .research-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .flash-card {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+  }
+  .flash-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  .flash-card:hover .flash-card-inner { transform: rotateY(180deg); }
+  
+  .flash-card-front, .flash-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .flash-card-front {
+    background-color: #2e2e33;
+    color: white;
+    border: 1px solid #444;
+  }
+  .flash-card-back {
+    background-color: #feda4a;
+    color: black;
+    transform: rotateY(180deg);
+  }
+</style>
+
+<div class="research-grid">
+  {{ range .Site.Data.research }}
+  <div class="flash-card">
+    <div class="flash-card-inner">
+      
+      <div class="flash-card-front">
+        <h3 style="margin-bottom: 10px;">{{ .title }}</h3>
+        <p>{{ .summary }}</p>
+        <small style="color: #888;">{{ .category }}</small>
+      </div>
+      
+      <div class="flash-card-back">
+        <p><strong>Lead:</strong> {{ .lead }}</p>
+        <p><strong>Funding:</strong> {{ .funding }}</p>
+        
+        <div style="margin-top: 15px;">
+           {{ range .links }}
+             <a href="{{ .url }}" style="color: {{ .color }}; margin: 0 5px; text-decoration: underline;">
+               [{{ .text }}]
+             </a>
+           {{ end }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+  {{ end }}
+</div>

@@ -38,12 +38,6 @@
 
     </style>
 </noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "light") {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
 </head>
 <body class="list" id="top">
     <header class="header">
@@ -53,26 +47,6 @@
                 <img src="//localhost:1313/images/lab-logo.png" alt="" aria-label="logo"
                     height="35">Solaris Lab</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
             </div>
         </div>
         <ul id="menu">
@@ -121,6 +95,7 @@
   </h1>
 </header>
 <div class="post-content"><style>
+   
   .research-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -131,30 +106,41 @@
     .research-grid { grid-template-columns: repeat(3, 1fr); }
   }
 
+   
   .flash-card {
     background-color: transparent;
     width: 100%;
     height: 300px;
     perspective: 1000px;
   }
+  
+   
   .flash-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.6s;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
     transform-style: preserve-3d;
     cursor: pointer;
   }
   .flash-card:hover .flash-card-inner { transform: rotateY(180deg); }
   
+   
   .flash-card-front, .flash-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 10px;
+    
+     
+    background-color: #13224a;        
+    border: 1px solid #00f2ff;        
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);  
+    border-radius: 12px;
+    color: #e0e7ff;                   
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -162,15 +148,33 @@
     padding: 20px;
     box-sizing: border-box;
   }
-  .flash-card-front {
-    background-color: #2e2e33;
-    color: white;
-    border: 1px solid #444;
+
+   
+  .flash-card-front h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(0, 242, 255, 0.5);
   }
+
+   
   .flash-card-back {
-    background-color: #feda4a;
-    color: black;
+    background-color: #0a1128;        
     transform: rotateY(180deg);
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);  
+  }
+  
+   
+  .flash-card a {
+      color: #00f2ff !important;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+  }
+  .flash-card a:hover {
+      text-shadow: 0 0 8px #00f2ff;
+      text-decoration: underline;
   }
 </style>
 
@@ -182,20 +186,20 @@
       <div class="flash-card-front">
         <h3 style="margin-bottom: 10px;">Neural Operators</h3>
         <p>Accelerating CFD solvers by 1000x using Fourier Neural Operators.</p>
-        <small style="color: #888;">AI &#43; Physics</small>
+        <small style="color: #00f2ff; font-weight: bold; margin-top: 10px;">AI &#43; Physics</small>
       </div>
       
       <div class="flash-card-back">
         <p><strong>Lead:</strong> Dr. Jane Doe</p>
         <p><strong>Funding:</strong> NSF Grant #2024</p>
         
-        <div style="margin-top: 15px;">
+        <div style="margin-top: 20px;">
            
-             <a href="https://github.com/..." style="color: #feda4a; margin: 0 5px; text-decoration: underline;">
+             <a href="https://github.com/..." style="margin: 0 8px;">
                [Code]
              </a>
            
-             <a href="https://arxiv.org/..." style="color: #fff; margin: 0 5px; text-decoration: underline;">
+             <a href="https://arxiv.org/..." style="margin: 0 8px;">
                [Paper]
              </a>
            
@@ -211,20 +215,20 @@
       <div class="flash-card-front">
         <h3 style="margin-bottom: 10px;">Quantum Turbulence</h3>
         <p>Simulating superfluids using quantum-inspired algorithms.</p>
-        <small style="color: #888;">HPC &amp; Quantum</small>
+        <small style="color: #00f2ff; font-weight: bold; margin-top: 10px;">HPC &amp; Quantum</small>
       </div>
       
       <div class="flash-card-back">
         <p><strong>Lead:</strong> Bob Coder</p>
         <p><strong>Funding:</strong> Under Review</p>
         
-        <div style="margin-top: 15px;">
+        <div style="margin-top: 20px;">
            
-             <a href="#" style="color: #feda4a; margin: 0 5px; text-decoration: underline;">
+             <a href="#" style="margin: 0 8px;">
                [GitHub]
              </a>
            
-             <a href="#" style="color: #fff; margin: 0 5px; text-decoration: underline;">
+             <a href="#" style="margin: 0 8px;">
                [Preprint]
              </a>
            
@@ -240,20 +244,20 @@
       <div class="flash-card-front">
         <h3 style="margin-bottom: 10px;">Bio-Locomotion</h3>
         <p>Modeling fish swimming patterns to design efficient underwater drones.</p>
-        <small style="color: #888;">Robotics</small>
+        <small style="color: #00f2ff; font-weight: bold; margin-top: 10px;">Robotics</small>
       </div>
       
       <div class="flash-card-back">
         <p><strong>Lead:</strong> Alice Researcher</p>
         <p><strong>Funding:</strong> DARPA</p>
         
-        <div style="margin-top: 15px;">
+        <div style="margin-top: 20px;">
            
-             <a href="#" style="color: #feda4a; margin: 0 5px; text-decoration: underline;">
+             <a href="#" style="margin: 0 8px;">
                [Demo]
              </a>
            
-             <a href="#" style="color: #fff; margin: 0 5px; text-decoration: underline;">
+             <a href="#" style="margin: 0 8px;">
                [Paper]
              </a>
            
@@ -329,19 +333,6 @@
             mybutton.style.opacity = "0";
         }
     };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
 
 </script>
 </body>

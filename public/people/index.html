@@ -38,12 +38,6 @@
 
     </style>
 </noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "light") {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
 </head>
 <body id="top">
     <header class="header">
@@ -53,26 +47,6 @@
                 <img src="//localhost:1313/images/lab-logo.png" alt="" aria-label="logo"
                     height="35">Solaris Lab</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
             </div>
         </div>
         <ul id="menu">
@@ -127,35 +101,90 @@
 </div>
   </header> 
   <div class="post-content"><style>
-.people-section { margin-bottom: 40px; }
-.people-section h2 { border-bottom: 2px solid #444; padding-bottom: 10px; margin-bottom: 20px; }
+ 
+.people-section { margin-bottom: 60px; }
+.people-section h2 { 
+    border-bottom: 1px solid #00f2ff;  
+    padding-bottom: 15px; 
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+}
 
+ 
 .people-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 30px;
 }
 
+ 
 .person-card {
   text-align: center;
-  background: #25262b; 
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #333;
+  background: #13224a;  
+  padding: 30px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 242, 255, 0.3);  
+  transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
+ 
+.person-card:hover {
+    transform: translateY(-5px);
+    border-color: #00f2ff;
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.2);
+}
+
+ 
 .person-img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid #feda4a;  
+  margin-bottom: 20px;
+  border: 3px solid #00f2ff;  
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);  
+  transition: transform 0.3s ease;
+}
+.person-card:hover .person-img {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.6);
 }
 
-.social-links { margin-top: 10px; }
-.social-links a { margin: 0 5px; text-decoration: none; font-size: 0.9em; color: #aaa; }
-.social-links a:hover { color: #fff; text-decoration: underline; }
+ 
+.person-card h3 {
+    margin: 10px 0 5px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.person-card p {
+    color: #e0e7ff;  
+    font-size: 0.95rem;
+    margin: 5px 0;
+}
+.person-card i {
+    color: #00f2ff;  
+}
+
+ 
+.social-links { margin-top: 15px; }
+.social-links a { 
+    margin: 0 8px; 
+    text-decoration: none; 
+    font-size: 0.9rem; 
+    color: #00f2ff; 
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+.social-links a:hover { 
+    color: #fff; 
+    text-shadow: 0 0 8px #00f2ff; 
+}
 </style>
 
 
@@ -292,19 +321,6 @@
             mybutton.style.opacity = "0";
         }
     };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
 
 </script>
 </body>

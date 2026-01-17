@@ -1,47 +1,95 @@
 {{ define "main" }}
-<div style="max-width: 800px; margin: 0 auto; padding: 40px 20px;">
-    <div style="text-align: center; margin-bottom: 3rem;">
+<div style="
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      gap: 40px; 
+      margin-bottom: 4rem; 
+      flex-wrap: wrap; /* Stacks on mobile */
+      text-align: left; /* Aligns text to the left */
+  ">
     
-    <img src="/images/lab-logo.png" alt="Lab Logo" style="height: 120px; margin-bottom: 20px;">
-    
-    <h1 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem;">
-      {{ .Params.title }}
-    </h1>
-    <p style="font-size: 1.25rem; color: #a3a3a3;">
-      {{ .Params.subtitle }}
-    </p>
+    {{ if .Params.hero_logo }}
+    <div style="flex: 0 0 auto;">
+        <img src="/{{ .Params.hero_logo }}" alt="Lab Logo" 
+             style="height: 220px; width: auto; filter: drop-shadow(0 0 25px rgba(0, 242, 255, 0.4));">
+    </div>
+    {{ end }}
+
+    <div style="flex: 1; min-width: 300px;">
+        
+        <h1 style="
+            font-size: 3.5rem; 
+            font-weight: 800; 
+            line-height: 1; 
+            margin-bottom: 10px; /* Reduced margin to keep acronym close */
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+        ">
+          {{ .Params.title }}
+        </h1>
+
+        {{ if .Params.full_name }}
+        <h2 style="
+            font-size: 1.2rem; 
+            color: #00f2ff; /* Cyan Glow */
+            font-weight: 600;
+            /* text-transform: uppercase; */
+            letter-spacing: 1px;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 5px rgba(0, 242, 255, 0.4);
+        ">
+            {{ .Params.full_name }}
+        </h2>
+        {{ end }}
+        
+        <p style="
+            font-size: 1.4rem; 
+            color: #e0e7ff; 
+            border-left: 4px solid #00f2ff; 
+            padding-left: 20px;
+            margin: 0;
+            line-height: 1.4;
+        ">
+          {{ .Params.subtitle }}
+        </p>
+    </div>
   </div>
 
   <div style="text-align: center; margin-bottom: 4rem;">
-    <blockquote style="border: none; font-size: 1.4rem; font-style: italic; color: #e5e7eb; line-height: 1.6;">
+    <blockquote style="border: none; font-size: 1.4rem; font-style: italic; color: #e0e7ff; line-height: 1.6;">
       "{{ .Params.quote.text }}"
     </blockquote>
-    <div style="margin-top: 10px; font-weight: bold; color: #feda4a; letter-spacing: 1px;">
+    <div style="margin-top: 15px; font-weight: bold; color: #00f2ff; letter-spacing: 1px; text-transform: uppercase;">
       — {{ .Params.quote.author }}
     </div>
   </div>
 
-  <div style="margin-bottom: 4rem; background: #000; padding: 10px; border-radius: 12px;">
+  <div style="margin-bottom: 4rem; background: #0a1128; padding: 10px; border-radius: 12px; border: 1px solid #13224a; box-shadow: 0 0 30px rgba(0, 242, 255, 0.1);">
     <video width="100%" controls muted autoplay loop style="display: block; width: 100%; border-radius: 8px;">
        <source src="/{{ .Params.video_file }}" type="video/mp4">
        Your browser does not support the video tag.
     </video>
   </div>
 
- <div>
-    <h2 style="border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px;">
+  <div>
+    <h2 style="border-bottom: 1px solid #00f2ff; padding-bottom: 15px; margin-bottom: 25px; color: #fff; text-transform: uppercase; letter-spacing: 1px;">
       Latest News
     </h2>
     
     {{ range .Site.Data.news }}
-    <div style="margin-bottom: 25px;">
-        <span style="background: #333; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">
+    <div style="margin-bottom: 25px; padding-left: 15px; border-left: 2px solid #13224a; transition: border-color 0.3s;">
+        <span style="background: #13224a; color: #00f2ff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">
           {{ .date }}
         </span>
-        <h3 style="display: inline-block; margin: 0 0 5px 10px; font-size: 1.1rem;">
+        
+        <h3 style="display: inline-block; margin: 0 0 5px 10px; font-size: 1.1rem; color: #fff;">
             {{ .title }}
         </h3>
-        <p style="margin: 0; color: #aaa;">
+        <p style="margin: 0; color: #e0e7ff; padding-left: 5px;">
           {{ .summary }}
         </p>
     </div>

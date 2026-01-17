@@ -1,33 +1,88 @@
 <style>
-.people-section { margin-bottom: 40px; }
-.people-section h2 { border-bottom: 2px solid #444; padding-bottom: 10px; margin-bottom: 20px; }
+/* 1. SECTION HEADERS */
+.people-section { margin-bottom: 60px; }
+.people-section h2 { 
+    border-bottom: 1px solid #00f2ff; /* Cyan Divider */
+    padding-bottom: 15px; 
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+}
 
+/* 2. THE GRID */
 .people-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 30px;
 }
 
+/* 3. THE CARD (Solaris Style) */
 .person-card {
   text-align: center;
-  background: #25262b; 
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #333;
+  background: #13224a; /* Medium Blue */
+  padding: 30px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 242, 255, 0.3); /* Subtle cyan border */
+  transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
+/* Hover Effect: Glow and Lift */
+.person-card:hover {
+    transform: translateY(-5px);
+    border-color: #00f2ff;
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.2);
+}
+
+/* 4. THE IMAGE (Glowing Halo) */
 .person-img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid #feda4a; /* Yellow Accent */
+  margin-bottom: 20px;
+  border: 3px solid #00f2ff; /* Cyan Ring */
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.4); /* Glow */
+  transition: transform 0.3s ease;
+}
+.person-card:hover .person-img {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.6);
 }
 
-.social-links { margin-top: 10px; }
-.social-links a { margin: 0 5px; text-decoration: none; font-size: 0.9em; color: #aaa; }
-.social-links a:hover { color: #fff; text-decoration: underline; }
+/* 5. TEXT STYLES */
+.person-card h3 {
+    margin: 10px 0 5px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.person-card p {
+    color: #e0e7ff; /* Soft Blue-White */
+    font-size: 0.95rem;
+    margin: 5px 0;
+}
+.person-card i {
+    color: #00f2ff; /* Italic text (Role) gets Cyan */
+}
+
+/* 6. LINKS */
+.social-links { margin-top: 15px; }
+.social-links a { 
+    margin: 0 8px; 
+    text-decoration: none; 
+    font-size: 0.9rem; 
+    color: #00f2ff; 
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+.social-links a:hover { 
+    color: #fff; 
+    text-shadow: 0 0 8px #00f2ff; 
+}
 </style>
 
 {{ with .Site.Data.people.pi }}

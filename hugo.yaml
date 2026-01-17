@@ -8,9 +8,9 @@ enableInlineShortcodes: true
 # 1. PARAMS SECTION
 params:
   defaultTheme: dark
+  disableThemeToggle: true
   assets:
     disableHLJS: true
-  # This tries to load CSS via the theme (Method 1)
   custom_css: ["css/lab-style.css"]
   label:
     text: "Solaris Lab"           # The text next to the logo

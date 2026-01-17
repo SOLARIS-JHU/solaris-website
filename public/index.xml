@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Welcome to the Lab on Solaris Lab</title>
+    <title>SOLARIS LAB on Solaris Lab</title>
     <link>//localhost:1313/</link>
-    <description>Recent content in Welcome to the Lab on Solaris Lab</description>
+    <description>Recent content in SOLARIS LAB on Solaris Lab</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>en-us</language>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
@@ -79,6 +79,7 @@ University of Science&lt;br&gt;
       <guid>//localhost:1313/software/</guid>
       <description>&lt;p&gt;We believe in open science. All our tools are available on GitHub.&lt;/p&gt;
 &lt;style&gt;
+   
   .research-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -89,30 +90,41 @@ University of Science&lt;br&gt;
     .research-grid { grid-template-columns: repeat(3, 1fr); }
   }
 
+   
   .flash-card {
     background-color: transparent;
     width: 100%;
     height: 300px;
     perspective: 1000px;
   }
+  
+   
   .flash-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.6s;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
     transform-style: preserve-3d;
     cursor: pointer;
   }
   .flash-card:hover .flash-card-inner { transform: rotateY(180deg); }
   
+   
   .flash-card-front, .flash-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 10px;
+    
+     
+    background-color: #13224a;        
+    border: 1px solid #00f2ff;        
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);  
+    border-radius: 12px;
+    color: #e0e7ff;                   
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,15 +132,33 @@ University of Science&lt;br&gt;
     padding: 20px;
     box-sizing: border-box;
   }
-  .flash-card-front {
-    background-color: #2e2e33;
-    color: white;
-    border: 1px solid #444;
+
+   
+  .flash-card-front h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(0, 242, 255, 0.5);
   }
+
+   
   .flash-card-back {
-    background-color: #feda4a;
-    color: black;
+    background-color: #0a1128;        
     transform: rotateY(180deg);
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);  
+  }
+  
+   
+  .flash-card a {
+      color: #00f2ff !important;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+  }
+  .flash-card a:hover {
+      text-shadow: 0 0 8px #00f2ff;
+      text-decoration: underline;
   }
 &lt;/style&gt;
 
@@ -147,35 +177,90 @@ University of Science&lt;br&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/people/</guid>
       <description>&lt;style&gt;
-.people-section { margin-bottom: 40px; }
-.people-section h2 { border-bottom: 2px solid #444; padding-bottom: 10px; margin-bottom: 20px; }
+ 
+.people-section { margin-bottom: 60px; }
+.people-section h2 { 
+    border-bottom: 1px solid #00f2ff;  
+    padding-bottom: 15px; 
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+}
 
+ 
 .people-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 30px;
 }
 
+ 
 .person-card {
   text-align: center;
-  background: #25262b; 
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #333;
+  background: #13224a;  
+  padding: 30px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 242, 255, 0.3);  
+  transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
+ 
+.person-card:hover {
+    transform: translateY(-5px);
+    border-color: #00f2ff;
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.2);
+}
+
+ 
 .person-img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid #feda4a;  
+  margin-bottom: 20px;
+  border: 3px solid #00f2ff;  
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);  
+  transition: transform 0.3s ease;
+}
+.person-card:hover .person-img {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.6);
 }
 
-.social-links { margin-top: 10px; }
-.social-links a { margin: 0 5px; text-decoration: none; font-size: 0.9em; color: #aaa; }
-.social-links a:hover { color: #fff; text-decoration: underline; }
+ 
+.person-card h3 {
+    margin: 10px 0 5px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.person-card p {
+    color: #e0e7ff;  
+    font-size: 0.95rem;
+    margin: 5px 0;
+}
+.person-card i {
+    color: #00f2ff;  
+}
+
+ 
+.social-links { margin-top: 15px; }
+.social-links a { 
+    margin: 0 8px; 
+    text-decoration: none; 
+    font-size: 0.9rem; 
+    color: #00f2ff; 
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+.social-links a:hover { 
+    color: #fff; 
+    text-shadow: 0 0 8px #00f2ff; 
+}
 &lt;/style&gt;
 
 

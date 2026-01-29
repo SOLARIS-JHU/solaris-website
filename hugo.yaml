@@ -14,7 +14,7 @@ params:
   custom_css: ["css/lab-style.css"]
   label:
     text: "Solaris Lab"           # The text next to the logo
-    icon: "/images/lab-logo.png"  # Path to your file
+    icon: "images/lab-logo.png"  # Path to your file
     iconHeight: 35           # Size of the logo
 
 # 2. MENU SECTION
@@ -22,31 +22,31 @@ menu:
   main:
     - identifier: home
       name: Home
-      url: /
+      pageRef: /        
       weight: 5
     - identifier: research
       name: Research
-      url: /research/
+      pageRef: /research 
       weight: 10
     - identifier: software
       name: Software
-      url: /software/
+      pageRef: /software
       weight: 20
     - identifier: people
       name: People
-      url: /people/
+      pageRef: /people
       weight: 30
     - identifier: gallery
       name: Gallery
-      url: /gallery/
+      pageRef: /gallery
       weight: 40
     - identifier: join
       name: Join Us
-      url: /join-us/
+      pageRef: /join-us
       weight: 50
     - identifier: contact
       name: Contact
-      url: /contact/
+      pageRef: /contact
       weight: 60
 
 # 3. MARKUP SECTION (Must be at the far left, NOT indented!)

@@ -3,6 +3,9 @@ languageCode: "en-us"
 title: "Solaris Lab"
 theme: "PaperMod"
 
+relativeURLs: true
+uglyURLs: true
+
 enableInlineShortcodes: true
 
 # 1. PARAMS SECTION

@@ -2,45 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SOLARIS LAB on Solaris Lab</title>
-    <link>//localhost:1313/</link>
+    <link>//localhost:1313/index.html</link>
     <description>Recent content in SOLARIS LAB on Solaris Lab</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>en-us</language>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact</title>
-      <link>//localhost:1313/contact/</link>
+      <link>//localhost:1313/contact.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/contact/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Lab Location:&lt;/strong&gt; Building 4, Room 204&lt;br&gt;
-University of Science&lt;br&gt;
-123 College Ave&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:lab-manager@university.edu&#34;&gt;lab-manager@university.edu&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Twitter:&lt;/strong&gt; @MyLabHandle&lt;/p&gt;</description>
+      <guid>//localhost:1313/contact.html</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Lab Location:&lt;/strong&gt; Latrobe, Room 201Q&lt;br&gt;
+3400 N Charles St, Baltimore, MD 21218&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; *jdrgona1 [at] jh dot edu&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Twitter:&lt;/strong&gt; @&lt;a href=&#34;https://x.com/jan_drgona?lang=es&#34;&gt;jan_drgona&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Join the Lab</title>
-      <link>//localhost:1313/join-us/</link>
+      <link>//localhost:1313/join-us.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/join-us/</guid>
-      <description>&lt;h2 id=&#34;prospective-graduate-students&#34;&gt;Prospective Graduate Students&lt;/h2&gt;
-&lt;p&gt;We are looking for students with strong backgrounds in &lt;strong&gt;Applied Math&lt;/strong&gt; or &lt;strong&gt;Computer Science&lt;/strong&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Funding:&lt;/strong&gt; Full funding is available for 2 students starting Fall 2026.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How to apply:&lt;/strong&gt; Please send an email with your CV and a 1-page statement of purpose.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;undergraduates&#34;&gt;Undergraduates&lt;/h2&gt;
-&lt;p&gt;We welcome undergrads for summer research internships. Experience with Python is preferred.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;postdocs&#34;&gt;Postdocs&lt;/h2&gt;
-&lt;p&gt;Currently, there are no open positions. However, if you have your own funding (e.g., Marie Curie, NSF Fellowship), we are happy to host you.&lt;/p&gt;</description>
+      <guid>//localhost:1313/join-us.html</guid>
+      <description>&lt;h3 id=&#34;prospective-students--postdocs&#34;&gt;Prospective Students &amp;amp; Postdocs&lt;/h3&gt;
+&lt;p&gt;The lab welcomes candidates with a strong foundation in &lt;strong&gt;Applied Mathematics&lt;/strong&gt;, &lt;strong&gt;Computer Science&lt;/strong&gt;, or related fields to join us. Applications are reviewed on a rolling basis.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To Apply:&lt;/strong&gt; Please submit your CV via email to &lt;strong&gt;jdrgona1 [at] jh dot edu&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Life at the Lab</title>
-      <link>//localhost:1313/gallery/</link>
+      <link>//localhost:1313/gallery.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/gallery/</guid>
+      <guid>//localhost:1313/gallery.html</guid>
       <description>&lt;style&gt;
 /* NUCLEAR OPTION: GALLERY CSS */
 .gallery-grid {
@@ -74,9 +64,9 @@ University of Science&lt;br&gt;
     </item>
     <item>
       <title>Open Source Software</title>
-      <link>//localhost:1313/software/</link>
+      <link>//localhost:1313/software.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/software/</guid>
+      <guid>//localhost:1313/software.html</guid>
       <description>&lt;p&gt;We believe in open science. All our tools are available on GitHub.&lt;/p&gt;
 &lt;style&gt;
    
@@ -173,9 +163,9 @@ University of Science&lt;br&gt;
     </item>
     <item>
       <title>Our Team</title>
-      <link>//localhost:1313/people/</link>
+      <link>//localhost:1313/people.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/people/</guid>
+      <guid>//localhost:1313/people.html</guid>
       <description>&lt;style&gt;
  
 .people-section { margin-bottom: 60px; }
@@ -206,6 +196,9 @@ University of Science&lt;br&gt;
   transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
   position: relative;
   overflow: hidden;
+  display: flex;        
+  flex-direction: column;
+  align-items: center;
 }
 
  
@@ -247,7 +240,10 @@ University of Science&lt;br&gt;
 }
 
  
-.social-links { margin-top: 15px; }
+.social-links { 
+    margin-top: auto;  
+    padding-top: 15px; 
+}
 .social-links a { 
     margin: 0 8px; 
     text-decoration: none; 
@@ -270,7 +266,7 @@ University of Science&lt;br&gt;
     
     &lt;div class=&#34;person-card&#34;&gt;
       &lt;img src=&#34;https://via.placeholder.com/150&#34; class=&#34;person-img&#34;&gt;
-      &lt;h3&gt;Dr. Jane Doe&lt;/h3&gt;
+      &lt;h3&gt;Prof. Ján Drgoňa&lt;/h3&gt;
       &lt;p&gt;&lt;i&gt;Associate Professor&lt;/i&gt;&lt;/p&gt;</description>
     </item>
   </channel>

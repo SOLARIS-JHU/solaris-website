@@ -20,3 +20,13 @@
     - text: "View on GitHub"
       url: "#"
       color: "#fff"
+
+- title: "NeuroMANCER"
+  summary: "High-performance C++ solver"
+  language: "C++"
+  info_1: "License: BSD 3-Clause License"
+  info_2: "Stars: 1.3k+"
+  links:
+    - text: "View on GitHub"
+      url: "https://github.com/pnnl/neuromancer"
+      color: "#fff"

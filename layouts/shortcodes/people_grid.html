@@ -28,6 +28,9 @@
   transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
   position: relative;
   overflow: hidden;
+  display: flex;       /* Added to handle varying heights better */
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Hover Effect: Glow and Lift */
@@ -69,7 +72,10 @@
 }
 
 /* 6. LINKS */
-.social-links { margin-top: 15px; }
+.social-links { 
+    margin-top: auto; /* Pushes links to the bottom if cards are different heights */
+    padding-top: 15px; 
+}
 .social-links a { 
     margin: 0 8px; 
     text-decoration: none; 
@@ -115,6 +121,7 @@
       <img src="{{ .image }}" class="person-img">
       <h3>{{ .name }}</h3>
       <p>{{ .role }}</p>
+      {{ if .focus }}<p>{{ .focus }}</p>{{ end }}
       <div class="social-links">
         {{ range .links }}
           <a href="{{ .url }}">[{{ .text }}]</a>
@@ -135,6 +142,12 @@
       <img src="{{ .image }}" class="person-img">
       <h3>{{ .name }}</h3>
       <p>{{ .role }}</p>
+      {{ if .focus }}<p>{{ .focus }}</p>{{ end }}
+      <div class="social-links">
+        {{ range .links }}
+          <a href="{{ .url }}">[{{ .text }}]</a>
+        {{ end }}
+      </div>
     </div>
     {{ end }}
   </div>

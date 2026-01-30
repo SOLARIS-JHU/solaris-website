@@ -10,8 +10,8 @@
 
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="//localhost:1313/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.a29c24210eb31d9ce56f669c66a35c9c51b17376b7764e336a49af7dec914cf0.css" integrity="sha256-opwkIQ6zHZzlb2acZqNcnFGxc3a3dk4zakmvfeyRTPA=" rel="preload stylesheet" as="style">
+<link rel="canonical" href="//localhost:1313/index.html">
+<link crossorigin="anonymous" href="./assets/css/stylesheet.a29c24210eb31d9ce56f669c66a35c9c51b17376b7764e336a49af7dec914cf0.css" integrity="sha256-opwkIQ6zHZzlb2acZqNcnFGxc3a3dk4zakmvfeyRTPA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="//localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
@@ -20,7 +20,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" type="application/rss+xml" href="//localhost:1313/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="//localhost:1313/">
+<link rel="alternate" hreflang="en" href="//localhost:1313/index.html">
 <noscript>
     <style>
         #theme-toggle,
@@ -43,37 +43,37 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="//localhost:1313/" title="SOLARIS LAB">
-                    <span class="active">Home</span>
+                <a href="//localhost:1313/index.html" title="SOLARIS LAB">
+                    <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/research/" title="Our Research">
+                <a href="//localhost:1313/research/index.html" title="Our Research">
                     <span>Research</span>
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/software/" title="Open Source Software">
+                <a href="//localhost:1313/software.html" title="Open Source Software">
                     <span>Software</span>
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/people/" title="Our Team">
+                <a href="//localhost:1313/people.html" title="Our Team">
                     <span>People</span>
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/gallery/" title="Life at the Lab">
+                <a href="//localhost:1313/gallery.html" title="Life at the Lab">
                     <span>Gallery</span>
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/join-us/" title="Join the Lab">
+                <a href="//localhost:1313/join-us.html" title="Join the Lab">
                     <span>Join Us</span>
                 </a>
             </li>
             <li>
-                <a href="//localhost:1313/contact/" title="Contact">
+                <a href="//localhost:1313/contact.html" title="Contact">
                     <span>Contact</span>
                 </a>
             </li>
@@ -81,19 +81,41 @@
     </nav>
 </header>
 <main class="main">
+
+<style>
+  .news-item {
+    border-left: 2px solid #13224a;
+    transition: all 0.3s ease;
+  }
+  .news-item:hover {
+    border-left: 4px solid #00f2ff !important;
+    background: rgba(0, 242, 255, 0.05);  
+    padding-left: 20px !important;  
+  }
+  .news-link {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  .news-link:hover {
+    color: #00f2ff !important;
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
+  }
+</style>
+
 <div style="
       display: flex; 
       align-items: center; 
       justify-content: center; 
       gap: 40px; 
       margin-bottom: 4rem; 
-      flex-wrap: wrap; /* Stacks on mobile */
-      text-align: left; /* Aligns text to the left */
+      flex-wrap: wrap; 
+      text-align: left;
   ">
     
     
     <div style="flex: 0 0 auto;">
-        <img src="/images/solaris-logo.png" alt="Lab Logo" 
+        <img src="./images/solaris-logo.png" alt="Lab Logo" 
              style="height: 220px; width: auto; filter: drop-shadow(0 0 25px rgba(0, 242, 255, 0.4));">
     </div>
     
@@ -104,7 +126,7 @@
             font-size: 3.5rem; 
             font-weight: 800; 
             line-height: 1; 
-            margin-bottom: 10px; /* Reduced margin to keep acronym close */
+            margin-bottom: 10px; 
             letter-spacing: 2px; 
             text-transform: uppercase; 
             color: #ffffff;
@@ -116,9 +138,8 @@
         
         <h2 style="
             font-size: 1.2rem; 
-            color: #00f2ff; /* Cyan Glow */
+            color: #00f2ff; 
             font-weight: 600;
-            /* text-transform: uppercase; */
             letter-spacing: 1px;
             margin-top: 0;
             margin-bottom: 1.5rem;
@@ -152,7 +173,7 @@
 
   <div style="margin-bottom: 4rem; background: #0a1128; padding: 10px; border-radius: 12px; border: 1px solid #13224a; box-shadow: 0 0 30px rgba(0, 242, 255, 0.1);">
     <video width="100%" controls muted autoplay loop style="display: block; width: 100%; border-radius: 8px;">
-       <source src="/my-video.mp4" type="video/mp4">
+       <source src="./my-video.mp4" type="video/mp4">
        Your browser does not support the video tag.
     </video>
   </div>
@@ -163,42 +184,89 @@
     </h2>
     
     
-    <div style="margin-bottom: 25px; padding-left: 15px; border-left: 2px solid #13224a; transition: border-color 0.3s;">
-        <span style="background: #13224a; color: #00f2ff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">
+    <div class="news-item" style="margin-bottom: 25px; padding: 10px 0 10px 15px;">
+        
+        <span style="background: #13224a; color: #00f2ff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; vertical-align: middle;">
           Jan 2026
         </span>
         
-        <h3 style="display: inline-block; margin: 0 0 5px 10px; font-size: 1.1rem; color: #fff;">
-            New ABC Grant Awarded
+        <h3 style="display: inline-block; margin: 0 0 5px 10px; font-size: 1.1rem; vertical-align: middle;">
+            
+             🏆 
+            
+
+            
+                <a href="https://github.com/SOLARIS-JHU/Multi-Agent-DPC" target="_blank" rel="noopener" class="news-link">
+                    1st Place Tesseract Hackathon 2025 <span style="font-size: 0.8em;">↗</span>
+                </a>
+            
         </h3>
-        <p style="margin: 0; color: #e0e7ff; padding-left: 5px;">
-          We have received $1M to study XYZ and CDE.
+
+        <p style="margin: 5px 0 0 0; color: #e0e7ff; padding-left: 5px; line-height: 1.5; font-size: 0.95rem;">
+          Congratulations to Honghui, Dibakar, and Pietro for the 1st position in the Tesseract Hackathon 2025.
         </p>
     </div>
     
-    <div style="margin-bottom: 25px; padding-left: 15px; border-left: 2px solid #13224a; transition: border-color 0.3s;">
-        <span style="background: #13224a; color: #00f2ff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">
-          Dec 2025
+    <div class="news-item" style="margin-bottom: 25px; padding: 10px 0 10px 15px;">
+        
+        <span style="background: #13224a; color: #00f2ff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; vertical-align: middle;">
+          Dunno 2026
         </span>
         
-        <h3 style="display: inline-block; margin: 0 0 5px 10px; font-size: 1.1rem; color: #fff;">
-            Paper Accepted at XYZ Conference
+        <h3 style="display: inline-block; margin: 0 0 5px 10px; font-size: 1.1rem; vertical-align: middle;">
+            
+             👋 
+            
+
+            
+                <span style="color: #fff;">Welcome New Postdoc</span>
+            
         </h3>
-        <p style="margin: 0; color: #e0e7ff; padding-left: 5px;">
-          Our work on &#39;ABC&#39; will be presented in DEF.
+
+        <p style="margin: 5px 0 0 0; color: #e0e7ff; padding-left: 5px; line-height: 1.5; font-size: 0.95rem;">
+          Welcome to Liang, who just joined the lab as a new Postdoc.
         </p>
     </div>
     
-    <div style="margin-bottom: 25px; padding-left: 15px; border-left: 2px solid #13224a; transition: border-color 0.3s;">
-        <span style="background: #13224a; color: #00f2ff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">
-          Nov 2025
+    <div class="news-item" style="margin-bottom: 25px; padding: 10px 0 10px 15px;">
+        
+        <span style="background: #13224a; color: #00f2ff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; vertical-align: middle;">
+          Dunno 2025
         </span>
         
-        <h3 style="display: inline-block; margin: 0 0 5px 10px; font-size: 1.1rem; color: #fff;">
-            Welcome New PhD Students
+        <h3 style="display: inline-block; margin: 0 0 5px 10px; font-size: 1.1rem; vertical-align: middle;">
+            
+             👋 
+            
+
+            
+                <span style="color: #fff;">Welcome New Postdoc</span>
+            
         </h3>
-        <p style="margin: 0; color: #e0e7ff; padding-left: 5px;">
-          ABC and DEF have joined the lab group to work on GHI.
+
+        <p style="margin: 5px 0 0 0; color: #e0e7ff; padding-left: 5px; line-height: 1.5; font-size: 0.95rem;">
+          Welcome to Parv, who just joined the lab as a new Postdoc.
+        </p>
+    </div>
+    
+    <div class="news-item" style="margin-bottom: 25px; padding: 10px 0 10px 15px;">
+        
+        <span style="background: #13224a; color: #00f2ff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; vertical-align: middle;">
+          Aug 2025
+        </span>
+        
+        <h3 style="display: inline-block; margin: 0 0 5px 10px; font-size: 1.1rem; vertical-align: middle;">
+            
+             👋 
+            
+
+            
+                <span style="color: #fff;">Welcome New PhD Students</span>
+            
+        </h3>
+
+        <p style="margin: 5px 0 0 0; color: #e0e7ff; padding-left: 5px; line-height: 1.5; font-size: 0.95rem;">
+          Welcome to Honghui and Pietro, who just joined the lab as new PhD students.
         </p>
     </div>
     

@@ -3,10 +3,9 @@ title: "Contact"
 layout: "single"
 ---
 
-**Lab Location:** Building 4, Room 204  
-University of Science  
-123 College Ave  
+**Lab Location:** Latrobe, Room 201Q  
+3400 N Charles St, Baltimore, MD 21218  
 
-**Email:** lab-manager@university.edu  
+**Email:** *jdrgona1 [at] jh dot edu
 
-**Twitter:** @MyLabHandle
+**Twitter:** @[jan_drgona](https://x.com/jan_drgona?lang=es)

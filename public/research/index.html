@@ -10,13 +10,13 @@
 <meta name="description" content="
 
 
+
   
   
     
-      
-      
-        Neural Operators
-        Accelerating CFD solvers by 1000x using Fourier Neural Operators.">
+    
+      AI &#43; Physics
+      We explore the intersection of machine learning and physical laws, aiming to accelerate simulations using Neural Operators.">
 <meta name="author" content="">
 <link rel="canonical" href="//localhost:1313/research/index.html">
 <link crossorigin="anonymous" href="../assets/css/stylesheet.a29c24210eb31d9ce56f669c66a35c9c51b17376b7764e336a49af7dec914cf0.css" integrity="sha256-opwkIQ6zHZzlb2acZqNcnFGxc3a3dk4zakmvfeyRTPA=" rel="preload stylesheet" as="style">
@@ -96,6 +96,41 @@
 </header>
 <div class="post-content"><style>
    
+  .research-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .macro-area {
+    margin-bottom: 80px;  
+  }
+
+  .area-title {
+    color: #00f2ff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+  }
+
+  .area-desc {
+    color: #b0c4de;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .area-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #13224a, transparent);
+    margin-bottom: 50px;
+  }
+
+   
   .research-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -144,17 +179,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 20px;
     box-sizing: border-box;
   }
 
    
+  .flash-card-front {
+    justify-content: center;  
+  }
+
   .flash-card-front h3 {
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 0 5px rgba(0, 242, 255, 0.5);
+    color: #e0e7ff;     
+    font-size: 1.25rem;
+    font-weight: 400;   
+    text-transform: none;  
+    letter-spacing: normal;
+    text-shadow: none;  
+    margin: 0;
+    line-height: 1.5;
   }
 
    
@@ -162,112 +204,167 @@
     background-color: #0a1128;        
     transform: rotateY(180deg);
     box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);  
+    justify-content: space-between;   
+    padding: 30px 20px;
+  }
+
+  .card-summary {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+  .card-meta {
+    font-size: 0.85rem;
+    color: #a0aec0;
+    width: 100%;
   }
   
    
-  .flash-card a {
+  .card-links {
+    margin-top: auto; 
+  }
+
+  .card-links a {
       color: #00f2ff !important;
       font-weight: bold;
       text-transform: uppercase;
       text-decoration: none;
       transition: all 0.3s ease;
+      margin: 0 8px;
   }
-  .flash-card a:hover {
+  .card-links a:hover {
       text-shadow: 0 0 8px #00f2ff;
       text-decoration: underline;
   }
 </style>
 
-<div class="research-grid">
+<div class="research-container">
+
   
-  <div class="flash-card">
-    <div class="flash-card-inner">
+  <div class="macro-area">
+    
+    <div class="area-header">
+      <h2 class="area-title">AI &#43; Physics</h2>
+      <p class="area-desc">We explore the intersection of machine learning and physical laws, aiming to accelerate simulations using Neural Operators.</p>
+    </div>
+
+    <div class="research-grid">
       
-      <div class="flash-card-front">
-        <h3 style="margin-bottom: 10px;">Neural Operators</h3>
-        <p>Accelerating CFD solvers by 1000x using Fourier Neural Operators.</p>
-        <small style="color: #00f2ff; font-weight: bold; margin-top: 10px;">AI &#43; Physics</small>
-      </div>
-      
-      <div class="flash-card-back">
-        <p><strong>Lead:</strong> Dr. Jane Doe</p>
-        <p><strong>Funding:</strong> NSF Grant #2024</p>
-        
-        <div style="margin-top: 20px;">
-           
-             <a href="https://github.com/..." style="margin: 0 8px;">
-               [Code]
-             </a>
-           
-             <a href="https://arxiv.org/..." style="margin: 0 8px;">
-               [Paper]
-             </a>
-           
+      <div class="flash-card">
+        <div class="flash-card-inner">
+          
+          <div class="flash-card-front">
+            <h3>Neural Operators</h3>
+          </div>
+          
+          <div class="flash-card-back">
+            <p class="card-summary">Accelerating CFD solvers by 1000x using Fourier Neural Operators.</p>
+            
+            <div class="card-meta">
+              <p><strong>Lead:</strong> Dr. Jane Doe</p>
+              <p><strong>Funding:</strong> NSF Grant #2024</p>
+            </div>
+            
+            <div class="card-links">
+               
+                 <a href="https://github.com/...">[Code]</a>
+               
+                 <a href="https://arxiv.org/...">[Paper]</a>
+               
+            </div>
+          </div>
+
         </div>
       </div>
-
-    </div>
+       </div>
+  
   </div>
   
-  <div class="flash-card">
-    <div class="flash-card-inner">
+  <hr class="area-divider">
+  
+  
+  <div class="macro-area">
+    
+    <div class="area-header">
+      <h2 class="area-title">HPC &amp; Quantum</h2>
+      <p class="area-desc">Our lab pushes the boundaries of computing power, utilizing quantum-inspired algorithms for turbulence modeling.</p>
+    </div>
+
+    <div class="research-grid">
       
-      <div class="flash-card-front">
-        <h3 style="margin-bottom: 10px;">Quantum Turbulence</h3>
-        <p>Simulating superfluids using quantum-inspired algorithms.</p>
-        <small style="color: #00f2ff; font-weight: bold; margin-top: 10px;">HPC &amp; Quantum</small>
-      </div>
-      
-      <div class="flash-card-back">
-        <p><strong>Lead:</strong> Bob Coder</p>
-        <p><strong>Funding:</strong> Under Review</p>
-        
-        <div style="margin-top: 20px;">
-           
-             <a href="#" style="margin: 0 8px;">
-               [GitHub]
-             </a>
-           
-             <a href="#" style="margin: 0 8px;">
-               [Preprint]
-             </a>
-           
+      <div class="flash-card">
+        <div class="flash-card-inner">
+          
+          <div class="flash-card-front">
+            <h3>Quantum Turbulence</h3>
+          </div>
+          
+          <div class="flash-card-back">
+            <p class="card-summary">Simulating superfluids using quantum-inspired algorithms.</p>
+            
+            <div class="card-meta">
+              <p><strong>Lead:</strong> Bob Coder</p>
+              <p><strong>Funding:</strong> Under Review</p>
+            </div>
+            
+            <div class="card-links">
+               
+                 <a href="#">[Preprint]</a>
+               
+            </div>
+          </div>
+
         </div>
       </div>
-
-    </div>
+       </div>
+  
   </div>
   
-  <div class="flash-card">
-    <div class="flash-card-inner">
+  <hr class="area-divider">
+  
+  
+  <div class="macro-area">
+    
+    <div class="area-header">
+      <h2 class="area-title">Optimization</h2>
+      <p class="area-desc">Developing robust mathematical frameworks for complex system optimization.</p>
+    </div>
+
+    <div class="research-grid">
       
-      <div class="flash-card-front">
-        <h3 style="margin-bottom: 10px;">Bio-Locomotion</h3>
-        <p>Modeling fish swimming patterns to design efficient underwater drones.</p>
-        <small style="color: #00f2ff; font-weight: bold; margin-top: 10px;">Robotics</small>
-      </div>
-      
-      <div class="flash-card-back">
-        <p><strong>Lead:</strong> Alice Researcher</p>
-        <p><strong>Funding:</strong> DARPA</p>
-        
-        <div style="margin-top: 20px;">
-           
-             <a href="#" style="margin: 0 8px;">
-               [Demo]
-             </a>
-           
-             <a href="#" style="margin: 0 8px;">
-               [Paper]
-             </a>
-           
+      <div class="flash-card">
+        <div class="flash-card-inner">
+          
+          <div class="flash-card-front">
+            <h3>Quadratic Programming</h3>
+          </div>
+          
+          <div class="flash-card-back">
+            <p class="card-summary">A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP.</p>
+            
+            <div class="card-meta">
+              <p><strong>Lead:</strong> Liang Wu</p>
+              
+            </div>
+            
+            <div class="card-links">
+               
+                 <a href="https://ieeexplore.ieee.org/...">[Paper]</a>
+               
+            </div>
+          </div>
+
         </div>
       </div>
-
-    </div>
+       </div>
+  
   </div>
   
-</div>
+  <hr class="area-divider">
+  
+   </div>
 
 
 </div>

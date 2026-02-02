@@ -1,38 +1,33 @@
-- title: "Neural Operators"
-  summary: "Accelerating CFD solvers by 1000x using Fourier Neural Operators."
-  category: "AI + Physics"
-  lead: "Dr. Jane Doe"
-  funding: "NSF Grant #2024"
-  links:
-    - text: "Code"
-      url: "https://github.com/..."
-      color: "#feda4a" # Yellow
-    - text: "Paper"
-      url: "https://arxiv.org/..."
-      color: "#fff"    # White
+- area: "AI + Physics"
+  description: "We explore the intersection of machine learning and physical laws, aiming to accelerate simulations using Neural Operators."
+  projects:
+    - title: "Neural Operators"
+      summary: "Accelerating CFD solvers by 1000x using Fourier Neural Operators."
+      lead: "Dr. Jane Doe"
+      funding: "NSF Grant #2024"
+      links:
+        - text: "Code"
+          url: "https://github.com/..."
+        - text: "Paper"
+          url: "https://arxiv.org/..."
 
-- title: "Quantum Turbulence"
-  summary: "Simulating superfluids using quantum-inspired algorithms."
-  category: "HPC & Quantum"
-  lead: "Bob Coder"
-  funding: "Under Review"
-  links:
-    - text: "GitHub"
-      url: "#"
-      color: "#feda4a"
-    - text: "Preprint"
-      url: "#"
-      color: "#fff"
+- area: "HPC & Quantum"
+  description: "Our lab pushes the boundaries of computing power, utilizing quantum-inspired algorithms for turbulence modeling."
+  projects:
+    - title: "Quantum Turbulence"
+      summary: "Simulating superfluids using quantum-inspired algorithms."
+      lead: "Bob Coder"
+      funding: "Under Review"
+      links:
+        - text: "Preprint"
+          url: "#"
 
-- title: "Bio-Locomotion"
-  summary: "Modeling fish swimming patterns to design efficient underwater drones."
-  category: "Robotics"
-  lead: "Alice Researcher"
-  funding: "DARPA"
-  links:
-    - text: "Demo"
-      url: "#"
-      color: "#feda4a"
-    - text: "Paper"
-      url: "#"
-      color: "#fff"
+- area: "Optimization"
+  description: "Developing robust mathematical frameworks for complex system optimization."
+  projects:
+    - title: "Quadratic Programming"
+      summary: "A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP."
+      lead: "Liang Wu"
+      links:
+        - text: "Paper"
+          url: "https://ieeexplore.ieee.org/..."

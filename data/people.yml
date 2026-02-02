@@ -16,8 +16,8 @@ pi:
 postdocs:
   - name: "Dr. Liang Wu"
     role: "Postdoctoral Researcher"
-    focus: "abc"
-    image: "https://via.placeholder.com/150"
+    focus: "Quadratic Programming, Model Predictive Control, and Control of PDE Systems"
+    image: "images/liang-pic.jpeg"
     links:
       - text: "email"
         url: "mailto:wliang14@jh.edu"
@@ -27,7 +27,6 @@ postdocs:
         url: "#"
       - text: "Linkedin"
         url: "https://www.linkedin.com/in/liang-wu-474371a9/"
-
 
   - name: "Dr. Parv Khurana"
     role: "Postdoctoral Researcher"

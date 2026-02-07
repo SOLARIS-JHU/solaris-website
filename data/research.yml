@@ -1,26 +1,16 @@
-- area: "AI + Physics"
-  description: "We explore the intersection of machine learning and physical laws, aiming to accelerate simulations using Neural Operators."
+- area: "Decision-Focused Learning"
+  description: "Bridging the gap between prediction and prescription by embedding optimization solvers into deep learning architectures for end-to-end decision-making."
   projects:
-    - title: "Neural Operators"
-      summary: "Accelerating CFD solvers by 1000x using Fourier Neural Operators."
-      lead: "Dr. Jane Doe"
-      funding: "NSF Grant #2024"
-      links:
-        - text: "Code"
-          url: "https://github.com/..."
-        - text: "Paper"
-          url: "https://arxiv.org/..."
-
-- area: "HPC & Quantum"
-  description: "Our lab pushes the boundaries of computing power, utilizing quantum-inspired algorithms for turbulence modeling."
-  projects:
-    - title: "Quantum Turbulence"
-      summary: "Simulating superfluids using quantum-inspired algorithms."
-      lead: "Bob Coder"
-      funding: "Under Review"
+    - title: "Decision Focused Learning for Pumped Hydro"
+      summary: "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning."
+      lead: "Honghui Zheng"
       links:
         - text: "Preprint"
-          url: "#"
+          url: "https://arxiv.org/abs/2512.20880"
+        - text: "Code"
+          url: "https://github.com/SOLARIS-JHU/DFL-UPHES"
+
+  
 
 - area: "Optimization"
   description: "Developing robust mathematical frameworks for complex system optimization."
@@ -30,4 +20,20 @@
       lead: "Liang Wu"
       links:
         - text: "Paper"
-          url: "https://ieeexplore.ieee.org/..."
+          url: "https://ieeexplore.ieee.org/abstract/document/11313851"
+    
+    - title: "πMPC"
+      summary: "Parallel-in horizon and construction-free nonlinear MPC algorithm."
+      lead: "Liang Wu"
+      links:
+        - text: "Preprint"
+          url: "https://arxiv.org/abs/2601.14414"
+        - text: "Code"
+          url: "https://github.com/SOLARIS-JHU/PiMPC.jl"
+
+    - title: " Koopman-based MPC"
+      summary: "Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control."
+      lead: "Liang Wu"
+      links:
+        - text: "Preprint"
+          url: "https://arxiv.org/abs/2601.11901"

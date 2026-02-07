@@ -1,25 +1,25 @@
-- title: "PyFluids-AI"
-  summary: "Python Library for CFD + ML"
-  language: "Python/PyTorch"
-  info_1: "License: MIT"
-  info_2: "Maintainer: Bob Coder"
-  links:
-    - text: "View on GitHub"
-      url: "#"
-      color: "#fff"
-    - text: "Read Docs"
-      url: "#"
-      color: "#000" # Black text for contrast on yellow
+# - title: "PyFluids-AI"
+#   summary: "Python Library for CFD + ML"
+#   language: "Python/PyTorch"
+#   info_1: "License: MIT"
+#   info_2: "Maintainer: Bob Coder"
+#   links:
+#     - text: "View on GitHub"
+#       url: "#"
+#       color: "#fff"
+#     - text: "Read Docs"
+#       url: "#"
+#       color: "#000" # Black text for contrast on yellow
 
-- title: "Solver++"
-  summary: "High-performance C++ solver"
-  language: "C++"
-  info_1: "License: GPLv3"
-  info_2: "Downloads: 10k+"
-  links:
-    - text: "View on GitHub"
-      url: "#"
-      color: "#fff"
+# - title: "Solver++"
+#   summary: "High-performance C++ solver"
+#   language: "C++"
+#   info_1: "License: GPLv3"
+#   info_2: "Downloads: 10k+"
+#   links:
+#     - text: "View on GitHub"
+#       url: "#"
+#       color: "#fff"
 
 - title: "NeuroMANCER"
   summary: "High-performance C++ solver"

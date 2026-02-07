@@ -67,7 +67,7 @@
       <link>//localhost:1313/software.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/software.html</guid>
-      <description>&lt;p&gt;We believe in open science. All our tools are available on GitHub.&lt;/p&gt;
+      <description>&lt;p&gt;We believe in open science. All our tools are available on GitHub. The group is also activaly contributing and mantaining the following libraries:&lt;/p&gt;
 &lt;style&gt;
    
   .research-grid {
@@ -158,8 +158,8 @@
     &lt;div class=&#34;flash-card-inner&#34;&gt;
       
       &lt;div class=&#34;flash-card-front&#34;&gt;
-        &lt;h3 style=&#34;margin-bottom: 10px;&#34;&gt;PyFluids-AI&lt;/h3&gt;
-        &lt;p&gt;Python Library for CFD &amp;#43; ML&lt;/p&gt;</description>
+        &lt;h3 style=&#34;margin-bottom: 10px;&#34;&gt;NeuroMANCER&lt;/h3&gt;
+        &lt;p&gt;High-performance C&amp;#43;&amp;#43; solver&lt;/p&gt;</description>
     </item>
     <item>
       <title>Our Team</title>
@@ -265,7 +265,7 @@
   &lt;div class=&#34;people-grid&#34;&gt;
     
     &lt;div class=&#34;person-card&#34;&gt;
-      &lt;img src=&#34;https://via.placeholder.com/150&#34; class=&#34;person-img&#34;&gt;
+      &lt;img src=&#34;images/jan-pic.webp&#34; class=&#34;person-img&#34;&gt;
       &lt;h3&gt;Prof. Ján Drgoňa&lt;/h3&gt;
       &lt;p&gt;&lt;i&gt;Associate Professor&lt;/i&gt;&lt;/p&gt;</description>
     </item>

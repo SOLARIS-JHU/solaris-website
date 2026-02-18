@@ -1,4 +1,2 @@
-- passare da giallo a blu (blu di solaris)
-- capire dove e come mettere il loghino (magari chiedi anche a jan)
-- piazzare delle altre info e vedere workflow bene bene
-- chiedi a jan che ne pensa
+- immagine leandro e cose leandro
+- immagine honghui e cose honghui

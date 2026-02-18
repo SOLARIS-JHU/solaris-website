@@ -1,7 +1,7 @@
 pi:
   - name: "Prof. Ján Drgoňa"
     role: "Associate Professor"
-    focus: "abc"
+    focus: "Differentiable Programming, Scientific Machine Learning"
     image: "images/jan-pic.webp"
     links:
       - text: "email"
@@ -46,13 +46,13 @@ postdocs:
 students:
   - name: "Honghui Zheng"
     role: "PhD Student (Joined Fall 2025)"
-    focus: "xyz"
-    image: "images/mali.jpg"
+    focus: "Learning to Optimize, Learning to Control, Mixed-Integer Programming"
+    image: "images/mali-mali-mali.jpg"
     links:
       - text: "email"
         url: "mailto:hzheng39@jh.edu"
-      # - text: "Scholar"
-      #   url: "#"
+      - text: "Scholar"
+        url: "https://scholar.google.com/citations?user=3AjQl3IAAAAJ&hl=en&authuser=1"
       # - text: "Personal Website"
       #   url: "#"
       - text: "Linkedin"
@@ -72,3 +72,17 @@ students:
         url: "https://amm.zanotp.com//"
       - text: "Linkedin"
         url: "https://www.linkedin.com/in/pietro-zanotta/"
+
+  - name: "Leandro von Krannichfeldt"
+    role: "Visiting PhD Student (Spring 2026)"
+    focus: "Hybrid Digital Twins for Building Energy Systems"
+    image: "images/leandro-pic.jpeg"
+    links:
+      - text: "email"
+        url: "mailto:leandro.vonkrannichfeldt@epfl.ch"
+      - text: "Scholar"
+        url: "https://scholar.google.com/citations?user=owpPixUAAAAJ&hl=en&oi=ao"
+      # - text: "Personal Website"
+      #   url: ""
+      - text: "Linkedin"
+        url: "https://www.linkedin.com/in/vonkrannichfeldtleandro//"

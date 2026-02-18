@@ -1,19 +1,55 @@
-- area: "Decision-Focused Learning"
-  description: "Bridging the gap between prediction and prescription by embedding optimization solvers into deep learning architectures for end-to-end decision-making."
+# - title: ""
+#   summary: ""
+#   lead: ""
+#   links:
+#   - text: "Preprint"
+#     url: ""
+
+- area: "Learning to Optimize (L2O)"
+  description: "Accelerating the solution of complex, constrained optimization problems through solver-free, self-supervised learning frameworks."
   projects:
-    - title: "Decision Focused Learning for Pumped Hydro"
-      summary: "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning."
-      lead: "Honghui Zheng"
+    - title: "Learning to Optimize for Mixed-Integer Non-linear Programming with Feasibility Guarantees"
+      summary: "L2O framework addressing parametric MINLP by integrating integer correction layers for adaptive rounding with projections to ensure feasibility"
+      lead: "Bo Tang"
       links:
-        - text: "Preprint"
-          url: "https://arxiv.org/abs/2512.20880"
-        - text: "Code"
-          url: "https://github.com/SOLARIS-JHU/DFL-UPHES"
+      - text: "Preprint"
+        url: "https://arxiv.org/abs/2410.11061"
+
+    - title: "Learning to Solve Constrained Bilevel Control Co-Design Problems"
+      summary: "Self-supervised L2O framework solving constrained bilevel control co-design problems trough control with enforced coupling constraints"
+      lead: "James Kotary"
+      links:
+      - text: "Preprint"
+        url: "https://arxiv.org/abs/2507.09050"
 
   
+- area: "Learning to Control (L2C)"
+  description: "Synthesizing constrained neural control policies for nonlinear and infinite-dimensional systems via differentiable predictive control and offline self-supervised learning."
+  projects:
+    - title: "Learning to Solve Parametric Mixed-Integer Optimal Control Problems via DPC"
+      summary: "Achieving near-optimal control performance via DPC in input- and state-constrained parametric mixed-integer optimal control problems."
+      lead: "Ján Boldocký"
+      links:
+        - text: "Preprint"
+          url: "https://arxiv.org/abs/2506.19646"
+    
+    - title: "Zero-Shot Function Encoder-Based Differentiable Predictive Control"
+      summary: "Integrating Function Encoder-based Neural ODEs with DPC to enable zero-shot control of nonlinear systems"
+      lead: "Hassan Iqbal"
+      links:
+        - text: "Preprint"
+          url: "https://arxiv.org/abs/2511.05757"
+   
+    - title: "Learning to Control PDEs with Differentiable Predictive Control and Time-Integrated Neural Operators"
+      summary: "End-to-end framework integrating Time-Integrated DeepONets with DPC to enable the offline, self-supervised optimization of control policies for PDEs"
+      lead: "Dibakar Roy Sarkar"
+      links:
+        - text: "Preprint"
+          url: "https://arxiv.org/abs/2511.08992"
+   
 
-- area: "Optimization"
-  description: "Developing robust mathematical frameworks for complex system optimization."
+- area: "Model Predictive Control (MPC)"
+  description: "TODO."
   projects:
     - title: "Quadratic Programming"
       summary: "A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP."
@@ -37,3 +73,49 @@
       links:
         - text: "Preprint"
           url: "https://arxiv.org/abs/2601.11901"
+
+
+- area: "Differentiable Programming"
+  description: "Integrating differentiability into engineering modeling frameworks to enable gradient-based learning, verification, and design optimization."
+  projects:
+    - title: "∂CBDs: Differentiable Causal Block Diagrams"
+      summary: "Integrating causal block diagrams, differentiability for learning and contract-based verification frameworks."
+      lead: "Thomas Beckers"
+      links:
+        - text: "Preprint"
+          url: "https://www.arxiv.org/abs/2602.07581"  
+  
+
+- area: "Energy systems"
+  description: "Enhancing the operation and scheduling of energy storage and grid systems through decision-focused learning and advanced optimization."
+  projects:
+    - title: "Decision Focused Learning for Pumped Hydro"
+      summary: "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning."
+      lead: "Honghui Zheng"
+      links:
+        - text: "Preprint"
+          url: "https://arxiv.org/abs/2512.20880"
+        - text: "Code"
+          url: "https://github.com/SOLARIS-JHU/DFL-UPHES"
+
+
+- area: "Scientific Machine Learning (SciML)"
+  description: "Bridging physics-based modeling with machine learning to ensure safety, stability, and physical consistency in data-driven representations of dynamical systems."
+  projects:
+  - title: "Safe Physics-informed Machine Learning for Dynamics and Control"
+    summary: "Tutorial paper provides a comprehensive overview of safe physics-informed machine learning for dynamics and control."
+    lead: "Ján Drgoňa"
+    links:
+      - text: "Paper"
+        url: "https://ieeexplore.ieee.org/abstract/document/11107836"
+
+  
+- area: "Nonlinear System Identification"
+  description: "Advancing data-driven modeling of complex dynamics."
+  projects:
+  - title: "Learning Neural Differential Algebraic Equations via Operator Splitting"
+    summary: "Introducing an operator splitting numerical integration scheme for learning Neural Differential Algebraic Equations."
+    lead: "James Koch"
+    links:
+      - text: "Paper"
+        url: "https://ieeexplore.ieee.org/abstract/document/11312239"

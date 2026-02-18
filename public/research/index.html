@@ -12,11 +12,82 @@
 
 
   
+    
+      
+        Learning to Optimize (L2O)
+      
+    
+      
+        Learning to Control (L2C)
+      
+    
+      
+        Model Predictive Control (MPC)
+      
+    
+      
+        Differentiable Programming
+      
+    
+      
+        Energy systems
+      
+    
+      
+        Scientific Machine Learning (SciML)
+      
+    
+      
+        Nonlinear System Identification
+      
+    
+  
+
+
+
+
   
     
+      
+        
+          Learning to Optimize (L2O)
+        
+      
+        
+          Learning to Control (L2C)
+        
+      
+        
+          Model Predictive Control (MPC)
+        
+      
+        
+          Differentiable Programming
+        
+      
+        
+          Energy systems
+        
+      
+        
+          Scientific Machine Learning (SciML)
+        
+      
+        
+          Nonlinear System Identification
+        
+      
     
-      Decision-Focused Learning
-      Bridging the gap between prediction and prescription by embedding optimization solvers into deep learning architectures for end-to-end decision-making.">
+  
+
+  
+    
+      
+      
+        
+        
+          Learning to Optimize (L2O)
+          Accelerating the solution of complex, constrained optimization problems through solver-free, self-supervised learning frameworks.">
 <meta name="author" content="">
 <link rel="canonical" href="//localhost:1313/research/index.html">
 <link crossorigin="anonymous" href="../assets/css/stylesheet.a29c24210eb31d9ce56f669c66a35c9c51b17376b7764e336a49af7dec914cf0.css" integrity="sha256-opwkIQ6zHZzlb2acZqNcnFGxc3a3dk4zakmvfeyRTPA=" rel="preload stylesheet" as="style">
@@ -94,16 +165,81 @@
     Our Research
   </h1>
 </header>
-<div class="post-content"><style>
+<div class="post-content">
+
+
+
+
+
+<style>
    
-  .research-container {
-    max-width: 1200px;
+  
+   
+  .layout-wrapper {
+    display: grid;
+    grid-template-columns: 220px 1fr;  
+    gap: 60px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
+    align-items: start;
   }
 
+   
+  .sidebar-nav {
+    position: sticky;
+    top: 50px;
+    padding-right: 20px;
+    border-right: 1px solid rgba(0, 242, 255, 0.1);  
+  }
+
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-link {
+    display: block;
+    color: #b0c4de;  
+    text-decoration: none;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-left: 2px solid transparent;
+    padding-left: 10px;
+  }
+
+  .nav-link:hover {
+    color: #00f2ff;
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
+  }
+
+   
+  .nav-link.active {
+    color: #00f2ff;
+    border-left: 2px solid #00f2ff;
+    padding-left: 15px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.4);
+    background: linear-gradient(90deg, rgba(0, 242, 255, 0.05), transparent);
+  }
+
+   
+  .mobile-nav-wrapper { display: none; }
+
+   
+
+   
+  .research-content { min-width: 0; }
+
   .macro-area {
-    margin-bottom: 80px;  
+    scroll-margin-top: 60px;  
+    margin-bottom: 80px; 
   }
 
   .area-title {
@@ -133,12 +269,10 @@
    
   .research-grid {
     display: grid;
-    grid-template-columns: 1fr;
+     
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding: 20px 0;
-  }
-  @media (min-width: 900px) {
-    .research-grid { grid-template-columns: repeat(3, 1fr); }
   }
 
    
@@ -149,7 +283,6 @@
     perspective: 1000px;
   }
   
-   
   .flash-card-inner {
     position: relative;
     width: 100%;
@@ -161,7 +294,6 @@
   }
   .flash-card:hover .flash-card-inner { transform: rotateY(180deg); }
   
-   
   .flash-card-front, .flash-card-back {
     position: absolute;
     width: 100%;
@@ -170,11 +302,11 @@
     backface-visibility: hidden;
     
      
-    background-color: #13224a;        
-    border: 1px solid #00f2ff;        
-    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);  
+    background-color: #13224a;      
+    border: 1px solid #00f2ff;      
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2); 
     border-radius: 12px;
-    color: #e0e7ff;                   
+    color: #e0e7ff;                 
     
     display: flex;
     flex-direction: column;
@@ -183,49 +315,31 @@
     box-sizing: border-box;
   }
 
-   
-  .flash-card-front {
-    justify-content: center;  
-  }
+  .flash-card-front { justify-content: center; }
 
   .flash-card-front h3 {
-    color: #e0e7ff;     
+    color: #e0e7ff;    
     font-size: 1.25rem;
-    font-weight: 400;   
-    text-transform: none;  
+    font-weight: 400;  
+    text-transform: none; 
     letter-spacing: normal;
-    text-shadow: none;  
+    text-shadow: none; 
     margin: 0;
     line-height: 1.5;
   }
 
-   
   .flash-card-back {
-    background-color: #0a1128;        
+    background-color: #0a1128;      
     transform: rotateY(180deg);
-    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);  
-    justify-content: space-between;   
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4); 
+    justify-content: space-between;  
     padding: 30px 20px;
   }
 
-  .card-summary {
-    font-style: italic;
-    font-size: 0.95rem;
-    color: #fff;
-    margin-bottom: 15px;
-  }
-
-  .card-meta {
-    font-size: 0.85rem;
-    color: #a0aec0;
-    width: 100%;
-  }
+  .card-summary { font-style: italic; font-size: 0.95rem; color: #fff; margin-bottom: 15px; }
+  .card-meta { font-size: 0.85rem; color: #a0aec0; width: 100%; }
   
-   
-  .card-links {
-    margin-top: auto; 
-  }
-
+  .card-links { margin-top: auto; }
   .card-links a {
       color: #00f2ff !important;
       font-weight: bold;
@@ -238,145 +352,550 @@
       text-shadow: 0 0 8px #00f2ff;
       text-decoration: underline;
   }
+
+   
+  @media (max-width: 1000px) {
+    .layout-wrapper {
+      grid-template-columns: 1fr;  
+      padding: 20px;
+      gap: 30px;
+    }
+    .sidebar-nav { display: none; }  
+    
+     
+    .mobile-nav-wrapper {
+      display: block;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(19, 34, 74, 0.95);  
+      border-bottom: 1px solid #00f2ff;
+      padding: 15px 0;
+    }
+    .mobile-nav-list {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 0 20px;
+      scrollbar-width: none;
+    }
+    .mobile-link {
+      color: #b0c4de;
+      white-space: nowrap;
+      text-decoration: none;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+    }
+    .mobile-link.active {
+      color: #fff;
+      border-color: #00f2ff;
+      text-shadow: 0 0 8px #00f2ff;
+    }
+  }
 </style>
 
-<div class="research-container">
 
-  
-  <div class="macro-area">
+<div class="mobile-nav-wrapper">
+  <div class="mobile-nav-list">
     
-    <div class="area-header">
-      <h2 class="area-title">Decision-Focused Learning</h2>
-      <p class="area-desc">Bridging the gap between prediction and prescription by embedding optimization solvers into deep learning architectures for end-to-end decision-making.</p>
-    </div>
-
-    <div class="research-grid">
-      
-      <div class="flash-card">
-        <div class="flash-card-inner">
-          
-          <div class="flash-card-front">
-            <h3>Decision Focused Learning for Pumped Hydro</h3>
-          </div>
-          
-          <div class="flash-card-back">
-            <p class="card-summary">Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning.</p>
-            
-            <div class="card-meta">
-              <p><strong>Lead:</strong> Honghui Zheng</p>
-              
-            </div>
-            
-            <div class="card-links">
-               
-                 <a href="https://arxiv.org/abs/2512.20880">[Preprint]</a>
-               
-                 <a href="https://github.com/SOLARIS-JHU/DFL-UPHES">[Code]</a>
-               
-            </div>
-          </div>
-
-        </div>
-      </div>
-       </div>
-  
-  </div>
-  
-  <hr class="area-divider">
-  
-  
-  <div class="macro-area">
+      <a href="#learning-to-optimize-l2o" class="mobile-link nav-tracker" data-target="learning-to-optimize-l2o">
+        Learning to Optimize (L2O)
+      </a>
     
-    <div class="area-header">
-      <h2 class="area-title">Optimization</h2>
-      <p class="area-desc">Developing robust mathematical frameworks for complex system optimization.</p>
-    </div>
-
-    <div class="research-grid">
-      
-      <div class="flash-card">
-        <div class="flash-card-inner">
-          
-          <div class="flash-card-front">
-            <h3>Quadratic Programming</h3>
-          </div>
-          
-          <div class="flash-card-back">
-            <p class="card-summary">A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP.</p>
-            
-            <div class="card-meta">
-              <p><strong>Lead:</strong> Liang Wu</p>
-              
-            </div>
-            
-            <div class="card-links">
-               
-                 <a href="https://ieeexplore.ieee.org/abstract/document/11313851">[Paper]</a>
-               
-            </div>
-          </div>
-
-        </div>
-      </div>
-      
-      <div class="flash-card">
-        <div class="flash-card-inner">
-          
-          <div class="flash-card-front">
-            <h3>πMPC</h3>
-          </div>
-          
-          <div class="flash-card-back">
-            <p class="card-summary">Parallel-in horizon and construction-free nonlinear MPC algorithm.</p>
-            
-            <div class="card-meta">
-              <p><strong>Lead:</strong> Liang Wu</p>
-              
-            </div>
-            
-            <div class="card-links">
-               
-                 <a href="https://arxiv.org/abs/2601.14414">[Preprint]</a>
-               
-                 <a href="https://github.com/SOLARIS-JHU/PiMPC.jl">[Code]</a>
-               
-            </div>
-          </div>
-
-        </div>
-      </div>
-      
-      <div class="flash-card">
-        <div class="flash-card-inner">
-          
-          <div class="flash-card-front">
-            <h3> Koopman-based MPC</h3>
-          </div>
-          
-          <div class="flash-card-back">
-            <p class="card-summary">Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control.</p>
-            
-            <div class="card-meta">
-              <p><strong>Lead:</strong> Liang Wu</p>
-              
-            </div>
-            
-            <div class="card-links">
-               
-                 <a href="https://arxiv.org/abs/2601.11901">[Preprint]</a>
-               
-            </div>
-          </div>
-
-        </div>
-      </div>
-       </div>
-  
+      <a href="#learning-to-control-l2c" class="mobile-link nav-tracker" data-target="learning-to-control-l2c">
+        Learning to Control (L2C)
+      </a>
+    
+      <a href="#model-predictive-control-mpc" class="mobile-link nav-tracker" data-target="model-predictive-control-mpc">
+        Model Predictive Control (MPC)
+      </a>
+    
+      <a href="#differentiable-programming" class="mobile-link nav-tracker" data-target="differentiable-programming">
+        Differentiable Programming
+      </a>
+    
+      <a href="#energy-systems" class="mobile-link nav-tracker" data-target="energy-systems">
+        Energy systems
+      </a>
+    
+      <a href="#scientific-machine-learning-sciml" class="mobile-link nav-tracker" data-target="scientific-machine-learning-sciml">
+        Scientific Machine Learning (SciML)
+      </a>
+    
+      <a href="#nonlinear-system-identification" class="mobile-link nav-tracker" data-target="nonlinear-system-identification">
+        Nonlinear System Identification
+      </a>
+    
   </div>
-  
-  <hr class="area-divider">
-  
-   </div>
+</div>
+
+<div class="layout-wrapper">
+
+  <aside class="sidebar-nav">
+    <nav class="nav-list">
+      
+        <a href="#learning-to-optimize-l2o" class="nav-link nav-tracker" data-target="learning-to-optimize-l2o">
+          Learning to Optimize (L2O)
+        </a>
+      
+        <a href="#learning-to-control-l2c" class="nav-link nav-tracker" data-target="learning-to-control-l2c">
+          Learning to Control (L2C)
+        </a>
+      
+        <a href="#model-predictive-control-mpc" class="nav-link nav-tracker" data-target="model-predictive-control-mpc">
+          Model Predictive Control (MPC)
+        </a>
+      
+        <a href="#differentiable-programming" class="nav-link nav-tracker" data-target="differentiable-programming">
+          Differentiable Programming
+        </a>
+      
+        <a href="#energy-systems" class="nav-link nav-tracker" data-target="energy-systems">
+          Energy systems
+        </a>
+      
+        <a href="#scientific-machine-learning-sciml" class="nav-link nav-tracker" data-target="scientific-machine-learning-sciml">
+          Scientific Machine Learning (SciML)
+        </a>
+      
+        <a href="#nonlinear-system-identification" class="nav-link nav-tracker" data-target="nonlinear-system-identification">
+          Nonlinear System Identification
+        </a>
+      
+    </nav>
+  </aside>
+
+  <div class="research-content">
+    
+      
+      <div id="learning-to-optimize-l2o" class="macro-area section-to-track">
+        
+        <div class="area-header">
+          <h2 class="area-title">Learning to Optimize (L2O)</h2>
+          <p class="area-desc">Accelerating the solution of complex, constrained optimization problems through solver-free, self-supervised learning frameworks.</p>
+        </div>
+
+        <div class="research-grid">
+          
+          <div class="flash-card">
+            <div class="flash-card-inner">
+              
+              <div class="flash-card-front">
+                <h3>Learning to Optimize for Mixed-Integer Non-linear Programming with Feasibility Guarantees</h3>
+              </div>
+              
+              <div class="flash-card-back">
+                <p class="card-summary">L2O framework addressing parametric MINLP by integrating integer correction layers for adaptive rounding with projections to ensure feasibility</p>
+                
+                <div class="card-meta">
+                  <p><strong>Lead:</strong> Bo Tang</p>
+                  
+                </div>
+                
+                <div class="card-links">
+                   
+                     <a href="https://arxiv.org/abs/2410.11061">[Preprint]</a>
+                   
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <div class="flash-card">
+            <div class="flash-card-inner">
+              
+              <div class="flash-card-front">
+                <h3>Learning to Solve Constrained Bilevel Control Co-Design Problems</h3>
+              </div>
+              
+              <div class="flash-card-back">
+                <p class="card-summary">Self-supervised L2O framework solving constrained bilevel control co-design problems trough control with enforced coupling constraints</p>
+                
+                <div class="card-meta">
+                  <p><strong>Lead:</strong> James Kotary</p>
+                  
+                </div>
+                
+                <div class="card-links">
+                   
+                     <a href="https://arxiv.org/abs/2507.09050">[Preprint]</a>
+                   
+                </div>
+              </div>
+
+            </div>
+          </div>
+           
+        </div> </div> <hr class="area-divider">
+      
+    
+      
+      <div id="learning-to-control-l2c" class="macro-area section-to-track">
+        
+        <div class="area-header">
+          <h2 class="area-title">Learning to Control (L2C)</h2>
+          <p class="area-desc">Synthesizing constrained neural control policies for nonlinear and infinite-dimensional systems via differentiable predictive control and offline self-supervised learning.</p>
+        </div>
+
+        <div class="research-grid">
+          
+          <div class="flash-card">
+            <div class="flash-card-inner">
+              
+              <div class="flash-card-front">
+                <h3>Learning to Solve Parametric Mixed-Integer Optimal Control Problems via DPC</h3>
+              </div>
+              
+              <div class="flash-card-back">
+                <p class="card-summary">Achieving near-optimal control performance via DPC in input- and state-constrained parametric mixed-integer optimal control problems.</p>
+                
+                <div class="card-meta">
+                  <p><strong>Lead:</strong> Ján Boldocký</p>
+                  
+                </div>
+                
+                <div class="card-links">
+                   
+                     <a href="https://arxiv.org/abs/2506.19646">[Preprint]</a>
+                   
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <div class="flash-card">
+            <div class="flash-card-inner">
+              
+              <div class="flash-card-front">
+                <h3>Zero-Shot Function Encoder-Based Differentiable Predictive Control</h3>
+              </div>
+              
+              <div class="flash-card-back">
+                <p class="card-summary">Integrating Function Encoder-based Neural ODEs with DPC to enable zero-shot control of nonlinear systems</p>
+                
+                <div class="card-meta">
+                  <p><strong>Lead:</strong> Hassan Iqbal</p>
+                  
+                </div>
+                
+                <div class="card-links">
+                   
+                     <a href="https://arxiv.org/abs/2511.05757">[Preprint]</a>
+                   
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <div class="flash-card">
+            <div class="flash-card-inner">
+              
+              <div class="flash-card-front">
+                <h3>Learning to Control PDEs with Differentiable Predictive Control and Time-Integrated Neural Operators</h3>
+              </div>
+              
+              <div class="flash-card-back">
+                <p class="card-summary">End-to-end framework integrating Time-Integrated DeepONets with DPC to enable the offline, self-supervised optimization of control policies for PDEs</p>
+                
+                <div class="card-meta">
+                  <p><strong>Lead:</strong> Dibakar Roy Sarkar</p>
+                  
+                </div>
+                
+                <div class="card-links">
+                   
+                     <a href="https://arxiv.org/abs/2511.08992">[Preprint]</a>
+                   
+                </div>
+              </div>
+
+            </div>
+          </div>
+           
+        </div> </div> <hr class="area-divider">
+      
+    
+      
+      <div id="model-predictive-control-mpc" class="macro-area section-to-track">
+        
+        <div class="area-header">
+          <h2 class="area-title">Model Predictive Control (MPC)</h2>
+          <p class="area-desc">TODO.</p>
+        </div>
+
+        <div class="research-grid">
+          
+          <div class="flash-card">
+            <div class="flash-card-inner">
+              
+              <div class="flash-card-front">
+                <h3>Quadratic Programming</h3>
+              </div>
+              
+              <div class="flash-card-back">
+                <p class="card-summary">A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP.</p>
+                
+                <div class="card-meta">
+                  <p><strong>Lead:</strong> Liang Wu</p>
+                  
+                </div>
+                
+                <div class="card-links">
+                   
+                     <a href="https://ieeexplore.ieee.org/abstract/document/11313851">[Paper]</a>
+                   
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <div class="flash-card">
+            <div class="flash-card-inner">
+              
+              <div class="flash-card-front">
+                <h3>πMPC</h3>
+              </div>
+              
+              <div class="flash-card-back">
+                <p class="card-summary">Parallel-in horizon and construction-free nonlinear MPC algorithm.</p>
+                
+                <div class="card-meta">
+                  <p><strong>Lead:</strong> Liang Wu</p>
+                  
+                </div>
+                
+                <div class="card-links">
+                   
+                     <a href="https://arxiv.org/abs/2601.14414">[Preprint]</a>
+                   
+                     <a href="https://github.com/SOLARIS-JHU/PiMPC.jl">[Code]</a>
+                   
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+          <div class="flash-card">
+            <div class="flash-card-inner">
+              
+              <div class="flash-card-front">
+                <h3> Koopman-based MPC</h3>
+              </div>
+              
+              <div class="flash-card-back">
+                <p class="card-summary">Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control.</p>
+                
+                <div class="card-meta">
+                  <p><strong>Lead:</strong> Liang Wu</p>
+                  
+                </div>
+                
+                <div class="card-links">
+                   
+                     <a href="https://arxiv.org/abs/2601.11901">[Preprint]</a>
+                   
+                </div>
+              </div>
+
+            </div>
+          </div>
+           
+        </div> </div> <hr class="area-divider">
+      
+    
+      
+      <div id="differentiable-programming" class="macro-area section-to-track">
+        
+        <div class="area-header">
+          <h2 class="area-title">Differentiable Programming</h2>
+          <p class="area-desc">Integrating differentiability into engineering modeling frameworks to enable gradient-based learning, verification, and design optimization.</p>
+        </div>
+
+        <div class="research-grid">
+          
+          <div class="flash-card">
+            <div class="flash-card-inner">
+              
+              <div class="flash-card-front">
+                <h3>∂CBDs: Differentiable Causal Block Diagrams</h3>
+              </div>
+              
+              <div class="flash-card-back">
+                <p class="card-summary">Integrating causal block diagrams, differentiability for learning and contract-based verification frameworks.</p>
+                
+                <div class="card-meta">
+                  <p><strong>Lead:</strong> Thomas Beckers</p>
+                  
+                </div>
+                
+                <div class="card-links">
+                   
+                     <a href="https://www.arxiv.org/abs/2602.07581">[Preprint]</a>
+                   
+                </div>
+              </div>
+
+            </div>
+          </div>
+           
+        </div> </div> <hr class="area-divider">
+      
+    
+      
+      <div id="energy-systems" class="macro-area section-to-track">
+        
+        <div class="area-header">
+          <h2 class="area-title">Energy systems</h2>
+          <p class="area-desc">Enhancing the operation and scheduling of energy storage and grid systems through decision-focused learning and advanced optimization.</p>
+        </div>
+
+        <div class="research-grid">
+          
+          <div class="flash-card">
+            <div class="flash-card-inner">
+              
+              <div class="flash-card-front">
+                <h3>Decision Focused Learning for Pumped Hydro</h3>
+              </div>
+              
+              <div class="flash-card-back">
+                <p class="card-summary">Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning.</p>
+                
+                <div class="card-meta">
+                  <p><strong>Lead:</strong> Honghui Zheng</p>
+                  
+                </div>
+                
+                <div class="card-links">
+                   
+                     <a href="https://arxiv.org/abs/2512.20880">[Preprint]</a>
+                   
+                     <a href="https://github.com/SOLARIS-JHU/DFL-UPHES">[Code]</a>
+                   
+                </div>
+              </div>
+
+            </div>
+          </div>
+           
+        </div> </div> <hr class="area-divider">
+      
+    
+      
+      <div id="scientific-machine-learning-sciml" class="macro-area section-to-track">
+        
+        <div class="area-header">
+          <h2 class="area-title">Scientific Machine Learning (SciML)</h2>
+          <p class="area-desc">Bridging physics-based modeling with machine learning to ensure safety, stability, and physical consistency in data-driven representations of dynamical systems.</p>
+        </div>
+
+        <div class="research-grid">
+          
+          <div class="flash-card">
+            <div class="flash-card-inner">
+              
+              <div class="flash-card-front">
+                <h3>Safe Physics-informed Machine Learning for Dynamics and Control</h3>
+              </div>
+              
+              <div class="flash-card-back">
+                <p class="card-summary">Tutorial paper provides a comprehensive overview of safe physics-informed machine learning for dynamics and control.</p>
+                
+                <div class="card-meta">
+                  <p><strong>Lead:</strong> Ján Drgoňa</p>
+                  
+                </div>
+                
+                <div class="card-links">
+                   
+                     <a href="https://ieeexplore.ieee.org/abstract/document/11107836">[Paper]</a>
+                   
+                </div>
+              </div>
+
+            </div>
+          </div>
+           
+        </div> </div> <hr class="area-divider">
+      
+    
+      
+      <div id="nonlinear-system-identification" class="macro-area section-to-track">
+        
+        <div class="area-header">
+          <h2 class="area-title">Nonlinear System Identification</h2>
+          <p class="area-desc">Advancing data-driven modeling of complex dynamics.</p>
+        </div>
+
+        <div class="research-grid">
+          
+          <div class="flash-card">
+            <div class="flash-card-inner">
+              
+              <div class="flash-card-front">
+                <h3>Learning Neural Differential Algebraic Equations via Operator Splitting</h3>
+              </div>
+              
+              <div class="flash-card-back">
+                <p class="card-summary">Introducing an operator splitting numerical integration scheme for learning Neural Differential Algebraic Equations.</p>
+                
+                <div class="card-meta">
+                  <p><strong>Lead:</strong> James Koch</p>
+                  
+                </div>
+                
+                <div class="card-links">
+                   
+                     <a href="https://ieeexplore.ieee.org/abstract/document/11312239">[Paper]</a>
+                   
+                </div>
+              </div>
+
+            </div>
+          </div>
+           
+        </div> </div> <hr class="area-divider">
+      
+     
+  </div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll(".section-to-track");
+  const allNavLinks = document.querySelectorAll(".nav-tracker");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const targetId = entry.target.getAttribute("id");
+        
+        
+        allNavLinks.forEach(link => link.classList.remove("active"));
+        
+        const activeLinks = document.querySelectorAll(`.nav-tracker[data-target="${targetId}"]`);
+        activeLinks.forEach(link => {
+          link.classList.add("active");
+          
+          if (link.classList.contains('mobile-link')) {
+             link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          }
+        });
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "-10% 0px -60% 0px" });
+
+  sections.forEach(section => observer.observe(section));
+});
+</script>
 
 
 </div>

@@ -44,3 +44,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          hugo-version: '0.155.2'
+          extended: true

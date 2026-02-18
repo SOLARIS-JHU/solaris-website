@@ -3,9 +3,6 @@ languageCode: "en-us"
 title: "Solaris Lab"
 theme: "PaperMod"
 
-author:
-  name: "Solaris Lab"
-
 relativeURLs: true
 uglyURLs: true
 
@@ -55,7 +52,6 @@ menu:
       pageRef: /contact
       weight: 60
 
-# 3. MARKUP SECTION (Must be at the far left, NOT indented!)
 markup:
   goldmark:
     renderer:

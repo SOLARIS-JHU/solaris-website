@@ -3,6 +3,9 @@ languageCode: "en-us"
 title: "Solaris Lab"
 theme: "PaperMod"
 
+author:
+  name: "Solaris Lab"
+
 relativeURLs: true
 uglyURLs: true
 

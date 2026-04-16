@@ -167,10 +167,6 @@
 </header>
 <div class="post-content">
 
-
-
-
-
 <style>
    
   
@@ -313,19 +309,23 @@
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
+    overflow: hidden;  
   }
 
   .flash-card-front { justify-content: center; }
 
   .flash-card-front h3 {
     color: #e0e7ff;    
-    font-size: 1.25rem;
+    font-size: 1.1rem;  
     font-weight: 400;  
     text-transform: none; 
     letter-spacing: normal;
     text-shadow: none; 
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.4;  
+    width: 100%;
+    overflow-wrap: break-word;  
+    word-wrap: break-word;
   }
 
   .flash-card-back {
@@ -498,6 +498,8 @@
                    
                      <a href="https://arxiv.org/abs/2410.11061">[Preprint]</a>
                    
+                     <a href="https://github.com/pnnl/L2O-MINLP">[GitHub]</a>
+                   
                 </div>
               </div>
 
@@ -522,6 +524,8 @@
                 <div class="card-links">
                    
                      <a href="https://arxiv.org/abs/2507.09050">[Preprint]</a>
+                   
+                     <a href="https://github.com/anon-research-coding/Control-Design-Learning">[GitHub]</a>
                    
                 </div>
               </div>
@@ -611,6 +615,8 @@
                    
                      <a href="https://arxiv.org/abs/2511.08992">[Preprint]</a>
                    
+                     <a href="https://github.com/Centrum-IntelliPhysics/PDEControl_DPC">[GitHub]</a>
+                   
                 </div>
               </div>
 
@@ -625,7 +631,7 @@
         
         <div class="area-header">
           <h2 class="area-title">Model Predictive Control (MPC)</h2>
-          <p class="area-desc">TODO.</p>
+          <p class="area-desc">Advancing the computational efficiency, real-time execution, and predictive accuracy of linear and nonlinear Model Predictive Control systems through novel solver architectures and data-driven dynamics learning.</p>
         </div>
 
         <div class="research-grid">
@@ -634,11 +640,11 @@
             <div class="flash-card-inner">
               
               <div class="flash-card-front">
-                <h3>Quadratic Programming</h3>
+                <h3>A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP</h3>
               </div>
               
               <div class="flash-card-back">
-                <p class="card-summary">A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP.</p>
+                <p class="card-summary">A time-certified predictor-corrector interior-point algorithm guarantees deterministic execution times and strict iteration complexity bounds for solving box-constrained quadratic programs in real-time model predictive control.</p>
                 
                 <div class="card-meta">
                   <p><strong>Lead:</strong> Liang Wu</p>
@@ -649,6 +655,8 @@
                    
                      <a href="https://ieeexplore.ieee.org/abstract/document/11313851">[Paper]</a>
                    
+                     <a href="https://github.com/liangwu2019/PC_BoxQP">[GitHub]</a>
+                   
                 </div>
               </div>
 
@@ -659,11 +667,11 @@
             <div class="flash-card-inner">
               
               <div class="flash-card-front">
-                <h3>πMPC</h3>
+                <h3>πMPC: A Parallel-in-horizon and Construction-free NMPC Solver</h3>
               </div>
               
               <div class="flash-card-back">
-                <p class="card-summary">Parallel-in horizon and construction-free nonlinear MPC algorithm.</p>
+                <p class="card-summary">The MPC algorithm delivers a construction-free, parallel-in-horizon nonlinear model predictive control solver by combining a novel variable-splitting scheme with a velocity-based system representation to enable highly efficient execution directly on system matrices.</p>
                 
                 <div class="card-meta">
                   <p><strong>Lead:</strong> Liang Wu</p>
@@ -674,7 +682,7 @@
                    
                      <a href="https://arxiv.org/abs/2601.14414">[Preprint]</a>
                    
-                     <a href="https://github.com/SOLARIS-JHU/PiMPC.jl">[Code]</a>
+                     <a href="https://github.com/SOLARIS-JHU/PiMPC.jl">[GitHub]</a>
                    
                 </div>
               </div>
@@ -686,11 +694,11 @@
             <div class="flash-card-inner">
               
               <div class="flash-card-front">
-                <h3> Koopman-based MPC</h3>
+                <h3>Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control</h3>
               </div>
               
               <div class="flash-card-back">
-                <p class="card-summary">Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control.</p>
+                <p class="card-summary">Learning long-horizon dynamics thorugh convex multi-step Koopman framework while completely bypassing the compounding prediction errors that plague traditional single-step models.</p>
                 
                 <div class="card-meta">
                   <p><strong>Lead:</strong> Liang Wu</p>
@@ -700,6 +708,8 @@
                 <div class="card-links">
                    
                      <a href="https://arxiv.org/abs/2601.11901">[Preprint]</a>
+                   
+                     <a href="https://github.com/SOLARIS-JHU/Multi-step-Koopman">[GitHub]</a>
                    
                 </div>
               </div>
@@ -762,11 +772,11 @@
             <div class="flash-card-inner">
               
               <div class="flash-card-front">
-                <h3>Decision Focused Learning for Pumped Hydro</h3>
+                <h3>Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning</h3>
               </div>
               
               <div class="flash-card-back">
-                <p class="card-summary">Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning.</p>
+                <p class="card-summary">This paper presents a decision-focused learning framework for underground pumped hydro energy storage scheduling that uses neural networks to guide recursive linearization.</p>
                 
                 <div class="card-meta">
                   <p><strong>Lead:</strong> Honghui Zheng</p>
@@ -854,6 +864,8 @@
                 <div class="card-links">
                    
                      <a href="https://ieeexplore.ieee.org/abstract/document/11312239">[Paper]</a>
+                   
+                     <a href="https://github.com/pnnl/NeuralDAEs">[GitHub]</a>
                    
                 </div>
               </div>

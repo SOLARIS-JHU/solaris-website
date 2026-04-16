@@ -1,198 +1,4 @@
 <!-- <style>
-  /* --- 1. PAGE LAYOUT & HEADERS (New) --- */
-  .research-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .macro-area {
-    margin-bottom: 80px; /* Space between the different research sections */
-  }
-
-  .area-title {
-    color: #00f2ff;
-    font-size: 2rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
-  }
-
-  .area-desc {
-    color: #b0c4de;
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin-bottom: 30px;
-    line-height: 1.6;
-  }
-
-  .area-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #13224a, transparent);
-    margin-bottom: 50px;
-  }
-
-  /* --- 2. THE GRID --- */
-  .research-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 20px 0;
-  }
-  @media (min-width: 900px) {
-    .research-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-
-  /* --- 3. THE CARD CONTAINER --- */
-  .flash-card {
-    background-color: transparent;
-    width: 100%;
-    height: 300px;
-    perspective: 1000px;
-  }
-  
-  /* --- 4. THE FLIPPER --- */
-  .flash-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transform-style: preserve-3d;
-    cursor: pointer;
-  }
-  .flash-card:hover .flash-card-inner { transform: rotateY(180deg); }
-  
-  /* --- 5. COMMON FRONT & BACK STYLES --- */
-  .flash-card-front, .flash-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    
-    /* SOLARIS CARD BASE */
-    background-color: #13224a;       /* Medium Blue */
-    border: 1px solid #00f2ff;       /* Cyan Border */
-    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2); /* Soft Glow */
-    border-radius: 12px;
-    color: #e0e7ff;                  /* Soft White Text */
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  /* --- 6. FRONT SPECIFIC (Updated for Cleaner Title) --- */
-  .flash-card-front {
-    justify-content: center; /* Ensures title is dead center */
-  }
-
-  .flash-card-front h3 {
-    color: #e0e7ff;    /* Soft white, not bright white */
-    font-size: 1.25rem;
-    font-weight: 400;  /* Regular weight, removed bold */
-    text-transform: none; /* Removed uppercase */
-    letter-spacing: normal;
-    text-shadow: none; /* Removed glow for clean text */
-    margin: 0;
-    line-height: 1.5;
-  }
-
-  /* --- 7. BACK SPECIFIC (Updated Layout) --- */
-  .flash-card-back {
-    background-color: #0a1128;       /* Darker Void Blue */
-    transform: rotateY(180deg);
-    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4); /* Stronger glow */
-    justify-content: space-between;  /* Spreads content out top-to-bottom */
-    padding: 30px 20px;
-  }
-
-  .card-summary {
-    font-style: italic;
-    font-size: 0.95rem;
-    color: #fff;
-    margin-bottom: 15px;
-  }
-
-  .card-meta {
-    font-size: 0.85rem;
-    color: #a0aec0;
-    width: 100%;
-  }
-  
-  /* Links inside the card */
-  .card-links {
-    margin-top: auto; 
-  }
-
-  .card-links a {
-      color: #00f2ff !important;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      margin: 0 8px;
-  }
-  .card-links a:hover {
-      text-shadow: 0 0 8px #00f2ff;
-      text-decoration: underline;
-  }
-</style>
-
-<div class="research-container">
-
-  {{ range .Site.Data.research }}
-  <div class="macro-area">
-    
-    <div class="area-header">
-      <h2 class="area-title">{{ .area }}</h2>
-      <p class="area-desc">{{ .description }}</p>
-    </div>
-
-    <div class="research-grid">
-      {{ range .projects }}
-      <div class="flash-card">
-        <div class="flash-card-inner">
-          
-          <div class="flash-card-front">
-            <h3>{{ .title }}</h3>
-          </div>
-          
-          <div class="flash-card-back">
-            <p class="card-summary">{{ .summary }}</p>
-            
-            <div class="card-meta">
-              <p><strong>Lead:</strong> {{ .lead }}</p>
-              {{ if .funding }}<p><strong>Funding:</strong> {{ .funding }}</p>{{ end }}
-            </div>
-            
-            <div class="card-links">
-               {{ range .links }}
-                 <a href="{{ .url }}">[{{ .text }}]</a>
-               {{ end }}
-            </div>
-          </div>
-
-        </div>
-      </div>
-      {{ end }} </div>
-  
-  </div>
-  
-  <hr class="area-divider">
-  
-  {{ end }} </div>-->
-
-
-
-
-<!-- new version below -->
-<style>
   /* =========================================
      1. NEW LAYOUT WRAPPERS (Structure Only)
      ========================================= */
@@ -353,6 +159,339 @@
     text-shadow: none; 
     margin: 0;
     line-height: 1.5;
+  }
+
+  .flash-card-back {
+    background-color: #0a1128;      
+    transform: rotateY(180deg);
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4); 
+    justify-content: space-between;  
+    padding: 30px 20px;
+  }
+
+  .card-summary { font-style: italic; font-size: 0.95rem; color: #fff; margin-bottom: 15px; }
+  .card-meta { font-size: 0.85rem; color: #a0aec0; width: 100%; }
+  
+  .card-links { margin-top: auto; }
+  .card-links a {
+      color: #00f2ff !important;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin: 0 8px;
+  }
+  .card-links a:hover {
+      text-shadow: 0 0 8px #00f2ff;
+      text-decoration: underline;
+  }
+
+  /* =========================================
+     3. RESPONSIVE / MOBILE LOGIC
+     ========================================= */
+  @media (max-width: 1000px) {
+    .layout-wrapper {
+      grid-template-columns: 1fr; /* Stack content */
+      padding: 20px;
+      gap: 30px;
+    }
+    .sidebar-nav { display: none; } /* Hide Sidebar */
+    
+    /* Mobile Top Bar */
+    .mobile-nav-wrapper {
+      display: block;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(19, 34, 74, 0.95); /* Matches your card blue */
+      border-bottom: 1px solid #00f2ff;
+      padding: 15px 0;
+    }
+    .mobile-nav-list {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 0 20px;
+      scrollbar-width: none;
+    }
+    .mobile-link {
+      color: #b0c4de;
+      white-space: nowrap;
+      text-decoration: none;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+    }
+    .mobile-link.active {
+      color: #fff;
+      border-color: #00f2ff;
+      text-shadow: 0 0 8px #00f2ff;
+    }
+  }
+</style>
+
+
+<div class="mobile-nav-wrapper">
+  <div class="mobile-nav-list">
+    {{ range .Site.Data.research }}
+      <a href="#{{ .area | urlize }}" class="mobile-link nav-tracker" data-target="{{ .area | urlize }}">
+        {{ .area }}
+      </a>
+    {{ end }}
+  </div>
+</div>
+
+<div class="layout-wrapper">
+
+  <aside class="sidebar-nav">
+    <nav class="nav-list">
+      {{ range .Site.Data.research }}
+        <a href="#{{ .area | urlize }}" class="nav-link nav-tracker" data-target="{{ .area | urlize }}">
+          {{ .area }}
+        </a>
+      {{ end }}
+    </nav>
+  </aside>
+
+  <div class="research-content">
+    {{ range .Site.Data.research }}
+      
+      <div id="{{ .area | urlize }}" class="macro-area section-to-track">
+        
+        <div class="area-header">
+          <h2 class="area-title">{{ .area }}</h2>
+          <p class="area-desc">{{ .description }}</p>
+        </div>
+
+        <div class="research-grid">
+          {{ range .projects }}
+          <div class="flash-card">
+            <div class="flash-card-inner">
+              
+              <div class="flash-card-front">
+                <h3>{{ .title }}</h3>
+              </div>
+              
+              <div class="flash-card-back">
+                <p class="card-summary">{{ .summary }}</p>
+                
+                <div class="card-meta">
+                  <p><strong>Lead:</strong> {{ .lead }}</p>
+                  {{ if .funding }}<p><strong>Funding:</strong> {{ .funding }}</p>{{ end }}
+                </div>
+                
+                <div class="card-links">
+                   {{ range .links }}
+                     <a href="{{ .url }}">[{{ .text }}]</a>
+                   {{ end }}
+                </div>
+              </div>
+
+            </div>
+          </div>
+          {{ end }} 
+        </div> </div> <hr class="area-divider">
+      
+    {{ end }} 
+  </div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll(".section-to-track");
+  const allNavLinks = document.querySelectorAll(".nav-tracker");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const targetId = entry.target.getAttribute("id");
+        
+        // Update all nav links (both mobile and sidebar)
+        allNavLinks.forEach(link => link.classList.remove("active"));
+        
+        const activeLinks = document.querySelectorAll(`.nav-tracker[data-target="${targetId}"]`);
+        activeLinks.forEach(link => {
+          link.classList.add("active");
+          // Auto-scroll mobile bar
+          if (link.classList.contains('mobile-link')) {
+             link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          }
+        });
+      }
+    });
+  }, { threshold: 0.15, rootMargin: "-10% 0px -60% 0px" });
+
+  sections.forEach(section => observer.observe(section));
+});
+</script>-->
+
+<style>
+  /* =========================================
+     1. NEW LAYOUT WRAPPERS (Structure Only)
+     ========================================= */
+  
+  /* The main container that holds Sidebar + Content */
+  .layout-wrapper {
+    display: grid;
+    grid-template-columns: 220px 1fr; /* Sidebar width | Content width */
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    align-items: start;
+  }
+
+  /* --- DESKTOP SIDEBAR --- */
+  .sidebar-nav {
+    position: sticky;
+    top: 50px;
+    padding-right: 20px;
+    border-right: 1px solid rgba(0, 242, 255, 0.1); /* Subtle divider */
+  }
+
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-link {
+    display: block;
+    color: #b0c4de; /* Matches your 'area-desc' color */
+    text-decoration: none;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-left: 2px solid transparent;
+    padding-left: 10px;
+  }
+
+  .nav-link:hover {
+    color: #00f2ff;
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
+  }
+
+  /* ACTIVE STATE (Matches your theme) */
+  .nav-link.active {
+    color: #00f2ff;
+    border-left: 2px solid #00f2ff;
+    padding-left: 15px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.4);
+    background: linear-gradient(90deg, rgba(0, 242, 255, 0.05), transparent);
+  }
+
+  /* --- MOBILE NAV (Hidden on Desktop) --- */
+  .mobile-nav-wrapper { display: none; }
+
+  /* =========================================
+     2. YOUR ORIGINAL VISUAL STYLES
+     (Preserved exactly as requested)
+     ========================================= */
+
+  /* Ensure content doesn't blowout the grid */
+  .research-content { min-width: 0; }
+
+  .macro-area {
+    scroll-margin-top: 60px; /* Helper for sticky nav jumping */
+    margin-bottom: 80px; 
+  }
+
+  .area-title {
+    color: #00f2ff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+  }
+
+  .area-desc {
+    color: #b0c4de;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  .area-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #13224a, transparent);
+    margin-bottom: 50px;
+  }
+
+  /* --- THE GRID (UPDATED FIX) --- */
+  .research-grid {
+    display: grid;
+    /* THIS IS THE FIX: Instead of 'repeat(3, 1fr)', we use auto-fit.
+       This prevents cards from being squashed below 300px. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+  }
+
+  /* --- YOUR CARD STYLES (Unchanged) --- */
+  .flash-card {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .flash-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  .flash-card:hover .flash-card-inner { transform: rotateY(180deg); }
+  
+  .flash-card-front, .flash-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+    /* SOLARIS VISUALS */
+    background-color: #13224a;      
+    border: 1px solid #00f2ff;      
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2); 
+    border-radius: 12px;
+    color: #e0e7ff;                 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Added to ensure no content spills out of the card */
+  }
+
+  .flash-card-front { justify-content: center; }
+
+  .flash-card-front h3 {
+    color: #e0e7ff;    
+    font-size: 1.1rem; /* Slightly reduced to fit longer titles safely */
+    font-weight: 400;  
+    text-transform: none; 
+    letter-spacing: normal;
+    text-shadow: none; 
+    margin: 0;
+    line-height: 1.4; /* Tighter line height */
+    width: 100%;
+    overflow-wrap: break-word; /* Forces long words to break onto the next line */
+    word-wrap: break-word;
   }
 
   .flash-card-back {

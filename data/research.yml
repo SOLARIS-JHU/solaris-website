@@ -14,6 +14,8 @@
       links:
       - text: "Preprint"
         url: "https://arxiv.org/abs/2410.11061"
+      - text: "GitHub"
+        url: "https://github.com/pnnl/L2O-MINLP"
 
     - title: "Learning to Solve Constrained Bilevel Control Co-Design Problems"
       summary: "Self-supervised L2O framework solving constrained bilevel control co-design problems trough control with enforced coupling constraints"
@@ -21,6 +23,8 @@
       links:
       - text: "Preprint"
         url: "https://arxiv.org/abs/2507.09050"
+      - text: "GitHub"
+        url: "https://github.com/anon-research-coding/Control-Design-Learning"
 
   
 - area: "Learning to Control (L2C)"
@@ -46,33 +50,39 @@
       links:
         - text: "Preprint"
           url: "https://arxiv.org/abs/2511.08992"
+        - text: "GitHub"
+          url: "https://github.com/Centrum-IntelliPhysics/PDEControl_DPC"
    
 
 - area: "Model Predictive Control (MPC)"
-  description: "TODO."
+  description: "Advancing the computational efficiency, real-time execution, and predictive accuracy of linear and nonlinear Model Predictive Control systems through novel solver architectures and data-driven dynamics learning."
   projects:
-    - title: "Quadratic Programming"
-      summary: "A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP."
+    - title: "A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP"
+      summary: "A time-certified predictor-corrector interior-point algorithm guarantees deterministic execution times and strict iteration complexity bounds for solving box-constrained quadratic programs in real-time model predictive control."
       lead: "Liang Wu"
       links:
         - text: "Paper"
           url: "https://ieeexplore.ieee.org/abstract/document/11313851"
+        - text: "GitHub"
+          url: "https://github.com/liangwu2019/PC_BoxQP"
     
-    - title: "πMPC"
-      summary: "Parallel-in horizon and construction-free nonlinear MPC algorithm."
+    - title: "πMPC: A Parallel-in-horizon and Construction-free NMPC Solver"
+      summary: "The MPC algorithm delivers a construction-free, parallel-in-horizon nonlinear model predictive control solver by combining a novel variable-splitting scheme with a velocity-based system representation to enable highly efficient execution directly on system matrices."
       lead: "Liang Wu"
       links:
         - text: "Preprint"
           url: "https://arxiv.org/abs/2601.14414"
-        - text: "Code"
+        - text: "GitHub"
           url: "https://github.com/SOLARIS-JHU/PiMPC.jl"
 
-    - title: " Koopman-based MPC"
-      summary: "Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control."
+    - title: "Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control"
+      summary: "Learning long-horizon dynamics thorugh convex multi-step Koopman framework while completely bypassing the compounding prediction errors that plague traditional single-step models."
       lead: "Liang Wu"
       links:
         - text: "Preprint"
           url: "https://arxiv.org/abs/2601.11901"
+        - text: "GitHub"
+          url: "https://github.com/SOLARIS-JHU/Multi-step-Koopman"
 
 
 - area: "Differentiable Programming"
@@ -89,8 +99,8 @@
 - area: "Energy systems"
   description: "Enhancing the operation and scheduling of energy storage and grid systems through decision-focused learning and advanced optimization."
   projects:
-    - title: "Decision Focused Learning for Pumped Hydro"
-      summary: "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning."
+    - title: "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning"
+      summary: "This paper presents a decision-focused learning framework for underground pumped hydro energy storage scheduling that uses neural networks to guide recursive linearization."
       lead: "Honghui Zheng"
       links:
         - text: "Preprint"
@@ -119,3 +129,5 @@
     links:
       - text: "Paper"
         url: "https://ieeexplore.ieee.org/abstract/document/11312239"
+      - text: "GitHub"
+        url: "https://github.com/pnnl/NeuralDAEs"

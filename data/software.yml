@@ -22,8 +22,8 @@
 #       color: "#fff"
 
 - title: "NeuroMANCER"
-  summary: "High-performance C++ solver"
-  language: "C++"
+  summary: "PyTorch library for parametric constrained optimization and control"
+  anguage: "Python"
   info_1: "License: BSD 3-Clause License"
   info_2: "Stars: 1.3k+"
   links:

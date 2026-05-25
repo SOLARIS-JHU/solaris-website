@@ -1,4 +1,9 @@
 - date: "May 2026"
+  title: "Poster Presentation"
+  summary: "Honghui presented a poster `NOIR: A MINLP Solver using Neural Overparameterization for Integer Representation` at University of Connecticut - Stamford."
+  type: Talk 
+
+- date: "May 2026"
   title: "Liang's Paper Accepted to L-CSS"
   summary: "Congrats to Liang for his paper `Fixed-time-stable ODE Representation of Lasso` accepted to L-CSS!"
   url: "https://ieeexplore.ieee.org/document/11523518"

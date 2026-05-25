@@ -73,6 +73,8 @@ students:
       - text: "Linkedin"
         url: "https://www.linkedin.com/in/pietro-zanotta/"
 
+
+alumni:
   - name: "Leandro von Krannichfeldt"
     role: "Visiting PhD Student (Spring 2026)"
     focus: "Hybrid Digital Twins for Building Energy Systems"

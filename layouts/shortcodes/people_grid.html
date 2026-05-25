@@ -153,3 +153,24 @@
   </div>
 </div>
 {{ end }}
+
+{{ with .Site.Data.people.alumni }}
+<div class="people-section">
+  <h2>Alumni</h2>
+  <div class="people-grid">
+    {{ range . }}
+    <div class="person-card">
+      <img src="{{ .image }}" class="person-img">
+      <h3>{{ .name }}</h3>
+      <p>{{ .role }}</p>
+      {{ if .focus }}<p>{{ .focus }}</p>{{ end }}
+      <div class="social-links">
+        {{ range .links }}
+          <a href="{{ .url }}">[{{ .text }}]</a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

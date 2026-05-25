@@ -1,2 +1,0 @@
-- immagine leandro e cose leandro
-- immagine honghui e cose honghui

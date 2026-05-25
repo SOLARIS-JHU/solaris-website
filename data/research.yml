@@ -8,6 +8,15 @@
 - area: "Learning to Optimize (L2O)"
   description: "Accelerating the solution of complex, constrained optimization problems through solver-free, self-supervised learning frameworks."
   projects:
+    - title: "Fixed-time-stable ODE Representation of Lasso"
+      summary: "TODO"
+      lead: "Liang Wu"
+      links:
+      - text: "Paper"
+        url: "https://ieeexplore.ieee.org/document/11523518"
+      - text: "GitHub"
+        url: "TODO"
+
     - title: "Learning to Optimize for Mixed-Integer Non-linear Programming with Feasibility Guarantees"
       summary: "L2O framework addressing parametric MINLP by integrating integer correction layers for adaptive rounding with projections to ensure feasibility"
       lead: "Bo Tang"

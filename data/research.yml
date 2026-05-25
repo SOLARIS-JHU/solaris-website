@@ -8,14 +8,6 @@
 - area: "Learning to Optimize (L2O)"
   description: "Accelerating the solution of complex, constrained optimization problems through solver-free, self-supervised learning frameworks."
   projects:
-    - title: "Fixed-time-stable ODE Representation of Lasso"
-      summary: "TODO"
-      lead: "Liang Wu"
-      links:
-      - text: "Paper"
-        url: "https://ieeexplore.ieee.org/document/11523518"
-      - text: "GitHub"
-        url: "TODO"
 
     - title: "Learning to Optimize for Mixed-Integer Non-linear Programming with Feasibility Guarantees"
       summary: "L2O framework addressing parametric MINLP by integrating integer correction layers for adaptive rounding with projections to ensure feasibility"
@@ -66,6 +58,14 @@
 - area: "Model Predictive Control (MPC)"
   description: "Advancing the computational efficiency, real-time execution, and predictive accuracy of linear and nonlinear Model Predictive Control systems through novel solver architectures and data-driven dynamics learning."
   projects:
+
+    - title: "Fixed-time-stable ODE Representation of Lasso"
+      summary: "A method to transform the non-smooth Lasso optimization problem into a fixed-time-stable ODE using a smooth nonnegative quadratic program, guaranteeing that the system converges to the optimal solution within an arbitrarily prescribed time limit independent of the problem data."
+      lead: "Liang Wu"
+      links:
+      - text: "Paper"
+        url: "https://ieeexplore.ieee.org/document/11523518"
+
     - title: "A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP"
       summary: "A time-certified predictor-corrector interior-point algorithm guarantees deterministic execution times and strict iteration complexity bounds for solving box-constrained quadratic programs in real-time model predictive control."
       lead: "Liang Wu"

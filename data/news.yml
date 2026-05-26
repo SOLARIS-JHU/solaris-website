@@ -1,7 +1,27 @@
 - date: "May 2026"
+  title: "Invited Talk"
+  summary: "Jan gave an invited lecture at the Workshop on AI for Modeling, Control, and Optimization of Partial Differential Equations during the American Control Conference (ACC) in New Orleans."
+  type: Talk
+
+- date: "May 2026"
   title: "Poster Presentation"
-  summary: "Honghui presented a poster `NOIR: A MINLP Solver using Neural Overparameterization for Integer Representation` at University of Connecticut - Stamford."
-  type: Talk 
+  summary: "Honghui presented the research poster `NOIR: A MINLP Solver using Neural Overparameterization for Integer Representation` at the University of Connecticut - Stamford."
+  type: Talk
+
+- date: "May 2026"
+  title: "Invited Talk"
+  summary: "Jan was a speaker for the Bose research seminar series (online)."
+  type: Talk
+
+- date: "May 2026"
+  title: "Workshop Organization"
+  summary: "Jan organized a workshop on Physics-Informed Learning for Modeling, Optimization, and Control of Cyber-Physical Systems at the Cyber-Physical Systems and Internet-of-Things (CPS-IoT) Week in France."
+  type: Talk
+
+- date: "May 2026"
+  title: "Invited Talk"
+  summary: "Jan presented an invited seminar to the Applied Math Department at the University of California, Santa Barbara."
+  type: Talk
 
 - date: "May 2026"
   title: "Liang's Paper Accepted to L-CSS"
@@ -12,7 +32,7 @@
 - date: "March 2026"
   title: "Invited Talk"
   summary: "Honghui held the invited talk at INFORMS Optimization Society Conference for Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning at session Machine Learning for Global Optimization."
-  type: "Talk"
+  type: Talk
 
 - date: "Feb 2026"
   title: "Welcome Visiting Grad Student"

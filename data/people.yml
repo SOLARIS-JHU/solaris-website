@@ -73,6 +73,20 @@ students:
       - text: "Linkedin"
         url: "https://www.linkedin.com/in/pietro-zanotta/"
 
+  - name: "Nima Chelongar"
+    role: "PhD Student (Joined Fall 2026)"
+    focus: "" # todo
+    image: "images/nima.jpg"
+    links:
+      - text: "email"
+        url: "mailto:nchelon1@jh.edu"
+      # - text: "Scholar"
+      #   url: "https://scholar.google.com/citations?user=3AjQl3IAAAAJ&hl=en&authuser=1"
+      # - text: "Personal Website"
+      #   url: "#"
+      - text: "Linkedin"
+        url: "https://www.linkedin.com/in/nima-chelongar-137aa5280/"
+
 
 alumni:
   - name: "Leandro von Krannichfeldt"

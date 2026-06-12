@@ -75,7 +75,7 @@ students:
 
   - name: "Nima Chelongar"
     role: "PhD Student (Joined Fall 2026)"
-    focus: "" # todo
+    focus: "Generative AI, Stochastic processes and Statistics"
     image: "images/nima.jpg"
     links:
       - text: "email"

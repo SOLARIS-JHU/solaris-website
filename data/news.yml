@@ -1,7 +1,19 @@
+- date: "July 2026"
+  title: "Poster Presentation"
+  summary: "Pietro presented the poster `CINOC: Cardinality-Invariant Neural Operator Policies for Scalable PDE Control` at ICML 2026."
+  url: "https://arxiv.org/abs/2605.25867"
+  type: Talk
+
+- date: "June 2026"
+  title: "Tutorial"
+  summary: "Jan presented the tutorial `Scientific Machine Learning for Modeling, Optimization, and Control`at L4DC 2026."
+  url: "https://www.linkedin.com/posts/drgona_the-recordings-of-our-l4dc-2026-scientific-share-7481339137803956224-XxwC/"
+  type: Talk
+
 - date: "June 2026"
   title: "Welcome New PhD Student"
   summary: "Welcome to Nima, who just joined the lab as new PhD students."
-  type: "Team"
+  type: Team
 
 - date: "May 2026"
   title: "Invited Talk"

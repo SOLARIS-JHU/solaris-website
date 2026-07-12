@@ -31,6 +31,13 @@
 - area: "Learning to Control (L2C)"
   description: "Synthesizing constrained neural control policies for nonlinear and infinite-dimensional systems via differentiable predictive control and offline self-supervised learning."
   projects:
+    - title: "CINOC: Cardinality-Invariant Neural Operator Policies for Scalable PDE Control"
+      summary: "Training multi-agent control policies for PDE control that generalize zero-shot to different swarm cardinalities."
+      lead: "Pietro Zanotta"
+      links:
+        - text: "Paper"
+          url: "https://arxiv.org/abs/2605.25867"
+
     - title: "Learning to Solve Parametric Mixed-Integer Optimal Control Problems via DPC"
       summary: "Achieving near-optimal control performance via DPC in input- and state-constrained parametric mixed-integer optimal control problems."
       lead: "Ján Boldocký"

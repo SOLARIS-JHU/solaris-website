@@ -73,7 +73,7 @@ students:
       - text: "Linkedin"
         url: "https://www.linkedin.com/in/pietro-zanotta/"
 
-  - name: "Nema Chelongar"
+  - name: "Nima Chelongar"
     role: "PhD Student (Joined Fall 2026)"
     focus: "Generative AI, Stochastic processes and Statistics"
     image: "images/nima.jpg"

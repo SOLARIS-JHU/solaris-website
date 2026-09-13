@@ -8,16 +8,23 @@ layout: "single"
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 15px;
+  align-items: start;
 }
 
 /* Updated to target both img and video */
-.gallery-item img,
-.gallery-item video {
+.post-content .gallery-item img,
+.post-content .gallery-item video {
+  display: block;
+  margin: 0;
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
+}
+
+.post-content .gallery-item img {
+  object-position: center 75%;
 }
 
 .gallery-item img:hover,
@@ -36,6 +43,10 @@ layout: "single"
 </style>
 
 <div class="gallery-grid">
+  <div class="gallery-item">
+    <img src="/images/5krun.jpeg" alt="Lab members at the 5 km run in Baltimore">
+    <div class="gallery-caption">5 km of MPC, except the plant keeps getting tired! Baltimore, September 2026</div>
+  </div>
   <!-- <div class="gallery-item">
     <img src="https://via.placeholder.com/400x300" alt="Lab Lunch">
   </div>

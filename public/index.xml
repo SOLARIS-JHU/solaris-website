@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SOLARIS LAB on Solaris Lab</title>
-    <link>http://localhost:1313/index.html</link>
+    <link>//localhost:1313/index.html</link>
     <description>Recent content in SOLARIS LAB on Solaris Lab</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact</title>
-      <link>http://localhost:1313/contact.html</link>
+      <link>//localhost:1313/contact.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact.html</guid>
+      <guid>//localhost:1313/contact.html</guid>
       <description>&lt;p&gt;&lt;strong&gt;Lab Location:&lt;/strong&gt; Latrobe, Room 201Q&lt;br&gt;
 3400 N Charles St, Baltimore, MD 21218&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; jdrgona1 [at] jh dot edu&lt;/p&gt;
@@ -19,18 +19,18 @@
     </item>
     <item>
       <title>Join the Lab</title>
-      <link>http://localhost:1313/join-us.html</link>
+      <link>//localhost:1313/join-us.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/join-us.html</guid>
+      <guid>//localhost:1313/join-us.html</guid>
       <description>&lt;h3 id=&#34;prospective-students--postdocs&#34;&gt;Prospective Students &amp;amp; Postdocs&lt;/h3&gt;
 &lt;p&gt;The lab welcomes candidates with a strong foundation in &lt;strong&gt;Applied Mathematics&lt;/strong&gt;, &lt;strong&gt;Computer Science&lt;/strong&gt;, or related fields to join us. Applications are reviewed on a rolling basis.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;To Apply:&lt;/strong&gt; Please submit your CV via email to &lt;strong&gt;jdrgona1 [at] jh dot edu&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Life at the Lab</title>
-      <link>http://localhost:1313/gallery.html</link>
+      <link>//localhost:1313/gallery.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/gallery.html</guid>
+      <guid>//localhost:1313/gallery.html</guid>
       <description>&lt;style&gt;
 .gallery-grid {
   display: grid;
@@ -94,9 +94,9 @@
     </item>
     <item>
       <title>Open Source Software</title>
-      <link>http://localhost:1313/software.html</link>
+      <link>//localhost:1313/software.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/software.html</guid>
+      <guid>//localhost:1313/software.html</guid>
       <description>&lt;p&gt;We believe in open science. All our tools are available on GitHub. The group is also activaly contributing and mantaining the following libraries:&lt;/p&gt;
 &lt;style&gt;
    
@@ -193,9 +193,9 @@
     </item>
     <item>
       <title>Our Team</title>
-      <link>http://localhost:1313/people.html</link>
+      <link>//localhost:1313/people.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/people.html</guid>
+      <guid>//localhost:1313/people.html</guid>
       <description>&lt;style&gt;
  
 .people-section { margin-bottom: 60px; }

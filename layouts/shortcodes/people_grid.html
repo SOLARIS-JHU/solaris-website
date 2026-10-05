@@ -154,13 +154,34 @@
 </div>
 {{ end }}
 
-{{ with .Site.Data.people.alumni }}
+{{ with .Site.Data.people.visiting_researchers }}
 <div class="people-section">
-  <h2>Alumni</h2>
+  <h2>Visiting Researchers</h2>
   <div class="people-grid">
     {{ range . }}
     <div class="person-card">
-      <img src="{{ .image }}" class="person-img">
+      <img src="{{ .image }}" class="person-img" alt="{{ .name }}">
+      <h3>{{ .name }}</h3>
+      <p>{{ .role }}</p>
+      {{ if .focus }}<p>{{ .focus }}</p>{{ end }}
+      <div class="social-links">
+        {{ range .links }}
+          <a href="{{ .url }}">[{{ .text }}]</a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+{{ with .Site.Data.people.undergraduates }}
+<div class="people-section">
+  <h2>Undergraduate Interns</h2>
+  <div class="people-grid">
+    {{ range . }}
+    <div class="person-card">
+      <img src="{{ .image }}" class="person-img" alt="{{ .name }}">
       <h3>{{ .name }}</h3>
       <p>{{ .role }}</p>
       {{ if .focus }}<p>{{ .focus }}</p>{{ end }}

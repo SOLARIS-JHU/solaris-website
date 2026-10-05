@@ -88,7 +88,7 @@ students:
         url: "https://www.linkedin.com/in/nima-chelongar-137aa5280/"
 
 
-alumni:
+visiting_researchers:
   - name: "Leandro von Krannichfeldt"
     role: "Visiting PhD Student (Spring 2026)"
     focus: "Hybrid Digital Twins for Building Energy Systems"
@@ -102,3 +102,15 @@ alumni:
       #   url: ""
       - text: "Linkedin"
         url: "https://www.linkedin.com/in/vonkrannichfeldtleandro//"
+
+
+undergraduates:
+  - name: "Terry Zhang"
+    role: "Undergraduate Intern (Summer 2026, Grinnell College)"
+    focus: "Develops NLP and QP solvers for different application scenarios under Liang's supervision."
+    image: "images/terry.png"
+    links:
+      - text: "email"
+        url: "mailto:zhangter@grinnell.edu"
+      - text: "Linkedin"
+        url: "https://www.linkedin.com/in/terry-zhang-20441a2b6/?isSelfProfile=true"

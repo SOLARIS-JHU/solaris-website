@@ -1,0 +1,34 @@
+- name: Johns Hopkins University
+  url: https://www.jhu.edu/
+  logo: /images/sponsors/jhu.svg
+  class: sponsor-card--jhu
+
+- name: Johns Hopkins Data Science and AI Institute
+  url: https://ai.jhu.edu/
+  logo: /images/sponsors/jhu-dsai.png
+  class: sponsor-card--dsai
+
+- name: U.S. DOE Office of Science — Advanced Scientific Computing Research (ASCR)
+  url: https://science.osti.gov/ascr
+  logo: /images/sponsors/doe-office-of-science.png
+  class: sponsor-card--doe
+
+- name: Pacific Northwest National Laboratory
+  url: https://www.pnnl.gov/
+  logo: /images/sponsors/pnnl.png
+  class: sponsor-card--pnnl
+
+- name: U.S. National Science Foundation
+  url: https://www.nsf.gov/
+  logo: /images/sponsors/nsf.png
+  class: sponsor-card--nsf
+
+- name: LEarning-Accelerated Domain Science (LEADS)
+  url: https://www.pnnl.gov/projects/leads-institute
+  logo: /images/sponsors/leads.jpg
+  class: sponsor-card--leads
+
+- name: Ralph O'Connor Sustainable Energy Institute
+  url: https://energyinstitute.jhu.edu/
+  logo: /images/sponsors/rosei-horizontal-blue.jpg
+  class: sponsor-card--rosei

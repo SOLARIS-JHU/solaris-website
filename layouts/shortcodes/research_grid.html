@@ -91,7 +91,7 @@
 
   .paper-year-header {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 0.9rem;
@@ -99,10 +99,150 @@
 
   .paper-year-header h3 {
     margin: 0;
+  }
+
+  .paper-year-picker {
+    position: relative;
+  }
+
+  .paper-year-trigger {
+    display: inline-flex;
+    gap: 0.65rem;
+    align-items: center;
+    min-height: 42px;
+    padding: 0.48rem 0.8rem 0.48rem 0.72rem;
+    border: 1px solid rgba(var(--solaris-accent-rgb), 0.58);
+    border-radius: 999px;
+    background:
+      linear-gradient(135deg, var(--solaris-accent-soft), transparent 72%),
+      var(--solaris-bg);
     color: var(--solaris-accent);
-    font-size: 1.3rem;
+    font: inherit;
+    font-size: 1.2rem;
+    font-weight: 750;
     letter-spacing: 0.04em;
-    text-shadow: 0 0 10px rgba(var(--solaris-accent-rgb), 0.2);
+    cursor: pointer;
+    box-shadow:
+      0 0 0 1px rgba(var(--solaris-accent-rgb), 0.06) inset,
+      0 0 18px rgba(var(--solaris-accent-rgb), 0.13);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .paper-year-trigger::before {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--solaris-accent);
+    box-shadow: 0 0 10px rgba(var(--solaris-accent-rgb), 0.8);
+    content: "";
+  }
+
+  .paper-year-trigger:hover,
+  .paper-year-trigger:focus-visible,
+  .paper-year-trigger[aria-expanded="true"] {
+    border-color: var(--solaris-accent);
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow:
+      0 0 0 1px rgba(var(--solaris-accent-rgb), 0.1) inset,
+      0 0 26px rgba(var(--solaris-accent-rgb), 0.25);
+  }
+
+  .paper-year-trigger-label {
+    color: var(--solaris-subtle);
+    font-size: 0.62rem;
+    font-weight: 750;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .paper-year-chevron {
+    width: 7px;
+    height: 7px;
+    margin: -3px 2px 0 1px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+  }
+
+  .paper-year-trigger[aria-expanded="true"] .paper-year-chevron {
+    margin-top: 3px;
+    transform: rotate(225deg);
+  }
+
+  .paper-year-menu {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% + 0.65rem);
+    left: 0;
+    min-width: 220px;
+    max-width: calc(100vw - 3rem);
+    padding: 0.5rem;
+    border: 1px solid rgba(var(--solaris-accent-rgb), 0.58);
+    border-radius: 14px;
+    background: var(--solaris-bg);
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.22), 0 0 28px rgba(var(--solaris-accent-rgb), 0.2);
+    animation: paper-year-menu-in 0.2s ease both;
+  }
+
+  .paper-year-menu-label {
+    display: block;
+    padding: 0.35rem 0.55rem 0.5rem;
+    color: var(--solaris-subtle);
+    font-size: 0.65rem;
+    font-weight: 750;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .paper-year-option {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    padding: 0.62rem 0.7rem;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--solaris-text);
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .paper-year-option small {
+    color: var(--solaris-subtle);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .paper-year-option:hover,
+  .paper-year-option:focus-visible,
+  .paper-year-option[aria-selected="true"] {
+    border-color: rgba(var(--solaris-accent-rgb), 0.42);
+    outline: none;
+    background: var(--solaris-accent-soft);
+    color: var(--solaris-accent);
+  }
+
+  .paper-year-group.is-entering .paper-card-grid {
+    animation: paper-year-cards-in 0.38s cubic-bezier(0.2, 0.75, 0.25, 1) both;
+  }
+
+  @keyframes paper-year-menu-in {
+    from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes paper-year-cards-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   .paper-year-count {
@@ -249,6 +389,16 @@
     text-transform: uppercase;
   }
 
+  .paper-card-venue {
+    margin: -0.55rem 0 0.85rem;
+    color: var(--solaris-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
   .paper-card-title {
     margin: 0;
     color: var(--solaris-text);
@@ -345,7 +495,12 @@
 
   @media (prefers-reduced-motion: reduce) {
     .paper-flip-card-inner,
-    .paper-card-image { transition: none; }
+    .paper-card-image,
+    .paper-year-trigger,
+    .paper-year-chevron { transition: none; }
+
+    .paper-year-menu,
+    .paper-year-group.is-entering .paper-card-grid { animation: none; }
   }
 </style>
 
@@ -374,16 +529,43 @@
           <p class="papers-area-description">{{ $area.description }}</p>
         </header>
 
-        {{ range $area.years }}
-          {{ $year := .year }}
-          <section class="paper-year-group" aria-labelledby="{{ $area.area | urlize }}-{{ $year }}">
+        {{ range $yearIndex, $yearGroup := $area.years }}
+          {{ $year := $yearGroup.year }}
+          <section class="paper-year-group" data-paper-year="{{ $year }}" aria-labelledby="{{ $area.area | urlize }}-{{ $year }}">
             <header class="paper-year-header">
-              <h3 id="{{ $area.area | urlize }}-{{ $year }}">{{ $year }}</h3>
-              <span class="paper-year-count">{{ len .papers }} {{ if eq (len .papers) 1 }}publication{{ else }}publications{{ end }}</span>
+              <div class="paper-year-picker">
+                <h3 id="{{ $area.area | urlize }}-{{ $year }}">
+                  <button
+                    type="button"
+                    class="paper-year-trigger"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    aria-controls="{{ $area.area | urlize }}-{{ $year }}-menu">
+                    <span class="paper-year-trigger-label">Year</span>
+                    <span>{{ $year }}</span>
+                    <span class="paper-year-chevron" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div id="{{ $area.area | urlize }}-{{ $year }}-menu" class="paper-year-menu" role="listbox" aria-label="Select publication year" hidden>
+                  <span class="paper-year-menu-label">Jump to year</span>
+                  {{ range $area.years }}
+                    <button
+                      type="button"
+                      class="paper-year-option"
+                      role="option"
+                      data-year-target="{{ .year }}"
+                      aria-selected="{{ if eq .year $year }}true{{ else }}false{{ end }}">
+                      <span>{{ .year }}</span>
+                      <small>{{ len .papers }} {{ if eq (len .papers) 1 }}paper{{ else }}papers{{ end }}</small>
+                    </button>
+                  {{ end }}
+                </div>
+              </div>
+              <span class="paper-year-count">{{ len $yearGroup.papers }} {{ if eq (len $yearGroup.papers) 1 }}publication{{ else }}publications{{ end }}</span>
             </header>
 
             <div class="paper-card-grid">
-              {{ range .papers }}
+              {{ range $yearGroup.papers }}
                 {{ $paper := . }}
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="{{ .title }}. Show details.">
                   <div class="paper-flip-card-inner">
@@ -402,10 +584,12 @@
                         </div>
                         <div class="paper-card-image-copy">
                           <span class="paper-card-year">{{ $year }}</span>
+                          {{ with $paper.venue }}<span class="paper-card-venue">{{ . }}</span>{{ end }}
                           <h4 class="paper-card-title">{{ $paper.title }}</h4>
                         </div>
                       {{ else }}
                         <span class="paper-card-year">{{ $year }}</span>
+                        {{ with $paper.venue }}<span class="paper-card-venue">{{ . }}</span>{{ end }}
                         <h4 class="paper-card-title">{{ $paper.title }}</h4>
                         <span class="paper-card-cue"></span>
                       {{ end }}
@@ -436,6 +620,91 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".papers-section-to-track");
   const navLinks = document.querySelectorAll(".papers-tracker");
   const cards = document.querySelectorAll(".paper-flip-card");
+  const yearTriggers = document.querySelectorAll(".paper-year-trigger");
+
+  document.querySelectorAll(".papers-area").forEach((area) => {
+    const yearGroups = Array.from(area.querySelectorAll(".paper-year-group"));
+    const hashTarget = yearGroups.find((group) => `#${group.id}` === window.location.hash);
+    const initialGroup = hashTarget || yearGroups[0];
+    yearGroups.forEach((group) => { group.hidden = group !== initialGroup; });
+  });
+
+  const closeYearMenus = (exceptMenu = null) => {
+    yearTriggers.forEach((trigger) => {
+      const menu = trigger.closest(".paper-year-picker").querySelector(".paper-year-menu");
+      if (menu === exceptMenu) return;
+      trigger.setAttribute("aria-expanded", "false");
+      menu.hidden = true;
+    });
+  };
+
+  const selectYear = (option) => {
+    const area = option.closest(".papers-area");
+    const targetYear = option.dataset.yearTarget;
+    const yearGroups = Array.from(area.querySelectorAll(".paper-year-group"));
+    const targetGroup = yearGroups.find((group) => group.dataset.paperYear === targetYear);
+    if (!targetGroup) return;
+
+    yearGroups.forEach((group) => { group.hidden = group !== targetGroup; });
+    area.querySelectorAll(".paper-year-option").forEach((yearOption) => {
+      yearOption.setAttribute("aria-selected", String(yearOption.dataset.yearTarget === targetYear));
+    });
+
+    targetGroup.classList.remove("is-entering");
+    void targetGroup.offsetWidth;
+    targetGroup.classList.add("is-entering");
+    closeYearMenus();
+    targetGroup.querySelector(".paper-year-trigger").focus();
+  };
+
+  yearTriggers.forEach((trigger) => {
+    const picker = trigger.closest(".paper-year-picker");
+    const menu = picker.querySelector(".paper-year-menu");
+    const options = Array.from(menu.querySelectorAll(".paper-year-option"));
+
+    trigger.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const willOpen = trigger.getAttribute("aria-expanded") !== "true";
+      closeYearMenus(willOpen ? menu : null);
+      trigger.setAttribute("aria-expanded", String(willOpen));
+      menu.hidden = !willOpen;
+    });
+
+    trigger.addEventListener("keydown", (event) => {
+      if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+      event.preventDefault();
+      closeYearMenus(menu);
+      trigger.setAttribute("aria-expanded", "true");
+      menu.hidden = false;
+      const selectedIndex = options.findIndex((option) => option.getAttribute("aria-selected") === "true");
+      const fallbackIndex = event.key === "ArrowDown" ? 0 : options.length - 1;
+      options[selectedIndex >= 0 ? selectedIndex : fallbackIndex].focus();
+    });
+
+    menu.addEventListener("click", (event) => event.stopPropagation());
+    menu.addEventListener("keydown", (event) => {
+      const currentIndex = options.indexOf(document.activeElement);
+      let nextIndex = currentIndex;
+      if (event.key === "ArrowDown") nextIndex = (currentIndex + 1) % options.length;
+      if (event.key === "ArrowUp") nextIndex = (currentIndex - 1 + options.length) % options.length;
+      if (event.key === "Home") nextIndex = 0;
+      if (event.key === "End") nextIndex = options.length - 1;
+      if (nextIndex !== currentIndex) {
+        event.preventDefault();
+        options[nextIndex].focus();
+      }
+    });
+
+    options.forEach((option) => option.addEventListener("click", () => selectYear(option)));
+  });
+
+  document.addEventListener("click", () => closeYearMenus());
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    const openTrigger = document.querySelector('.paper-year-trigger[aria-expanded="true"]');
+    closeYearMenus();
+    if (openTrigger) openTrigger.focus();
+  });
 
   const setActive = (targetId) => {
     navLinks.forEach((link) => link.classList.toggle("active", link.dataset.target === targetId));

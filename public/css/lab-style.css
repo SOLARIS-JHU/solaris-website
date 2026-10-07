@@ -150,12 +150,212 @@ div[style*="border-left"]:hover {
     margin: 1rem 0 2.5rem;
 }
 
-.research-overview-grid {
-    width: min(1120px, calc(100vw - 3rem));
+.research-vision,
+.research-directions {
+    width: min(1160px, calc(100vw - 3rem));
     margin-right: 0;
     margin-left: 50%;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     transform: translateX(-50%);
+}
+
+.research-vision {
+    position: relative;
+    margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+    padding: clamp(1.6rem, 4vw, 2.5rem) 0 clamp(1.8rem, 4vw, 3rem);
+    border-bottom: 1px solid var(--solaris-border);
+}
+
+.research-vision::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: min(190px, 36%);
+    height: 2px;
+    background: var(--solaris-accent);
+    box-shadow: 0 0 16px rgba(var(--solaris-accent-rgb), 0.55);
+    content: "";
+}
+
+.research-eyebrow,
+.research-direction-kicker {
+    margin: 0 0 0.65rem;
+    color: var(--solaris-accent);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-shadow: 0 0 10px rgba(var(--solaris-accent-rgb), 0.25);
+    text-transform: uppercase;
+}
+
+.research-intro {
+    max-width: 860px;
+    margin-bottom: 0;
+    color: var(--solaris-text);
+    font-size: clamp(1.15rem, 2vw, 1.42rem);
+    line-height: 1.7;
+}
+
+.research-directions {
+    display: grid;
+    gap: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 3rem;
+}
+
+.research-direction {
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    padding: clamp(1.4rem, 3.5vw, 2.5rem);
+    border: 1px solid var(--solaris-border);
+    border-radius: 18px;
+    background: linear-gradient(125deg, rgba(var(--solaris-accent-rgb), 0.065), transparent 36%), var(--solaris-bg);
+    box-shadow: 0 14px 45px rgba(2, 11, 26, 0.12), 0 0 24px rgba(var(--solaris-accent-rgb), 0.06);
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    gap: clamp(1.8rem, 5vw, 4rem);
+    align-items: center;
+    isolation: isolate;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.research-direction::before {
+    position: absolute;
+    z-index: -1;
+    top: -35%;
+    left: -12%;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(var(--solaris-accent-rgb), 0.09), transparent 68%);
+    content: "";
+    pointer-events: none;
+}
+
+.research-direction:hover,
+.research-direction:focus-within {
+    border-color: var(--solaris-border-strong);
+    box-shadow: 0 18px 50px rgba(2, 11, 26, 0.16), 0 0 30px rgba(var(--solaris-accent-rgb), 0.12);
+    transform: translateY(-3px);
+}
+
+.research-direction--reverse .research-direction-copy {
+    order: 2;
+}
+
+.research-direction--reverse .research-direction-media {
+    order: 1;
+}
+
+.research-direction-copy {
+    position: relative;
+    min-width: 0;
+}
+
+.research-direction-number {
+    position: absolute;
+    top: -1.3rem;
+    right: 0;
+    color: rgba(var(--solaris-accent-rgb), 0.09);
+    font-size: clamp(4.8rem, 9vw, 7.5rem);
+    font-weight: 900;
+    letter-spacing: -0.08em;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+.research-direction-copy h2 {
+    position: relative;
+    max-width: 520px;
+    margin: 0 0 1.1rem;
+    color: var(--solaris-text);
+    font-size: clamp(1.8rem, 3.5vw, 2.65rem);
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+}
+
+.research-direction-copy > p:not(.research-direction-kicker) {
+    position: relative;
+    margin: 0 0 0.9rem;
+    color: var(--solaris-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.research-focus-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.25rem 0 1.35rem;
+    padding: 0;
+    list-style: none;
+}
+
+.research-focus-list li {
+    margin: 0;
+    padding: 0.38rem 0.68rem;
+    border: 1px solid var(--solaris-border-strong);
+    border-radius: 999px;
+    color: var(--solaris-accent);
+    font-size: 0.74rem;
+    font-weight: 750;
+    line-height: 1.35;
+}
+
+.research-paper-link {
+    display: inline-flex;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid rgba(var(--solaris-accent-rgb), 0.48);
+    border-radius: 8px;
+    color: var(--solaris-accent) !important;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.035em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.research-paper-link:hover,
+.research-paper-link:focus-visible {
+    border-color: var(--solaris-accent);
+    background: var(--solaris-accent-soft);
+    color: var(--solaris-text) !important;
+    outline: none;
+}
+
+.research-direction-media {
+    min-width: 0;
+    margin: 0;
+}
+
+.research-figure-frame {
+    display: grid;
+    min-height: 330px;
+    overflow: hidden;
+    padding: clamp(0.45rem, 1.1vw, 0.75rem);
+    border: 1px solid rgba(20, 120, 166, 0.2);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 12px 34px rgba(2, 11, 26, 0.16);
+    place-items: center;
+}
+
+.research-figure-frame img {
+    width: 100%;
+    height: 100%;
+    max-height: 430px;
+    border-radius: 9px;
+    object-fit: contain;
+}
+
+.research-direction-media figcaption {
+    margin-top: 0.85rem;
+    color: var(--solaris-subtle);
+    font-size: 0.78rem;
+    line-height: 1.55;
+}
+
+.research-direction-media figcaption strong {
+    color: var(--solaris-accent);
 }
 
 .overview-card {
@@ -382,11 +582,33 @@ div[style*="border-left"]:hover {
 }
 
 @media (max-width: 760px) {
-    .research-overview-grid {
+    .research-vision,
+    .research-directions {
         width: 100%;
         margin-left: 0;
-        grid-template-columns: 1fr;
         transform: none;
+    }
+
+    .research-direction {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .research-direction--reverse .research-direction-copy,
+    .research-direction--reverse .research-direction-media {
+        order: initial;
+    }
+
+    .research-direction-copy {
+        order: 1 !important;
+    }
+
+    .research-direction-media {
+        order: 2 !important;
+    }
+
+    .research-figure-frame {
+        min-height: 260px;
     }
 }
 
@@ -398,6 +620,24 @@ div[style*="border-left"]:hover {
     .overview-card {
         min-height: auto;
         padding: 1.4rem;
+    }
+
+    .research-direction {
+        padding: 1.15rem;
+        border-radius: 14px;
+    }
+
+    .research-direction-copy h2 {
+        padding-right: 1.6rem;
+    }
+
+    .research-direction-number {
+        top: -0.7rem;
+        font-size: 4.8rem;
+    }
+
+    .research-figure-frame {
+        min-height: 220px;
     }
 
     .activity-section-header,

@@ -7,6 +7,20 @@
 - area: "Learning to Optimize"
   description: "Learning-based methods that accelerate constrained, mixed-integer, and decision-focused optimization while preserving feasibility and physical requirements."
   years:
+    - year: 2026
+      papers:
+        - title: "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning"
+          venue: "IEEE Transactions on Sustainable Energy"
+          summary: "A decision-focused learning framework that guides recursive linearization for fast, high-quality day-ahead scheduling of underground pumped hydro energy storage."
+          lead: "Honghui Zheng"
+          links:
+            - text: "Journal"
+              url: "https://doi.org/10.1109/TSTE.2026.3722492"
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2512.20880"
+            - text: "GitHub"
+              url: "https://github.com/SOLARIS-JHU/DFL-UPHES"
+
     - year: 2025
       papers:
         - title: "Learning to Solve Constrained Bilevel Control Co-Design Problems"
@@ -17,15 +31,6 @@
               url: "https://arxiv.org/abs/2507.09050"
             - text: "GitHub"
               url: "https://github.com/anon-research-coding/Control-Design-Learning"
-
-        - title: "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning"
-          summary: "A decision-focused learning framework that uses neural networks to guide recursive linearization for energy-storage scheduling."
-          lead: "Honghui Zheng"
-          links:
-            - text: "Preprint"
-              url: "https://arxiv.org/abs/2512.20880"
-            - text: "GitHub"
-              url: "https://github.com/SOLARIS-JHU/DFL-UPHES"
 
     - year: 2024
       papers:
@@ -43,32 +48,8 @@
   years:
     - year: 2026
       papers:
-        - title: "CINOC: Cardinality-Invariant Neural Operator Policies for Scalable PDE Control"
-          summary: "Decentralized neural-operator control policies for PDE systems that generalize zero-shot across different swarm cardinalities."
-          lead: "Pietro Zanotta"
-          links:
-            - text: "Preprint"
-              url: "https://arxiv.org/abs/2605.25867"
-            - text: "GitHub"
-              url: "https://github.com/SOLARIS-JHU/CINOC"
-
-    - year: 2025
-      papers:
-        - title: "Learning to Solve Parametric Mixed-Integer Optimal Control Problems via DPC"
-          summary: "Near-optimal control for input- and state-constrained parametric mixed-integer problems using differentiable predictive control."
-          lead: "Ján Boldocký"
-          links:
-            - text: "Preprint"
-              url: "https://arxiv.org/abs/2506.19646"
-
-        - title: "Zero-Shot Function Encoder-Based Differentiable Predictive Control"
-          summary: "Function Encoder-based neural ODEs integrated with differentiable predictive control for zero-shot control of nonlinear systems."
-          lead: "Hassan Iqbal"
-          links:
-            - text: "Preprint"
-              url: "https://arxiv.org/abs/2511.05757"
-
         - title: "Learning to Control PDEs with Differentiable Predictive Control and Time-Integrated Neural Operators"
+          venue: "IEEE CDC 2026"
           summary: "An end-to-end framework combining Time-Integrated DeepONets with offline, self-supervised optimization of PDE control policies."
           lead: "Dibakar Roy Sarkar"
           links:
@@ -77,17 +58,97 @@
             - text: "GitHub"
               url: "https://github.com/Centrum-IntelliPhysics/PDEControl_DPC"
 
+        - title: "Mixed-Integer Nonlinear Differentiable Predictive Control for Underground Pumped Hydro Energy Storage Systems"
+          venue: "IEEE CDC 2026"
+          summary: "A self-supervised mixed-integer control policy for nonlinear pumped-hydro scheduling, using differentiable simulation, Transformers, and Gumbel-Softmax decisions."
+          lead: "Honghui Zheng"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2609.17964"
+            - text: "GitHub"
+              url: "https://github.com/SOLARIS-JHU/MI-DPC-UPHES"
+
+        - title: "Safe Receding Horizon Mixed-Integer Differentiable Predictive Control for Degradation-Aware Battery Dispatch"
+          venue: "IEEE CDC 2026"
+          summary: "A receding-horizon neural battery-dispatch controller with differentiable degradation physics and a safety filter that guarantees recursive feasibility."
+          lead: "Eshagh Safarzadeh Ravajiri"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2609.28698"
+
+        - title: "Data Center Chiller Plant Optimization via Mixed-Integer Nonlinear Differentiable Predictive Control"
+          venue: "IFAC World Congress 2026"
+          summary: "A mixed-integer differentiable predictive control framework for real-time optimization of nonlinear multi-chiller plants."
+          lead: "Ján Boldocký"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2603.28323"
+
+        - title: "Learning to Solve Parametric Mixed-Integer Optimal Control Problems via Differentiable Predictive Control"
+          venue: "IFAC World Congress 2026"
+          summary: "Near-optimal control for input- and state-constrained parametric mixed-integer problems using differentiable predictive control."
+          lead: "Ján Boldocký"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2506.19646"
+
+        - title: "CINOC: Cardinality-Invariant Neural Operator Policies for Scalable PDE Control"
+          venue: "ICML 2026"
+          summary: "Decentralized neural-operator control policies for PDE systems that generalize zero-shot across different swarm cardinalities."
+          lead: "Pietro Zanotta"
+          links:
+            - text: "Paper"
+              url: "https://proceedings.mlr.press/v306/zanotta26a.html"
+            - text: "GitHub"
+              url: "https://github.com/SOLARIS-JHU/CINOC"
+
+    - year: 2025
+      papers:
+        - title: "Zero-Shot Function Encoder-Based Differentiable Predictive Control"
+          summary: "Function Encoder-based neural ODEs integrated with differentiable predictive control for zero-shot control of nonlinear systems."
+          lead: "Hassan Iqbal"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2511.05757"
+
 - area: "Optimization and Model Predictive Control"
   description: "Fast, time-certified, and parallel algorithms for real-time optimization and predictive control."
   years:
     - year: 2026
       papers:
         - title: "Fixed-Time-Stable ODE Representation of Lasso"
+          venue: "IEEE L-CSS / CDC 2026"
           summary: "A smooth, projection-free ODE formulation of Lasso with a prescribed convergence time that is independent of the problem data."
           lead: "Liang Wu"
           links:
             - text: "Paper"
               url: "https://ieeexplore.ieee.org/document/11523518"
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2604.02069"
+
+        - title: "Koopman-Based Linear MPC for Safe Control using Control Barrier Functions"
+          venue: "IEEE CDC 2026"
+          summary: "A Koopman lifting framework that turns nonlinear safety-constrained MPC with discrete-time control barrier functions into an efficient quadratic program."
+          lead: "Shuo Liu"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2603.21070"
+
+        - title: "Polynomial Parametric Koopman Operators for Stochastic MPC"
+          venue: "IEEE CDC 2026"
+          summary: "A polynomial-chaos-parametrized Koopman model with a compact deterministic reformulation for efficient stochastic MPC of nonlinear systems."
+          lead: "Efstathios Iliakis"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2604.00935"
+
+        - title: "Time-Certified and Efficient NMPC via Koopman Operator"
+          venue: "IFAC World Congress 2026"
+          summary: "A Koopman-based NMPC formulation that yields structured box-constrained quadratic programs with certified execution times."
+          lead: "Liang Wu"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2602.15596"
 
         - title: "πMPC: A Parallel-in-Horizon and Construction-Free NMPC Solver"
           summary: "A variable-splitting nonlinear MPC solver designed for efficient parallel execution directly on system matrices."
@@ -123,6 +184,24 @@
   years:
     - year: 2026
       papers:
+        - title: "SCORE: Statistical Certification of Regions of Attraction via Extreme Value Theory"
+          venue: "IEEE CDC 2026"
+          summary: "A scalable statistical framework combining stochastic sampling and extreme value theory to certify regions of attraction in high-dimensional nonlinear systems."
+          lead: "Pietro Zanotta"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2603.29658"
+            - text: "GitHub"
+              url: "https://github.com/SOLARIS-JHU/SCORE"
+
+        - title: "Stability Enhanced Gaussian Process Variational Autoencoders"
+          venue: "IEEE CDC 2026"
+          summary: "A stability-enhanced Gaussian-process VAE that learns interpretable, semi-contracting latent linear dynamics from high-dimensional video data."
+          lead: "Carl R. Richardson"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2604.09331"
+
         - title: "∂CBDs: Differentiable Causal Block Diagrams"
           summary: "A framework that combines causal block diagrams, differentiable learning, and contract-based verification."
           lead: "Thomas Beckers"

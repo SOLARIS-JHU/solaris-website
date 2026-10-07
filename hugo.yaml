@@ -11,9 +11,11 @@ enableInlineShortcodes: true
 # 1. PARAMS SECTION
 params:
   defaultTheme: dark
-  disableThemeToggle: true
+  disableThemeToggle: false
   assets:
     disableHLJS: true
+    theme_color: "#0b1426"
+    msapplication_TileColor: "#0b1426"
     favicon: "favicon.ico"
     favicon16x16: "favicon-16x16.png"
     favicon32x32: "favicon-32x32.png"
@@ -33,12 +35,20 @@ menu:
       weight: 5
     - identifier: research
       name: Research
-      pageRef: /research 
+      pageRef: /research
       weight: 10
+    - identifier: papers
+      name: Papers
+      pageRef: /papers
+      weight: 15
     - identifier: software
       name: Software
       pageRef: /software
       weight: 20
+    - identifier: activities
+      name: Activities
+      pageRef: /activities
+      weight: 25
     - identifier: people
       name: People
       pageRef: /people

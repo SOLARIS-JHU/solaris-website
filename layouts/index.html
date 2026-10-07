@@ -2,22 +2,22 @@
 
 <style>
   .news-item {
-    border-left: 2px solid #13224a;
+    border-left: 2px solid var(--solaris-border);
     transition: all 0.3s ease;
   }
   .news-item:hover {
-    border-left: 4px solid #00f2ff !important;
-    background: rgba(0, 242, 255, 0.05); /* Slight cyan background fade */
+    border-left: 4px solid var(--solaris-accent) !important;
+    background: var(--solaris-accent-soft);
     padding-left: 20px !important; /* Slide effect */
   }
   .news-link {
     text-decoration: none;
-    color: #fff;
+    color: var(--solaris-text);
     transition: color 0.3s;
   }
   .news-link:hover {
-    color: #00f2ff !important;
-    text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
+    color: var(--solaris-accent) !important;
+    text-shadow: none;
   }
 </style>
 
@@ -33,8 +33,8 @@
     
     {{ if .Params.hero_logo }}
     <div style="flex: 0 0 auto;">
-        <img src="/{{ .Params.hero_logo }}" alt="Lab Logo" 
-             style="height: 220px; width: auto; filter: drop-shadow(0 0 25px rgba(0, 242, 255, 0.4));">
+        <img src="/{{ .Params.hero_logo }}" alt="Lab Logo" class="hero-logo"
+             style="height: 220px; width: auto;">
     </div>
     {{ end }}
 
@@ -47,8 +47,8 @@
             margin-bottom: 10px; 
             letter-spacing: 2px; 
             text-transform: uppercase; 
-            color: #ffffff;
-            text-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+            color: var(--solaris-text);
+            text-shadow: none;
         ">
           {{ .Params.title }}
         </h1>
@@ -56,12 +56,12 @@
         {{ if .Params.full_name }}
         <h2 style="
             font-size: 1.2rem; 
-            color: #00f2ff; 
+            color: var(--solaris-accent); 
             font-weight: 600;
             letter-spacing: 1px;
             margin-top: 0;
             margin-bottom: 1.5rem;
-            text-shadow: 0 0 5px rgba(0, 242, 255, 0.4);
+            text-shadow: none;
         ">
             {{ .Params.full_name }}
         </h2>
@@ -69,8 +69,8 @@
         
         <p style="
             font-size: 1.4rem; 
-            color: #e0e7ff; 
-            border-left: 4px solid #00f2ff; 
+            color: var(--solaris-text); 
+            border-left: 4px solid var(--solaris-accent); 
             padding-left: 20px;
             margin: 0;
             line-height: 1.4;
@@ -81,27 +81,27 @@
   </div>
 
   <div style="text-align: center; margin-bottom: 4rem;">
-    <blockquote style="border: none; font-size: 1.4rem; font-style: italic; color: #e0e7ff; line-height: 1.6;">
+    <blockquote style="border: none; font-size: 1.4rem; font-style: italic; color: var(--solaris-text); line-height: 1.6;">
       "{{ .Params.quote.text }}"
     </blockquote>
-    <div style="margin-top: 15px; font-weight: bold; color: #00f2ff; letter-spacing: 1px; text-transform: uppercase;">
+    <div style="margin-top: 15px; font-weight: bold; color: var(--solaris-accent); letter-spacing: 1px; text-transform: uppercase;">
       — {{ .Params.quote.author }}
     </div>
   </div>
 
-  <div style="margin-bottom: 4rem; background: #0a1128; padding: 10px; border-radius: 12px; border: 1px solid #13224a; box-shadow: 0 0 30px rgba(0, 242, 255, 0.1);">
+  <div style="margin-bottom: 4rem; background: var(--solaris-bg); padding: 10px; border-radius: 10px; border: 1px solid var(--solaris-border);">
     <img src="/images/lab-pic.jpg" alt="Lab Group Picture" style="display: block; width: 100%; height: auto; border-radius: 8px;">
   </div>
 
   <div>
-    <h2 style="border-bottom: 1px solid #00f2ff; padding-bottom: 15px; margin-bottom: 25px; color: #fff; text-transform: uppercase; letter-spacing: 1px;">
+    <h2 style="border-bottom: 1px solid var(--solaris-border); padding-bottom: 15px; margin-bottom: 25px; color: var(--solaris-text); text-transform: uppercase; letter-spacing: 1px;">
       Latest News
     </h2>
     
     {{ range .Site.Data.news }}
     <div class="news-item" style="margin-bottom: 25px; padding: 10px 0 10px 15px;">
         
-        <span style="background: #13224a; color: #00f2ff; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; vertical-align: middle;">
+        <span style="background: var(--solaris-accent-soft); color: var(--solaris-accent); padding: 2px 8px; border: 1px solid var(--solaris-border); border-radius: 4px; font-size: 0.8rem; font-weight: bold; vertical-align: middle;">
           {{ .date }}
         </span>
         
@@ -119,11 +119,11 @@
                     {{ .title }} <span style="font-size: 0.8em;">↗</span>
                 </a>
             {{ else }}
-                <span style="color: #fff;">{{ .title }}</span>
+                <span style="color: var(--solaris-text);">{{ .title }}</span>
             {{ end }}
         </h3>
 
-        <p style="margin: 5px 0 0 0; color: #e0e7ff; padding-left: 5px; line-height: 1.5; font-size: 0.95rem;">
+        <p style="margin: 5px 0 0 0; color: var(--solaris-muted); padding-left: 5px; line-height: 1.5; font-size: 0.95rem;">
           {{ .summary }}
         </p>
     </div>

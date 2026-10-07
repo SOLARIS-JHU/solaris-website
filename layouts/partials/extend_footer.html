@@ -1,0 +1,19 @@
+<script>
+(() => {
+  const root = document.documentElement;
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+  const tileColor = document.querySelector('meta[name="msapplication-TileColor"]');
+
+  const syncBrowserColor = () => {
+    const color = root.dataset.theme === "light" ? "#f5f8fc" : "#0b1426";
+    if (themeColor) themeColor.setAttribute("content", color);
+    if (tileColor) tileColor.setAttribute("content", color);
+  };
+
+  syncBrowserColor();
+  new MutationObserver(syncBrowserColor).observe(root, {
+    attributes: true,
+    attributeFilter: ["data-theme"]
+  });
+})();
+</script>

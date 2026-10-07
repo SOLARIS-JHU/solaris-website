@@ -1,661 +1,387 @@
-<!-- <style>
-  /* =========================================
-     1. NEW LAYOUT WRAPPERS (Structure Only)
-     ========================================= */
-  
-  /* The main container that holds Sidebar + Content */
-  .layout-wrapper {
-    display: grid;
-    grid-template-columns: 220px 1fr; /* Sidebar width | Content width */
-    gap: 60px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    align-items: start;
-  }
-
-  /* --- DESKTOP SIDEBAR --- */
-  .sidebar-nav {
-    position: sticky;
-    top: 50px;
-    padding-right: 20px;
-    border-right: 1px solid rgba(0, 242, 255, 0.1); /* Subtle divider */
-  }
-
-  .nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .nav-link {
-    display: block;
-    color: #b0c4de; /* Matches your 'area-desc' color */
-    text-decoration: none;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    border-left: 2px solid transparent;
-    padding-left: 10px;
-  }
-
-  .nav-link:hover {
-    color: #00f2ff;
-    text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
-  }
-
-  /* ACTIVE STATE (Matches your theme) */
-  .nav-link.active {
-    color: #00f2ff;
-    border-left: 2px solid #00f2ff;
-    padding-left: 15px;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(0, 242, 255, 0.4);
-    background: linear-gradient(90deg, rgba(0, 242, 255, 0.05), transparent);
-  }
-
-  /* --- MOBILE NAV (Hidden on Desktop) --- */
-  .mobile-nav-wrapper { display: none; }
-
-  /* =========================================
-     2. YOUR ORIGINAL VISUAL STYLES
-     (Preserved exactly as requested)
-     ========================================= */
-
-  /* Ensure content doesn't blowout the grid */
-  .research-content { min-width: 0; }
-
-  .macro-area {
-    scroll-margin-top: 60px; /* Helper for sticky nav jumping */
-    margin-bottom: 80px; 
-  }
-
-  .area-title {
-    color: #00f2ff;
-    font-size: 2rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
-  }
-
-  .area-desc {
-    color: #b0c4de;
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin-bottom: 30px;
-    line-height: 1.6;
-  }
-
-  .area-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #13224a, transparent);
-    margin-bottom: 50px;
-  }
-
-  /* --- THE GRID (UPDATED FIX) --- */
-  .research-grid {
-    display: grid;
-    /* THIS IS THE FIX: Instead of 'repeat(3, 1fr)', we use auto-fit.
-       This prevents cards from being squashed below 300px. */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 20px 0;
-  }
-
-  /* --- YOUR CARD STYLES (Unchanged) --- */
-  .flash-card {
-    background-color: transparent;
-    width: 100%;
-    height: 300px;
-    perspective: 1000px;
-  }
-  
-  .flash-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transform-style: preserve-3d;
-    cursor: pointer;
-  }
-  .flash-card:hover .flash-card-inner { transform: rotateY(180deg); }
-  
-  .flash-card-front, .flash-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    
-    /* SOLARIS VISUALS */
-    background-color: #13224a;      
-    border: 1px solid #00f2ff;      
-    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2); 
-    border-radius: 12px;
-    color: #e0e7ff;                 
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .flash-card-front { justify-content: center; }
-
-  .flash-card-front h3 {
-    color: #e0e7ff;    
-    font-size: 1.25rem;
-    font-weight: 400;  
-    text-transform: none; 
-    letter-spacing: normal;
-    text-shadow: none; 
-    margin: 0;
-    line-height: 1.5;
-  }
-
-  .flash-card-back {
-    background-color: #0a1128;      
-    transform: rotateY(180deg);
-    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4); 
-    justify-content: space-between;  
-    padding: 30px 20px;
-  }
-
-  .card-summary { font-style: italic; font-size: 0.95rem; color: #fff; margin-bottom: 15px; }
-  .card-meta { font-size: 0.85rem; color: #a0aec0; width: 100%; }
-  
-  .card-links { margin-top: auto; }
-  .card-links a {
-      color: #00f2ff !important;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      margin: 0 8px;
-  }
-  .card-links a:hover {
-      text-shadow: 0 0 8px #00f2ff;
-      text-decoration: underline;
-  }
-
-  /* =========================================
-     3. RESPONSIVE / MOBILE LOGIC
-     ========================================= */
-  @media (max-width: 1000px) {
-    .layout-wrapper {
-      grid-template-columns: 1fr; /* Stack content */
-      padding: 20px;
-      gap: 30px;
-    }
-    .sidebar-nav { display: none; } /* Hide Sidebar */
-    
-    /* Mobile Top Bar */
-    .mobile-nav-wrapper {
-      display: block;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: rgba(19, 34, 74, 0.95); /* Matches your card blue */
-      border-bottom: 1px solid #00f2ff;
-      padding: 15px 0;
-    }
-    .mobile-nav-list {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      padding: 0 20px;
-      scrollbar-width: none;
-    }
-    .mobile-link {
-      color: #b0c4de;
-      white-space: nowrap;
-      text-decoration: none;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      padding-bottom: 5px;
-      border-bottom: 2px solid transparent;
-    }
-    .mobile-link.active {
-      color: #fff;
-      border-color: #00f2ff;
-      text-shadow: 0 0 8px #00f2ff;
-    }
-  }
-</style>
-
-
-<div class="mobile-nav-wrapper">
-  <div class="mobile-nav-list">
-    {{ range .Site.Data.research }}
-      <a href="#{{ .area | urlize }}" class="mobile-link nav-tracker" data-target="{{ .area | urlize }}">
-        {{ .area }}
-      </a>
-    {{ end }}
-  </div>
-</div>
-
-<div class="layout-wrapper">
-
-  <aside class="sidebar-nav">
-    <nav class="nav-list">
-      {{ range .Site.Data.research }}
-        <a href="#{{ .area | urlize }}" class="nav-link nav-tracker" data-target="{{ .area | urlize }}">
-          {{ .area }}
-        </a>
-      {{ end }}
-    </nav>
-  </aside>
-
-  <div class="research-content">
-    {{ range .Site.Data.research }}
-      
-      <div id="{{ .area | urlize }}" class="macro-area section-to-track">
-        
-        <div class="area-header">
-          <h2 class="area-title">{{ .area }}</h2>
-          <p class="area-desc">{{ .description }}</p>
-        </div>
-
-        <div class="research-grid">
-          {{ range .projects }}
-          <div class="flash-card">
-            <div class="flash-card-inner">
-              
-              <div class="flash-card-front">
-                <h3>{{ .title }}</h3>
-              </div>
-              
-              <div class="flash-card-back">
-                <p class="card-summary">{{ .summary }}</p>
-                
-                <div class="card-meta">
-                  <p><strong>Lead:</strong> {{ .lead }}</p>
-                  {{ if .funding }}<p><strong>Funding:</strong> {{ .funding }}</p>{{ end }}
-                </div>
-                
-                <div class="card-links">
-                   {{ range .links }}
-                     <a href="{{ .url }}">[{{ .text }}]</a>
-                   {{ end }}
-                </div>
-              </div>
-
-            </div>
-          </div>
-          {{ end }} 
-        </div> </div> <hr class="area-divider">
-      
-    {{ end }} 
-  </div>
-
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const sections = document.querySelectorAll(".section-to-track");
-  const allNavLinks = document.querySelectorAll(".nav-tracker");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const targetId = entry.target.getAttribute("id");
-        
-        // Update all nav links (both mobile and sidebar)
-        allNavLinks.forEach(link => link.classList.remove("active"));
-        
-        const activeLinks = document.querySelectorAll(`.nav-tracker[data-target="${targetId}"]`);
-        activeLinks.forEach(link => {
-          link.classList.add("active");
-          // Auto-scroll mobile bar
-          if (link.classList.contains('mobile-link')) {
-             link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-          }
-        });
-      }
-    });
-  }, { threshold: 0.15, rootMargin: "-10% 0px -60% 0px" });
-
-  sections.forEach(section => observer.observe(section));
-});
-</script>-->
-
 <style>
-  /* =========================================
-     1. NEW LAYOUT WRAPPERS (Structure Only)
-     ========================================= */
-  
-  /* The main container that holds Sidebar + Content */
-  .layout-wrapper {
+  .papers-mobile-nav { display: none; }
+
+  .papers-layout {
     display: grid;
-    grid-template-columns: 220px 1fr; /* Sidebar width | Content width */
-    gap: 60px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 2.75rem;
     align-items: start;
+    margin-top: 1.5rem;
   }
 
-  /* --- DESKTOP SIDEBAR --- */
-  .sidebar-nav {
+  .papers-sidebar {
     position: sticky;
-    top: 50px;
-    padding-right: 20px;
-    border-right: 1px solid rgba(0, 242, 255, 0.1); /* Subtle divider */
+    top: 2rem;
+    padding: 0.25rem 1.25rem 0.5rem 0;
+    border-right: 1px solid var(--solaris-border);
   }
 
-  .nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .nav-link {
+  .papers-sidebar-label {
     display: block;
-    color: #b0c4de; /* Matches your 'area-desc' color */
-    text-decoration: none;
-    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: var(--solaris-subtle);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
+  }
+
+  .papers-nav-list { display: grid; gap: 0.45rem; }
+
+  .papers-nav-link {
+    display: block;
+    padding: 0.65rem 0.75rem;
     border-left: 2px solid transparent;
-    padding-left: 10px;
+    color: var(--solaris-muted) !important;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    text-decoration: none;
   }
 
-  .nav-link:hover {
-    color: #00f2ff;
-    text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
+  .papers-nav-link:hover,
+  .papers-nav-link.active {
+    border-left-color: var(--solaris-accent);
+    background: var(--solaris-accent-soft);
+    color: var(--solaris-text) !important;
+    text-shadow: 0 0 10px rgba(var(--solaris-accent-rgb), 0.3);
   }
 
-  /* ACTIVE STATE (Matches your theme) */
-  .nav-link.active {
-    color: #00f2ff;
-    border-left: 2px solid #00f2ff;
-    padding-left: 15px;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(0, 242, 255, 0.4);
-    background: linear-gradient(90deg, rgba(0, 242, 255, 0.05), transparent);
+  .papers-content { min-width: 0; }
+
+  .papers-area {
+    scroll-margin-top: 2rem;
+    margin-bottom: 4.5rem;
   }
 
-  /* --- MOBILE NAV (Hidden on Desktop) --- */
-  .mobile-nav-wrapper { display: none; }
+  .papers-area:last-child { margin-bottom: 0; }
 
-  /* =========================================
-     2. YOUR ORIGINAL VISUAL STYLES
-     (Preserved exactly as requested)
-     ========================================= */
-
-  /* Ensure content doesn't blowout the grid */
-  .research-content { min-width: 0; }
-
-  .macro-area {
-    scroll-margin-top: 60px; /* Helper for sticky nav jumping */
-    margin-bottom: 80px; 
+  .papers-area-header {
+    margin-bottom: 1.8rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--solaris-border);
   }
 
-  .area-title {
-    color: #00f2ff;
-    font-size: 2rem;
-    margin-bottom: 10px;
+  .papers-area-kicker {
+    display: block;
+    margin-bottom: 0.55rem;
+    color: var(--solaris-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+    text-shadow: 0 0 10px rgba(var(--solaris-accent-rgb), 0.24);
   }
 
-  .area-desc {
-    color: #b0c4de;
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin-bottom: 30px;
-    line-height: 1.6;
+  .papers-area-title {
+    margin: 0;
+    color: var(--solaris-text);
+    font-size: clamp(1.65rem, 3vw, 2.15rem);
+    line-height: 1.15;
   }
 
-  .area-divider {
-    border: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #13224a, transparent);
-    margin-bottom: 50px;
+  .papers-area-description {
+    max-width: 780px;
+    margin: 0.8rem 0 0;
+    color: var(--solaris-muted);
+    font-size: 1rem;
+    line-height: 1.65;
   }
 
-  /* --- THE GRID (UPDATED FIX) --- */
-  .research-grid {
+  .paper-year-group + .paper-year-group { margin-top: 2.25rem; }
+
+  .paper-year-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .paper-year-header h3 {
+    margin: 0;
+    color: var(--solaris-accent);
+    font-size: 1.3rem;
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 10px rgba(var(--solaris-accent-rgb), 0.2);
+  }
+
+  .paper-year-count {
+    color: var(--solaris-subtle);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .paper-card-grid {
     display: grid;
-    /* THIS IS THE FIX: Instead of 'repeat(3, 1fr)', we use auto-fit.
-       This prevents cards from being squashed below 300px. */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 20px 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
   }
 
-  /* --- YOUR CARD STYLES (Unchanged) --- */
-  .flash-card {
-    background-color: transparent;
-    width: 100%;
-    height: 300px;
-    perspective: 1000px;
+  .paper-flip-card {
+    height: 320px;
+    outline: none;
+    perspective: 1100px;
   }
-  
-  .flash-card-inner {
+
+  .paper-flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
-    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
     transform-style: preserve-3d;
-    cursor: pointer;
+    transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
   }
-  .flash-card:hover .flash-card-inner { transform: rotateY(180deg); }
-  
-  .flash-card-front, .flash-card-back {
+
+  .paper-flip-card:hover .paper-flip-card-inner,
+  .paper-flip-card:focus-within:not(:focus) .paper-flip-card-inner,
+  .paper-flip-card.is-flipped .paper-flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .paper-flip-card-front,
+  .paper-flip-card-back {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    
-    /* SOLARIS VISUALS */
-    background-color: #13224a;      
-    border: 1px solid #00f2ff;      
-    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2); 
-    border-radius: 12px;
-    color: #e0e7ff;                 
-    
+    inset: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
     box-sizing: border-box;
-    overflow: hidden; /* Added to ensure no content spills out of the card */
+    padding: 1.35rem;
+    overflow: hidden;
+    border: 1px solid rgba(var(--solaris-accent-rgb), 0.55);
+    border-radius: 12px;
+    background: var(--solaris-bg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    box-shadow: 0 0 18px rgba(var(--solaris-accent-rgb), 0.14);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
   }
 
-  .flash-card-front { justify-content: center; }
-
-  .flash-card-front h3 {
-    color: #e0e7ff;    
-    font-size: 1.1rem; /* Slightly reduced to fit longer titles safely */
-    font-weight: 400;  
-    text-transform: none; 
-    letter-spacing: normal;
-    text-shadow: none; 
-    margin: 0;
-    line-height: 1.4; /* Tighter line height */
-    width: 100%;
-    overflow-wrap: break-word; /* Forces long words to break onto the next line */
-    word-wrap: break-word;
+  .paper-flip-card:hover .paper-flip-card-front,
+  .paper-flip-card:hover .paper-flip-card-back,
+  .paper-flip-card:focus .paper-flip-card-front,
+  .paper-flip-card:focus .paper-flip-card-back {
+    border-color: var(--solaris-accent);
+    box-shadow: 0 0 28px rgba(var(--solaris-accent-rgb), 0.26);
   }
 
-  .flash-card-back {
-    background-color: #0a1128;      
+  .paper-flip-card-front {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .paper-flip-card-back {
+    justify-content: space-between;
     transform: rotateY(180deg);
-    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4); 
-    justify-content: space-between;  
-    padding: 30px 20px;
   }
 
-  .card-summary { font-style: italic; font-size: 0.95rem; color: #fff; margin-bottom: 15px; }
-  .card-meta { font-size: 0.85rem; color: #a0aec0; width: 100%; }
-  
-  .card-links { margin-top: auto; }
-  .card-links a {
-      color: #00f2ff !important;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      margin: 0 8px;
-  }
-  .card-links a:hover {
-      text-shadow: 0 0 8px #00f2ff;
-      text-decoration: underline;
+  .paper-card-year {
+    margin-bottom: 1rem;
+    color: var(--solaris-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
   }
 
-  /* =========================================
-     3. RESPONSIVE / MOBILE LOGIC
-     ========================================= */
-  @media (max-width: 1000px) {
-    .layout-wrapper {
-      grid-template-columns: 1fr; /* Stack content */
-      padding: 20px;
-      gap: 30px;
-    }
-    .sidebar-nav { display: none; } /* Hide Sidebar */
-    
-    /* Mobile Top Bar */
-    .mobile-nav-wrapper {
-      display: block;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: rgba(19, 34, 74, 0.95); /* Matches your card blue */
-      border-bottom: 1px solid #00f2ff;
-      padding: 15px 0;
-    }
-    .mobile-nav-list {
+  .paper-card-title {
+    margin: 0;
+    color: var(--solaris-text);
+    font-size: 1.08rem;
+    line-height: 1.45;
+  }
+
+  .paper-card-cue {
+    margin-top: 1.25rem;
+    color: var(--solaris-subtle);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .paper-card-summary {
+    margin: 0;
+    color: var(--solaris-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .paper-card-lead {
+    margin: auto 0 0.9rem;
+    color: var(--solaris-text);
+    font-size: 0.82rem;
+  }
+
+  .paper-card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .paper-card-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid rgba(var(--solaris-accent-rgb), 0.45);
+    border-radius: 999px;
+    color: var(--solaris-accent) !important;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .paper-card-links a:hover,
+  .paper-card-links a:focus {
+    border-color: var(--solaris-accent);
+    background: var(--solaris-accent-soft);
+    color: var(--solaris-text) !important;
+    text-shadow: 0 0 8px rgba(var(--solaris-accent-rgb), 0.38);
+  }
+
+  @media (max-width: 900px) {
+    .papers-mobile-nav {
       display: flex;
+      gap: 0.5rem;
+      margin: 0 0 1.5rem;
+      padding: 0 0 0.7rem;
       overflow-x: auto;
-      gap: 20px;
-      padding: 0 20px;
-      scrollbar-width: none;
+      scrollbar-width: thin;
     }
-    .mobile-link {
-      color: #b0c4de;
-      white-space: nowrap;
+
+    .papers-mobile-nav a {
+      flex: 0 0 auto;
+      padding: 0.5rem 0.7rem;
+      border: 1px solid var(--solaris-border);
+      border-radius: 999px;
+      color: var(--solaris-muted) !important;
+      font-size: 0.78rem;
       text-decoration: none;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      padding-bottom: 5px;
-      border-bottom: 2px solid transparent;
+      white-space: nowrap;
     }
-    .mobile-link.active {
-      color: #fff;
-      border-color: #00f2ff;
-      text-shadow: 0 0 8px #00f2ff;
+
+    .papers-mobile-nav a.active {
+      border-color: var(--solaris-accent);
+      color: var(--solaris-text) !important;
+      box-shadow: 0 0 12px rgba(var(--solaris-accent-rgb), 0.18);
     }
+
+    .papers-layout { grid-template-columns: 1fr; gap: 0; }
+    .papers-sidebar { display: none; }
+  }
+
+  @media (max-width: 640px) {
+    .papers-area { margin-bottom: 3.5rem; }
+    .paper-card-grid { grid-template-columns: 1fr; }
+    .paper-flip-card { height: 340px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .paper-flip-card-inner { transition: none; }
   }
 </style>
 
+<nav class="papers-mobile-nav" aria-label="Paper research areas">
+  {{ range .Site.Data.research }}
+    <a href="#{{ .area | urlize }}" class="papers-tracker" data-target="{{ .area | urlize }}">{{ .area }}</a>
+  {{ end }}
+</nav>
 
-<div class="mobile-nav-wrapper">
-  <div class="mobile-nav-list">
-    {{ range .Site.Data.research }}
-      <a href="#{{ .area | urlize }}" class="mobile-link nav-tracker" data-target="{{ .area | urlize }}">
-        {{ .area }}
-      </a>
-    {{ end }}
-  </div>
-</div>
-
-<div class="layout-wrapper">
-
-  <aside class="sidebar-nav">
-    <nav class="nav-list">
+<div class="papers-layout">
+  <aside class="papers-sidebar">
+    <span class="papers-sidebar-label">Explore by theme</span>
+    <nav class="papers-nav-list" aria-label="Paper research areas">
       {{ range .Site.Data.research }}
-        <a href="#{{ .area | urlize }}" class="nav-link nav-tracker" data-target="{{ .area | urlize }}">
-          {{ .area }}
-        </a>
+        <a href="#{{ .area | urlize }}" class="papers-nav-link papers-tracker" data-target="{{ .area | urlize }}">{{ .area }}</a>
       {{ end }}
     </nav>
   </aside>
 
-  <div class="research-content">
-    {{ range .Site.Data.research }}
-      
-      <div id="{{ .area | urlize }}" class="macro-area section-to-track">
-        
-        <div class="area-header">
-          <h2 class="area-title">{{ .area }}</h2>
-          <p class="area-desc">{{ .description }}</p>
-        </div>
+  <div class="papers-content">
+    {{ range $areaIndex, $area := .Site.Data.research }}
+      <section id="{{ $area.area | urlize }}" class="papers-area papers-section-to-track">
+        <header class="papers-area-header">
+          <span class="papers-area-kicker">Theme {{ printf "%02d" (add $areaIndex 1) }}</span>
+          <h2 class="papers-area-title">{{ $area.area }}</h2>
+          <p class="papers-area-description">{{ $area.description }}</p>
+        </header>
 
-        <div class="research-grid">
-          {{ range .projects }}
-          <div class="flash-card">
-            <div class="flash-card-inner">
-              
-              <div class="flash-card-front">
-                <h3>{{ .title }}</h3>
-              </div>
-              
-              <div class="flash-card-back">
-                <p class="card-summary">{{ .summary }}</p>
-                
-                <div class="card-meta">
-                  <p><strong>Lead:</strong> {{ .lead }}</p>
-                  {{ if .funding }}<p><strong>Funding:</strong> {{ .funding }}</p>{{ end }}
-                </div>
-                
-                <div class="card-links">
-                   {{ range .links }}
-                     <a href="{{ .url }}">[{{ .text }}]</a>
-                   {{ end }}
-                </div>
-              </div>
+        {{ range $area.years }}
+          {{ $year := .year }}
+          <section class="paper-year-group" aria-labelledby="{{ $area.area | urlize }}-{{ $year }}">
+            <header class="paper-year-header">
+              <h3 id="{{ $area.area | urlize }}-{{ $year }}">{{ $year }}</h3>
+              <span class="paper-year-count">{{ len .papers }} {{ if eq (len .papers) 1 }}publication{{ else }}publications{{ end }}</span>
+            </header>
 
+            <div class="paper-card-grid">
+              {{ range .papers }}
+                <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="{{ .title }}. Show details.">
+                  <div class="paper-flip-card-inner">
+                    <div class="paper-flip-card-front">
+                      <span class="paper-card-year">{{ $year }}</span>
+                      <h4 class="paper-card-title">{{ .title }}</h4>
+                      <span class="paper-card-cue"></span>
+                    </div>
+
+                    <div class="paper-flip-card-back">
+                      <p class="paper-card-summary">{{ .summary }}</p>
+                      <p class="paper-card-lead"><strong>Lead:</strong> {{ .lead }}</p>
+                      <div class="paper-card-links">
+                        {{ range .links }}
+                          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .text }}</a>
+                        {{ end }}
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              {{ end }}
             </div>
-          </div>
-          {{ end }} 
-        </div> </div> <hr class="area-divider">
-      
-    {{ end }} 
+          </section>
+        {{ end }}
+      </section>
+    {{ end }}
   </div>
-
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const sections = document.querySelectorAll(".section-to-track");
-  const allNavLinks = document.querySelectorAll(".nav-tracker");
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(".papers-section-to-track");
+  const navLinks = document.querySelectorAll(".papers-tracker");
+  const cards = document.querySelectorAll(".paper-flip-card");
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const targetId = entry.target.getAttribute("id");
-        
-        // Update all nav links (both mobile and sidebar)
-        allNavLinks.forEach(link => link.classList.remove("active"));
-        
-        const activeLinks = document.querySelectorAll(`.nav-tracker[data-target="${targetId}"]`);
-        activeLinks.forEach(link => {
-          link.classList.add("active");
-          // Auto-scroll mobile bar
-          if (link.classList.contains('mobile-link')) {
-             link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-          }
-        });
+  const setActive = (targetId) => {
+    navLinks.forEach((link) => link.classList.toggle("active", link.dataset.target === targetId));
+  };
+
+  if (sections.length) {
+    setActive(sections[0].id);
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      if (visible.length) setActive(visible[0].target.id);
+    }, { rootMargin: "-15% 0px -65% 0px", threshold: [0.05, 0.2, 0.5] });
+    sections.forEach((section) => observer.observe(section));
+  }
+
+  cards.forEach((card) => {
+    const toggleCard = () => {
+      const flipped = card.classList.toggle("is-flipped");
+      card.setAttribute("aria-expanded", String(flipped));
+    };
+
+    card.addEventListener("click", (event) => {
+      if (!event.target.closest("a")) toggleCard();
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if ((event.key === "Enter" || event.key === " ") && !event.target.closest("a")) {
+        event.preventDefault();
+        toggleCard();
       }
     });
-  }, { threshold: 0.15, rootMargin: "-10% 0px -60% 0px" });
-
-  sections.forEach(section => observer.observe(section));
+  });
 });
 </script>

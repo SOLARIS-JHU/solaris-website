@@ -1,151 +1,143 @@
-# - title: ""
-#   summary: ""
-#   lead: ""
-#   links:
-#   - text: "Preprint"
-#     url: ""
+- area: "Learning to Optimize"
+  description: "Learning-based methods that accelerate constrained, mixed-integer, and decision-focused optimization while preserving feasibility and physical requirements."
+  years:
+    - year: 2025
+      papers:
+        - title: "Learning to Solve Constrained Bilevel Control Co-Design Problems"
+          summary: "A self-supervised learning-to-optimize framework for constrained bilevel control co-design with enforced coupling constraints."
+          lead: "James Kotary"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2507.09050"
+            - text: "GitHub"
+              url: "https://github.com/anon-research-coding/Control-Design-Learning"
 
-- area: "Learning to Optimize (L2O)"
-  description: "Accelerating the solution of complex, constrained optimization problems through solver-free, self-supervised learning frameworks."
-  projects:
+        - title: "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning"
+          summary: "A decision-focused learning framework that uses neural networks to guide recursive linearization for energy-storage scheduling."
+          lead: "Honghui Zheng"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2512.20880"
+            - text: "GitHub"
+              url: "https://github.com/SOLARIS-JHU/DFL-UPHES"
 
-    - title: "Learning to Optimize for Mixed-Integer Non-linear Programming with Feasibility Guarantees"
-      summary: "L2O framework addressing parametric MINLP by integrating integer correction layers for adaptive rounding with projections to ensure feasibility"
-      lead: "Bo Tang"
-      links:
-      - text: "Preprint"
-        url: "https://arxiv.org/abs/2410.11061"
-      - text: "GitHub"
-        url: "https://github.com/pnnl/L2O-MINLP"
+    - year: 2024
+      papers:
+        - title: "Learning to Optimize for Mixed-Integer Nonlinear Programming with Feasibility Guarantees"
+          summary: "A learning-to-optimize framework for parametric MINLP that combines adaptive integer correction with projections to guarantee feasibility."
+          lead: "Bo Tang"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2410.11061"
+            - text: "GitHub"
+              url: "https://github.com/pnnl/L2O-MINLP"
 
-    - title: "Learning to Solve Constrained Bilevel Control Co-Design Problems"
-      summary: "Self-supervised L2O framework solving constrained bilevel control co-design problems trough control with enforced coupling constraints"
-      lead: "James Kotary"
-      links:
-      - text: "Preprint"
-        url: "https://arxiv.org/abs/2507.09050"
-      - text: "GitHub"
-        url: "https://github.com/anon-research-coding/Control-Design-Learning"
+- area: "Learning to Control"
+  description: "Data-driven control policies for constrained nonlinear and distributed systems, trained through differentiable predictive control and operator learning."
+  years:
+    - year: 2026
+      papers:
+        - title: "CINOC: Cardinality-Invariant Neural Operator Policies for Scalable PDE Control"
+          summary: "Decentralized neural-operator control policies for PDE systems that generalize zero-shot across different swarm cardinalities."
+          lead: "Pietro Zanotta"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2605.25867"
+            - text: "GitHub"
+              url: "https://github.com/SOLARIS-JHU/CINOC"
 
-  
-- area: "Learning to Control (L2C)"
-  description: "Synthesizing constrained neural control policies for nonlinear and infinite-dimensional systems via differentiable predictive control and offline self-supervised learning."
-  projects:
-    - title: "CINOC: Cardinality-Invariant Neural Operator Policies for Scalable PDE Control"
-      summary: "Training multi-agent decentralized control policies for PDE control able to generalize zero-shot to different swarm cardinalities."
-      lead: "Pietro Zanotta"
-      links:
-        - text: "Paper"
-          url: "https://arxiv.org/abs/2605.25867"
-        - text: "GitHub"
-          url: "https://github.com/SOLARIS-JHU/CINOC"
+    - year: 2025
+      papers:
+        - title: "Learning to Solve Parametric Mixed-Integer Optimal Control Problems via DPC"
+          summary: "Near-optimal control for input- and state-constrained parametric mixed-integer problems using differentiable predictive control."
+          lead: "Ján Boldocký"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2506.19646"
 
-    - title: "Learning to Solve Parametric Mixed-Integer Optimal Control Problems via DPC"
-      summary: "Achieving near-optimal control performance via DPC in input- and state-constrained parametric mixed-integer optimal control problems."
-      lead: "Ján Boldocký"
-      links:
-        - text: "Preprint"
-          url: "https://arxiv.org/abs/2506.19646"
-    
-    - title: "Zero-Shot Function Encoder-Based Differentiable Predictive Control"
-      summary: "Integrating Function Encoder-based Neural ODEs with DPC to enable zero-shot control of nonlinear systems"
-      lead: "Hassan Iqbal"
-      links:
-        - text: "Preprint"
-          url: "https://arxiv.org/abs/2511.05757"
-   
-    - title: "Learning to Control PDEs with Differentiable Predictive Control and Time-Integrated Neural Operators"
-      summary: "End-to-end framework integrating Time-Integrated DeepONets with DPC to enable the offline, self-supervised optimization of control policies for PDEs"
-      lead: "Dibakar Roy Sarkar"
-      links:
-        - text: "Preprint"
-          url: "https://arxiv.org/abs/2511.08992"
-        - text: "GitHub"
-          url: "https://github.com/Centrum-IntelliPhysics/PDEControl_DPC"
-   
+        - title: "Zero-Shot Function Encoder-Based Differentiable Predictive Control"
+          summary: "Function Encoder-based neural ODEs integrated with differentiable predictive control for zero-shot control of nonlinear systems."
+          lead: "Hassan Iqbal"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2511.05757"
 
-- area: "Model Predictive Control (MPC)"
-  description: "Advancing the computational efficiency, real-time execution, and predictive accuracy of linear and nonlinear Model Predictive Control systems through novel solver architectures and data-driven dynamics learning."
-  projects:
+        - title: "Learning to Control PDEs with Differentiable Predictive Control and Time-Integrated Neural Operators"
+          summary: "An end-to-end framework combining Time-Integrated DeepONets with offline, self-supervised optimization of PDE control policies."
+          lead: "Dibakar Roy Sarkar"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2511.08992"
+            - text: "GitHub"
+              url: "https://github.com/Centrum-IntelliPhysics/PDEControl_DPC"
 
-    - title: "Fixed-time-stable ODE Representation of Lasso"
-      summary: "A method to transform the non-smooth Lasso optimization problem into a fixed-time-stable ODE using a smooth nonnegative quadratic program, guaranteeing that the system converges to the optimal solution within an arbitrarily prescribed time limit independent of the problem data."
-      lead: "Liang Wu"
-      links:
-      - text: "Paper"
-        url: "https://ieeexplore.ieee.org/document/11523518"
+- area: "Optimization and Model Predictive Control"
+  description: "Fast, time-certified, and parallel algorithms for real-time optimization and predictive control."
+  years:
+    - year: 2026
+      papers:
+        - title: "Fixed-Time-Stable ODE Representation of Lasso"
+          summary: "A smooth, projection-free ODE formulation of Lasso with a prescribed convergence time that is independent of the problem data."
+          lead: "Liang Wu"
+          links:
+            - text: "Paper"
+              url: "https://ieeexplore.ieee.org/document/11523518"
 
-    - title: "A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP"
-      summary: "A time-certified predictor-corrector interior-point algorithm guarantees deterministic execution times and strict iteration complexity bounds for solving box-constrained quadratic programs in real-time model predictive control."
-      lead: "Liang Wu"
-      links:
-        - text: "Paper"
-          url: "https://ieeexplore.ieee.org/abstract/document/11313851"
-        - text: "GitHub"
-          url: "https://github.com/liangwu2019/PC_BoxQP"
-    
-    - title: "πMPC: A Parallel-in-horizon and Construction-free NMPC Solver"
-      summary: "The MPC algorithm delivers a construction-free, parallel-in-horizon nonlinear model predictive control solver by combining a novel variable-splitting scheme with a velocity-based system representation to enable highly efficient execution directly on system matrices."
-      lead: "Liang Wu"
-      links:
-        - text: "Preprint"
-          url: "https://arxiv.org/abs/2601.14414"
-        - text: "GitHub"
-          url: "https://github.com/SOLARIS-JHU/PiMPC.jl"
+        - title: "πMPC: A Parallel-in-Horizon and Construction-Free NMPC Solver"
+          summary: "A variable-splitting nonlinear MPC solver designed for efficient parallel execution directly on system matrices."
+          lead: "Liang Wu"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2601.14414"
+            - text: "GitHub"
+              url: "https://github.com/SOLARIS-JHU/PiMPC.jl"
 
-    - title: "Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control"
-      summary: "Learning long-horizon dynamics thorugh convex multi-step Koopman framework while completely bypassing the compounding prediction errors that plague traditional single-step models."
-      lead: "Liang Wu"
-      links:
-        - text: "Preprint"
-          url: "https://arxiv.org/abs/2601.11901"
-        - text: "GitHub"
-          url: "https://github.com/SOLARIS-JHU/Multi-step-Koopman"
+        - title: "Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control"
+          summary: "A convex multi-step Koopman framework for long-horizon dynamics learning that avoids compounding single-step prediction errors."
+          lead: "Liang Wu"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2601.11901"
+            - text: "GitHub"
+              url: "https://github.com/SOLARIS-JHU/Multi-step-Koopman"
 
+    - year: 2025
+      papers:
+        - title: "A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP"
+          summary: "A predictor-corrector interior-point method with deterministic execution-time and iteration-complexity guarantees for real-time MPC."
+          lead: "Liang Wu"
+          links:
+            - text: "Paper"
+              url: "https://ieeexplore.ieee.org/abstract/document/11313851"
+            - text: "GitHub"
+              url: "https://github.com/liangwu2019/PC_BoxQP"
 
-- area: "Differentiable Programming"
-  description: "Integrating differentiability into engineering modeling frameworks to enable gradient-based learning, verification, and design optimization."
-  projects:
-    - title: "∂CBDs: Differentiable Causal Block Diagrams"
-      summary: "Integrating causal block diagrams, differentiability for learning and contract-based verification frameworks."
-      lead: "Thomas Beckers"
-      links:
-        - text: "Preprint"
-          url: "https://www.arxiv.org/abs/2602.07581"  
-  
+- area: "Scientific Machine Learning and System Identification"
+  description: "Physics-informed, differentiable, and structure-aware models for learning reliable representations of complex dynamical systems."
+  years:
+    - year: 2026
+      papers:
+        - title: "∂CBDs: Differentiable Causal Block Diagrams"
+          summary: "A framework that combines causal block diagrams, differentiable learning, and contract-based verification."
+          lead: "Thomas Beckers"
+          links:
+            - text: "Preprint"
+              url: "https://www.arxiv.org/abs/2602.07581"
 
-- area: "Energy systems"
-  description: "Enhancing the operation and scheduling of energy storage and grid systems through decision-focused learning and advanced optimization."
-  projects:
-    - title: "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning"
-      summary: "This paper presents a decision-focused learning framework for underground pumped hydro energy storage scheduling that uses neural networks to guide recursive linearization."
-      lead: "Honghui Zheng"
-      links:
-        - text: "Preprint"
-          url: "https://arxiv.org/abs/2512.20880"
-        - text: "GitHub"
-          url: "https://github.com/SOLARIS-JHU/DFL-UPHES"
+    - year: 2025
+      papers:
+        - title: "Safe Physics-Informed Machine Learning for Dynamics and Control"
+          summary: "A tutorial overview of physics-informed machine learning methods for safe modeling and control of dynamical systems."
+          lead: "Ján Drgoňa"
+          links:
+            - text: "Paper"
+              url: "https://ieeexplore.ieee.org/abstract/document/11107836"
 
-
-- area: "Scientific Machine Learning (SciML)"
-  description: "Bridging physics-based modeling with machine learning to ensure safety, stability, and physical consistency in data-driven representations of dynamical systems."
-  projects:
-  - title: "Safe Physics-informed Machine Learning for Dynamics and Control"
-    summary: "Tutorial paper provides a comprehensive overview of safe physics-informed machine learning for dynamics and control."
-    lead: "Ján Drgoňa"
-    links:
-      - text: "Paper"
-        url: "https://ieeexplore.ieee.org/abstract/document/11107836"
-
-  
-- area: "Nonlinear System Identification"
-  description: "Advancing data-driven modeling of complex dynamics."
-  projects:
-  - title: "Learning Neural Differential Algebraic Equations via Operator Splitting"
-    summary: "Introducing an operator splitting numerical integration scheme for learning Neural Differential Algebraic Equations."
-    lead: "James Koch"
-    links:
-      - text: "Paper"
-        url: "https://ieeexplore.ieee.org/abstract/document/11312239"
-      - text: "GitHub"
-        url: "https://github.com/pnnl/NeuralDAEs"
+        - title: "Learning Neural Differential Algebraic Equations via Operator Splitting"
+          summary: "An operator-splitting integration scheme for learning neural differential-algebraic equation models from data."
+          lead: "James Koch"
+          links:
+            - text: "Paper"
+              url: "https://ieeexplore.ieee.org/abstract/document/11312239"
+            - text: "GitHub"
+              url: "https://github.com/pnnl/NeuralDAEs"

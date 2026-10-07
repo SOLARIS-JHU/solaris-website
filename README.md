@@ -40,19 +40,24 @@ Add a new block to the top of the list to add a new announcement.
   summary: "Our work on Quantum Turbulence was accepted at ICML."
 ```
 
-### 🔹 Updating Research Projects
+### 🔹 Updating Papers
 **File:** `data/research.yml`
 
-Each project is a block. The site automatically arranges them into a grid.
+Papers are grouped first by one of the four research themes, then by year. Keep the year groups in newest-first order.
 ```yaml
-- title: "New Project Name"
-  summary: "A short description of the project."
-  category: "AI + Physics"
-  lead: "Dr. Jane Doe"
-  funding: "NSF"
-  links:
-    - text: "Code"
-      url: "[https://github.com/](https://github.com/)..."
+- area: "Research Theme"
+  description: "A short description of the theme."
+  years:
+    - year: 2026
+      papers:
+        - title: "New Paper Name"
+          summary: "A short description of the paper."
+          lead: "Lead Researcher"
+          links:
+            - text: "Paper"
+              url: "https://example.com/paper"
+            - text: "GitHub"
+              url: "https://github.com/example/repository"
 ```
 
 ### 🔹 Updating Software Tools

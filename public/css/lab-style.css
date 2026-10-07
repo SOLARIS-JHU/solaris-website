@@ -1,32 +1,338 @@
-/* SOLARIS THEME VARIABLES */
-:root {
-    --solaris-bg: #0a1128;       /* Deep Space Blue */
-    --solaris-card: #13224a;     /* Lighter Blue */
-    --solaris-cyan: #00f2ff;     /* The Logo Glow Color */
-    --solaris-text: #e0e7ff;     /* Soft White */
+/* SOLARIS THEME */
+:root,
+:root[data-theme="dark"] {
+    --solaris-bg: #0b1426;
+    --solaris-surface: #0b1426;
+    --solaris-border: #293a54;
+    --solaris-border-strong: #3e5878;
+    --solaris-accent: #7cccf0;
+    --solaris-accent-rgb: 124, 204, 240;
+    --solaris-accent-soft: rgba(124, 204, 240, 0.09);
+    --solaris-text: #eef5ff;
+    --solaris-muted: #b1bfd3;
+    --solaris-subtle: #7f90a8;
+
+    --theme: var(--solaris-bg);
+    --entry: var(--solaris-bg);
+    --primary: var(--solaris-text);
+    --secondary: var(--solaris-muted);
+    --tertiary: #14213a;
+    --content: #d8e3f2;
+    --code-block-bg: #08101f;
+    --code-bg: #14213a;
+    --border: var(--solaris-border);
+    color-scheme: dark;
 }
 
-/* 1. OVERRIDE THE BACKGROUND */
-body.dark {
-    background-color: var(--solaris-bg) !important;
+:root[data-theme="light"] {
+    --solaris-bg: #f5f8fc;
+    --solaris-surface: #f5f8fc;
+    --solaris-border: #c8d5e5;
+    --solaris-border-strong: #87a2bd;
+    --solaris-accent: #1478a6;
+    --solaris-accent-rgb: 20, 120, 166;
+    --solaris-accent-soft: rgba(20, 120, 166, 0.08);
+    --solaris-text: #17263c;
+    --solaris-muted: #50637b;
+    --solaris-subtle: #6c7f95;
+
+    --theme: var(--solaris-bg);
+    --entry: var(--solaris-bg);
+    --primary: var(--solaris-text);
+    --secondary: var(--solaris-muted);
+    --tertiary: #e7eef6;
+    --content: #263950;
+    --code-block-bg: #e9f0f7;
+    --code-bg: #e3ebf4;
+    --border: var(--solaris-border);
+    color-scheme: light;
+}
+
+html,
+body,
+body.dark,
+.list,
+.header,
+.footer,
+main {
+    background: var(--solaris-bg) !important;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body {
     color: var(--solaris-text) !important;
 }
 
-.header, .footer, main {
-    background-color: var(--solaris-bg) !important;
+.header {
+    border-bottom: 1px solid var(--solaris-border);
 }
 
-/* 2. MAKE LINKS GLOW */
-a { color: var(--solaris-cyan) !important; transition: 0.3s; }
-a:hover { text-shadow: 0 0 8px var(--solaris-cyan); }
+.footer {
+    border-top: 1px solid var(--solaris-border);
+}
 
-/* 3. MENU BAR ADJUSTMENTS */
-.header { background: rgba(10, 17, 40, 0.9) !important; }
-.header .menu li a { color: var(--solaris-text) !important; }
-.header .menu li a:hover { color: var(--solaris-cyan) !important; }
+a {
+    color: var(--solaris-accent) !important;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
 
-/* 4. NEWS HOVER EFFECT */
-/* This makes the blue line turn cyan when you hover over news */
+a:hover {
+    color: var(--solaris-text) !important;
+    text-shadow: 0 0 9px rgba(var(--solaris-accent-rgb), 0.38);
+}
+
+.logo img,
+.hero-logo {
+    border-radius: 12px;
+    filter: drop-shadow(0 0 12px rgba(var(--solaris-accent-rgb), 0.24));
+}
+
+.logo > a {
+    color: var(--solaris-text) !important;
+}
+
+:root[data-theme="light"] .hero-logo {
+    box-shadow: 0 14px 34px rgba(23, 38, 60, 0.14);
+}
+
+#theme-toggle {
+    display: inline-grid;
+    width: 38px;
+    height: 38px;
+    padding: 6px;
+    border: 1px solid var(--solaris-border);
+    border-radius: 999px;
+    color: var(--solaris-muted);
+    place-items: center;
+    transition: color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#theme-toggle:hover,
+#theme-toggle:focus-visible {
+    border-color: var(--solaris-accent);
+    color: var(--solaris-accent);
+    box-shadow: 0 0 14px rgba(var(--solaris-accent-rgb), 0.2);
+    outline: none;
+}
+
+.header .menu li a,
+#menu a {
+    color: var(--solaris-muted) !important;
+}
+
+.header .menu li a:hover,
+#menu a:hover,
+#menu .active {
+    color: var(--solaris-text) !important;
+}
+
+#menu .active {
+    border-bottom-color: var(--solaris-accent);
+}
+
 div[style*="border-left"]:hover {
-    border-left-color: var(--solaris-cyan) !important;
+    border-left-color: var(--solaris-accent) !important;
+}
+
+/* RESEARCH AND ACTIVITIES OVERVIEW PAGES */
+.page-intro {
+    max-width: 760px;
+    margin: 0 0 2.5rem;
+    color: var(--solaris-muted);
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+    margin: 1rem 0 2.5rem;
+}
+
+.research-overview-grid {
+    width: min(1120px, calc(100vw - 3rem));
+    margin-right: 0;
+    margin-left: 50%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    transform: translateX(-50%);
+}
+
+.overview-card {
+    min-height: 230px;
+    padding: 1.6rem;
+    border: 1px solid var(--solaris-border);
+    border-radius: 10px;
+    background: var(--solaris-bg);
+    box-shadow: 0 0 14px rgba(var(--solaris-accent-rgb), 0.08);
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.overview-card:hover {
+    border-color: var(--solaris-accent);
+    background: rgba(var(--solaris-accent-rgb), 0.025);
+    box-shadow: 0 0 24px rgba(var(--solaris-accent-rgb), 0.18);
+}
+
+.overview-card h2 {
+    margin: 1rem 0 0.75rem;
+    color: var(--solaris-text);
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
+
+.overview-card p {
+    margin: 0;
+    color: var(--solaris-muted);
+    line-height: 1.65;
+}
+
+.placeholder-label {
+    display: inline-block;
+    padding: 0.25rem 0.55rem;
+    border: 1px solid rgba(var(--solaris-accent-rgb), 0.42);
+    border-radius: 999px;
+    color: var(--solaris-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(var(--solaris-accent-rgb), 0.24);
+}
+
+.placeholder-note {
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--solaris-accent);
+    background: var(--solaris-accent-soft);
+    color: var(--solaris-muted);
+    line-height: 1.6;
+}
+
+/* ACTIVITIES */
+.activities-stack {
+    display: grid;
+    gap: 1.5rem;
+    margin: 1rem 0 2.5rem;
+}
+
+.activity-section {
+    overflow: hidden;
+    border: 1px solid var(--solaris-border);
+    border-radius: 12px;
+    background: var(--solaris-bg);
+    box-shadow: 0 0 16px rgba(var(--solaris-accent-rgb), 0.08);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activity-section:hover,
+.activity-section:focus-within {
+    border-color: var(--solaris-border-strong);
+    box-shadow: 0 0 26px rgba(var(--solaris-accent-rgb), 0.15);
+}
+
+.activity-section-header {
+    padding: 1.6rem 1.75rem 1.4rem;
+    border-bottom: 1px solid var(--solaris-border);
+    background: linear-gradient(110deg, var(--solaris-accent-soft), transparent 65%);
+}
+
+.activity-kicker {
+    color: var(--solaris-accent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-shadow: 0 0 9px rgba(var(--solaris-accent-rgb), 0.28);
+}
+
+.activity-section-header h2 {
+    margin: 0.35rem 0 0.45rem;
+    color: var(--solaris-text);
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+
+.activity-section-header p,
+.activity-entry p {
+    margin: 0;
+    color: var(--solaris-muted);
+    line-height: 1.65;
+}
+
+.activity-section-content,
+.activity-year-list {
+    padding: 0 1.75rem;
+}
+
+.activity-section-content {
+    padding-top: 1.5rem;
+    padding-bottom: 1.6rem;
+}
+
+.activity-year-group {
+    display: grid;
+    grid-template-columns: 86px minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 1.5rem 0;
+}
+
+.activity-year-group + .activity-year-group {
+    border-top: 1px solid var(--solaris-border);
+}
+
+.activity-year {
+    padding-top: 0.1rem;
+}
+
+.activity-year span {
+    color: var(--solaris-accent);
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 10px rgba(var(--solaris-accent-rgb), 0.24);
+}
+
+.activity-entry {
+    min-width: 0;
+    padding-left: 1.15rem;
+    border-left: 2px solid var(--solaris-border-strong);
+}
+
+.activity-entry h3 {
+    margin: 0.65rem 0 0.4rem;
+    color: var(--solaris-text);
+    font-size: 1.08rem;
+    line-height: 1.35;
+}
+
+@media (max-width: 760px) {
+    .research-overview-grid {
+        width: 100%;
+        margin-left: 0;
+        grid-template-columns: 1fr;
+        transform: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-card {
+        min-height: auto;
+        padding: 1.4rem;
+    }
+
+    .activity-section-header,
+    .activity-section-content,
+    .activity-year-list {
+        padding-right: 1.25rem;
+        padding-left: 1.25rem;
+    }
+
+    .activity-year-group {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
 }

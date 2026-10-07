@@ -2,16 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>SOLARIS LAB on Solaris Lab</title>
-    <link>//localhost:1313/index.html</link>
+    <link>/index.html</link>
     <description>Recent content in SOLARIS LAB on Solaris Lab</description>
     <generator>Hugo -- 0.154.5</generator>
     <language>en-us</language>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Activities</title>
+      <link>/activities.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/activities.html</guid>
+      <description>Seminars, workshops, tutorials, and teaching activities from the Solaris Lab.</description>
+    </item>
     <item>
       <title>Contact</title>
-      <link>//localhost:1313/contact.html</link>
+      <link>/contact.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/contact.html</guid>
+      <guid>/contact.html</guid>
       <description>&lt;p&gt;&lt;strong&gt;Lab Location:&lt;/strong&gt; Latrobe, Room 201Q&lt;br&gt;
 3400 N Charles St, Baltimore, MD 21218&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; jdrgona1 [at] jh dot edu&lt;/p&gt;
@@ -19,18 +26,18 @@
     </item>
     <item>
       <title>Join the Lab</title>
-      <link>//localhost:1313/join-us.html</link>
+      <link>/join-us.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/join-us.html</guid>
+      <guid>/join-us.html</guid>
       <description>&lt;h3 id=&#34;prospective-students--postdocs&#34;&gt;Prospective Students &amp;amp; Postdocs&lt;/h3&gt;
 &lt;p&gt;The lab welcomes candidates with a strong foundation in &lt;strong&gt;Applied Mathematics&lt;/strong&gt;, &lt;strong&gt;Computer Science&lt;/strong&gt;, or related fields to join us. Applications are reviewed on a rolling basis.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;To Apply:&lt;/strong&gt; Please submit your CV via email to &lt;strong&gt;jdrgona1 [at] jh dot edu&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Life at the Lab</title>
-      <link>//localhost:1313/gallery.html</link>
+      <link>/gallery.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/gallery.html</guid>
+      <guid>/gallery.html</guid>
       <description>&lt;style&gt;
 .gallery-grid {
   display: grid;
@@ -47,7 +54,9 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border: 1px solid var(--solaris-border);
   border-radius: 8px;
+  box-shadow: 0 0 14px rgba(var(--solaris-accent-rgb), 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -63,7 +72,7 @@
 /* Optional: Clean styling for the description text */
 .gallery-caption {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--solaris-muted);
   margin-top: 8px;
   text-align: center;
   line-height: 1.4;
@@ -94,9 +103,9 @@
     </item>
     <item>
       <title>Open Source Software</title>
-      <link>//localhost:1313/software.html</link>
+      <link>/software.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/software.html</guid>
+      <guid>/software.html</guid>
       <description>&lt;p&gt;We believe in open science. All our tools are available on GitHub. The group is also activaly contributing and mantaining the following libraries:&lt;/p&gt;
 &lt;style&gt;
    
@@ -139,11 +148,11 @@
     backface-visibility: hidden;
     
      
-    background-color: #13224a;        
-    border: 1px solid #00f2ff;        
-    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);  
+    background-color: var(--solaris-bg);
+    border: 1px solid var(--solaris-border);
+    box-shadow: 0 0 16px rgba(var(--solaris-accent-rgb), 0.12);
     border-radius: 12px;
-    color: #e0e7ff;                   
+    color: var(--solaris-text);
     
     display: flex;
     flex-direction: column;
@@ -155,29 +164,30 @@
 
    
   .flash-card-front h3 {
-    color: #ffffff;
+    color: var(--solaris-text);
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-shadow: 0 0 5px rgba(0, 242, 255, 0.5);
+    text-shadow: 0 0 9px rgba(var(--solaris-accent-rgb), 0.28);
   }
 
    
   .flash-card-back {
-    background-color: #0a1128;        
+    background-color: var(--solaris-bg);
     transform: rotateY(180deg);
-    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);  
+    box-shadow: 0 0 24px rgba(var(--solaris-accent-rgb), 0.22);
   }
   
    
   .flash-card a {
-      color: #00f2ff !important;
+      color: var(--solaris-accent) !important;
       font-weight: bold;
       text-transform: uppercase;
       text-decoration: none;
       transition: all 0.3s ease;
   }
   .flash-card a:hover {
-      text-shadow: 0 0 8px #00f2ff;
+      color: var(--solaris-text) !important;
+      text-shadow: none;
       text-decoration: underline;
   }
 &lt;/style&gt;
@@ -193,111 +203,17 @@
     </item>
     <item>
       <title>Our Team</title>
-      <link>//localhost:1313/people.html</link>
+      <link>/people.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/people.html</guid>
-      <description>&lt;style&gt;
- 
-.people-section { margin-bottom: 60px; }
-.people-section h2 { 
-    border-bottom: 1px solid #00f2ff;  
-    padding-bottom: 15px; 
-    margin-bottom: 30px;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
-}
-
- 
-.people-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 30px;
-}
-
- 
-.person-card {
-  text-align: center;
-  background: #13224a;  
-  padding: 30px 20px;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 242, 255, 0.3);  
-  transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  display: flex;        
-  flex-direction: column;
-  align-items: center;
-}
-
- 
-.person-card:hover {
-    transform: translateY(-5px);
-    border-color: #00f2ff;
-    box-shadow: 0 0 25px rgba(0, 242, 255, 0.2);
-}
-
- 
-.person-img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-  border: 3px solid #00f2ff;  
-  box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);  
-  transition: transform 0.3s ease;
-}
-.person-card:hover .person-img {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 242, 255, 0.6);
-}
-
- 
-.person-card h3 {
-    margin: 10px 0 5px;
-    color: #fff;
-    font-size: 1.2rem;
-}
-.person-card p {
-    color: #e0e7ff;  
-    font-size: 0.95rem;
-    margin: 5px 0;
-}
-.person-card i {
-    color: #00f2ff;  
-}
-
- 
-.social-links { 
-    margin-top: auto;  
-    padding-top: 15px; 
-}
-.social-links a { 
-    margin: 0 8px; 
-    text-decoration: none; 
-    font-size: 0.9rem; 
-    color: #00f2ff; 
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: all 0.2s;
-}
-.social-links a:hover { 
-    color: #fff; 
-    text-shadow: 0 0 8px #00f2ff; 
-}
-&lt;/style&gt;
-
-
-&lt;div class=&#34;people-section&#34;&gt;
-  &lt;h2&gt;Principal Investigator&lt;/h2&gt;
-  &lt;div class=&#34;people-grid&#34;&gt;
-    
-    &lt;div class=&#34;person-card&#34;&gt;
-      &lt;img src=&#34;images/jan-pic.webp&#34; class=&#34;person-img&#34;&gt;
-      &lt;h3&gt;Prof. Ján Drgoňa&lt;/h3&gt;
-      &lt;p&gt;&lt;i&gt;Associate Professor&lt;/i&gt;&lt;/p&gt;</description>
+      <guid>/people.html</guid>
+      <description>Researchers and students working across optimization, control, and scientific machine learning at the Solaris Lab.</description>
+    </item>
+    <item>
+      <title>Papers</title>
+      <link>/papers.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/papers.html</guid>
+      <description>Publications and preprints from the Solaris Lab across optimization, control, scientific machine learning, and dynamical systems.</description>
     </item>
   </channel>
 </rss>

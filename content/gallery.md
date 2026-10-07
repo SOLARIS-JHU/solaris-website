@@ -19,7 +19,9 @@ layout: "single"
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border: 1px solid var(--solaris-border);
   border-radius: 8px;
+  box-shadow: 0 0 14px rgba(var(--solaris-accent-rgb), 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -35,7 +37,7 @@ layout: "single"
 /* Optional: Clean styling for the description text */
 .gallery-caption {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--solaris-muted);
   margin-top: 8px;
   text-align: center;
   line-height: 1.4;

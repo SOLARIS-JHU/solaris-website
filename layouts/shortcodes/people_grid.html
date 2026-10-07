@@ -1,197 +1,169 @@
 <style>
-/* 1. SECTION HEADERS */
-.people-section { margin-bottom: 60px; }
-.people-section h2 { 
-    border-bottom: 1px solid #00f2ff; /* Cyan Divider */
-    padding-bottom: 15px; 
-    margin-bottom: 30px;
-    color: #ffffff;
+  .people-directory {
+    width: min(1280px, calc(100vw - 32px));
+    margin: 1.25rem 0 0 50%;
+    transform: translateX(-50%);
+  }
+
+  .people-row {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 0.75rem 0.5rem 1.5rem;
+  }
+
+  .person-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 390px;
+    padding: 1.15rem 0.9rem;
+    overflow: hidden;
+    border: 1px solid rgba(var(--solaris-accent-rgb), 0.48);
+    border-radius: 12px;
+    background: var(--solaris-bg);
+    box-shadow: 0 0 16px rgba(var(--solaris-accent-rgb), 0.12);
+    text-align: center;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .person-card:hover,
+  .person-card:focus-within {
+    transform: translateY(-4px);
+    border-color: var(--solaris-accent);
+    box-shadow: 0 0 26px rgba(var(--solaris-accent-rgb), 0.24);
+  }
+
+  .person-category {
+    min-height: 2.4em;
+    margin-bottom: 0.9rem;
+    color: var(--solaris-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    line-height: 1.25;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
-}
+    text-shadow: 0 0 9px rgba(var(--solaris-accent-rgb), 0.28);
+  }
 
-/* 2. THE GRID */
-.people-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 30px;
-}
+  .person-img {
+    width: 112px;
+    height: 112px;
+    margin: 0 0 0.9rem;
+    border: 2px solid var(--solaris-accent);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 18px rgba(var(--solaris-accent-rgb), 0.26);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
 
-/* 3. THE CARD (Solaris Style) */
-.person-card {
-  text-align: center;
-  background: #13224a; /* Medium Blue */
-  padding: 30px 20px;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 242, 255, 0.3); /* Subtle cyan border */
-  transition: all 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-  display: flex;       /* Added to handle varying heights better */
-  flex-direction: column;
-  align-items: center;
-}
+  .person-card:hover .person-img,
+  .person-card:focus-within .person-img {
+    transform: scale(1.03);
+    box-shadow: 0 0 24px rgba(var(--solaris-accent-rgb), 0.38);
+  }
 
-/* Hover Effect: Glow and Lift */
-.person-card:hover {
-    transform: translateY(-5px);
-    border-color: #00f2ff;
-    box-shadow: 0 0 25px rgba(0, 242, 255, 0.2);
-}
+  .person-details {
+    width: 100%;
+    min-width: 0;
+  }
 
-/* 4. THE IMAGE (Glowing Halo) */
-.person-img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-  border: 3px solid #00f2ff; /* Cyan Ring */
-  box-shadow: 0 0 15px rgba(0, 242, 255, 0.4); /* Glow */
-  transition: transform 0.3s ease;
-}
-.person-card:hover .person-img {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 242, 255, 0.6);
-}
+  .person-details h2 {
+    margin: 0;
+    color: var(--solaris-text);
+    font-size: 1.02rem;
+    line-height: 1.3;
+  }
 
-/* 5. TEXT STYLES */
-.person-card h3 {
-    margin: 10px 0 5px;
-    color: #fff;
-    font-size: 1.2rem;
-}
-.person-card p {
-    color: #e0e7ff; /* Soft Blue-White */
-    font-size: 0.95rem;
-    margin: 5px 0;
-}
-.person-card i {
-    color: #00f2ff; /* Italic text (Role) gets Cyan */
-}
+  .person-role {
+    margin: 0.35rem 0 0;
+    color: var(--solaris-accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
 
-/* 6. LINKS */
-.social-links { 
-    margin-top: auto; /* Pushes links to the bottom if cards are different heights */
-    padding-top: 15px; 
-}
-.social-links a { 
-    margin: 0 8px; 
-    text-decoration: none; 
-    font-size: 0.9rem; 
-    color: #00f2ff; 
-    font-weight: bold;
+  .person-focus {
+    margin: 0.55rem 0 0;
+    color: var(--solaris-muted);
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .person-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem;
+    margin-top: auto;
+    padding-top: 0.85rem;
+  }
+
+  .person-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 27px;
+    padding: 0.22rem 0.48rem;
+    border: 1px solid rgba(var(--solaris-accent-rgb), 0.38);
+    border-radius: 999px;
+    color: var(--solaris-accent) !important;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-decoration: none;
     text-transform: uppercase;
-    transition: all 0.2s;
-}
-.social-links a:hover { 
-    color: #fff; 
-    text-shadow: 0 0 8px #00f2ff; 
-}
+  }
+
+  .person-links a:hover,
+  .person-links a:focus {
+    border-color: var(--solaris-accent);
+    background: var(--solaris-accent-soft);
+    color: var(--solaris-text) !important;
+    text-shadow: 0 0 8px rgba(var(--solaris-accent-rgb), 0.38);
+  }
+
+  @media (max-width: 1100px) {
+    .people-row { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 860px) {
+    .people-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 640px) {
+    .people-directory { width: calc(100vw - 20px); }
+    .people-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .person-card { min-height: 380px; }
+  }
+
+  @media (max-width: 430px) {
+    .people-row { grid-template-columns: 1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .person-card,
+    .person-img {
+      transition: none;
+    }
+  }
 </style>
 
-{{ with .Site.Data.people.pi }}
-<div class="people-section">
-  <h2>Principal Investigator</h2>
-  <div class="people-grid">
-    {{ range . }}
-    <div class="person-card">
-      <img src="{{ .image }}" class="person-img">
-      <h3>{{ .name }}</h3>
-      <p><i>{{ .role }}</i></p>
-      <p>{{ .focus }}</p>
-      <div class="social-links">
-        {{ range .links }}
-          <a href="{{ .url }}">[{{ .text }}]</a>
-        {{ end }}
-      </div>
-    </div>
+<div class="people-directory">
+  <div class="people-row" role="list" aria-label="Solaris Lab members">
+    {{ range .Site.Data.people.pi }}
+      {{ partial "person-card.html" (dict "person" . "category" "Principal Investigator") }}
+    {{ end }}
+    {{ range .Site.Data.people.postdocs }}
+      {{ partial "person-card.html" (dict "person" . "category" "Postdoctoral Researcher") }}
+    {{ end }}
+    {{ range .Site.Data.people.students }}
+      {{ partial "person-card.html" (dict "person" . "category" "PhD Student") }}
+    {{ end }}
+    {{ range .Site.Data.people.visiting_researchers }}
+      {{ partial "person-card.html" (dict "person" . "category" "Visiting Researcher") }}
+    {{ end }}
+    {{ range .Site.Data.people.undergraduates }}
+      {{ partial "person-card.html" (dict "person" . "category" "Undergraduate Intern") }}
     {{ end }}
   </div>
 </div>
-{{ end }}
-
-{{ with .Site.Data.people.postdocs }}
-<div class="people-section">
-  <h2>Postdocs</h2>
-  <div class="people-grid">
-    {{ range . }}
-    <div class="person-card">
-      <img src="{{ .image }}" class="person-img">
-      <h3>{{ .name }}</h3>
-      <p>{{ .role }}</p>
-      {{ if .focus }}<p>{{ .focus }}</p>{{ end }}
-      <div class="social-links">
-        {{ range .links }}
-          <a href="{{ .url }}">[{{ .text }}]</a>
-        {{ end }}
-      </div>
-    </div>
-    {{ end }}
-  </div>
-</div>
-{{ end }}
-
-{{ with .Site.Data.people.students }}
-<div class="people-section">
-  <h2>PhD Students</h2>
-  <div class="people-grid">
-    {{ range . }}
-    <div class="person-card">
-      <img src="{{ .image }}" class="person-img">
-      <h3>{{ .name }}</h3>
-      <p>{{ .role }}</p>
-      {{ if .focus }}<p>{{ .focus }}</p>{{ end }}
-      <div class="social-links">
-        {{ range .links }}
-          <a href="{{ .url }}">[{{ .text }}]</a>
-        {{ end }}
-      </div>
-    </div>
-    {{ end }}
-  </div>
-</div>
-{{ end }}
-
-{{ with .Site.Data.people.visiting_researchers }}
-<div class="people-section">
-  <h2>Visiting Researchers</h2>
-  <div class="people-grid">
-    {{ range . }}
-    <div class="person-card">
-      <img src="{{ .image }}" class="person-img" alt="{{ .name }}">
-      <h3>{{ .name }}</h3>
-      <p>{{ .role }}</p>
-      {{ if .focus }}<p>{{ .focus }}</p>{{ end }}
-      <div class="social-links">
-        {{ range .links }}
-          <a href="{{ .url }}">[{{ .text }}]</a>
-        {{ end }}
-      </div>
-    </div>
-    {{ end }}
-  </div>
-</div>
-{{ end }}
-
-{{ with .Site.Data.people.undergraduates }}
-<div class="people-section">
-  <h2>Undergraduate Interns</h2>
-  <div class="people-grid">
-    {{ range . }}
-    <div class="person-card">
-      <img src="{{ .image }}" class="person-img" alt="{{ .name }}">
-      <h3>{{ .name }}</h3>
-      <p>{{ .role }}</p>
-      {{ if .focus }}<p>{{ .focus }}</p>{{ end }}
-      <div class="social-links">
-        {{ range .links }}
-          <a href="{{ .url }}">[{{ .text }}]</a>
-        {{ end }}
-      </div>
-    </div>
-    {{ end }}
-  </div>
-</div>
-{{ end }}

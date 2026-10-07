@@ -39,11 +39,11 @@
     backface-visibility: hidden;
     
     /* SOLARIS CARD BASE */
-    background-color: #13224a;       /* Medium Blue */
-    border: 1px solid #00f2ff;       /* Cyan Border */
-    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2); /* Soft Glow */
+    background-color: var(--solaris-bg);
+    border: 1px solid var(--solaris-border);
+    box-shadow: 0 0 16px rgba(var(--solaris-accent-rgb), 0.12);
     border-radius: 12px;
-    color: #e0e7ff;                  /* Soft White Text */
+    color: var(--solaris-text);
     
     display: flex;
     flex-direction: column;
@@ -55,29 +55,30 @@
 
   /* 5. FRONT SPECIFIC */
   .flash-card-front h3 {
-    color: #ffffff;
+    color: var(--solaris-text);
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-shadow: 0 0 5px rgba(0, 242, 255, 0.5);
+    text-shadow: 0 0 9px rgba(var(--solaris-accent-rgb), 0.28);
   }
 
   /* 6. BACK SPECIFIC */
   .flash-card-back {
-    background-color: #0a1128;       /* Darker Void Blue */
+    background-color: var(--solaris-bg);
     transform: rotateY(180deg);
-    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4); /* Stronger glow */
+    box-shadow: 0 0 24px rgba(var(--solaris-accent-rgb), 0.22);
   }
   
   /* Links inside the card */
   .flash-card a {
-      color: #00f2ff !important;
+      color: var(--solaris-accent) !important;
       font-weight: bold;
       text-transform: uppercase;
       text-decoration: none;
       transition: all 0.3s ease;
   }
   .flash-card a:hover {
-      text-shadow: 0 0 8px #00f2ff;
+      color: var(--solaris-text) !important;
+      text-shadow: none;
       text-decoration: underline;
   }
 </style>
@@ -90,7 +91,7 @@
       <div class="flash-card-front">
         <h3 style="margin-bottom: 10px;">{{ .title }}</h3>
         <p>{{ .summary }}</p>
-        <small style="color: #00f2ff; font-weight: bold; margin-top: 10px;">{{ .language }}</small>
+        <small style="color: var(--solaris-accent); font-weight: bold; margin-top: 10px;">{{ .language }}</small>
       </div>
       
       <div class="flash-card-back">

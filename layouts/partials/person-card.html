@@ -1,0 +1,27 @@
+{{- $person := .person -}}
+<article class="person-card" role="listitem">
+  <span class="person-category">{{ .category }}</span>
+
+  <img
+    src="{{ $person.image | relURL }}"
+    class="person-img"
+    alt="Portrait of {{ $person.name }}"
+    width="112"
+    height="112"
+    loading="lazy"
+  >
+
+  <div class="person-details">
+    <h2>{{ $person.name }}</h2>
+    <p class="person-role">{{ $person.role }}</p>
+    {{ with $person.focus }}<p class="person-focus">{{ . }}</p>{{ end }}
+  </div>
+
+  {{ with $person.links }}
+    <div class="person-links" aria-label="Links for {{ $person.name }}">
+      {{ range . }}
+        <a href="{{ .url }}"{{ if hasPrefix .url "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .text }}</a>
+      {{ end }}
+    </div>
+  {{ end }}
+</article>

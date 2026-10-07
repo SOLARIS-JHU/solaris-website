@@ -171,6 +171,70 @@
     text-align: center;
   }
 
+  .paper-flip-card-front--image {
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 0;
+    text-align: left;
+  }
+
+  .paper-card-image-frame {
+    display: grid;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+    place-items: center;
+    background:
+      radial-gradient(circle at 50% 40%, rgba(var(--solaris-accent-rgb), 0.12), transparent 65%),
+      var(--solaris-bg);
+  }
+
+  .paper-card-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    transition: transform 0.35s ease;
+  }
+
+  .paper-card-image--contain {
+    box-sizing: border-box;
+    padding: 0.65rem;
+    object-fit: contain;
+  }
+
+  .paper-card-image--cover {
+    object-fit: cover;
+  }
+
+  .paper-flip-card:hover .paper-card-image,
+  .paper-flip-card:focus .paper-card-image {
+    transform: scale(1.025);
+  }
+
+  .paper-card-image-copy {
+    display: flex;
+    flex: 0 0 42%;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 0;
+    padding: 0.95rem 1.2rem 1.05rem;
+    border-top: 1px solid var(--solaris-border);
+    background: var(--solaris-bg);
+  }
+
+  .paper-card-image-copy .paper-card-year {
+    margin-bottom: 0.45rem;
+  }
+
+  .paper-card-image-copy .paper-card-title {
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+
   .paper-flip-card-back {
     justify-content: space-between;
     transform: rotateY(180deg);
@@ -280,7 +344,8 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .paper-flip-card-inner { transition: none; }
+    .paper-flip-card-inner,
+    .paper-card-image { transition: none; }
   }
 </style>
 
@@ -319,12 +384,31 @@
 
             <div class="paper-card-grid">
               {{ range .papers }}
+                {{ $paper := . }}
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="{{ .title }}. Show details.">
                   <div class="paper-flip-card-inner">
-                    <div class="paper-flip-card-front">
-                      <span class="paper-card-year">{{ $year }}</span>
-                      <h4 class="paper-card-title">{{ .title }}</h4>
-                      <span class="paper-card-cue"></span>
+                    <div class="paper-flip-card-front{{ if .image }} paper-flip-card-front--image{{ end }}">
+                      {{ with $paper.image }}
+                        {{ $imageFit := "contain" }}
+                        {{ if eq $paper.image_fit "cover" }}{{ $imageFit = "cover" }}{{ end }}
+                        <div class="paper-card-image-frame">
+                          <img
+                            class="paper-card-image paper-card-image--{{ $imageFit }}"
+                            src="{{ . | relURL }}"
+                            alt="{{ $paper.image_alt | default (printf "Visual for %s" $paper.title) }}"
+                            loading="lazy"
+                            decoding="async"
+                            {{ with $paper.image_position }}style="object-position: {{ . }};"{{ end }}>
+                        </div>
+                        <div class="paper-card-image-copy">
+                          <span class="paper-card-year">{{ $year }}</span>
+                          <h4 class="paper-card-title">{{ $paper.title }}</h4>
+                        </div>
+                      {{ else }}
+                        <span class="paper-card-year">{{ $year }}</span>
+                        <h4 class="paper-card-title">{{ $paper.title }}</h4>
+                        <span class="paper-card-cue"></span>
+                      {{ end }}
                     </div>
 
                     <div class="paper-flip-card-back">

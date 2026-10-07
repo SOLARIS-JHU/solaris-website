@@ -1,3 +1,9 @@
+# Optional front image fields for any paper:
+# image: "images/papers/example.webp"
+# image_alt: "Short description of the paper image"
+# image_fit: "contain" # default; use "cover" for full-bleed photography
+# image_position: "center" # optional, e.g. "center top" or "40% 50%"
+
 - area: "Learning to Optimize"
   description: "Learning-based methods that accelerate constrained, mixed-integer, and decision-focused optimization while preserving feasibility and physical requirements."
   years:

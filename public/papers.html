@@ -357,6 +357,70 @@
     text-align: center;
   }
 
+  .paper-flip-card-front--image {
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 0;
+    text-align: left;
+  }
+
+  .paper-card-image-frame {
+    display: grid;
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
+    place-items: center;
+    background:
+      radial-gradient(circle at 50% 40%, rgba(var(--solaris-accent-rgb), 0.12), transparent 65%),
+      var(--solaris-bg);
+  }
+
+  .paper-card-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    transition: transform 0.35s ease;
+  }
+
+  .paper-card-image--contain {
+    box-sizing: border-box;
+    padding: 0.65rem;
+    object-fit: contain;
+  }
+
+  .paper-card-image--cover {
+    object-fit: cover;
+  }
+
+  .paper-flip-card:hover .paper-card-image,
+  .paper-flip-card:focus .paper-card-image {
+    transform: scale(1.025);
+  }
+
+  .paper-card-image-copy {
+    display: flex;
+    flex: 0 0 42%;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 0;
+    padding: 0.95rem 1.2rem 1.05rem;
+    border-top: 1px solid var(--solaris-border);
+    background: var(--solaris-bg);
+  }
+
+  .paper-card-image-copy .paper-card-year {
+    margin-bottom: 0.45rem;
+  }
+
+  .paper-card-image-copy .paper-card-title {
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+
   .paper-flip-card-back {
     justify-content: space-between;
     transform: rotateY(180deg);
@@ -466,7 +530,8 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .paper-flip-card-inner { transition: none; }
+    .paper-flip-card-inner,
+    .paper-card-image { transition: none; }
   }
 </style>
 
@@ -517,12 +582,15 @@
 
             <div class="paper-card-grid">
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="Learning to Solve Constrained Bilevel Control Co-Design Problems. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2025</span>
-                      <h4 class="paper-card-title">Learning to Solve Constrained Bilevel Control Co-Design Problems</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2025</span>
+                        <h4 class="paper-card-title">Learning to Solve Constrained Bilevel Control Co-Design Problems</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">
@@ -539,12 +607,15 @@
                   </div>
                 </article>
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2025</span>
-                      <h4 class="paper-card-title">Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2025</span>
+                        <h4 class="paper-card-title">Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">
@@ -573,12 +644,15 @@
 
             <div class="paper-card-grid">
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="Learning to Optimize for Mixed-Integer Nonlinear Programming with Feasibility Guarantees. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2024</span>
-                      <h4 class="paper-card-title">Learning to Optimize for Mixed-Integer Nonlinear Programming with Feasibility Guarantees</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2024</span>
+                        <h4 class="paper-card-title">Learning to Optimize for Mixed-Integer Nonlinear Programming with Feasibility Guarantees</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">
@@ -617,12 +691,15 @@
 
             <div class="paper-card-grid">
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="CINOC: Cardinality-Invariant Neural Operator Policies for Scalable PDE Control. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2026</span>
-                      <h4 class="paper-card-title">CINOC: Cardinality-Invariant Neural Operator Policies for Scalable PDE Control</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2026</span>
+                        <h4 class="paper-card-title">CINOC: Cardinality-Invariant Neural Operator Policies for Scalable PDE Control</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">
@@ -651,12 +728,15 @@
 
             <div class="paper-card-grid">
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="Learning to Solve Parametric Mixed-Integer Optimal Control Problems via DPC. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2025</span>
-                      <h4 class="paper-card-title">Learning to Solve Parametric Mixed-Integer Optimal Control Problems via DPC</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2025</span>
+                        <h4 class="paper-card-title">Learning to Solve Parametric Mixed-Integer Optimal Control Problems via DPC</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">
@@ -671,12 +751,15 @@
                   </div>
                 </article>
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="Zero-Shot Function Encoder-Based Differentiable Predictive Control. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2025</span>
-                      <h4 class="paper-card-title">Zero-Shot Function Encoder-Based Differentiable Predictive Control</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2025</span>
+                        <h4 class="paper-card-title">Zero-Shot Function Encoder-Based Differentiable Predictive Control</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">
@@ -691,12 +774,15 @@
                   </div>
                 </article>
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="Learning to Control PDEs with Differentiable Predictive Control and Time-Integrated Neural Operators. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2025</span>
-                      <h4 class="paper-card-title">Learning to Control PDEs with Differentiable Predictive Control and Time-Integrated Neural Operators</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2025</span>
+                        <h4 class="paper-card-title">Learning to Control PDEs with Differentiable Predictive Control and Time-Integrated Neural Operators</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">
@@ -735,12 +821,15 @@
 
             <div class="paper-card-grid">
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="Fixed-Time-Stable ODE Representation of Lasso. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2026</span>
-                      <h4 class="paper-card-title">Fixed-Time-Stable ODE Representation of Lasso</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2026</span>
+                        <h4 class="paper-card-title">Fixed-Time-Stable ODE Representation of Lasso</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">
@@ -755,12 +844,15 @@
                   </div>
                 </article>
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="πMPC: A Parallel-in-Horizon and Construction-Free NMPC Solver. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2026</span>
-                      <h4 class="paper-card-title">πMPC: A Parallel-in-Horizon and Construction-Free NMPC Solver</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2026</span>
+                        <h4 class="paper-card-title">πMPC: A Parallel-in-Horizon and Construction-Free NMPC Solver</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">
@@ -777,12 +869,15 @@
                   </div>
                 </article>
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2026</span>
-                      <h4 class="paper-card-title">Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2026</span>
+                        <h4 class="paper-card-title">Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">
@@ -811,12 +906,15 @@
 
             <div class="paper-card-grid">
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2025</span>
-                      <h4 class="paper-card-title">A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2025</span>
+                        <h4 class="paper-card-title">A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">
@@ -855,12 +953,15 @@
 
             <div class="paper-card-grid">
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="∂CBDs: Differentiable Causal Block Diagrams. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2026</span>
-                      <h4 class="paper-card-title">∂CBDs: Differentiable Causal Block Diagrams</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2026</span>
+                        <h4 class="paper-card-title">∂CBDs: Differentiable Causal Block Diagrams</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">
@@ -887,12 +988,15 @@
 
             <div class="paper-card-grid">
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="Safe Physics-Informed Machine Learning for Dynamics and Control. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2025</span>
-                      <h4 class="paper-card-title">Safe Physics-Informed Machine Learning for Dynamics and Control</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2025</span>
+                        <h4 class="paper-card-title">Safe Physics-Informed Machine Learning for Dynamics and Control</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">
@@ -907,12 +1011,15 @@
                   </div>
                 </article>
               
+                
                 <article class="paper-flip-card" tabindex="0" aria-expanded="false" aria-label="Learning Neural Differential Algebraic Equations via Operator Splitting. Show details.">
                   <div class="paper-flip-card-inner">
                     <div class="paper-flip-card-front">
-                      <span class="paper-card-year">2025</span>
-                      <h4 class="paper-card-title">Learning Neural Differential Algebraic Equations via Operator Splitting</h4>
-                      <span class="paper-card-cue"></span>
+                      
+                        <span class="paper-card-year">2025</span>
+                        <h4 class="paper-card-title">Learning Neural Differential Algebraic Equations via Operator Splitting</h4>
+                        <span class="paper-card-cue"></span>
+                      
                     </div>
 
                     <div class="paper-flip-card-back">

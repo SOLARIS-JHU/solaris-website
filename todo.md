@@ -1,0 +1,7 @@
+ - aggiungere ultime news e papers
+ - aggiungere immagini a tutti i papers
+ - refinire la pagina "research"
+ - aggiungere roba alla pagina open source software
+ - potenziare pagina activities
+ - ottenere dominio che sia decente
+ - fare foto con tutto il team

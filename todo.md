@@ -1,4 +1,3 @@
  - aggiungere immagini a tutti i papers
- - refinire la pagina "research"
  - ottenere dominio che sia decente
  - fare foto con tutto il team

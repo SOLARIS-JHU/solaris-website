@@ -298,11 +298,87 @@ div[style*="border-left"]:hover {
     border-left: 2px solid var(--solaris-border-strong);
 }
 
+.activity-entries {
+    display: grid;
+    min-width: 0;
+}
+
+.activity-entries .activity-entry + .activity-entry {
+    margin-top: 1.35rem;
+    padding-top: 1.35rem;
+    border-top: 1px solid var(--solaris-border);
+}
+
+.activity-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.75rem;
+    align-items: center;
+    margin-bottom: 0.35rem !important;
+    color: var(--solaris-subtle) !important;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.activity-meta time {
+    color: var(--solaris-accent);
+}
+
+.course-code {
+    color: var(--solaris-accent) !important;
+    font-size: 0.82rem;
+    font-weight: 750;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.activity-meta span::before {
+    margin-right: 0.75rem;
+    color: var(--solaris-border-strong);
+    content: "•";
+}
+
 .activity-entry h3 {
-    margin: 0.65rem 0 0.4rem;
+    margin: 0.3rem 0 0.4rem;
     color: var(--solaris-text);
     font-size: 1.08rem;
     line-height: 1.35;
+}
+
+.activity-entry h3 a {
+    color: var(--solaris-text);
+    text-decoration: none;
+}
+
+.activity-entry h3 a:hover {
+    color: var(--solaris-accent);
+}
+
+.activity-entry .placeholder-label + h3 {
+    margin-top: 0.65rem;
+}
+
+.activity-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.activity-links a {
+    padding: 0.32rem 0.65rem;
+    border: 1px solid var(--solaris-border-strong);
+    border-radius: 999px;
+    color: var(--solaris-accent);
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.activity-links a:hover {
+    background: var(--solaris-accent-soft);
 }
 
 @media (max-width: 760px) {
@@ -334,5 +410,13 @@ div[style*="border-left"]:hover {
     .activity-year-group {
         grid-template-columns: 1fr;
         gap: 0.75rem;
+    }
+
+    .activity-meta span {
+        flex-basis: 100%;
+    }
+
+    .activity-meta span::before {
+        display: none;
     }
 }

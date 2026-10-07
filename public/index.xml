@@ -1,219 +1,176 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>SOLARIS LAB on Solaris Lab</title>
-    <link>/index.html</link>
-    <description>Recent content in SOLARIS LAB on Solaris Lab</description>
-    <generator>Hugo -- 0.154.5</generator>
-    <language>en-us</language>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Activities</title>
-      <link>/activities.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/activities.html</guid>
-      <description>Seminars, workshops, tutorials, and teaching activities from the Solaris Lab.</description>
-    </item>
-    <item>
-      <title>Contact</title>
-      <link>/contact.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/contact.html</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Lab Location:&lt;/strong&gt; Latrobe, Room 201Q&lt;br&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>SOLARIS LAB on Solaris Lab</title><link>/index.html</link><description>Recent content in SOLARIS LAB on Solaris Lab</description><generator>Hugo -- 0.154.5</generator><language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Activities</title><link>/activities.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/activities.html</guid><description>Seminars, workshops, tutorials, and teaching activities from the Solaris Lab.</description></item><item><title>Contact</title><link>/contact.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/contact.html</guid><description>&lt;p&gt;&lt;strong&gt;Lab Location:&lt;/strong&gt; Latrobe, Room 201Q&lt;br&gt;
 3400 N Charles St, Baltimore, MD 21218&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; jdrgona1 [at] jh dot edu&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Twitter:&lt;/strong&gt; @&lt;a href=&#34;https://x.com/jan_drgona?lang=es&#34;&gt;jan_drgona&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Join the Lab</title>
-      <link>/join-us.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/join-us.html</guid>
-      <description>&lt;h3 id=&#34;prospective-students--postdocs&#34;&gt;Prospective Students &amp;amp; Postdocs&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Twitter:&lt;/strong&gt; @&lt;a href="https://x.com/jan_drgona?lang=es"&gt;jan_drgona&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Join the Lab</title><link>/join-us.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/join-us.html</guid><description>&lt;h3 id="prospective-students--postdocs"&gt;Prospective Students &amp;amp; Postdocs&lt;/h3&gt;
 &lt;p&gt;The lab welcomes candidates with a strong foundation in &lt;strong&gt;Applied Mathematics&lt;/strong&gt;, &lt;strong&gt;Computer Science&lt;/strong&gt;, or related fields to join us. Applications are reviewed on a rolling basis.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;To Apply:&lt;/strong&gt; Please submit your CV via email to &lt;strong&gt;jdrgona1 [at] jh dot edu&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Life at the Lab</title>
-      <link>/gallery.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/gallery.html</guid>
-      <description>&lt;style&gt;
+&lt;p&gt;&lt;strong&gt;To Apply:&lt;/strong&gt; Please submit your CV via email to &lt;strong&gt;jdrgona1 [at] jh dot edu&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Life at the Lab</title><link>/gallery.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/gallery.html</guid><description>&lt;style&gt;
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 15px;
-  align-items: start;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+gap: 15px;
+align-items: start;
 }
-
 /* Updated to target both img and video */
 .post-content .gallery-item img,
 .post-content .gallery-item video {
-  display: block;
-  margin: 0;
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border: 1px solid var(--solaris-border);
-  border-radius: 8px;
-  box-shadow: 0 0 14px rgba(var(--solaris-accent-rgb), 0.1);
-  transition: transform 0.3s ease;
+display: block;
+margin: 0;
+width: 100%;
+height: 200px;
+object-fit: cover;
+border: 1px solid var(--solaris-border);
+border-radius: 8px;
+box-shadow: 0 0 14px rgba(var(--solaris-accent-rgb), 0.1);
+transition: transform 0.3s ease;
 }
-
 .post-content .gallery-item img {
-  object-position: center 75%;
+object-position: center 75%;
 }
-
 .gallery-item img:hover,
-.gallery-item video:hover { 
-  transform: scale(1.05); 
+.gallery-item video:hover {
+transform: scale(1.05);
 }
-
 /* Optional: Clean styling for the description text */
 .gallery-caption {
-  font-size: 0.85rem;
-  color: var(--solaris-muted);
-  margin-top: 8px;
-  text-align: center;
-  line-height: 1.4;
+font-size: 0.85rem;
+color: var(--solaris-muted);
+margin-top: 8px;
+text-align: center;
+line-height: 1.4;
 }
 &lt;/style&gt;
-&lt;div class=&#34;gallery-grid&#34;&gt;
-  &lt;div class=&#34;gallery-item&#34;&gt;
-    &lt;img src=&#34;./images/5krun.jpeg&#34; alt=&#34;Lab members at the 5 km run in Baltimore&#34;&gt;
-    &lt;div class=&#34;gallery-caption&#34;&gt;5 km of MPC, except the plant keeps getting tired! Baltimore, September 2026&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;!-- &lt;div class=&#34;gallery-item&#34;&gt;
-    &lt;img src=&#34;https://via.placeholder.com/400x300&#34; alt=&#34;Lab Lunch&#34;&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;gallery-item&#34;&gt;
-    &lt;img src=&#34;https://via.placeholder.com/400x300&#34; alt=&#34;Conference Trip&#34;&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;gallery-item&#34;&gt;
-    &lt;img src=&#34;https://via.placeholder.com/400x300&#34; alt=&#34;Hackathon&#34;&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;gallery-item&#34;&gt;
-    &lt;img src=&#34;https://via.placeholder.com/400x300&#34; alt=&#34;Whiteboard Session&#34;&gt;
-  &lt;/div&gt; --&gt;
-  &lt;div class=&#34;gallery-item&#34;&gt;
-    &lt;video src=&#34;./images/autorotation.mp4&#34; controls muted&gt;&lt;/video&gt;
-    &lt;div class=&#34;gallery-caption&#34;&gt;Real-world safety critical control system. France 2026&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</description>
-    </item>
-    <item>
-      <title>Open Source Software</title>
-      <link>/software.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/software.html</guid>
-      <description>&lt;p&gt;We believe in open science. All our tools are available on GitHub. The group is also activaly contributing and mantaining the following libraries:&lt;/p&gt;
+&lt;div class="gallery-grid"&gt;
+&lt;div class="gallery-item"&gt;
+&lt;img src="./images/5krun.jpeg" alt="Lab members at the 5 km run in Baltimore"&gt;
+&lt;div class="gallery-caption"&gt;5 km of MPC, except the plant keeps getting tired! Baltimore, September 2026&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- &lt;div class="gallery-item"&gt;
+&lt;img src="https://via.placeholder.com/400x300" alt="Lab Lunch"&gt;
+&lt;/div&gt;
+&lt;div class="gallery-item"&gt;
+&lt;img src="https://via.placeholder.com/400x300" alt="Conference Trip"&gt;
+&lt;/div&gt;
+&lt;div class="gallery-item"&gt;
+&lt;img src="https://via.placeholder.com/400x300" alt="Hackathon"&gt;
+&lt;/div&gt;
+&lt;div class="gallery-item"&gt;
+&lt;img src="https://via.placeholder.com/400x300" alt="Whiteboard Session"&gt;
+&lt;/div&gt; --&gt;
+&lt;div class="gallery-item"&gt;
+&lt;video src="./images/autorotation.mp4" controls muted&gt;&lt;/video&gt;
+&lt;div class="gallery-caption"&gt;Real-world safety critical control system. France 2026&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>Open Source Software</title><link>/software.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/software.html</guid><description>&lt;p&gt;We believe in open science. Our tools are available on GitHub, and the group actively contributes to and maintains the following libraries:&lt;/p&gt;
 &lt;style&gt;
-   
-  .research-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 20px 0;
-  }
-  @media (min-width: 900px) {
-    .research-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-
-   
-  .flash-card {
-    background-color: transparent;
-    width: 100%;
-    height: 300px;
-    perspective: 1000px;
-  }
-  
-   
-  .flash-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
-    transform-style: preserve-3d;
-    cursor: pointer;
-  }
-  .flash-card:hover .flash-card-inner { transform: rotateY(180deg); }
-  
-   
-  .flash-card-front, .flash-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    
-     
-    background-color: var(--solaris-bg);
-    border: 1px solid var(--solaris-border);
-    box-shadow: 0 0 16px rgba(var(--solaris-accent-rgb), 0.12);
-    border-radius: 12px;
-    color: var(--solaris-text);
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-   
-  .flash-card-front h3 {
-    color: var(--solaris-text);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 0 9px rgba(var(--solaris-accent-rgb), 0.28);
-  }
-
-   
-  .flash-card-back {
-    background-color: var(--solaris-bg);
-    transform: rotateY(180deg);
-    box-shadow: 0 0 24px rgba(var(--solaris-accent-rgb), 0.22);
-  }
-  
-   
-  .flash-card a {
-      color: var(--solaris-accent) !important;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.3s ease;
-  }
-  .flash-card a:hover {
-      color: var(--solaris-text) !important;
-      text-shadow: none;
-      text-decoration: underline;
-  }
+.research-grid {
+display: grid;
+grid-template-columns: 1fr;
+gap: 30px;
+padding: 20px 0;
+}
+@media (min-width: 900px) {
+.research-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.flash-card {
+background-color: transparent;
+width: 100%;
+height: 300px;
+perspective: 1000px;
+}
+.flash-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+transform-style: preserve-3d;
+cursor: pointer;
+}
+.flash-card:hover .flash-card-inner { transform: rotateY(180deg); }
+.flash-card-front, .flash-card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+background-color: var(--solaris-bg);
+border: 1px solid rgba(var(--solaris-accent-rgb), 0.55);
+box-shadow: 0 0 18px rgba(var(--solaris-accent-rgb), 0.14);
+border-radius: 12px;
+color: var(--solaris-text);
+transition: border-color 0.2s ease, box-shadow 0.2s ease;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 20px;
+box-sizing: border-box;
+}
+.flash-card-front {
+padding-bottom: 4.25rem;
+}
+.flash-card-front h3 {
+color: var(--solaris-text);
+text-transform: uppercase;
+letter-spacing: 1px;
+text-shadow: 0 0 9px rgba(var(--solaris-accent-rgb), 0.28);
+white-space: nowrap;
+word-break: normal;
+overflow-wrap: normal;
+hyphens: none;
+}
+.software-language {
+position: absolute;
+right: 1rem;
+bottom: 1.35rem;
+left: 1rem;
+margin: 0;
+color: var(--solaris-accent);
+font-size: 0.875rem;
+font-weight: bold;
+line-height: 1.25;
+}
+.flash-card-front p,
+.flash-card-back p,
+.flash-card a {
+word-break: normal;
+overflow-wrap: normal;
+hyphens: none;
+}
+.flash-card:hover .flash-card-front,
+.flash-card:hover .flash-card-back,
+.flash-card:focus-within .flash-card-front,
+.flash-card:focus-within .flash-card-back {
+border-color: var(--solaris-accent);
+box-shadow: 0 0 28px rgba(var(--solaris-accent-rgb), 0.26);
+}
+.flash-card-back {
+background-color: var(--solaris-bg);
+transform: rotateY(180deg);
+}
+.flash-card a {
+color: var(--solaris-accent) !important;
+font-weight: bold;
+text-transform: uppercase;
+text-decoration: none;
+transition: all 0.3s ease;
+}
+.flash-card a:hover {
+color: var(--solaris-text) !important;
+text-shadow: none;
+text-decoration: underline;
+}
+.software-github-stats {
+margin: 0.35rem 0 0;
+color: var(--solaris-accent);
+font-size: 0.9rem;
+font-weight: 700;
+letter-spacing: 0.02em;
+}
 &lt;/style&gt;
-
-&lt;div class=&#34;research-grid&#34;&gt;
-  
-  &lt;div class=&#34;flash-card&#34;&gt;
-    &lt;div class=&#34;flash-card-inner&#34;&gt;
-      
-      &lt;div class=&#34;flash-card-front&#34;&gt;
-        &lt;h3 style=&#34;margin-bottom: 10px;&#34;&gt;NeuroMANCER&lt;/h3&gt;
-        &lt;p&gt;PyTorch library for parametric constrained optimization and control&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Our Team</title>
-      <link>/people.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/people.html</guid>
-      <description>Researchers and students working across optimization, control, and scientific machine learning at the Solaris Lab.</description>
-    </item>
-    <item>
-      <title>Papers</title>
-      <link>/papers.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/papers.html</guid>
-      <description>Publications and preprints from the Solaris Lab across optimization, control, scientific machine learning, and dynamical systems.</description>
-    </item>
-  </channel>
-</rss>
+&lt;div class="research-grid"&gt;
+&lt;div class="flash-card"&gt;
+&lt;div class="flash-card-inner"&gt;
+&lt;div class="flash-card-front"&gt;
+&lt;h3 style="margin-bottom: 10px;"&gt;PiMPC.jl&lt;/h3&gt;
+&lt;p&gt;Parallel-in-horizon, construction-free model predictive control with GPU acceleration&lt;/p&gt;</description></item><item><title>Our Team</title><link>/people.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/people.html</guid><description>Researchers and students working across optimization, control, and scientific machine learning at the Solaris Lab.</description></item><item><title>Papers</title><link>/papers.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/papers.html</guid><description>Publications and preprints from the Solaris Lab across optimization, control, scientific machine learning, and dynamical systems.</description></item></channel></rss>

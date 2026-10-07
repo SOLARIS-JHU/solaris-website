@@ -21,11 +21,56 @@
 #       url: "#"
 #       color: "#fff"
 
+- title: "PiMPC.jl"
+  repo: "SOLARIS-JHU/PiMPC.jl"
+  summary: "Parallel-in-horizon, construction-free model predictive control with GPU acceleration"
+  language: "Julia / Python"
+  info_1: "License: MIT"
+  info_2: "Method: ADMM-based MPC"
+  links:
+    - text: "View on GitHub"
+      url: "https://github.com/SOLARIS-JHU/PiMPC.jl"
+      color: "#fff"
+
+- title: "MI-DPC-UPHES"
+  repo: "SOLARIS-JHU/MI-DPC-UPHES"
+  summary: "Mixed-integer differentiable predictive control for underground pumped-hydro scheduling"
+  language: "Python"
+  info_1: "License: MIT"
+  info_2: "Companion code: CDC 2026"
+  links:
+    - text: "View on GitHub"
+      url: "https://github.com/SOLARIS-JHU/MI-DPC-UPHES"
+      color: "#fff"
+
+- title: "CINOC"
+  repo: "SOLARIS-JHU/CINOC"
+  summary: "Cardinality-invariant neural operator policies for scalable multi-agent PDE control"
+  language: "Python / JAX"
+  info_1: "Framework: Tesseract-JAX"
+  info_2: "Companion code: ICML 2026"
+  links:
+    - text: "View on GitHub"
+      url: "https://github.com/SOLARIS-JHU/CINOC"
+      color: "#fff"
+
+- title: "SCORE"
+  repo: "SOLARIS-JHU/SCORE"
+  summary: "Statistical certification of regions of attraction using extreme value theory"
+  language: "Python"
+  info_1: "Includes: Research code and tutorials"
+  info_2: "Companion code: CDC 2026"
+  links:
+    - text: "View on GitHub"
+      url: "https://github.com/SOLARIS-JHU/SCORE"
+      color: "#fff"
+
 - title: "NeuroMANCER"
+  repo: "pnnl/neuromancer"
   summary: "PyTorch library for parametric constrained optimization and control"
-  anguage: "Python"
+  language: "Python"
   info_1: "License: BSD 3-Clause License"
-  info_2: "Stars: 1.3k+"
+  info_2: "Framework: PyTorch"
   links:
     - text: "View on GitHub"
       url: "https://github.com/pnnl/neuromancer"

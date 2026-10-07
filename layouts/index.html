@@ -477,13 +477,21 @@
   }
 
   .news-type {
-    display: inline-block;
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
     margin-bottom: 0.4rem;
     color: var(--solaris-subtle);
     font-size: 0.72rem;
     font-weight: 750;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+  }
+
+  .news-emoji {
+    font-size: 1rem;
+    line-height: 1;
+    text-shadow: none;
   }
 
   .news-item h3 {
@@ -499,6 +507,89 @@
     font-size: 0.95rem;
     line-height: 1.55;
   }
+
+  .news-note {
+    margin-top: 0.8rem !important;
+    padding-left: 0.85rem;
+    border-left: 2px solid var(--solaris-border-strong);
+    font-size: 0.86rem !important;
+  }
+
+  .news-details {
+    margin-top: 0.9rem;
+    border: 1px solid var(--solaris-border);
+    border-radius: 9px;
+    background: var(--solaris-bg);
+  }
+
+  .news-details summary {
+    padding: 0.7rem 0.85rem;
+    color: var(--solaris-accent);
+    font-size: 0.78rem;
+    font-weight: 750;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    list-style-position: inside;
+    text-transform: uppercase;
+  }
+
+  .news-details[open] summary { border-bottom: 1px solid var(--solaris-border); }
+
+  .news-detail-list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0 1rem 0 2.6rem;
+  }
+
+  .news-detail-list li {
+    padding: 0.8rem 0 0.8rem 0.2rem;
+    color: var(--solaris-accent);
+  }
+
+  .news-detail-list li + li { border-top: 1px solid var(--solaris-border); }
+
+  .news-detail-title {
+    color: var(--solaris-text) !important;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+
+  .news-detail-title:hover { color: var(--solaris-accent) !important; }
+
+  .news-detail-authors {
+    margin-top: 0.25rem !important;
+    font-size: 0.82rem !important;
+  }
+
+  .news-detail-note {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--solaris-subtle);
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .news-resource-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+  }
+
+  .news-resource-links a {
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--solaris-border-strong);
+    border-radius: 999px;
+    color: var(--solaris-accent) !important;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .news-resource-links a:hover { background: var(--solaris-accent-soft); }
 
   .news-link {
     color: var(--solaris-text) !important;
@@ -648,10 +739,22 @@
 
       <div class="home-news-list">
         {{ range .Site.Data.news }}
+          {{ $detailsLabel := .details_label }}
+          {{ $newsEmoji := "✨" }}
+          {{ if eq .type "Award" }}{{ $newsEmoji = "🏆" }}
+          {{ else if eq .type "Grant" }}{{ $newsEmoji = "💰" }}
+          {{ else if eq .type "Paper" }}{{ $newsEmoji = "📄" }}
+          {{ else if eq .type "Team" }}{{ $newsEmoji = "👋" }}
+          {{ else if eq .type "Talk" }}{{ $newsEmoji = "📣" }}
+          {{ else if eq .type "Workshop" }}{{ $newsEmoji = "🛠️" }}
+          {{ else if eq .type "Tutorial" }}{{ $newsEmoji = "🧭" }}
+          {{ else if eq .type "Seminar" }}{{ $newsEmoji = "🎙️" }}
+          {{ else if eq .type "Hackathon" }}{{ $newsEmoji = "💻" }}
+          {{ end }}
           <article class="news-item">
             <time class="news-date">{{ .date }}</time>
             <div>
-              {{ with .type }}<span class="news-type">{{ . }}</span>{{ end }}
+              {{ with .type }}<span class="news-type"><span class="news-emoji" aria-hidden="true">{{ $newsEmoji }}</span>{{ . }}</span>{{ end }}
               <h3>
                 {{ if .url }}
                   <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="news-link">{{ .title }}</a>
@@ -660,6 +763,32 @@
                 {{ end }}
               </h3>
               <p>{{ .summary }}</p>
+              {{ with .details }}
+                <details class="news-details">
+                  <summary>{{ default "View details" $detailsLabel }}</summary>
+                  <ol class="news-detail-list">
+                    {{ range . }}
+                      <li>
+                        {{ if .url }}
+                          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="news-detail-title">{{ .title }}</a>
+                        {{ else }}
+                          <span class="news-detail-title">{{ .title }}</span>
+                        {{ end }}
+                        {{ with .authors }}<p class="news-detail-authors">{{ . }}</p>{{ end }}
+                        {{ with .note }}<span class="news-detail-note">{{ . }}</span>{{ end }}
+                      </li>
+                    {{ end }}
+                  </ol>
+                </details>
+              {{ end }}
+              {{ with .note }}<p class="news-note">{{ . }}</p>{{ end }}
+              {{ with .links }}
+                <div class="news-resource-links" aria-label="Related links">
+                  {{ range . }}
+                    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>
+                  {{ end }}
+                </div>
+              {{ end }}
             </div>
           </article>
         {{ end }}

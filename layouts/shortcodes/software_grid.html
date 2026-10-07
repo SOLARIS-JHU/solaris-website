@@ -40,10 +40,11 @@
     
     /* SOLARIS CARD BASE */
     background-color: var(--solaris-bg);
-    border: 1px solid var(--solaris-border);
-    box-shadow: 0 0 16px rgba(var(--solaris-accent-rgb), 0.12);
+    border: 1px solid rgba(var(--solaris-accent-rgb), 0.55);
+    box-shadow: 0 0 18px rgba(var(--solaris-accent-rgb), 0.14);
     border-radius: 12px;
     color: var(--solaris-text);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
     
     display: flex;
     flex-direction: column;
@@ -54,18 +55,53 @@
   }
 
   /* 5. FRONT SPECIFIC */
+  .flash-card-front {
+    padding-bottom: 4.25rem;
+  }
+
   .flash-card-front h3 {
     color: var(--solaris-text);
     text-transform: uppercase;
     letter-spacing: 1px;
     text-shadow: 0 0 9px rgba(var(--solaris-accent-rgb), 0.28);
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+
+  .software-language {
+    position: absolute;
+    right: 1rem;
+    bottom: 1.35rem;
+    left: 1rem;
+    margin: 0;
+    color: var(--solaris-accent);
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1.25;
+  }
+
+  .flash-card-front p,
+  .flash-card-back p,
+  .flash-card a {
+    word-break: normal;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+
+  .flash-card:hover .flash-card-front,
+  .flash-card:hover .flash-card-back,
+  .flash-card:focus-within .flash-card-front,
+  .flash-card:focus-within .flash-card-back {
+    border-color: var(--solaris-accent);
+    box-shadow: 0 0 28px rgba(var(--solaris-accent-rgb), 0.26);
   }
 
   /* 6. BACK SPECIFIC */
   .flash-card-back {
     background-color: var(--solaris-bg);
     transform: rotateY(180deg);
-    box-shadow: 0 0 24px rgba(var(--solaris-accent-rgb), 0.22);
   }
   
   /* Links inside the card */
@@ -81,6 +117,14 @@
       text-shadow: none;
       text-decoration: underline;
   }
+
+  .software-github-stats {
+    margin: 0.35rem 0 0;
+    color: var(--solaris-accent);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
 </style>
 
 <div class="research-grid">
@@ -91,16 +135,19 @@
       <div class="flash-card-front">
         <h3 style="margin-bottom: 10px;">{{ .title }}</h3>
         <p>{{ .summary }}</p>
-        <small style="color: var(--solaris-accent); font-weight: bold; margin-top: 10px;">{{ .language }}</small>
+        <small class="software-language">{{ .language }}</small>
       </div>
       
       <div class="flash-card-back">
         <p><strong>{{ .info_1 }}</strong></p>
         <p><strong>{{ .info_2 }}</strong></p>
+        {{ with .repo }}
+          <p class="software-github-stats" data-repo="{{ . }}" hidden></p>
+        {{ end }}
         
         <div style="margin-top: 20px;">
            {{ range .links }}
-             <a href="{{ .url }}">
+             <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
                {{ .text }}
              </a><br><br>
            {{ end }}
@@ -111,3 +158,59 @@
   </div>
   {{ end }}
 </div>
+
+<script>
+  (() => {
+    const statElements = document.querySelectorAll('.software-github-stats[data-repo]');
+    const cacheLifetime = 6 * 60 * 60 * 1000;
+    const numberFormatter = new Intl.NumberFormat();
+
+    const readCache = (key) => {
+      try {
+        const cached = JSON.parse(localStorage.getItem(key));
+        if (cached && Date.now() - cached.savedAt < cacheLifetime) return cached;
+      } catch (_) {}
+      return null;
+    };
+
+    const writeCache = (key, stats) => {
+      try {
+        localStorage.setItem(key, JSON.stringify({ ...stats, savedAt: Date.now() }));
+      } catch (_) {}
+    };
+
+    const showStats = (element, stats) => {
+      if (stats.stars <= 10 && stats.forks <= 5) return;
+      element.textContent = `★ ${numberFormatter.format(stats.stars)} stars · ${numberFormatter.format(stats.forks)} forks`;
+      element.hidden = false;
+    };
+
+    statElements.forEach(async (element) => {
+      const repo = element.dataset.repo;
+      const cacheKey = `solaris-github-stats:${repo}`;
+      const cached = readCache(cacheKey);
+
+      if (cached) {
+        showStats(element, cached);
+        return;
+      }
+
+      try {
+        const response = await fetch(`https://api.github.com/repos/${repo}`, {
+          headers: { Accept: 'application/vnd.github+json' }
+        });
+        if (!response.ok) return;
+
+        const repository = await response.json();
+        const stats = {
+          stars: repository.stargazers_count,
+          forks: repository.forks_count
+        };
+        writeCache(cacheKey, stats);
+        showStats(element, stats);
+      } catch (_) {
+        // Leave the optional statistics hidden if GitHub cannot be reached.
+      }
+    });
+  })();
+</script>

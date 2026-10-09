@@ -688,54 +688,22 @@
     line-height: 1.65;
   }
 
-  .sponsor-viewport {
-    --sponsor-gap: 1rem;
+  .sponsor-grid {
     position: relative;
     left: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
     width: min(1240px, calc(100vw - (2 * var(--gap))));
-    overflow: hidden;
     transform: translateX(-50%);
-  }
-
-  .sponsor-track {
-    display: flex;
-    width: max-content;
-    gap: var(--sponsor-gap);
-    align-items: stretch;
-    will-change: transform;
-  }
-
-  .sponsor-group {
-    display: flex;
-    flex: none;
-    gap: var(--sponsor-gap);
-    align-items: stretch;
-  }
-
-  .sponsor-viewport:not(.is-scrolling) .sponsor-track {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .sponsor-viewport.is-scrolling {
-    -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
-    mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
-  }
-
-  .sponsor-viewport.is-scrolling .sponsor-track {
-    animation: sponsor-trail var(--sponsor-duration, 30s) linear infinite;
-  }
-
-  .sponsor-viewport.is-scrolling:hover .sponsor-track,
-  .sponsor-viewport.is-scrolling:focus-within .sponsor-track {
-    animation-play-state: paused;
   }
 
   .sponsor-card {
     position: relative;
     display: grid;
-    flex: 0 0 204px;
-    width: 204px;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
     min-height: 132px;
     padding: 1.25rem 1.4rem;
     overflow: hidden;
@@ -787,18 +755,8 @@
     object-fit: contain;
   }
 
-  .sponsor-card--jhu {
-    flex-basis: 242px;
-    width: 242px;
-  }
-
   .sponsor-card--jhu img {
     max-width: 200px;
-  }
-
-  .sponsor-card--dsai {
-    flex-basis: 246px;
-    width: 246px;
   }
 
   .sponsor-card--dsai img {
@@ -806,18 +764,8 @@
     max-height: 96px;
   }
 
-  .sponsor-card--doe {
-    flex-basis: 250px;
-    width: 250px;
-  }
-
   .sponsor-card--doe img {
     max-width: 218px;
-  }
-
-  .sponsor-card--pnnl {
-    flex-basis: 232px;
-    width: 232px;
   }
 
   .sponsor-card--pnnl img {
@@ -825,19 +773,9 @@
     max-height: 74px;
   }
 
-  .sponsor-card--nsf {
-    flex-basis: 148px;
-    width: 148px;
-  }
-
   .sponsor-card--nsf img {
     max-width: 78px;
     max-height: 78px;
-  }
-
-  .sponsor-card--leads {
-    flex-basis: 218px;
-    width: 218px;
   }
 
   .sponsor-card--leads img {
@@ -846,8 +784,7 @@
   }
 
   .sponsor-card--rosei {
-    flex-basis: 370px;
-    width: 370px;
+    grid-column: span 2;
     min-height: 152px;
   }
 
@@ -855,7 +792,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 480px;
+    width: min(650px, 130%);
     max-width: none;
     max-height: none;
     transform: translate(-50%, -50%);
@@ -953,12 +890,6 @@
     }
   }
 
-  @keyframes sponsor-trail {
-    to {
-      transform: translateX(calc(-50% - (var(--sponsor-gap) / 2)));
-    }
-  }
-
   @media (max-width: 780px) {
     .home-intro-emblem {
       width: min(96vw, 560px);
@@ -983,6 +914,10 @@
       grid-template-columns: 1fr;
       gap: 0.75rem;
       align-items: start;
+    }
+
+    .sponsor-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
@@ -1020,12 +955,18 @@
       gap: 0.35rem;
     }
 
-    .sponsor-viewport {
+    .sponsor-grid {
+      grid-template-columns: 1fr;
       width: calc(100vw - 1rem);
     }
 
     .sponsor-card {
       min-height: 102px;
+    }
+
+    .sponsor-card--rosei {
+      grid-column: auto;
+      min-height: 132px;
     }
   }
 
@@ -1060,17 +1001,6 @@
       transition: none;
     }
 
-    .sponsor-viewport {
-      overflow-x: auto;
-      padding-bottom: 0.45rem;
-      -webkit-mask-image: none !important;
-      mask-image: none !important;
-      scrollbar-width: thin;
-    }
-
-    .sponsor-viewport .sponsor-track {
-      animation: none !important;
-    }
   }
 </style>
 
@@ -1136,25 +1066,21 @@
           our work.</p>
       </header>
 
-      <div class="sponsor-viewport" data-sponsor-marquee aria-label="Sponsors and affiliations">
-        <div class="sponsor-track" data-sponsor-track>
-          <div class="sponsor-group" data-sponsor-group>
-            {{ range . }}
-            {{ $sponsor := . }}
-            <a class="sponsor-card {{ .class }}" href="{{ .url }}" target="_blank" rel="noopener noreferrer"
-              aria-label="Visit {{ .name }}">
-              {{ with .logo }}
-              <img src="{{ . }}" alt="{{ $sponsor.name }}" loading="lazy" decoding="async">
-              {{ else }}
-              <span class="sponsor-wordmark" aria-hidden="true">
-                <strong>{{ .wordmark }}</strong>
-                <span>{{ .detail }}</span>
-              </span>
-              {{ end }}
-            </a>
-            {{ end }}
-          </div>
-        </div>
+      <div class="sponsor-grid" aria-label="Sponsors and affiliations">
+        {{ range . }}
+        {{ $sponsor := . }}
+        <a class="sponsor-card {{ .class }}" href="{{ .url }}" target="_blank" rel="noopener noreferrer"
+          aria-label="Visit {{ .name }}">
+          {{ with .logo }}
+          <img src="{{ . }}" alt="{{ $sponsor.name }}" loading="lazy" decoding="async">
+          {{ else }}
+          <span class="sponsor-wordmark" aria-hidden="true">
+            <strong>{{ .wordmark }}</strong>
+            <span>{{ .detail }}</span>
+          </span>
+          {{ end }}
+        </a>
+        {{ end }}
       </div>
     </section>
     {{ end }}
@@ -1235,42 +1161,6 @@
     const track = document.querySelector("[data-home-intro]");
     const reveals = document.querySelectorAll(".home-reveal");
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const sponsorViewport = document.querySelector("[data-sponsor-marquee]");
-
-    let syncSponsors = () => { };
-    if (sponsorViewport) {
-      const sponsorTrack = sponsorViewport.querySelector("[data-sponsor-track]");
-      const sponsorGroup = sponsorViewport.querySelector("[data-sponsor-group]");
-      const sponsorClone = sponsorGroup.cloneNode(true);
-      sponsorClone.setAttribute("aria-hidden", "true");
-      sponsorClone.removeAttribute("data-sponsor-group");
-      sponsorClone.querySelectorAll("a").forEach((link) => link.setAttribute("tabindex", "-1"));
-      sponsorClone.hidden = true;
-      sponsorTrack.appendChild(sponsorClone);
-
-      syncSponsors = () => {
-        const shouldScroll = !reducedMotion.matches && sponsorGroup.scrollWidth > sponsorViewport.clientWidth;
-        sponsorViewport.classList.toggle("is-scrolling", shouldScroll);
-        sponsorClone.hidden = !shouldScroll;
-        if (shouldScroll) {
-          const duration = Math.max(28, sponsorGroup.scrollWidth / 42);
-          sponsorViewport.style.setProperty("--sponsor-duration", `${duration.toFixed(1)}s`);
-        }
-      };
-
-      if ("ResizeObserver" in window) {
-        const sponsorResizeObserver = new ResizeObserver(syncSponsors);
-        sponsorResizeObserver.observe(sponsorViewport);
-        sponsorResizeObserver.observe(sponsorGroup);
-      } else {
-        window.addEventListener("resize", syncSponsors, { passive: true });
-      }
-
-      sponsorGroup.querySelectorAll("img").forEach((logo) => {
-        if (!logo.complete) logo.addEventListener("load", syncSponsors, { once: true });
-      });
-      syncSponsors();
-    }
 
     if (!track) return;
 
@@ -1351,7 +1241,6 @@
     window.addEventListener("load", remeasureIntro, { once: true });
     reducedMotion.addEventListener?.("change", () => {
       remeasureIntro();
-      syncSponsors();
     });
 
     if (window.location.hash === "#home-main") {

@@ -15,12 +15,12 @@ description: "Seminars, workshops, tutorials, and teaching activities from the S
     <div class="activity-section-content activity-entries">
       <article class="activity-entry">
         <p class="course-code">EN.560.654 (01)</p>
-        <h3>Introduction to Machine Learning and Control for Building Energy Systems</h3>
+        <h3><a href="https://github.com/drgona/ML_and_control_buildings_energy" target="_blank" rel="noopener noreferrer">Introduction to Machine Learning and Control for Building Energy Systems</a></h3>
         <p>This course introduces the principles of building energy optimization with a focus on the modeling and control of HVAC systems. The curriculum covers HVAC fundamentals, thermodynamics, and heat transfer, progressing to dynamic systems, control theory, and optimization techniques. Key topics include an introduction to system identification, machine learning, and optimal control applied to energy-efficient building management. The course concludes with hands-on coding assignments focusing on implementation of machine learning and control techniques for optimizing the energy efficiency of buildings using high-fidelity simulation frameworks.</p>
       </article>
       <article class="activity-entry">
         <p class="course-code">EN.560.652 (01)</p>
-        <h3>Scientific Machine Learning for Modeling, Optimization, and Control of Dynamical Systems</h3>
+        <h3><a href="https://github.com/drgona/SciML-Course" target="_blank" rel="noopener noreferrer">Scientific Machine Learning for Modeling, Optimization, and Control of Dynamical Systems</a></h3>
         <p>This course offers a scientific machine learning (SciML) approach to the modeling, optimization, and control of dynamical systems. Students will learn to systematically integrate physics-based models and constraints into deep learning architectures, and to leverage data-driven methods for accelerating the solution of large-scale optimization and optimal control problems. Key topics include physics-informed neural networks, learning to optimize, neural differential equations, neural operators, and differentiable control. The course also examines real-world applications of these emerging SciML techniques in domains such as building energy management, networked dynamical systems, and power systems. Emphasis will be placed on practical, hands-on coding exercises and project-based assessments to reinforce theoretical concepts through implementation.</p>
       </article>
     </div>

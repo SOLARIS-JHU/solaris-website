@@ -260,7 +260,7 @@
   }
 
   .paper-flip-card {
-    height: 320px;
+    height: 350px;
     outline: none;
     perspective: 1100px;
   }
@@ -376,7 +376,8 @@
   }
 
   .paper-flip-card-back {
-    justify-content: space-between;
+    gap: 0.72rem;
+    justify-content: flex-start;
     transform: rotateY(180deg);
   }
 
@@ -417,14 +418,25 @@
   .paper-card-summary {
     margin: 0;
     color: var(--solaris-muted);
-    font-size: 0.9rem;
-    line-height: 1.55;
+    font-size: 0.84rem;
+    line-height: 1.48;
   }
 
-  .paper-card-lead {
-    margin: auto 0 0.9rem;
+  .paper-card-authors {
+    display: grid;
+    gap: 0.18rem;
+    margin: auto 0 0;
     color: var(--solaris-text);
-    font-size: 0.82rem;
+    font-size: 0.76rem;
+    line-height: 1.42;
+    overflow-wrap: anywhere;
+  }
+
+  .paper-card-authors strong {
+    color: var(--solaris-accent);
+    font-size: 0.68rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
   }
 
   .paper-card-links {
@@ -490,7 +502,7 @@
   @media (max-width: 640px) {
     .papers-area { margin-bottom: 3.5rem; }
     .paper-card-grid { grid-template-columns: 1fr; }
-    .paper-flip-card { height: 340px; }
+    .paper-flip-card { height: 360px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -597,7 +609,7 @@
 
                     <div class="paper-flip-card-back">
                       <p class="paper-card-summary">{{ .summary }}</p>
-                      <p class="paper-card-lead"><strong>Lead:</strong> {{ .lead }}</p>
+                      <p class="paper-card-authors"><strong>Authors</strong><span>{{ .authors }}</span></p>
                       <div class="paper-card-links">
                         {{ range .links }}
                           <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .text }}</a>

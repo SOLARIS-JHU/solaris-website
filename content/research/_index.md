@@ -65,13 +65,13 @@ description: "The Solaris Lab develops learning-enabled optimization and control
         <li>Buildings, HVAC, and data-center cooling</li>
         <li>Mixed-integer real-time control</li>
       </ul>
-      <a class="research-paper-link" href="https://doi.org/10.1109/TSTE.2026.3722492" target="_blank" rel="noopener noreferrer">Featured paper: DFL for UPHES</a>
+      <a class="research-paper-link" href="https://xboldocky.github.io/chiller-plant-MIDPC/" target="_blank" rel="noopener noreferrer">Featured paper: Data Center Chiller Plant MI-DPC</a>
     </div>
     <figure class="research-direction-media">
       <div class="research-figure-frame">
-        <img src="/images/research/uphes-energy-control.jpg" alt="Underground pumped hydro energy storage system with upper and lower reservoirs, turbine, generator, and power grid" loading="lazy" decoding="async">
+        <img src="/images/research/chiller-plant-midpc.png" alt="Graphical abstract showing mixed-integer differentiable predictive control for a data-center chiller plant" loading="lazy" decoding="async">
       </div>
-      <figcaption><strong>Underground pumped-hydro energy storage</strong> from Honghui Zheng's work on decision-focused scheduling.</figcaption>
+      <figcaption><strong>Data-center chiller plant optimization</strong> with mixed-integer differentiable predictive control, led by Ján Boldocký.</figcaption>
     </figure>
   </section>
 </div>

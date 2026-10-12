@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>/activities.html</loc></url><url><loc>/categories/index.html</loc></url><url><loc>/contact.html</loc></url><url><loc>/join-us.html</loc></url><url><loc>/gallery.html</loc></url><url><loc>/software.html</loc></url><url><loc>/people.html</loc></url><url><loc>/papers.html</loc></url><url><loc>/research/index.html</loc></url><url><loc>/index.html</loc></url><url><loc>/tags/index.html</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>//localhost:1313/activities.html</loc>
+  </url><url>
+    <loc>//localhost:1313/categories/index.html</loc>
+  </url><url>
+    <loc>//localhost:1313/contact.html</loc>
+  </url><url>
+    <loc>//localhost:1313/join-us.html</loc>
+  </url><url>
+    <loc>//localhost:1313/gallery.html</loc>
+  </url><url>
+    <loc>//localhost:1313/software.html</loc>
+  </url><url>
+    <loc>//localhost:1313/people.html</loc>
+  </url><url>
+    <loc>//localhost:1313/papers.html</loc>
+  </url><url>
+    <loc>//localhost:1313/research/index.html</loc>
+  </url><url>
+    <loc>//localhost:1313/index.html</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/index.html</loc>
+  </url>
+</urlset>

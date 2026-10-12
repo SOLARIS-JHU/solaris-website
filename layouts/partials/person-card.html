@@ -13,7 +13,8 @@
 
   <div class="person-details">
     <h2>{{ $person.name }}</h2>
-    <p class="person-role">{{ $person.role }}</p>
+    <p class="person-role">{{ $person.role }}{{ with $person.role_detail }}<br><span>{{ . }}</span>{{ end }}</p>
+    {{ with $person.affiliation }}<p class="person-affiliation">{{ . }}</p>{{ end }}
     {{ with $person.focus }}<p class="person-focus">{{ . }}</p>{{ end }}
   </div>
 

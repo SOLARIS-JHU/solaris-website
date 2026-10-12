@@ -106,7 +106,8 @@ visiting_researchers:
 
 undergraduates:
   - name: "Terry Zhang"
-    role: "Undergraduate Intern (Summer 2026, Grinnell College)"
+    role: "Undergraduate Intern"
+    role_detail: "Summer 2026, Grinnell College"
     focus: "Develops NLP and QP solvers for different application scenarios under Liang's supervision."
     image: "images/terry.png"
     links:
@@ -114,3 +115,18 @@ undergraduates:
         url: "mailto:zhangter@grinnell.edu"
       - text: "Linkedin"
         url: "https://www.linkedin.com/in/terry-zhang-20441a2b6/?isSelfProfile=true"
+
+  - name: "Aubin Vertueux Dzossa Bontse"
+    role: "Undergraduate Intern"
+    role_detail: "Summer 2026, Furman University"
+    focus: "Chance-constrained differentiable predictive control with margin flexibility for data-center chiller plants."
+    image: "images/aubin-bontse.jpg"
+    links:
+      - text: "Linkedin"
+        url: "https://www.linkedin.com/in/aubin-vertueux-dzossa-bontse-a334b6247/"
+
+  - name: "Zhikai Su"
+    role: "Undergraduate Intern"
+    role_detail: "Summer 2026, Sichuan University"
+    focus: "Derivative-free optimization for scientific machine learning, with observable geometry and ensemble Kalman inversion (OM-EKI) for dynamical systems without backpropagation."
+    image: "images/zhikai-su.jpeg"

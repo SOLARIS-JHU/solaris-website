@@ -122,6 +122,8 @@ undergraduates:
     focus: "Chance-constrained differentiable predictive control with margin flexibility for data-center chiller plants."
     image: "images/aubin-bontse.jpg"
     links:
+      - text: "email"
+        url: "mailto:dzosau1@furman.edu"
       - text: "Linkedin"
         url: "https://www.linkedin.com/in/aubin-vertueux-dzossa-bontse-a334b6247/"
 

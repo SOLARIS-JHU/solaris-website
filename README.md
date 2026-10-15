@@ -78,7 +78,7 @@ Same format as research. Links are automatically styled Cyan.
 ### 🔹 Managing the Team (People)
 **File:** `data/people.yml`
 
-The team is divided into three groups: `pi`, `postdocs`, and `students`.
+The People page is divided into Current Members and Alumni. Current members are grouped in `pi`, `postdocs`, `students`, `visiting_researchers`, and `undergraduates`. Former members belong in the `alumni` list; move their profile there, update their role (for example, `Former Postdoctoral Researcher`), and add their time at Solaris in `role_detail` (for example, `October 2025–October 2026`). Use `affiliation` for their home institution when applicable.
 To add a new student, simply add them to the `students` list:
 ```yaml
 students:

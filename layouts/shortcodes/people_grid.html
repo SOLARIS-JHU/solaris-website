@@ -5,6 +5,19 @@
     transform: translateX(-50%);
   }
 
+  .people-section + .people-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--solaris-border);
+  }
+
+  .people-section > h2 {
+    margin: 0 0 0.75rem;
+    padding: 0 0.5rem;
+    color: var(--solaris-text);
+    font-size: 1.6rem;
+  }
+
   .people-row {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -68,7 +81,7 @@
     min-width: 0;
   }
 
-  .person-details h2 {
+  .person-details h3 {
     margin: 0;
     color: var(--solaris-text);
     font-size: 1.02rem;
@@ -157,7 +170,9 @@
 </style>
 
 <div class="people-directory">
-  <div class="people-row" role="list" aria-label="Solaris Lab members">
+  <section class="people-section" aria-labelledby="current-members">
+  <h2 id="current-members">Current Members</h2>
+  <div class="people-row" role="list" aria-label="Current Solaris Lab members">
     {{ range .Site.Data.people.pi }}
       {{ partial "person-card.html" (dict "person" . "category" "Principal Investigator") }}
     {{ end }}
@@ -174,4 +189,15 @@
       {{ partial "person-card.html" (dict "person" . "category" "Undergraduate Intern") }}
     {{ end }}
   </div>
+  </section>
+  {{ with .Site.Data.people.alumni }}
+  <section class="people-section" aria-labelledby="alumni">
+    <h2 id="alumni">Alumni</h2>
+    <div class="people-row" role="list" aria-label="Solaris Lab alumni">
+      {{ range . }}
+        {{ partial "person-card.html" (dict "person" . "category" (.category | default .role)) }}
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
 </div>

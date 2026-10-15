@@ -1,4 +1,9 @@
 - date: "October 2026"
+  title: "Welcome, Gaoyuang"
+  summary: "Welcome to Gaoyuang, which is joining the lab as a postdoctoral researcher."
+  type: "Team"
+
+- date: "October 2026"
   title: "Pietro at the Tesseract Hackathon 2026"
   summary: "Pietro took part in the Tesseract Hackathon 2026 with FIDE—Fiber-Informed Differentiable Experimental Design—working on optimal experimental design for systems observed through aggregate measurements."
   url: "https://github.com/SOLARIS-JHU/FIDE-Tesseract"

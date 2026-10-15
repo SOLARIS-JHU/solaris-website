@@ -28,20 +28,19 @@ postdocs:
       - text: "Linkedin"
         url: "https://www.linkedin.com/in/liang-wu-474371a9/"
 
-  - name: "Dr. Parv Khurana"
+  - name: "Dr. Gaoyuan Wu"
     role: "Postdoctoral Researcher"
-    focus: "PDE control, Neural Operator, Linear Solvers"
-    image: "images/parv.jpg"
+    focus: "Differentiable physics, optimization and control of infrastructure and building systems"
+    image: "images/gaoyuan.png"
     links:
       - text: "email"
-        url: "mailto:pkhuran3@jh.edu"
+        url: "mailto:gwu37@jh.edu"
       - text: "Scholar"
-        url: "https://scholar.google.com/citations?user=ERq6oD0AAAAJ&hl=en&oi=ao"
-      # - text: "Personal Website"
-      #   url: "#"
+        url: "https://scholar.google.com/citations?user=2aTANLwAAAAJ&hl=en"
+      - text: "Personal Website"
+        url: "https://gaoyuanwu.github.io/"
       - text: "Linkedin"
-        url: "https://www.linkedin.com/in/parv-khurana/"
-
+        url: "https://www.linkedin.com/in/gaoyuan-wu-6a4983194"
 
 students:
   - name: "Honghui Zheng"
@@ -88,9 +87,68 @@ students:
         url: "https://www.linkedin.com/in/nima-chelongar-137aa5280/"
 
 
-visiting_researchers:
+alumni:
+  # Keep alumni in order of departure, most recent first.
+  - name: "Dr. Parv Khurana"
+    category: "Postdoctoral Researcher"
+    role: "Former Postdoctoral Researcher"
+    role_detail: "October 2025–October 2026"
+    focus: "PDE control, Neural Operator, Linear Solvers"
+    image: "images/parv.jpg"
+    links:
+      - text: "email"
+        url: "mailto:pkhuran3@jh.edu"
+      - text: "Scholar"
+        url: "https://scholar.google.com/citations?user=ERq6oD0AAAAJ&hl=en&oi=ao"
+      - text: "Linkedin"
+        url: "https://www.linkedin.com/in/parv-khurana/"
+
+
+  - name: "Terry Zhang"
+    category: "Undergraduate Intern"
+    role: "Former Undergraduate Intern"
+    role_detail: "May–August 2026"
+    affiliation: "Grinnell College"
+    focus: "Develops NLP and QP solvers for different application scenarios under Liang's supervision."
+    image: "images/terry.png"
+    links:
+      - text: "email"
+        url: "mailto:zhangter@grinnell.edu"
+      - text: "Linkedin"
+        url: "https://www.linkedin.com/in/terry-zhang-20441a2b6/?isSelfProfile=true"
+
+  - name: "Aubin Vertueux Dzossa Bontse"
+    category: "Undergraduate Intern"
+    role: "Former Undergraduate Intern"
+    role_detail: "May–August 2026"
+    affiliation: "Furman University"
+    focus: "Chance-constrained differentiable predictive control with margin flexibility for data-center chiller plants."
+    image: "images/aubin-bontse.jpg"
+    links:
+      - text: "email"
+        url: "mailto:dzosau1@furman.edu"
+      - text: "Linkedin"
+        url: "https://www.linkedin.com/in/aubin-vertueux-dzossa-bontse-a334b6247/"
+
+  - name: "Zhikai Su"
+    category: "Undergraduate Intern"
+    role: "Former Undergraduate Intern"
+    role_detail: "May–August 2026"
+    affiliation: "Sichuan University"
+    focus: "Derivative-free optimization for scientific machine learning and dynamical systems."
+    image: "images/zhikai-su.jpeg"
+    links:
+      - text: "email"
+        url: "mailto:hatsukarlsu06@gmail.com"
+      - text: "Scholar"
+        url: "https://scholar.google.com/citations?user=2zEEjskAAAAJ"
+      - text: "Linkedin"
+        url: "https://www.linkedin.com/in/zhikai-su-1763b6443/"
+
   - name: "Leandro von Krannichfeldt"
-    role: "Visiting PhD Student (Spring 2026)"
+    category: "Visiting PhD Student"
+    role: "Former Visiting PhD Student"
+    role_detail: "February–May 2026"
     focus: "Hybrid Digital Twins for Building Energy Systems"
     image: "images/leandro-pic.jpeg"
     links:
@@ -102,40 +160,3 @@ visiting_researchers:
       #   url: ""
       - text: "Linkedin"
         url: "https://www.linkedin.com/in/vonkrannichfeldtleandro//"
-
-
-undergraduates:
-  - name: "Terry Zhang"
-    role: "Undergraduate Intern"
-    role_detail: "Summer 2026, Grinnell College"
-    focus: "Develops NLP and QP solvers for different application scenarios under Liang's supervision."
-    image: "images/terry.png"
-    links:
-      - text: "email"
-        url: "mailto:zhangter@grinnell.edu"
-      - text: "Linkedin"
-        url: "https://www.linkedin.com/in/terry-zhang-20441a2b6/?isSelfProfile=true"
-
-  - name: "Aubin Vertueux Dzossa Bontse"
-    role: "Undergraduate Intern"
-    role_detail: "Summer 2026, Furman University"
-    focus: "Chance-constrained differentiable predictive control with margin flexibility for data-center chiller plants."
-    image: "images/aubin-bontse.jpg"
-    links:
-      - text: "email"
-        url: "mailto:dzosau1@furman.edu"
-      - text: "Linkedin"
-        url: "https://www.linkedin.com/in/aubin-vertueux-dzossa-bontse-a334b6247/"
-
-  - name: "Zhikai Su"
-    role: "Undergraduate Intern"
-    role_detail: "Summer 2026, Sichuan University"
-    focus: "Derivative-free optimization for scientific machine learning and dynamical systems."
-    image: "images/zhikai-su.jpeg"
-    links:
-      - text: "email"
-        url: "mailto:hatsukarlsu06@gmail.com"
-      - text: "Scholar"
-        url: "https://scholar.google.com/citations?user=2zEEjskAAAAJ"
-      - text: "Linkedin"
-        url: "https://www.linkedin.com/in/zhikai-su-1763b6443/"

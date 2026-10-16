@@ -2,14 +2,16 @@
 <article class="person-card" role="listitem">
   <span class="person-category">{{ .category }}</span>
 
+  {{ with $person.image }}
   <img
-    src="{{ $person.image | relURL }}"
+    src="{{ . | relURL }}"
     class="person-img"
     alt="Portrait of {{ $person.name }}"
     width="112"
     height="112"
     loading="lazy"
   >
+  {{ end }}
 
   <div class="person-details">
     <h3>{{ $person.name }}</h3>

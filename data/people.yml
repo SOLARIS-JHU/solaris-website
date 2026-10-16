@@ -117,6 +117,19 @@ alumni:
       - text: "Linkedin"
         url: "https://www.linkedin.com/in/terry-zhang-20441a2b6/?isSelfProfile=true"
 
+  - name: "Jianna Pollack"
+    category: "Undergraduate Intern"
+    role: "Former Undergraduate Intern"
+    role_detail: "May–August 2026"
+    affiliation: "Grinnell College"
+    focus: "Developed JAX-based, GPU-parallel MPC controllers for robotics simulation under Liang’s supervision"
+    image: "images/Jianna_Photo.jpeg"
+    links:
+      - text: "email"
+        url: "mailto:jiannatakara@gmail.com"
+      - text: "Linkedin"
+        url: "https://www.linkedin.com/in/jianna-pollack-614810266/?isSelfProfile=true"
+
   - name: "Aubin Vertueux Dzossa Bontse"
     category: "Undergraduate Intern"
     role: "Former Undergraduate Intern"

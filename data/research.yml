@@ -67,6 +67,8 @@
           links:
             - text: "Preprint"
               url: "https://arxiv.org/abs/2609.17964"
+            - text: "Website"
+              url: "https://solaris-jhu.github.io/MI-DPC-UPHES/"
             - text: "GitHub"
               url: "https://github.com/SOLARIS-JHU/MI-DPC-UPHES"
 

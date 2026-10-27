@@ -1,4 +1,9 @@
 - date: "October 2026"
+  title: "Welcome, Maven"
+  summary: "Welcome to Maven Holst, who has joined the SOLARIS Lab. They work on PDE control and physics-informed scientific machine learning."
+  type: "Team"
+
+- date: "October 2026"
   title: "Welcome, Gaoyuang"
   summary: "Welcome to Gaoyuang, which is joining the lab as a postdoctoral researcher."
   type: "Team"

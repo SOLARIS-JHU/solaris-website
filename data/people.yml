@@ -87,6 +87,18 @@ students:
         url: "https://www.linkedin.com/in/nima-chelongar-137aa5280/"
 
 
+  - name: "Maven Holst"
+    role: "Master's Student"
+    focus: "PDE Control, Physics-Informed Scientific Machine Learning"
+    image: "images/maven.JPG"
+    links:
+      - text: "email"
+        url: "mailto:mholst1@jhu.edu"
+      - text: "Scholar"
+        url: "https://scholar.google.com/citations?view_op=list_works&hl=en&user=5k_V0Y0AAAAJ"
+      - text: "Linkedin"
+        url: "https://www.linkedin.com/in/maven-holst-693259221/"
+
 alumni:
   # Keep alumni in order of departure, most recent first.
   - name: "Dr. Parv Khurana"

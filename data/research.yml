@@ -9,17 +9,19 @@
   years:
     - year: 2026
       papers:
-        - title: "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning"
-          venue: "IEEE Transactions on Sustainable Energy"
-          summary: "A decision-focused learning framework that guides recursive linearization for fast, high-quality day-ahead scheduling of underground pumped hydro energy storage."
-          authors: "Honghui Zheng, Pietro Favaro, Yury Dvorkin, Ján Drgoňa"
+        - title: "ML-Guided Primal Heuristics for Mixed Binary Quadratic Programs"
+          summary: "Learned solution predictions and contrastive training guide primal heuristics for mixed binary quadratic programs, improving solution quality and transfer across problem instances."
+          authors: "Weimin Huang, Natalie M. Isenberg, Ján Drgoňa, Draguna L. Vrabie, Bistra Dilkina"
           links:
-            - text: "Journal"
-              url: "https://doi.org/10.1109/TSTE.2026.3722492"
             - text: "Preprint"
-              url: "https://arxiv.org/abs/2512.20880"
-            - text: "GitHub"
-              url: "https://github.com/SOLARIS-JHU/DFL-UPHES"
+              url: "https://arxiv.org/abs/2604.23053"
+
+        - title: "L2O-CCG: Adversarial Learning with Set Generalization for Adaptive Robust Optimization"
+          summary: "A learned adversarial optimizer accelerates constraint-and-column generation for adaptive robust optimization and generalizes across changing uncertainty sets."
+          authors: "Zhiyi Zhou, Ján Drgoňa, Yury Dvorkin"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2603.22548"
 
     - year: 2025
       papers:
@@ -48,6 +50,35 @@
   years:
     - year: 2026
       papers:
+        - title: "SD-DPC: Sparse Dictionary Differentiable Predictive Control"
+          summary: "Sparse dictionary policies are trained through learned dynamics and a predictive-control objective to produce compact, interpretable feedback laws for nonlinear systems."
+          authors: "Ali Reza Daneshvar Garmroodi, Ján Drgoňa"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2610.02466"
+
+        - title: "Topological Feasibility Guarantees for Differentiable Predictive Control"
+          summary: "Topological analysis and barrier-based offline training establish deterministic feasibility guarantees for differentiable predictive control from finitely many training samples."
+          authors: "Guangyu Wu, Ján Drgoňa"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2608.10332"
+
+        - title: "Accelerating and Scaling MPC-Guided Reinforcement Learning for Humanoid Locomotion and Manipulation"
+          summary: "A batched GPU MPC solver provides efficient training-time guidance for reinforcement learning of humanoid locomotion and manipulation skills."
+          authors: "Junheng Li, Liang Wu, Sergio A. Esteban, Lizhi Yang, Ján Drgoňa, Aaron D. Ames"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2606.05687"
+
+        - title: "Zero-Shot Transferable Solution Method for Parametric Optimal Control Problems"
+          venue: "American Control Conference 2026"
+          summary: "Function-encoder policies learn reusable neural basis functions offline and adapt to new optimal-control objectives through lightweight coefficient estimation."
+          authors: "Xingjian Li, Kelvin Kan, Deepanshu Verma, Krishna Kumar, Stanley Osher, Ján Drgoňa"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2509.18404"
+
         - title: "Learning to Control PDEs with Differentiable Predictive Control and Time-Integrated Neural Operators"
           venue: "IEEE CDC 2026"
           summary: "An end-to-end framework combining Time-Integrated DeepONets with offline, self-supervised optimization of PDE control policies."
@@ -59,36 +90,6 @@
               url: "https://centrum-intelliphysics.github.io/PDEControl_DPC_website/"
             - text: "GitHub"
               url: "https://github.com/Centrum-IntelliPhysics/PDEControl_DPC"
-
-        - title: "Mixed-Integer Nonlinear Differentiable Predictive Control for Underground Pumped Hydro Energy Storage Systems"
-          venue: "IEEE CDC 2026"
-          summary: "A self-supervised mixed-integer control policy for nonlinear pumped-hydro scheduling, using differentiable simulation, Transformers, and Gumbel-Softmax decisions."
-          authors: "Honghui Zheng, Ján Boldocký, Yury Dvorkin, Ján Drgoňa"
-          links:
-            - text: "Preprint"
-              url: "https://arxiv.org/abs/2609.17964"
-            - text: "Website"
-              url: "https://solaris-jhu.github.io/MI-DPC-UPHES/"
-            - text: "GitHub"
-              url: "https://github.com/SOLARIS-JHU/MI-DPC-UPHES"
-
-        - title: "Safe Receding Horizon Mixed-Integer Differentiable Predictive Control for Degradation-Aware Battery Dispatch"
-          venue: "IEEE CDC 2026"
-          summary: "A receding-horizon neural battery-dispatch controller with differentiable degradation physics and a safety filter that guarantees recursive feasibility."
-          authors: "Eshagh Safarzadeh Ravajiri, Ján Drgoňa, Benjamin F. Hobbs"
-          links:
-            - text: "Preprint"
-              url: "https://arxiv.org/abs/2609.28698"
-
-        - title: "Data Center Chiller Plant Optimization via Mixed-Integer Nonlinear Differentiable Predictive Control"
-          venue: "IFAC World Congress 2026"
-          summary: "A mixed-integer differentiable predictive control framework for real-time optimization of nonlinear multi-chiller plants."
-          authors: "Ján Boldocký, Cary Faulkner, Elad Michael, Martin Gulan, Aaron Tuor, Ján Drgoňa"
-          links:
-            - text: "Preprint"
-              url: "https://arxiv.org/abs/2603.28323"
-            - text: "Website"
-              url: "https://xboldocky.github.io/chiller-plant-MIDPC/"
 
         - title: "Learning to Solve Parametric Mixed-Integer Optimal Control Problems via Differentiable Predictive Control"
           venue: "IFAC World Congress 2026"
@@ -126,6 +127,56 @@
   years:
     - year: 2026
       papers:
+        - title: "A Koopman–Polynomial Chaos Framework for SMPC of Nonlinear Stochastic Processes"
+          summary: "Polynomial-chaos Koopman models yield a condensed stochastic MPC formulation that handles uncertain parameters and disturbances without scaling online decisions with the lifted-state dimension."
+          authors: "Wallace Gian Yion Tan, Efstathios Iliakis, Liang Wu, Ján Drgoňa, Richard D. Braatz"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2610.24105"
+
+        - title: "Fast-DeePC: Fast Data-Enabled Predictive Control using Soft-constrained Scheme"
+          summary: "A soft-constrained DeePC formulation eliminates trajectory coefficients offline, reducing online control to a fixed-size box-constrained quadratic program."
+          authors: "Terry Zhang, Ján Drgoňa, Malika Sader, Di Liu, Liang Wu"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2610.12902"
+
+        - title: "Model Predictive Control for Safety-Critical Systems Using Taylor's Theorem with Lagrange Remainder"
+          summary: "Taylor expansions with a numerically approximated Lagrange remainder provide MPC safety constraints with fewer tuning parameters and reduced conservativeness."
+          authors: "Shuo Liu, Liang Wu, Wei Xiao, Ján Drgoňa, Calin A. Belta"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2610.06976"
+
+        - title: "lapanda: A Matrix-Free Differentiable Solver for Nonconvex Constrained Optimization Layers"
+          summary: "A matrix-free augmented-Lagrangian solver enables efficient forward optimization and differentiation through nonconvex problems with general constraints."
+          authors: "Yuankun Chen, Zifei Nie, Kangyu Lin, Ján Drgoňa, Liang Wu"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2609.33630"
+
+        - title: "Accelerating Branch MPC with Two-Level Parallel Direct Solves on GPUs"
+          summary: "A GPU direct solver exploits parallelism across scenarios and prediction horizons to accelerate linear algebra in branch model predictive control."
+          authors: "Fenglong Song, Luyao Zhang, Liang Wu, Ján Drgoňa, Colin N. Jones"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2609.29977"
+
+        - title: "DR-MPC: Fast and Feasible Dynamics-Relaxed Model-Predictive Control for Legged Locomotion"
+          summary: "Dynamics relaxation and contact-aware input parameterization yield a feasible box-constrained MPC problem with an efficient tailored solver for legged robots."
+          authors: "Run Wang, Alapati Tuerxun, Shuo Liu, Wei Xiao, Ján Drgoňa, Yilin Mo, Liang Wu"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2609.20035"
+
+        - title: "Koopman-BoxQP: Solving Large-Scale NMPC at kHz Rates"
+          venue: "L4DC 2026"
+          summary: "Koopman models and a warm-started, structure-exploiting interior-point solver enable large-scale nonlinear MPC through box-constrained quadratic programs."
+          authors: "Liang Wu, Wallace Gian Yion Tan, Richard D. Braatz, Ján Drgoňa"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2602.18331"
+
         - title: "Fixed-Time-Stable ODE Representation of Lasso"
           venue: "IEEE L-CSS / CDC 2026"
           summary: "A smooth, projection-free ODE formulation of Lasso with a prescribed convergence time that is independent of the problem data."
@@ -194,6 +245,14 @@
   years:
     - year: 2026
       papers:
+        - title: "E-PINNs: Epistemic Physics-Informed Neural Networks"
+          venue: "Machine Learning for Computational Science and Engineering"
+          summary: "A compact epinet augments pretrained physics-informed neural networks to estimate epistemic uncertainty with modest additional computational cost."
+          authors: "Bruno Jacob, Ashish S. Nair, Amanda A. Howard, Ján Drgoňa, Panos Stinis"
+          links:
+            - text: "Journal"
+              url: "https://doi.org/10.1007/s44379-026-00086-8"
+
         - title: "SCORE: Statistical Certification of Regions of Attraction via Extreme Value Theory"
           venue: "IEEE CDC 2026"
           summary: "A scalable statistical framework combining stochastic sampling and extreme value theory to certify regions of attraction in high-dimensional nonlinear systems."
@@ -238,3 +297,78 @@
               url: "https://drgona.github.io/NeuralDAEs/"
             - text: "GitHub"
               url: "https://github.com/pnnl/NeuralDAEs"
+
+- area: "Energy Systems"
+  description: "Optimization, learning, and control for sustainable energy systems, including energy storage, power grids, and building thermal management."
+  years:
+    - year: 2026
+      papers:
+        - title: "End-to-End Battery Dispatch with Exact Rainflow Degradation via Mixed-Integer Differentiable Predictive Control"
+          venue: "IEEE Transactions on Smart Grid"
+          summary: "A differentiable rainflow layer trains mixed-integer battery-dispatch policies on exact cycle degradation, with a safety filter enforcing operating constraints."
+          authors: "Eshagh Safarzadeh Ravajiri, Ján Drgoňa, Mahdi Mehrtash, Benjamin F. Hobbs"
+          links:
+            - text: "Journal"
+              url: "https://doi.org/10.1109/TSG.2026.3737375"
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2609.12968"
+
+        - title: "Homotopy-Guided Self-Supervised Learning of Parametric Solutions for AC Optimal Power Flow"
+          venue: "IEEE PES General Meeting 2026"
+          summary: "Homotopy-guided self-supervised training gradually restores AC optimal power-flow constraints to improve convergence and feasibility without labeled optimal solutions."
+          authors: "Shimiao Li, Aaron Tuor, Draguna Vrabie, Larry Pileggi, Ján Drgoňa"
+          links:
+            - text: "Paper"
+              url: "https://doi.org/10.1109/PESGM58988.2026.11693405"
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2511.11677"
+
+        - title: "Physics vs. Structure: A Systematic Benchmark of Learning Strategies for Multi-Zone Building Thermal Dynamics"
+          venue: "Energy and Buildings"
+          summary: "A benchmark of five system-identification approaches examines how data availability, zone coupling, and physical structure affect building thermal-model accuracy and cost."
+          authors: "Soumya Vasisht, Cary Faulkner, Elad Michael, Aaron Tuor, Ján Drgoňa, Draguna Vrabie"
+          links:
+            - text: "Journal"
+              url: "https://www.sciencedirect.com/science/article/pii/S0378778826005323"
+
+        - title: "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning"
+          venue: "IEEE Transactions on Sustainable Energy"
+          summary: "A decision-focused learning framework that guides recursive linearization for fast, high-quality day-ahead scheduling of underground pumped hydro energy storage."
+          authors: "Honghui Zheng, Pietro Favaro, Yury Dvorkin, Ján Drgoňa"
+          links:
+            - text: "Journal"
+              url: "https://doi.org/10.1109/TSTE.2026.3722492"
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2512.20880"
+            - text: "GitHub"
+              url: "https://github.com/SOLARIS-JHU/DFL-UPHES"
+
+        - title: "Mixed-Integer Nonlinear Differentiable Predictive Control for Underground Pumped Hydro Energy Storage Systems"
+          venue: "IEEE CDC 2026"
+          summary: "A self-supervised mixed-integer control policy for nonlinear pumped-hydro scheduling, using differentiable simulation, Transformers, and Gumbel-Softmax decisions."
+          authors: "Honghui Zheng, Ján Boldocký, Yury Dvorkin, Ján Drgoňa"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2609.17964"
+            - text: "Website"
+              url: "https://solaris-jhu.github.io/MI-DPC-UPHES/"
+            - text: "GitHub"
+              url: "https://github.com/SOLARIS-JHU/MI-DPC-UPHES"
+
+        - title: "Safe Receding Horizon Mixed-Integer Differentiable Predictive Control for Degradation-Aware Battery Dispatch"
+          venue: "IEEE CDC 2026"
+          summary: "A receding-horizon neural battery-dispatch controller with differentiable degradation physics and a safety filter that guarantees recursive feasibility."
+          authors: "Eshagh Safarzadeh Ravajiri, Ján Drgoňa, Benjamin F. Hobbs"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2609.28698"
+
+        - title: "Data Center Chiller Plant Optimization via Mixed-Integer Nonlinear Differentiable Predictive Control"
+          venue: "IFAC World Congress 2026"
+          summary: "A mixed-integer differentiable predictive control framework for real-time optimization of nonlinear multi-chiller plants."
+          authors: "Ján Boldocký, Cary Faulkner, Elad Michael, Martin Gulan, Aaron Tuor, Ján Drgoňa"
+          links:
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2603.28323"
+            - text: "Website"
+              url: "https://xboldocky.github.io/chiller-plant-MIDPC/"

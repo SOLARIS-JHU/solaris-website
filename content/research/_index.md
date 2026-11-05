@@ -26,7 +26,7 @@ description: "The Solaris Lab develops learning-enabled optimization and control
     <figure class="research-direction-media">
       <div class="research-figure-frame research-figure-frame--flush research-figure-frame--animation">
         <div class="research-cinoc-embed">
-          <iframe src="/images/research/cinoc-field-control.html?embed=1" title="Interactive CINOC animation: moving drones control a PDE field, with stabilization, tracking, and density control" loading="lazy"></iframe>
+          <iframe src="/images/research/cinoc-field-control.html?embed=1&amp;v=b8354f98815f" title="Interactive CINOC animation: moving drones control a PDE field, with stabilization, tracking, and density control" loading="lazy"></iframe>
         </div>
       </div>
       <figcaption><strong>CINOC</strong> learns scalable neural-operator policies for control of physical systems governed by partial differential equations (PDEs).</figcaption>

@@ -56,6 +56,8 @@
           links:
             - text: "Preprint"
               url: "https://arxiv.org/abs/2610.02466"
+            - text: "Website"
+              url: "https://solaris-jhu.github.io/SD-DPC-website/"
 
         - title: "Topological Feasibility Guarantees for Differentiable Predictive Control"
           summary: "Topological analysis and barrier-based offline training establish deterministic feasibility guarantees for differentiable predictive control from finitely many training samples."
@@ -70,6 +72,10 @@
           links:
             - text: "Preprint"
               url: "https://arxiv.org/abs/2606.05687"
+            - text: "GitHub"
+              url: "https://github.com/junhengl/mpc-rl"
+            - text: "Website"
+              url: "https://caltech-amber.github.io/mpc-guided-rl/"
 
         - title: "Zero-Shot Transferable Solution Method for Parametric Optimal Control Problems"
           venue: "American Control Conference 2026"
@@ -262,6 +268,8 @@
               url: "https://arxiv.org/abs/2603.29658"
             - text: "GitHub"
               url: "https://github.com/SOLARIS-JHU/SCORE"
+            - text: "Website"
+              url: "https://solaris-jhu.github.io/score-website/"
 
         - title: "Stability Enhanced Gaussian Process Variational Autoencoders"
           venue: "IEEE CDC 2026"

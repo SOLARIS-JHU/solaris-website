@@ -180,7 +180,7 @@
       {{ partial "person-card.html" (dict "person" . "category" "Postdoctoral Researcher") }}
     {{ end }}
     {{ range .Site.Data.people.students }}
-      {{ partial "person-card.html" (dict "person" . "category" "PhD Student") }}
+      {{ partial "person-card.html" (dict "person" . "category" (replaceRE " \\(.*\\)$" "" .role)) }}
     {{ end }}
     {{ range .Site.Data.people.visiting_researchers }}
       {{ partial "person-card.html" (dict "person" . "category" "Visiting Researcher") }}

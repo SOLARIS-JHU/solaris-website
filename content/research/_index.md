@@ -27,7 +27,7 @@ description: "The Solaris Lab develops learning-enabled optimization and control
       <div class="research-figure-frame">
         <img src="/images/research/cinoc-learning-control-restored.svg" alt="CINOC neural-operator control framework coordinating multiple agents over partial differential equation systems" width="1600" height="860" loading="lazy" decoding="async">
       </div>
-      <figcaption><strong>CINOC</strong> learns scalable neural-operator policies for PDE control. Led by Pietro Zanotta, Dibakar Roy Sarkar, and Honghui Zheng.</figcaption>
+      <figcaption><strong>CINOC</strong> learns scalable neural-operator policies for PDE control.</figcaption>
     </figure>
   </section>
 
@@ -51,7 +51,7 @@ description: "The Solaris Lab develops learning-enabled optimization and control
           <img src="/images/research/pimpc-admm-gpu-animated.svg" alt="Six piMPC horizon stages execute ADMM updates in parallel, with neighboring-stage reads, a global residual check, and a synchronized schematic of GPU work allocation" width="2250" height="1277" loading="lazy" decoding="async">
         </a>
       </div>
-      <figcaption><strong>&pi;MPC</strong> executes ADMM updates across the prediction horizon in parallel. The animation shows six stages, neighboring-stage reads, a global residual check, and schematic GPU work allocation. Led by Liang Wu. <a href="/images/research/pimpc-admm-gpu.html" target="_blank" rel="noopener noreferrer">Explore the animation</a>.</figcaption>
+      <figcaption><strong>&pi;MPC</strong> executes optimization updates across the prediction horizon in parallel enabling GPU acceleration.</figcaption>
     </figure>
   </section>
 

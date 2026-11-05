@@ -24,10 +24,12 @@ description: "The Solaris Lab develops learning-enabled optimization and control
       <a class="research-paper-link" href="https://proceedings.mlr.press/v306/zanotta26a.html" target="_blank" rel="noopener noreferrer">Featured paper: CINOC</a>
     </div>
     <figure class="research-direction-media">
-      <div class="research-figure-frame">
-        <img src="/images/research/cinoc-learning-control-restored.svg" alt="CINOC neural-operator control framework coordinating multiple agents over partial differential equation systems" width="1600" height="860" loading="lazy" decoding="async">
+      <div class="research-figure-frame research-figure-frame--flush research-figure-frame--animation">
+        <div class="research-cinoc-embed">
+          <iframe src="/images/research/cinoc-field-control.html?embed=1" title="Interactive CINOC animation: moving drones control a PDE field, with stabilization, tracking, and density control" loading="lazy"></iframe>
+        </div>
       </div>
-      <figcaption><strong>CINOC</strong> learns scalable neural-operator policies for PDE control.</figcaption>
+      <figcaption><strong>CINOC</strong> learns scalable neural-operator policies for control of physical systems governed by partial differential equations (PDEs).</figcaption>
     </figure>
   </section>
 
@@ -73,7 +75,7 @@ description: "The Solaris Lab develops learning-enabled optimization and control
       <div class="research-figure-frame research-figure-frame--flush">
         <img src="/images/research/energy-systems-grid.svg?v=69360a538d41" alt="Pumped-hydro storage, batteries, a data center, and building cooling connected through a substation, transformers, and electrical feeders" width="1671" height="941" loading="lazy" decoding="async">
       </div>
-      <figcaption><strong>Connected energy systems:</strong> pumped hydro, batteries, buildings, HVAC, and data-center cooling.</figcaption>
+      <figcaption><strong>Connected energy systems:</strong> power grid, pumped hydro, batteries, buildings, HVAC, and data-center cooling.</figcaption>
     </figure>
   </section>
 </div>

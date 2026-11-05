@@ -45,6 +45,7 @@ body #cinoc-field-control-preview .cinoc-controls{display:flex;align-items:cente
   const master=document.createElement('canvas');master.width=W*SCALE;master.height=Math.round(H*SCALE);
   const ctx=master.getContext('2d'),mc=main.getContext('2d'),ac=applications.getContext('2d');
   const motion=matchMedia('(prefers-reduced-motion: reduce)');
+  const loop=new URLSearchParams(location.search).has('embed');let loopHold=0;root.dataset.loop=String(loop);
   let running=!motion.matches,ready=false,time=0,last=0,accumulator=0;
   let z=new Float32Array(N*N),next=new Float32Array(N*N);
   let tracking=new Float32Array(R*R),trackingNext=new Float32Array(R*R);
@@ -178,10 +179,24 @@ body #cinoc-field-control-preview .cinoc-controls{display:flex;align-items:cente
     mc.clearRect(0,0,main.width,main.height);mc.drawImage(master,0,0,CUT*SCALE,H*SCALE,0,0,main.width,main.height);ac.clearRect(0,0,applications.width,applications.height);ac.drawImage(master,CUT*SCALE,0,(W-CUT)*SCALE,H*SCALE,0,0,applications.width,applications.height);
     root.dataset.elapsed=time.toFixed(2);root.dataset.stateEnergy=(rms(z)/initialEnergy).toFixed(4);root.dataset.trackingError=trackingError().toFixed(4);root.dataset.densityCenter=JSON.stringify(densityCenter.map(x=>+x.toFixed(4)));
   }
-  function updateButton(){button.textContent=time>=DURATION?'Replay':running?'Pause':'Play';button.setAttribute('aria-label',time>=DURATION?'Replay animation':running?'Pause animation':'Play animation');root.dataset.running=String(running);}
-  button.addEventListener('click',()=>{if(!ready)return;if(time>=DURATION){reset();running=true;status.textContent='Conceptual animation';}else running=!running;last=0;updateButton();draw();});
+  function updateButton(){button.textContent=time>=DURATION&&!loop?'Replay':running?'Pause':'Play';button.setAttribute('aria-label',time>=DURATION&&!loop?'Replay animation':running?'Pause animation':'Play animation');root.dataset.running=String(running);}
+  button.addEventListener('click',()=>{if(!ready)return;if(time>=DURATION&&!loop){reset();running=true;status.textContent='Conceptual animation';}else running=!running;last=0;updateButton();draw();});
   motion.addEventListener('change',e=>{if(e.matches){running=false;updateButton();}});document.addEventListener('visibilitychange',()=>{last=0;});
-  function tick(stamp){if(ready&&running&&!document.hidden){const delta=last?Math.min((stamp-last)/1000,.06):0;accumulator+=delta;while(accumulator>=.02&&time<DURATION){advance(.02);accumulator-=.02;}if(time>=DURATION){running=false;status.textContent='Conceptual animation · complete';updateButton();}draw();}last=stamp;requestAnimationFrame(tick);}
+  function tick(stamp){
+    if(ready&&running&&!document.hidden){
+      const delta=last?Math.min((stamp-last)/1000,.06):0;
+      if(loop&&time>=DURATION){
+        loopHold+=delta;
+        if(loopHold>=1.2){reset();loopHold=0;accumulator=0;updateButton();}
+      }else{
+        accumulator+=delta;
+        while(accumulator>=.02&&time<DURATION){advance(.02);accumulator-=.02;}
+        if(time>=DURATION&&!loop){running=false;status.textContent='Conceptual animation · complete';updateButton();}
+      }
+      draw();
+    }
+    last=stamp;requestAnimationFrame(tick);
+  }
   Promise.all([drone.decode()]).then(()=>{initRenderer();reset();ready=true;root.dataset.ready='true';updateButton();draw();requestAnimationFrame(tick);}).catch(e=>{root.dataset.error=String(e);status.textContent='The animation could not load.';button.disabled=true;});
 })();
 </script>

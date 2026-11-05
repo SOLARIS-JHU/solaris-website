@@ -46,10 +46,12 @@ description: "The Solaris Lab develops learning-enabled optimization and control
       <a class="research-paper-link" href="https://arxiv.org/abs/2601.14414" target="_blank" rel="noopener noreferrer">Featured paper: &pi;MPC</a>
     </div>
     <figure class="research-direction-media">
-      <div class="research-figure-frame">
-        <img src="/images/research/pimpc-scalability.svg" alt="PiMPC computation-time benchmark across increasing prediction horizons and system dimensions" loading="lazy" decoding="async">
+      <div class="research-figure-frame research-figure-frame--flush research-figure-frame--animation">
+        <a class="research-figure-link" href="/images/research/pimpc-admm-gpu.html" target="_blank" rel="noopener noreferrer" aria-label="Open the interactive piMPC ADMM and GPU animation">
+          <img src="/images/research/pimpc-admm-gpu-animated.svg" alt="Six piMPC horizon stages execute ADMM updates in parallel, with neighboring-stage reads, a global residual check, and a synchronized schematic of GPU work allocation" width="2250" height="1277" loading="lazy" decoding="async">
+        </a>
       </div>
-      <figcaption><strong>&pi;MPC</strong> maintains nearly constant GPU iteration time as prediction horizons and system dimensions grow. Led by Liang Wu.</figcaption>
+      <figcaption><strong>&pi;MPC</strong> executes ADMM updates across the prediction horizon in parallel. The animation shows six stages, neighboring-stage reads, a global residual check, and schematic GPU work allocation. Led by Liang Wu. <a href="/images/research/pimpc-admm-gpu.html" target="_blank" rel="noopener noreferrer">Explore the animation</a>.</figcaption>
     </figure>
   </section>
 
@@ -68,7 +70,7 @@ description: "The Solaris Lab develops learning-enabled optimization and control
       <a class="research-paper-link" href="https://xboldocky.github.io/chiller-plant-MIDPC/" target="_blank" rel="noopener noreferrer">Featured paper: Data Center Chiller Plant MI-DPC</a>
     </div>
     <figure class="research-direction-media">
-      <div class="research-figure-frame">
+      <div class="research-figure-frame research-figure-frame--flush">
         <img src="/images/research/energy-systems-grid.svg" alt="Pumped-hydro storage, batteries, a data center, and building cooling connected through a substation, transformers, and electrical feeders" width="1672" height="941" loading="lazy" decoding="async">
       </div>
       <figcaption><strong>Connected energy systems:</strong> pumped hydro, batteries, buildings, HVAC, and data-center cooling.</figcaption>

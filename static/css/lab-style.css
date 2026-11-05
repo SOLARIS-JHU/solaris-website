@@ -347,6 +347,41 @@ div[style*="border-left"]:hover {
     object-fit: contain;
 }
 
+.research-figure-frame.research-figure-frame--flush {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.research-figure-frame.research-figure-frame--flush img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+.research-figure-frame.research-figure-frame--animation {
+    background: #f5f8fc;
+}
+
+.research-figure-frame .research-figure-link {
+    display: block;
+    border-radius: inherit;
+    line-height: 0;
+    box-shadow: none;
+}
+
+.research-figure-link:focus-visible {
+    outline: 3px solid var(--solaris-accent);
+    outline-offset: -3px;
+}
+
 .research-direction-media figcaption {
     margin-top: 0.85rem;
     color: var(--solaris-subtle);

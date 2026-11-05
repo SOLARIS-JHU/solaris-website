@@ -3,3 +3,6 @@
 {{- if and .File (in (slice "papers" "software" "activities" "gallery" "join-us") .File.BaseFileName) }}
 <style>.main { --main-width: 1040px; }</style>
 {{- end }}
+{{- if and .File (eq .File.BaseFileName "join-us") }}
+<style>.post-title { font-size: clamp(28px, 3.2vw, 34px); line-height: 1.25; }</style>
+{{- end }}

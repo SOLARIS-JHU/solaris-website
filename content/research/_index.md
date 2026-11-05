@@ -25,7 +25,7 @@ description: "The Solaris Lab develops learning-enabled optimization and control
     </div>
     <figure class="research-direction-media">
       <div class="research-figure-frame">
-        <img src="/images/research/cinoc-learning-control.png" alt="CINOC neural-operator control framework coordinating multiple agents over partial differential equation systems" loading="lazy" decoding="async">
+        <img src="/images/research/cinoc-learning-control-restored.svg" alt="CINOC neural-operator control framework coordinating multiple agents over partial differential equation systems" width="1600" height="860" loading="lazy" decoding="async">
       </div>
       <figcaption><strong>CINOC</strong> learns scalable neural-operator policies for PDE control. Led by Pietro Zanotta, Dibakar Roy Sarkar, and Honghui Zheng.</figcaption>
     </figure>
@@ -69,9 +69,9 @@ description: "The Solaris Lab develops learning-enabled optimization and control
     </div>
     <figure class="research-direction-media">
       <div class="research-figure-frame">
-        <img src="/images/research/chiller-plant-midpc.png" alt="Graphical abstract showing mixed-integer differentiable predictive control for a data-center chiller plant" loading="lazy" decoding="async">
+        <img src="/images/research/energy-systems-grid.svg" alt="Pumped-hydro storage, batteries, a data center, and building cooling connected through a substation, transformers, and electrical feeders" width="1672" height="941" loading="lazy" decoding="async">
       </div>
-      <figcaption><strong>Data-center chiller plant optimization</strong> with mixed-integer differentiable predictive control, led by Ján Boldocký.</figcaption>
+      <figcaption><strong>Connected energy systems:</strong> pumped hydro, batteries, buildings, HVAC, and data-center cooling.</figcaption>
     </figure>
   </section>
 </div>

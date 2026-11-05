@@ -377,7 +377,7 @@ div[style*="border-left"]:hover {
 .research-cinoc-embed {
     position: relative;
     width: 100%;
-    padding-top: calc(53.7622% + 48px);
+    padding-top: 53.7622%;
 }
 
 .research-cinoc-embed iframe {
@@ -387,6 +387,7 @@ div[style*="border-left"]:hover {
     width: 100%;
     height: 100%;
     border: 0;
+    pointer-events: none;
 }
 
 .research-figure-frame .research-figure-link {

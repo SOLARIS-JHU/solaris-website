@@ -33,6 +33,7 @@
 .spg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 1rem; }
 .spg-card {
   display: flex; flex-direction: column; min-width: 0; overflow: hidden;
+  container-type: inline-size;
   border: 1px solid rgba(var(--solaris-accent-rgb), .55); border-radius: 12px; background: var(--solaris-bg);
   color: var(--solaris-text); box-shadow: 0 0 18px rgba(var(--solaris-accent-rgb), .14);
   transition: border-color .2s ease, box-shadow .2s ease;
@@ -54,7 +55,13 @@
   background: #fffffff2; opacity: 0; transition: opacity .18s ease;
 }
 .spg-art:hover .spg-expand, .spg-art:focus-visible .spg-expand { opacity: 1; }
-.spg-card-body { display: flex; flex: none; flex-direction: column; height: 16rem; padding: .95rem 1.2rem 1.05rem; }
+.spg-card-body { display: flex; flex: none; flex-direction: column; height: 15.5rem; padding: .95rem 1.2rem 1.05rem; }
+@container (min-width: 330px) {
+  .spg-card-body { height: 13.5rem; }
+}
+@container (min-width: 338px) {
+  .spg-card-body { height: 12rem; }
+}
 .solaris-papers .spg-paper-title {
   margin: 0; padding: 0; border: 0; font-size: .98rem; line-height: 1.35;
   font-weight: 700; letter-spacing: normal; color: var(--solaris-text);
@@ -62,8 +69,7 @@
 .solaris-papers .spg-paper-title a { color: var(--solaris-text) !important; }
 .solaris-papers .spg-paper-title a:hover { color: var(--solaris-accent) !important; }
 .solaris-papers .spg-authors {
-  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
-  overflow: hidden; margin: .7rem 0 1rem; color: var(--solaris-text);
+  margin: .7rem 0 1rem; color: var(--solaris-text);
   font-size: .76rem; line-height: 1.42; overflow-wrap: anywhere;
 }
 .spg-resource-links { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: auto; }
@@ -124,7 +130,6 @@ body.spg-modal-open { overflow: hidden; }
 @media (max-width: 640px) {
   .solaris-papers { margin-top: 1.25rem; }
   .spg-grid { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
-  .solaris-papers .spg-authors { -webkit-line-clamp: 4; }
   .spg-expand { opacity: 1; }
   .spg-viewer { width: calc(100vw - 16px); max-height: calc(100dvh - 16px); border-radius: 9px; }
   .spg-modal-head { padding: 1rem; gap: .5rem; }

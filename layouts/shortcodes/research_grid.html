@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ "css/papers.css" | relURL }}?v=7">
+<link rel="stylesheet" href="{{ "css/papers.css" | relURL }}?v=9">
 <section class="solaris-papers" data-papers-gallery aria-label="Research papers">
   <div class="spg-overview-controls"><button type="button" data-spg-overview-play>Pause animations</button></div>
   <nav class="papers-mobile-nav" aria-label="Paper research areas">
@@ -23,53 +23,34 @@
             <h2 class="papers-area-title">{{ $area.area }}</h2>
             <p class="papers-area-description">{{ $area.description }}</p>
           </header>
-          {{ range $area.years }}
-            {{ $yearGroup := . }}
-            {{ $year := .year }}
-            {{ $yearID := printf "%s-%v" ($area.area | urlize) $year }}
-            <section class="paper-year-group" id="{{ $yearID }}" data-paper-year="{{ $year }}" aria-labelledby="{{ $yearID }}-heading">
-              <header class="paper-year-header">
-                <div class="paper-year-picker">
-                  <h3 id="{{ $yearID }}-heading">
-                    <button type="button" class="paper-year-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="{{ $yearID }}-menu">
-                      <span class="paper-year-trigger-label">Year</span><span>{{ $year }}</span><span class="paper-year-chevron" aria-hidden="true"></span>
-                    </button>
-                  </h3>
-                  <div id="{{ $yearID }}-menu" class="paper-year-menu" role="listbox" aria-label="Jump to publication year" hidden>
-                    <span class="paper-year-menu-label">Jump to year</span>
-                    {{ range $area.years }}
-                      <button type="button" class="paper-year-option" role="option" data-year-target="{{ .year }}" aria-selected="{{ if eq .year $year }}true{{ else }}false{{ end }}">
-                        <span>{{ .year }}</span><small>{{ len .papers }} {{ if eq (len .papers) 1 }}paper{{ else }}papers{{ end }}</small>
-                      </button>
-                    {{ end }}
-                  </div>
-                </div>
-                <span class="paper-year-count">{{ len .papers }} {{ if eq (len .papers) 1 }}publication{{ else }}publications{{ end }}</span>
-              </header>
-              <div class="spg-grid paper-card-grid">
-                {{ range $yearGroup.papers }}
-                  {{ $paper := . }}
-                  {{ $resources := .abstract_links | default .links }}
-                  {{ $animated := .image_animated | default .image }}
-                  {{ $static := .image_static | default .image }}
-                  {{ $openURL := .image_animated | default .image_static | default .image }}
-                  {{ $id := .abstract_id | default (.title | urlize) }}
-                  <article class="spg-card" data-spg-card data-paper-id="{{ $id }}"
-                    data-animated="{{ with .image_animated }}{{ . | relURL }}{{ end }}"
-                    data-static="{{ with .image_static }}{{ . | relURL }}{{ end }}"
-                    data-thumbnail="{{ with .image }}{{ . | relURL }}{{ end }}">
-                    {{ with $animated }}
-                      <a class="spg-art" data-spg-open href="{{ $openURL | relURL }}" target="_blank" rel="noopener" aria-label="Open graphical abstract for {{ $paper.title }}" aria-haspopup="dialog" aria-controls="spg-viewer">
-                        <picture>
-                          {{ with $static }}<source media="(prefers-reduced-motion: reduce)" srcset="{{ . | relURL }}">{{ end }}
-                          <img src="{{ . | relURL }}" alt="{{ $paper.image_alt | default (printf "Graphical abstract for %s" $paper.title) }}" width="600" height="310" loading="lazy" decoding="async" data-spg-overview>
-                        </picture>
-                        <span class="spg-expand" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg></span>
-                      </a>
-                    {{ end }}
-                    <div class="spg-card-body">
-                      <h4 class="spg-paper-title"><a data-spg-open href="{{ $openURL | relURL }}" target="_blank" rel="noopener" aria-haspopup="dialog" aria-controls="spg-viewer">{{ .title }}</a></h4>
-                      <p class="spg-authors" title="{{ .authors }}">{{ .authors }}</p>
+          <div class="spg-grid paper-card-grid">
+            {{ range sort $area.years "year" "desc" }}
+              {{ $yearGroup := . }}
+              {{ $year := .year }}
+              {{ range $yearGroup.papers }}
+                {{ $paper := . }}
+                {{ $resources := .abstract_links | default .links }}
+                {{ $animated := .image_animated | default .image }}
+                {{ $static := .image_static | default .image }}
+                {{ $openURL := .image_animated | default .image_static | default .image }}
+                {{ $id := .abstract_id | default (.title | urlize) }}
+                <article class="spg-card" data-spg-card data-paper-id="{{ $id }}" data-paper-year="{{ $year }}"
+                  data-animated="{{ with .image_animated }}{{ . | relURL }}{{ end }}"
+                  data-static="{{ with .image_static }}{{ . | relURL }}{{ end }}"
+                  data-thumbnail="{{ with .image }}{{ . | relURL }}{{ end }}">
+                  {{ with $animated }}
+                    <a class="spg-art" data-spg-open href="{{ $openURL | relURL }}" target="_blank" rel="noopener" aria-label="Open graphical abstract for {{ $paper.title }}" aria-haspopup="dialog" aria-controls="spg-viewer">
+                      <picture>
+                        {{ with $static }}<source media="(prefers-reduced-motion: reduce)" srcset="{{ . | relURL }}">{{ end }}
+                        <img src="{{ . | relURL }}" alt="{{ $paper.image_alt | default (printf "Graphical abstract for %s" $paper.title) }}" width="600" height="310" loading="lazy" decoding="async" data-spg-overview>
+                      </picture>
+                      <span class="spg-expand" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg></span>
+                    </a>
+                  {{ end }}
+                  <div class="spg-card-body">
+                    <h3 class="spg-paper-title"><a data-spg-open href="{{ $openURL | relURL }}" target="_blank" rel="noopener" aria-haspopup="dialog" aria-controls="spg-viewer">{{ .title }}</a></h3>
+                    <p class="spg-authors" title="{{ .authors }}">{{ .authors }}</p>
+                    <div class="spg-card-footer">
                       <nav class="spg-resource-links" aria-label="Resources for {{ .title }}">
                         {{ range $resources }}
                           {{ $label := .text | default .label }}
@@ -80,13 +61,14 @@
                           <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ $label }}<span aria-hidden="true"> ↗</span></a>
                         {{ end }}
                       </nav>
-                      <template data-spg-details><p>{{ .abstract_summary | default .summary }}</p></template>
+                      <span class="spg-paper-year" title="Publication year">{{ $year }}</span>
                     </div>
-                  </article>
-                {{ end }}
-              </div>
-            </section>
-          {{ end }}
+                    <template data-spg-details><p>{{ .abstract_summary | default .summary }}</p></template>
+                  </div>
+                </article>
+              {{ end }}
+            {{ end }}
+          </div>
         </section>
       {{ end }}
     </div>
@@ -109,4 +91,4 @@
     <div class="spg-abstract" data-spg-science></div>
   </dialog>
 </section>
-<script src="{{ "js/papers.js" | relURL }}?v=8" defer></script>
+<script src="{{ "js/papers.js" | relURL }}?v=9" defer></script>

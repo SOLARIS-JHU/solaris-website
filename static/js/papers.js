@@ -22,93 +22,20 @@
   let svg = null, paused = true, explicitMotion = false;
 
   function initializeTopics() {
-  const sections = gallery.querySelectorAll(".papers-section-to-track");
-  const navLinks = gallery.querySelectorAll(".papers-tracker");
-  const yearTriggers = gallery.querySelectorAll(".paper-year-trigger");
+    const sections = gallery.querySelectorAll(".papers-section-to-track");
+    const navLinks = gallery.querySelectorAll(".papers-tracker");
+    const setActive = (targetId) => {
+      navLinks.forEach((link) => link.classList.toggle("active", link.dataset.target === targetId));
+    };
 
-  const closeYearMenus = (exceptMenu = null) => {
-    yearTriggers.forEach((trigger) => {
-      const menu = trigger.closest(".paper-year-picker").querySelector(".paper-year-menu");
-      if (menu === exceptMenu) return;
-      trigger.setAttribute("aria-expanded", "false");
-      menu.hidden = true;
-    });
-  };
-
-  const selectYear = (option) => {
-    const area = option.closest(".papers-area");
-    const targetYear = option.dataset.yearTarget;
-    const yearGroups = Array.from(area.querySelectorAll(".paper-year-group"));
-    const targetGroup = yearGroups.find((group) => group.dataset.paperYear === targetYear);
-    if (!targetGroup) return;
-
-    closeYearMenus();
-    // Year controls navigate the full publication list; every year stays visible.
-    targetGroup.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
-    targetGroup.querySelector(".paper-year-trigger").focus({ preventScroll: true });
-  };
-
-  yearTriggers.forEach((trigger) => {
-    const picker = trigger.closest(".paper-year-picker");
-    const menu = picker.querySelector(".paper-year-menu");
-    const options = Array.from(menu.querySelectorAll(".paper-year-option"));
-
-    trigger.addEventListener("click", (event) => {
-      event.stopPropagation();
-      const willOpen = trigger.getAttribute("aria-expanded") !== "true";
-      closeYearMenus(willOpen ? menu : null);
-      trigger.setAttribute("aria-expanded", String(willOpen));
-      menu.hidden = !willOpen;
-    });
-
-    trigger.addEventListener("keydown", (event) => {
-      if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
-      event.preventDefault();
-      closeYearMenus(menu);
-      trigger.setAttribute("aria-expanded", "true");
-      menu.hidden = false;
-      const selectedIndex = options.findIndex((option) => option.getAttribute("aria-selected") === "true");
-      const fallbackIndex = event.key === "ArrowDown" ? 0 : options.length - 1;
-      options[selectedIndex >= 0 ? selectedIndex : fallbackIndex].focus();
-    });
-
-    menu.addEventListener("click", (event) => event.stopPropagation());
-    menu.addEventListener("keydown", (event) => {
-      const currentIndex = options.indexOf(document.activeElement);
-      let nextIndex = currentIndex;
-      if (event.key === "ArrowDown") nextIndex = (currentIndex + 1) % options.length;
-      if (event.key === "ArrowUp") nextIndex = (currentIndex - 1 + options.length) % options.length;
-      if (event.key === "Home") nextIndex = 0;
-      if (event.key === "End") nextIndex = options.length - 1;
-      if (nextIndex !== currentIndex) {
-        event.preventDefault();
-        options[nextIndex].focus();
-      }
-    });
-
-    options.forEach((option) => option.addEventListener("click", () => selectYear(option)));
-  });
-
-  document.addEventListener("click", () => closeYearMenus());
-  document.addEventListener("keydown", (event) => {
-    if (event.key !== "Escape") return;
-    const openTrigger = gallery.querySelector('.paper-year-trigger[aria-expanded="true"]');
-    closeYearMenus();
-    if (openTrigger) openTrigger.focus();
-  });
-
-  const setActive = (targetId) => {
-    navLinks.forEach((link) => link.classList.toggle("active", link.dataset.target === targetId));
-  };
-
-  if (sections.length) {
-    setActive(sections[0].id);
-    const observer = new IntersectionObserver((entries) => {
-      const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-      if (visible.length) setActive(visible[0].target.id);
-    }, { rootMargin: "-15% 0px -65% 0px", threshold: [0.05, 0.2, 0.5] });
-    sections.forEach((section) => observer.observe(section));
-  }
+    if (sections.length) {
+      setActive(sections[0].id);
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible.length) setActive(visible[0].target.id);
+      }, { rootMargin: "-15% 0px -65% 0px", threshold: [0.05, 0.2, 0.5] });
+      sections.forEach((section) => observer.observe(section));
+    }
 
   }
 

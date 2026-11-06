@@ -26,13 +26,6 @@
   const navLinks = gallery.querySelectorAll(".papers-tracker");
   const yearTriggers = gallery.querySelectorAll(".paper-year-trigger");
 
-  gallery.querySelectorAll(".papers-area").forEach((area) => {
-    const yearGroups = Array.from(area.querySelectorAll(".paper-year-group"));
-    const hashTarget = yearGroups.find((group) => `#${group.id}` === window.location.hash);
-    const initialGroup = hashTarget || yearGroups[0];
-    yearGroups.forEach((group) => { group.hidden = group !== initialGroup; });
-  });
-
   const closeYearMenus = (exceptMenu = null) => {
     yearTriggers.forEach((trigger) => {
       const menu = trigger.closest(".paper-year-picker").querySelector(".paper-year-menu");
@@ -49,17 +42,10 @@
     const targetGroup = yearGroups.find((group) => group.dataset.paperYear === targetYear);
     if (!targetGroup) return;
 
-    yearGroups.forEach((group) => { group.hidden = group !== targetGroup; });
-    area.querySelectorAll(".paper-year-option").forEach((yearOption) => {
-      yearOption.setAttribute("aria-selected", String(yearOption.dataset.yearTarget === targetYear));
-    });
-
-    targetGroup.classList.remove("is-entering");
-    void targetGroup.offsetWidth;
-    targetGroup.classList.add("is-entering");
     closeYearMenus();
-    targetGroup.querySelector(".paper-year-trigger").focus();
-    refreshOverview();
+    // Year controls navigate the full publication list; every year stays visible.
+    targetGroup.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+    targetGroup.querySelector(".paper-year-trigger").focus({ preventScroll: true });
   };
 
   yearTriggers.forEach((trigger) => {

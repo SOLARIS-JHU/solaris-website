@@ -35,7 +35,7 @@
                       <span class="paper-year-trigger-label">Year</span><span>{{ $year }}</span><span class="paper-year-chevron" aria-hidden="true"></span>
                     </button>
                   </h3>
-                  <div id="{{ $yearID }}-menu" class="paper-year-menu" role="listbox" aria-label="Select publication year" hidden>
+                  <div id="{{ $yearID }}-menu" class="paper-year-menu" role="listbox" aria-label="Jump to publication year" hidden>
                     <span class="paper-year-menu-label">Jump to year</span>
                     {{ range $area.years }}
                       <button type="button" class="paper-year-option" role="option" data-year-target="{{ .year }}" aria-selected="{{ if eq .year $year }}true{{ else }}false{{ end }}">
@@ -109,4 +109,4 @@
     <div class="spg-abstract" data-spg-science></div>
   </dialog>
 </section>
-<script src="{{ "js/papers.js" | relURL }}?v=7" defer></script>
+<script src="{{ "js/papers.js" | relURL }}?v=8" defer></script>

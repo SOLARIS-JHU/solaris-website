@@ -1,4 +1,4 @@
-/* On-demand native SVG playback. No animated assets are fetched on page load. */
+/* Animated topic overview and accessible enlarged SVG playback. */
 (() => {
   'use strict';
   const gallery = document.querySelector('[data-papers-gallery]');
@@ -6,7 +6,6 @@
   gallery.dataset.ready = 'true';
   const find = selector => gallery.querySelector(selector);
   const cards = [...gallery.querySelectorAll('[data-spg-card]')];
-  const search = find('#spg-search');
   const dialog = find('#spg-viewer');
   const stage = find('[data-spg-stage]');
   const status = find('[data-spg-load-status]');
@@ -16,21 +15,137 @@
   const previous = find('[data-spg-previous]');
   const next = find('[data-spg-next]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const normalize = text => text.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase();
-  const searchText = new Map(cards.map(card => [card, normalize(card.querySelector('.spg-paper-title').textContent + ' ' + card.querySelector('.spg-authors').textContent)]));
+  const overviewPlay = find('[data-spg-overview-play]');
+  let overviewPaused = reducedMotion.matches;
   const cache = new Map();
   let current = null, opener = null, controller = null, request = 0;
   let svg = null, paused = true, explicitMotion = false;
 
-  function filter() {
-    const query = normalize(search.value.trim());
-    let count = 0;
-    for (const card of cards) { card.hidden = !searchText.get(card).includes(query); if (!card.hidden) count++; }
-    find('[data-spg-count]').textContent = `${count} ${count === 1 ? 'paper' : 'papers'}`;
-    find('[data-spg-empty]').hidden = count !== 0;
+  function initializeTopics() {
+  const sections = gallery.querySelectorAll(".papers-section-to-track");
+  const navLinks = gallery.querySelectorAll(".papers-tracker");
+  const yearTriggers = gallery.querySelectorAll(".paper-year-trigger");
+
+  gallery.querySelectorAll(".papers-area").forEach((area) => {
+    const yearGroups = Array.from(area.querySelectorAll(".paper-year-group"));
+    const hashTarget = yearGroups.find((group) => `#${group.id}` === window.location.hash);
+    const initialGroup = hashTarget || yearGroups[0];
+    yearGroups.forEach((group) => { group.hidden = group !== initialGroup; });
+  });
+
+  const closeYearMenus = (exceptMenu = null) => {
+    yearTriggers.forEach((trigger) => {
+      const menu = trigger.closest(".paper-year-picker").querySelector(".paper-year-menu");
+      if (menu === exceptMenu) return;
+      trigger.setAttribute("aria-expanded", "false");
+      menu.hidden = true;
+    });
+  };
+
+  const selectYear = (option) => {
+    const area = option.closest(".papers-area");
+    const targetYear = option.dataset.yearTarget;
+    const yearGroups = Array.from(area.querySelectorAll(".paper-year-group"));
+    const targetGroup = yearGroups.find((group) => group.dataset.paperYear === targetYear);
+    if (!targetGroup) return;
+
+    yearGroups.forEach((group) => { group.hidden = group !== targetGroup; });
+    area.querySelectorAll(".paper-year-option").forEach((yearOption) => {
+      yearOption.setAttribute("aria-selected", String(yearOption.dataset.yearTarget === targetYear));
+    });
+
+    targetGroup.classList.remove("is-entering");
+    void targetGroup.offsetWidth;
+    targetGroup.classList.add("is-entering");
+    closeYearMenus();
+    targetGroup.querySelector(".paper-year-trigger").focus();
+    refreshOverview();
+  };
+
+  yearTriggers.forEach((trigger) => {
+    const picker = trigger.closest(".paper-year-picker");
+    const menu = picker.querySelector(".paper-year-menu");
+    const options = Array.from(menu.querySelectorAll(".paper-year-option"));
+
+    trigger.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const willOpen = trigger.getAttribute("aria-expanded") !== "true";
+      closeYearMenus(willOpen ? menu : null);
+      trigger.setAttribute("aria-expanded", String(willOpen));
+      menu.hidden = !willOpen;
+    });
+
+    trigger.addEventListener("keydown", (event) => {
+      if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+      event.preventDefault();
+      closeYearMenus(menu);
+      trigger.setAttribute("aria-expanded", "true");
+      menu.hidden = false;
+      const selectedIndex = options.findIndex((option) => option.getAttribute("aria-selected") === "true");
+      const fallbackIndex = event.key === "ArrowDown" ? 0 : options.length - 1;
+      options[selectedIndex >= 0 ? selectedIndex : fallbackIndex].focus();
+    });
+
+    menu.addEventListener("click", (event) => event.stopPropagation());
+    menu.addEventListener("keydown", (event) => {
+      const currentIndex = options.indexOf(document.activeElement);
+      let nextIndex = currentIndex;
+      if (event.key === "ArrowDown") nextIndex = (currentIndex + 1) % options.length;
+      if (event.key === "ArrowUp") nextIndex = (currentIndex - 1 + options.length) % options.length;
+      if (event.key === "Home") nextIndex = 0;
+      if (event.key === "End") nextIndex = options.length - 1;
+      if (nextIndex !== currentIndex) {
+        event.preventDefault();
+        options[nextIndex].focus();
+      }
+    });
+
+    options.forEach((option) => option.addEventListener("click", () => selectYear(option)));
+  });
+
+  document.addEventListener("click", () => closeYearMenus());
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    const openTrigger = gallery.querySelector('.paper-year-trigger[aria-expanded="true"]');
+    closeYearMenus();
+    if (openTrigger) openTrigger.focus();
+  });
+
+  const setActive = (targetId) => {
+    navLinks.forEach((link) => link.classList.toggle("active", link.dataset.target === targetId));
+  };
+
+  if (sections.length) {
+    setActive(sections[0].id);
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      if (visible.length) setActive(visible[0].target.id);
+    }, { rootMargin: "-15% 0px -65% 0px", threshold: [0.05, 0.2, 0.5] });
+    sections.forEach((section) => observer.observe(section));
   }
-  search.addEventListener('input', filter);
-  filter();
+
+  }
+
+  function refreshOverview() {
+    const stopped = overviewPaused || reducedMotion.matches || document.hidden || dialog?.open;
+    for (const card of cards) {
+      const img = card.querySelector('.spg-art img');
+      if (!img) continue;
+      const source = card.querySelector('.spg-art source');
+      const url = localURL(stopped ? (card.dataset.static || card.dataset.thumbnail) : (card.dataset.animated || card.dataset.thumbnail));
+      if (source) source.media = stopped ? 'all' : '(prefers-reduced-motion: reduce)';
+      if (url && img.src !== url.href) img.src = url.href;
+    }
+    if (overviewPlay) {
+      overviewPlay.disabled = reducedMotion.matches;
+      overviewPlay.textContent = reducedMotion.matches ? 'Animations paused' : overviewPaused ? 'Play animations' : 'Pause animations';
+      overviewPlay.title = reducedMotion.matches ? 'Reduced motion is enabled' : '';
+    }
+  }
+  overviewPlay?.addEventListener('click', () => { overviewPaused = !overviewPaused; refreshOverview(); });
+  document.addEventListener('visibilitychange', refreshOverview);
+  initializeTopics();
+  refreshOverview();
   // With no dialog support, links retain their ordinary standalone-SVG behavior.
   if (!dialog || typeof dialog.showModal !== 'function') return;
 
@@ -110,15 +225,15 @@
     find('#spg-modal-authors').textContent = card.querySelector('.spg-authors').textContent;
     find('[data-spg-modal-links]').replaceChildren(...[...card.querySelector('.spg-resource-links').children].map(link => link.cloneNode(true)));
     find('[data-spg-science]').replaceChildren(card.querySelector('[data-spg-details]').content.cloneNode(true));
-    find('[data-spg-method]').open = false;
     resourceLink('[data-spg-animated]', card.dataset.animated);
     resourceLink('[data-spg-static]', card.dataset.static);
     placeholder(card);
-    const visible = cards.filter(item => !item.hidden);
+    const visible = cards.filter(item => !item.closest('[hidden]'));
     previous.disabled = next.disabled = visible.length < 2;
     play.disabled = restart.disabled = true;
     setPaused(reducedMotion.matches);
     if (!dialog.open) { dialog.showModal(); document.body.classList.add('spg-modal-open'); close.focus({ preventScroll: true }); }
+    refreshOverview();
     dialog.scrollTop = 0;
     const url = localURL(card.dataset.animated, '.svg');
     if (!url) { status.textContent = 'A static graphical abstract is available for this paper.'; return; }
@@ -143,7 +258,7 @@
     } finally { clearTimeout(timeout); }
   }
   function navigate(delta) {
-    const visible = cards.filter(card => !card.hidden);
+    const visible = cards.filter(card => !card.closest('[hidden]'));
     if (visible.length < 2) return;
     const index = visible.indexOf(current);
     show(visible[(index + delta + visible.length) % visible.length]);
@@ -163,7 +278,8 @@
     request++; controller?.abort(); svg = null; stage.replaceChildren();
     document.body.classList.remove('spg-modal-open');
     if (opener?.isConnected && !opener.closest('[hidden]')) opener.focus({ preventScroll: true });
-    else search.focus({ preventScroll: true });
+    else cards.find(card => !card.closest('[hidden]'))?.querySelector('[data-spg-open]')?.focus({ preventScroll: true });
+    refreshOverview();
   });
   play.addEventListener('click', () => {
     if (!svg) return;
@@ -205,5 +321,7 @@
   });
   reducedMotion.addEventListener('change', event => {
     if (event.matches && svg) { setPaused(true); status.textContent = 'Animation paused to match your reduced-motion preference.'; }
+    overviewPaused = event.matches;
+    refreshOverview();
   });
 })();

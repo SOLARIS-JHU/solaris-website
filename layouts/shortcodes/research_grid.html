@@ -1,101 +1,112 @@
-{{- /* One publication per abstract, regardless of its original area/year groups. */ -}}
-{{- $papers := slice -}}
-{{- $seen := newScratch -}}
-{{- range .Site.Data.research -}}
-  {{- range .years -}}
-    {{- range .papers -}}
-      {{- $key := .abstract_id | default .title -}}
-      {{- if not ($seen.Get $key) -}}
-        {{- $seen.Set $key true -}}
-        {{- $papers = $papers | append (merge . (dict "abstract_order" (.abstract_order | default 999999))) -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
-{{- $papers = sort $papers "abstract_order" "asc" -}}
-<link rel="stylesheet" href="{{ "css/papers.css" | relURL }}?v=6">
+<link rel="stylesheet" href="{{ "css/papers.css" | relURL }}?v=7">
 <section class="solaris-papers" data-papers-gallery aria-label="Research papers">
-  <div class="spg-tools">
-    <label class="spg-visually-hidden" for="spg-search">Find a paper or author</label>
-    <input id="spg-search" class="spg-search" type="search" placeholder="Find a paper or author…" autocomplete="off" aria-controls="spg-grid">
-    <span class="spg-count" data-spg-count role="status" aria-live="polite" aria-atomic="true">{{ len $papers }} papers</span>
+  <div class="spg-overview-controls"><button type="button" data-spg-overview-play>Pause animations</button></div>
+  <nav class="papers-mobile-nav" aria-label="Paper research areas">
+    {{ range .Site.Data.research }}
+      <a href="#{{ .area | urlize }}" class="papers-tracker" data-target="{{ .area | urlize }}">{{ .area }}</a>
+    {{ end }}
+  </nav>
+  <div class="papers-layout">
+    <aside class="papers-sidebar">
+      <span class="papers-sidebar-label">Explore by theme</span>
+      <nav class="papers-nav-list" aria-label="Paper research areas">
+        {{ range .Site.Data.research }}
+          <a href="#{{ .area | urlize }}" class="papers-nav-link papers-tracker" data-target="{{ .area | urlize }}">{{ .area }}</a>
+        {{ end }}
+      </nav>
+    </aside>
+    <div class="papers-content">
+      {{ range $areaIndex, $area := .Site.Data.research }}
+        <section id="{{ $area.area | urlize }}" class="papers-area papers-section-to-track">
+          <header class="papers-area-header">
+            <span class="papers-area-kicker">Theme {{ printf "%02d" (add $areaIndex 1) }}</span>
+            <h2 class="papers-area-title">{{ $area.area }}</h2>
+            <p class="papers-area-description">{{ $area.description }}</p>
+          </header>
+          {{ range $area.years }}
+            {{ $yearGroup := . }}
+            {{ $year := .year }}
+            {{ $yearID := printf "%s-%v" ($area.area | urlize) $year }}
+            <section class="paper-year-group" id="{{ $yearID }}" data-paper-year="{{ $year }}" aria-labelledby="{{ $yearID }}-heading">
+              <header class="paper-year-header">
+                <div class="paper-year-picker">
+                  <h3 id="{{ $yearID }}-heading">
+                    <button type="button" class="paper-year-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="{{ $yearID }}-menu">
+                      <span class="paper-year-trigger-label">Year</span><span>{{ $year }}</span><span class="paper-year-chevron" aria-hidden="true"></span>
+                    </button>
+                  </h3>
+                  <div id="{{ $yearID }}-menu" class="paper-year-menu" role="listbox" aria-label="Select publication year" hidden>
+                    <span class="paper-year-menu-label">Jump to year</span>
+                    {{ range $area.years }}
+                      <button type="button" class="paper-year-option" role="option" data-year-target="{{ .year }}" aria-selected="{{ if eq .year $year }}true{{ else }}false{{ end }}">
+                        <span>{{ .year }}</span><small>{{ len .papers }} {{ if eq (len .papers) 1 }}paper{{ else }}papers{{ end }}</small>
+                      </button>
+                    {{ end }}
+                  </div>
+                </div>
+                <span class="paper-year-count">{{ len .papers }} {{ if eq (len .papers) 1 }}publication{{ else }}publications{{ end }}</span>
+              </header>
+              <div class="spg-grid paper-card-grid">
+                {{ range $yearGroup.papers }}
+                  {{ $paper := . }}
+                  {{ $resources := .abstract_links | default .links }}
+                  {{ $animated := .image_animated | default .image }}
+                  {{ $static := .image_static | default .image }}
+                  {{ $openURL := .image_animated | default .image_static | default .image }}
+                  {{ $id := .abstract_id | default (.title | urlize) }}
+                  <article class="spg-card" data-spg-card data-paper-id="{{ $id }}"
+                    data-animated="{{ with .image_animated }}{{ . | relURL }}{{ end }}"
+                    data-static="{{ with .image_static }}{{ . | relURL }}{{ end }}"
+                    data-thumbnail="{{ with .image }}{{ . | relURL }}{{ end }}">
+                    {{ with $animated }}
+                      <a class="spg-art" data-spg-open href="{{ $openURL | relURL }}" target="_blank" rel="noopener" aria-label="Open graphical abstract for {{ $paper.title }}" aria-haspopup="dialog" aria-controls="spg-viewer">
+                        <picture>
+                          {{ with $static }}<source media="(prefers-reduced-motion: reduce)" srcset="{{ . | relURL }}">{{ end }}
+                          <img src="{{ . | relURL }}" alt="{{ $paper.image_alt | default (printf "Graphical abstract for %s" $paper.title) }}" width="600" height="310" loading="lazy" decoding="async" data-spg-overview>
+                        </picture>
+                        <span class="spg-expand" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg></span>
+                      </a>
+                    {{ end }}
+                    <div class="spg-card-body">
+                      <h4 class="spg-paper-title"><a data-spg-open href="{{ $openURL | relURL }}" target="_blank" rel="noopener" aria-haspopup="dialog" aria-controls="spg-viewer">{{ .title }}</a></h4>
+                      <p class="spg-authors" title="{{ .authors }}">{{ .authors }}</p>
+                      <nav class="spg-resource-links" aria-label="Resources for {{ .title }}">
+                        {{ range $resources }}
+                          {{ $label := .text | default .label }}
+                          {{ if not $paper.abstract_links }}
+                            {{ if in (slice "Preprint" "Journal") $label }}{{ $label = "Paper" }}{{ end }}
+                            {{ if eq $label "GitHub" }}{{ $label = "Code" }}{{ end }}
+                          {{ end }}
+                          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ $label }}<span aria-hidden="true"> ↗</span></a>
+                        {{ end }}
+                      </nav>
+                      <template data-spg-details><p>{{ .abstract_summary | default .summary }}</p></template>
+                    </div>
+                  </article>
+                {{ end }}
+              </div>
+            </section>
+          {{ end }}
+        </section>
+      {{ end }}
+    </div>
   </div>
-  <p class="spg-empty" data-spg-empty hidden>No papers match your search.</p>
-  <div class="spg-grid" id="spg-grid">
-    {{- range $papers -}}
-      {{- $paper := . -}}
-      {{- $resources := .abstract_links | default .links -}}
-      {{- $openURL := .image_animated | default .image_static | default .image -}}
-      {{- $id := .abstract_id | default (.title | urlize) -}}
-      <article class="spg-card" data-spg-card data-paper-id="{{ $id }}"
-        data-animated="{{ with .image_animated }}{{ . | relURL }}{{ end }}"
-        data-static="{{ with .image_static }}{{ . | relURL }}{{ end }}"
-        data-thumbnail="{{ with .image }}{{ . | relURL }}{{ end }}">
-        {{- with .image -}}
-          <a class="spg-art" data-spg-open href="{{ $openURL | relURL }}" target="_blank" rel="noopener" aria-label="Open graphical abstract for {{ $paper.title }}" aria-haspopup="dialog" aria-controls="spg-viewer">
-            <img src="{{ . | relURL }}" alt="{{ $paper.image_alt | default (printf "Graphical abstract for %s" $paper.title) }}" width="600" height="310" loading="lazy" decoding="async">
-            <span class="spg-expand" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg></span>
-          </a>
-        {{- end -}}
-        <div class="spg-card-body">
-          <h2 class="spg-paper-title"><a data-spg-open href="{{ $openURL | relURL }}" target="_blank" rel="noopener" aria-haspopup="dialog" aria-controls="spg-viewer">{{ .title }}</a></h2>
-          <p class="spg-authors" title="{{ .authors }}">{{ .authors }}</p>
-          <nav class="spg-resource-links" aria-label="Resources for {{ .title }}">
-            {{- range $resources -}}
-              {{- $label := .text | default .label -}}
-              {{- if not $paper.abstract_links -}}
-                {{- if in (slice "Preprint" "Journal") $label -}}{{- $label = "Paper" -}}{{- end -}}
-                {{- if eq $label "GitHub" -}}{{- $label = "Code" -}}{{- end -}}
-              {{- end -}}
-              <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ $label }}<span aria-hidden="true"> ↗</span></a>
-            {{- end -}}
-          </nav>
-          <template data-spg-details>
-            {{- with .summary }}<p>{{ . }}</p>{{ end -}}
-            {{- with .abstract_scope }}<p><strong>Scope.</strong> {{ . }}</p>{{ end -}}
-            <p><strong>Animation.</strong> {{ .abstract_animation | default "This animation illustrates the method; it does not reproduce reported experimental results." }}</p>
-            {{- with .abstract_sources -}}
-              <ul class="spg-sources">
-                {{- range . -}}
-                  <li><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .locator | default "Primary source" }}</a></li>
-                {{- end -}}
-              </ul>
-            {{- end -}}
-          </template>
-        </div>
-      </article>
-    {{- end -}}
-  </div>
-  <noscript><p>Select a graphical abstract to open its SVG. Search and enlarged playback controls are available when JavaScript is enabled.</p></noscript>
-
+  <noscript><p>Select a graphical abstract to open its SVG. Enlarged playback controls are available when JavaScript is enabled.</p></noscript>
   <dialog class="spg-viewer" id="spg-viewer" aria-labelledby="spg-modal-title" aria-describedby="spg-modal-authors">
     <div class="spg-modal-head">
       <div class="spg-modal-heading">
-        <h2 id="spg-modal-title"></h2>
-        <p class="spg-modal-authors" id="spg-modal-authors"></p>
+        <h2 id="spg-modal-title"></h2><p class="spg-modal-authors" id="spg-modal-authors"></p>
         <nav class="spg-resource-links" data-spg-modal-links aria-label="Paper resources"></nav>
       </div>
       <button class="spg-close" data-spg-close type="button" aria-label="Close graphical abstract" autofocus><span aria-hidden="true">×</span></button>
     </div>
-    <div class="spg-art-region">
-      <div class="spg-stage" data-spg-stage></div>
-      <p class="spg-load-status" data-spg-load-status role="status" aria-live="polite"></p>
-    </div>
+    <div class="spg-art-region"><div class="spg-stage" data-spg-stage></div><p class="spg-load-status" data-spg-load-status role="status" aria-live="polite"></p></div>
     <div class="spg-controls" role="group" aria-label="Graphical abstract controls">
-      <button type="button" data-spg-play disabled>Pause</button>
-      <button type="button" data-spg-restart disabled>Restart</button>
-      <span class="spg-paper-navigation">
-        <button type="button" data-spg-previous aria-label="Previous paper"><span aria-hidden="true">←</span></button>
-        <button type="button" data-spg-next aria-label="Next paper"><span aria-hidden="true">→</span></button>
-      </span>
-      <span class="spg-control-spacer"></span>
-      <a data-spg-animated download target="_blank" rel="noopener">Animated SVG</a>
-      <a data-spg-static download target="_blank" rel="noopener">Static SVG</a>
+      <button type="button" data-spg-play disabled>Pause</button><button type="button" data-spg-restart disabled>Restart</button>
+      <span class="spg-paper-navigation"><button type="button" data-spg-previous aria-label="Previous paper"><span aria-hidden="true">←</span></button><button type="button" data-spg-next aria-label="Next paper"><span aria-hidden="true">→</span></button></span>
+      <span class="spg-control-spacer"></span><a data-spg-animated download target="_blank" rel="noopener">Animated SVG</a><a data-spg-static download target="_blank" rel="noopener">Static SVG</a>
     </div>
-    <details class="spg-method" data-spg-method>
-      <summary>Method, scope, and sources</summary>
-      <div data-spg-science></div>
-    </details>
+    <div class="spg-abstract" data-spg-science></div>
   </dialog>
 </section>
-<script src="{{ "js/papers.js" | relURL }}?v=6" defer></script>
+<script src="{{ "js/papers.js" | relURL }}?v=7" defer></script>

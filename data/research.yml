@@ -12,6 +12,7 @@
         - title: "ML-Guided Primal Heuristics for Mixed Binary Quadratic Programs"
           abstract_id: "arxiv-2604.23053"
           abstract_order: 1
+          abstract_summary: "Mixed binary quadratic programs combine discrete decisions with continuous variables and quadratic interactions. This method represents each instance as a tripartite graph and trains graph attention models to predict binary assignments using contrastive and solution-prediction losses. The predictions guide a restricted optimization subproblem, combining learned search guidance with conventional solver refinement."
           image: "images/papers/v6/arxiv-2604.23053.png"
           image_animated: "images/papers/v6/arxiv-2604.23053.svg"
           image_static: "images/papers/v6/arxiv-2604.23053-static.svg"
@@ -30,6 +31,7 @@
         - title: "L2O-CCG: Adversarial Learning with Set Generalization for Adaptive Robust Optimization"
           abstract_id: "arxiv-2603.22548"
           abstract_order: 2
+          abstract_summary: "Two-stage adaptive robust optimization requires repeated searches for challenging uncertainty scenarios. L2O-CCG combines a learned recourse surrogate, a learned proximal optimizer, and uncertainty-set projections to guide this search within constraint-and-column generation. Exact recourse evaluation checks selected scenarios before master updates, while the learned update rule can be reused across different uncertainty-set geometries."
           image: "images/papers/v6/arxiv-2603.22548.png"
           image_animated: "images/papers/v6/arxiv-2603.22548.svg"
           image_static: "images/papers/v6/arxiv-2603.22548-static.svg"
@@ -50,6 +52,7 @@
         - title: "Learning to Solve Constrained Bilevel Control Co-Design Problems"
           abstract_id: "arxiv-2507.09050"
           abstract_order: 3
+          abstract_summary: "Control co-design couples physical design choices to the behavior of an optimal controller. This self-supervised framework predicts design variables, differentiates through the lower-level control problem, and corrects violations of constraints coupling the two levels. Upper-level projection and gradient-based correction incorporate design feasibility into learning while retaining the controller's role in evaluating each candidate design."
           image: "images/papers/v6/arxiv-2507.09050.png"
           image_animated: "images/papers/v6/arxiv-2507.09050.svg"
           image_static: "images/papers/v6/arxiv-2507.09050-static.svg"
@@ -72,6 +75,7 @@
         - title: "Learning to Optimize for Mixed-Integer Nonlinear Programming with Feasibility Guarantees"
           abstract_id: "arxiv-2410.11061"
           abstract_order: 4
+          abstract_summary: "Mixed-integer nonlinear programs require decisions that satisfy both integrality and nonlinear constraints. This framework learns relaxed solutions, applies an adaptive integer-correction layer, and refines candidates through iterative constraint-violation updates at inference. By separating integrality enforcement from feasibility refinement, it supports learned solution maps for parametric problems while accounting for the conditions and approximation errors underlying feasibility guarantees."
           image: "images/papers/v6/arxiv-2410.11061.png"
           image_animated: "images/papers/v6/arxiv-2410.11061.svg"
           image_static: "images/papers/v6/arxiv-2410.11061-static.svg"
@@ -97,6 +101,7 @@
         - title: "SD-DPC: Sparse Dictionary Differentiable Predictive Control"
           abstract_id: "arxiv-2610.02466"
           abstract_order: 5
+          abstract_summary: "Compact feedback policies can make nonlinear control easier to interpret and deploy. SD-DPC identifies sparse dynamics and trains a policy expressed in a candidate-function dictionary through predictive closed-loop rollouts. Coefficient pruning and refitting produce an explicit sparse feedback law, with policy terms selected for control performance rather than imitation of an expert controller."
           image: "images/papers/v6/arxiv-2610.02466.png"
           image_animated: "images/papers/v6/arxiv-2610.02466.svg"
           image_static: "images/papers/v6/arxiv-2610.02466-static.svg"
@@ -117,6 +122,7 @@
         - title: "Topological Feasibility Guarantees for Differentiable Predictive Control"
           abstract_id: "arxiv-2608.10332"
           abstract_order: 6
+          abstract_summary: "Offline policy training must connect feasibility at sampled trajectories to feasibility beyond those samples. This work combines barrier-based differentiable predictive control with warm-started homotopy training and a topological analysis of safe trajectory neighborhoods. Strict safety margins, continuity, and sufficient finite coverage support conditional feasibility guarantees for learned policies under the stated regularity and compactness assumptions."
           image: "images/papers/v6/arxiv-2608.10332.png"
           image_animated: "images/papers/v6/arxiv-2608.10332.svg"
           image_static: "images/papers/v6/arxiv-2608.10332-static.svg"
@@ -135,6 +141,7 @@
         - title: "Accelerating and Scaling MPC-Guided Reinforcement Learning for Humanoid Locomotion and Manipulation"
           abstract_id: "arxiv-2606.05687"
           abstract_order: 7
+          abstract_summary: "Predictive control can provide useful structure for humanoid reinforcement learning, but solving many control problems during training is computationally demanding. A batched GPU centroidal MPC solver supplies predictive landmarks that shape training rewards across simulated environments. This training-time guidance supports learning whole-body locomotion and manipulation policies while parallelizing computation across environments and prediction horizons."
           image: "images/papers/v6/arxiv-2606.05687.png"
           image_animated: "images/papers/v6/arxiv-2606.05687.svg"
           image_static: "images/papers/v6/arxiv-2606.05687-static.svg"
@@ -157,6 +164,7 @@
         - title: "Zero-Shot Transferable Solution Method for Parametric Optimal Control Problems"
           abstract_id: "arxiv-2509.18404"
           abstract_order: 8
+          abstract_summary: "Changing an optimal-control objective often requires adapting an existing policy. This method learns reusable neural policy basis functions offline from expert solutions and combines them with task-specific coefficients. New coefficients are estimated from state-action examples by least squares, or predicted by a separately trained operator, enabling transfer within the learned task family without retraining the policy bases."
           image: "images/papers/v6/arxiv-2509.18404.png"
           image_animated: "images/papers/v6/arxiv-2509.18404.svg"
           image_static: "images/papers/v6/arxiv-2509.18404-static.svg"
@@ -176,6 +184,7 @@
         - title: "Learning to Control PDEs with Differentiable Predictive Control and Time-Integrated Neural Operators"
           abstract_id: "arxiv-2511.08992"
           abstract_order: 9
+          abstract_summary: "Controlling spatially distributed systems requires models that support prediction and efficient policy optimization. This framework learns a temporal-derivative operator with a Time-Integrated DeepONet, integrates it numerically, and uses the frozen surrogate for differentiable closed-loop rollouts. Control losses are backpropagated through those rollouts to train explicit neural policies for PDE actuation and field tracking."
           image: "images/papers/v6/arxiv-2511.08992.png"
           image_animated: "images/papers/v6/arxiv-2511.08992.svg"
           image_static: "images/papers/v6/arxiv-2511.08992-static.svg"
@@ -199,6 +208,7 @@
         - title: "Learning to Solve Parametric Mixed-Integer Optimal Control Problems via Differentiable Predictive Control"
           abstract_id: "arxiv-2506.19646"
           abstract_order: 10
+          abstract_summary: "Mixed-integer optimal control combines continuous actions with discrete operating decisions. This differentiable predictive-control framework trains a shared neural policy with separate continuous and discrete outputs through model-based rollouts. It compares differentiable rounding strategies that use hard decisions in the forward pass and surrogate gradients in training, enabling explicit policies for parametric mixed-integer control problems."
           image: "images/papers/v6/arxiv-2506.19646.png"
           image_animated: "images/papers/v6/arxiv-2506.19646.svg"
           image_static: "images/papers/v6/arxiv-2506.19646-static.svg"
@@ -220,6 +230,7 @@
         - title: "CINOC: Cardinality-Invariant Neural Operator Policies for Scalable PDE Control"
           abstract_id: "paper-11"
           abstract_order: 11
+          abstract_summary: "PDE control with multiple actuators must accommodate changes in the number and locations of agents. CINOC uses a shared neural-operator policy that each agent queries from local field observations and coordinates, producing actuation intensities and, for mobile agents, velocities. Training through a differentiable PDE solver enables demonstrated transfer across agent populations without retraining the shared policy."
           image: "images/papers/v6/cinoc-cardinality-invariant-control.png"
           image_animated: "images/papers/v6/cinoc-cardinality-invariant-control.svg"
           image_static: "images/papers/v6/cinoc-cardinality-invariant-control-static.svg"
@@ -245,6 +256,7 @@
         - title: "Zero-Shot Function Encoder-Based Differentiable Predictive Control"
           abstract_id: "arxiv-2511.05757"
           abstract_order: 12
+          abstract_summary: "A learned controller must adapt when system dynamics change. This framework learns neural-ODE basis functions and trains a differentiable predictive-control policy conditioned on the resulting dynamics coefficients. Online state-action transitions identify new coefficients while the neural models remain fixed, allowing adaptation within the learned dynamics representation without retraining the control policy."
           image: "images/papers/v6/arxiv-2511.05757.png"
           image_animated: "images/papers/v6/arxiv-2511.05757.svg"
           image_static: "images/papers/v6/arxiv-2511.05757-static.svg"
@@ -268,6 +280,7 @@
         - title: "A Koopman–Polynomial Chaos Framework for SMPC of Nonlinear Stochastic Processes"
           abstract_id: "arxiv-2610.24105"
           abstract_order: 13
+          abstract_summary: "Nonlinear stochastic control must account for uncertain parameters and disturbances that evolve over time. This framework combines Koopman lifting with polynomial-chaos representations, then precomputes matrices for predicted moments, expected costs, and constraints. The resulting condensed convex control problem keeps online decision dimensions independent of the lifted-state and polynomial-basis sizes while retaining both sources of uncertainty."
           image: "images/papers/v6/arxiv-2610.24105.png"
           image_animated: "images/papers/v6/arxiv-2610.24105.svg"
           image_static: "images/papers/v6/arxiv-2610.24105-static.svg"
@@ -286,6 +299,7 @@
         - title: "Fast-DeePC: Fast Data-Enabled Predictive Control using Soft-constrained Scheme"
           abstract_id: "arxiv-2610.12902"
           abstract_order: 14
+          abstract_summary: "Data-enabled predictive control can become computationally expensive as the recorded trajectory dataset grows. Fast-DeePC replaces hard trajectory-consistency conditions with quadratic penalties and ridge regularization, allowing the trajectory coefficient vector to be eliminated offline. Online control then solves a fixed-size box-constrained quadratic program whose decision dimension does not grow with the dataset length."
           image: "images/papers/v6/arxiv-2610.12902.png"
           image_animated: "images/papers/v6/arxiv-2610.12902.svg"
           image_static: "images/papers/v6/arxiv-2610.12902-static.svg"
@@ -304,6 +318,7 @@
         - title: "Model Predictive Control for Safety-Critical Systems Using Taylor's Theorem with Lagrange Remainder"
           abstract_id: "arxiv-2610.06976"
           abstract_order: 15
+          abstract_summary: "Safety-critical nonlinear MPC requires constraints that account for how a safety function evolves between prediction steps. This method uses Taylor's theorem and a numerically approximated integral remainder under zero-order-hold inputs to construct predictive safety constraints. A margin covering the approximation error connects the numerical remainder calculation to the stated sample-time safety condition."
           image: "images/papers/v6/arxiv-2610.06976.png"
           image_animated: "images/papers/v6/arxiv-2610.06976.svg"
           image_static: "images/papers/v6/arxiv-2610.06976-static.svg"
@@ -322,6 +337,7 @@
         - title: "lapanda: A Matrix-Free Differentiable Solver for Nonconvex Constrained Optimization Layers"
           abstract_id: "arxiv-2609.33630"
           abstract_order: 16
+          abstract_summary: "Learning through constrained optimization requires both a forward solution and sensitivities for an outer learning objective. Lapanda combines an augmented-Lagrangian outer loop with PANDA subproblem solves and matrix-free operators for differentiation. The resulting optimization layer handles general nonlinear constraints and nonconvex objectives, with local sensitivity results established under the stated regularity and optimality conditions."
           image: "images/papers/v6/arxiv-2609.33630.png"
           image_animated: "images/papers/v6/arxiv-2609.33630.svg"
           image_static: "images/papers/v6/arxiv-2609.33630-static.svg"
@@ -340,6 +356,7 @@
         - title: "Accelerating Branch MPC with Two-Level Parallel Direct Solves on GPUs"
           abstract_id: "arxiv-2609.29977"
           abstract_order: 17
+          abstract_summary: "Branch MPC creates large linear systems that couple a shared initial decision to independent future scenarios. This GPU direct solver reorganizes the system into scenario-tail factorizations and horizon-parallel triangular solves, with coupling handled through the root block. Exploiting both levels of structure enables concurrent work across scenarios and prediction steps for the required positive-definite systems."
           image: "images/papers/v6/arxiv-2609.29977.png"
           image_animated: "images/papers/v6/arxiv-2609.29977.svg"
           image_static: "images/papers/v6/arxiv-2609.29977-static.svg"
@@ -358,6 +375,7 @@
         - title: "DR-MPC: Fast and Feasible Dynamics-Relaxed Model-Predictive Control for Legged Locomotion"
           abstract_id: "arxiv-2609.20035"
           abstract_order: 18
+          abstract_summary: "Legged locomotion requires rapid replanning of contact forces under changing stance and swing phases. DR-MPC relaxes dynamics and affine friction residuals into penalties, removes swing-leg forces, and groups stance controls to obtain a reduced box-constrained quadratic program. The contact-aware formulation simplifies the factorized control system and provides feasibility for the relaxed problem with nonempty input boxes."
           image: "images/papers/v6/arxiv-2609.20035.png"
           image_animated: "images/papers/v6/arxiv-2609.20035.svg"
           image_static: "images/papers/v6/arxiv-2609.20035-static.svg"
@@ -376,6 +394,7 @@
         - title: "Koopman-BoxQP: Solving Large-Scale NMPC at kHz Rates"
           abstract_id: "arxiv-2602.18331"
           abstract_order: 19
+          abstract_summary: "Large lifted models can make nonlinear predictive control expensive to solve online. Koopman-BoxQP eliminates lifted observables and penalizes prediction residuals to obtain a box-constrained quadratic program over the control formulation. A warm-started Mehrotra interior-point method exploits the resulting structure and reduced Newton systems to support fast repeated optimization with approximate Koopman dynamics."
           image: "images/papers/v6/arxiv-2602.18331.png"
           image_animated: "images/papers/v6/arxiv-2602.18331.svg"
           image_static: "images/papers/v6/arxiv-2602.18331-static.svg"
@@ -395,6 +414,7 @@
         - title: "Fixed-Time-Stable ODE Representation of Lasso"
           abstract_id: "arxiv-2604.02069"
           abstract_order: 20
+          abstract_summary: "Sparse regression can be formulated as a continuous-time dynamical computation. This work splits Lasso coefficients into nonnegative variables, adds quadratic regularization, and constructs a Newton-based flow for the resulting quadratic program's optimality residuals. With strictly positive initialization, the flow gain sets a prescribed continuous-time settling bound for convergence to the sparse solution."
           image: "images/papers/v6/arxiv-2604.02069.png"
           image_animated: "images/papers/v6/arxiv-2604.02069.svg"
           image_static: "images/papers/v6/arxiv-2604.02069-static.svg"
@@ -416,6 +436,7 @@
         - title: "Koopman-Based Linear MPC for Safe Control using Control Barrier Functions"
           abstract_id: "arxiv-2603.21070"
           abstract_order: 21
+          abstract_summary: "Nonlinear control-barrier constraints can complicate predictive control optimization. This method augments the system state with its barrier value and learns a joint Koopman predictor for both quantities. Linear relaxed barrier constraints then enter a quadratic program, preserving predicted barrier nonnegativity under the stated initialization conditions while making safety-constrained prediction tractable in the lifted model."
           image: "images/papers/v6/arxiv-2603.21070.png"
           image_animated: "images/papers/v6/arxiv-2603.21070.svg"
           image_static: "images/papers/v6/arxiv-2603.21070-static.svg"
@@ -435,6 +456,7 @@
         - title: "Polynomial Parametric Koopman Operators for Stochastic MPC"
           abstract_id: "arxiv-2604.00935"
           abstract_order: 22
+          abstract_summary: "Uncertain fixed parameters complicate prediction and constraint handling in nonlinear MPC. Polynomial Parametric Koopman Operators represent the parameter dependence of lifted dynamics through polynomial-chaos coefficients learned from data. Condensing expected costs and moment constraints produces a deterministic control problem whose online variables scale with the input dimension and horizon rather than the lifted-state or polynomial-basis sizes."
           image: "images/papers/v6/arxiv-2604.00935.png"
           image_animated: "images/papers/v6/arxiv-2604.00935.svg"
           image_static: "images/papers/v6/arxiv-2604.00935-static.svg"
@@ -454,6 +476,7 @@
         - title: "Time-Certified and Efficient NMPC via Koopman Operator"
           abstract_id: "arxiv-2602.15596"
           abstract_order: 23
+          abstract_summary: "Real-time nonlinear MPC benefits from a predictable bound on optimization effort. This framework combines learned Koopman dynamics and dynamics relaxation to form a structured box-constrained quadratic program. A certified predictor-corrector interior-point method exploits reduced Newton systems and provides an iteration budget for reaching a specified tolerance on the reformulated convex problem."
           image: "images/papers/v6/arxiv-2602.15596.png"
           image_animated: "images/papers/v6/arxiv-2602.15596.svg"
           image_static: "images/papers/v6/arxiv-2602.15596-static.svg"
@@ -473,6 +496,7 @@
         - title: "πMPC: A Parallel-in-Horizon and Construction-Free NMPC Solver"
           abstract_id: "arxiv-2601.14414"
           abstract_order: 24
+          abstract_summary: "Long prediction horizons create substantial computational work in model predictive control. πMPC combines variable splitting with a velocity-based representation to derive closed-form ADMM updates that can run across time stages in parallel. Operating directly on system matrices avoids constructing a general MPC-to-QP formulation, with nonlinear MPC handled through the method's local modeling framework."
           image: "images/papers/v6/arxiv-2601.14414.png"
           image_animated: "images/papers/v6/arxiv-2601.14414.svg"
           image_static: "images/papers/v6/arxiv-2601.14414-static.svg"
@@ -493,6 +517,7 @@
         - title: "Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control"
           abstract_id: "arxiv-2601.11901"
           abstract_order: 25
+          abstract_summary: "Predictive control needs accurate models over an entire horizon rather than only one step. This method learns the condensed multi-step Koopman mapping directly through convex least squares, with independent subproblems across horizon positions and state coordinates. Optional dictionary pruning reduces the representation, avoiding repeated application of a fitted one-step operator when constructing future predictions."
           image: "images/papers/v6/arxiv-2601.11901.png"
           image_animated: "images/papers/v6/arxiv-2601.11901.svg"
           image_static: "images/papers/v6/arxiv-2601.11901-static.svg"
@@ -515,6 +540,7 @@
         - title: "A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP"
           abstract_id: "paper-26"
           abstract_order: 26
+          abstract_summary: "Real-time control requires box-constrained quadratic programs to be solved with predictable computational effort. This predictor-corrector interior-point method starts from strictly feasible variables and alternates adaptive predictor steps with full corrector steps. For convex BoxQP problems, the analysis supplies a data-independent iteration bound to reach a specified duality-gap tolerance under the stated initialization."
           image: "images/papers/v6/arxiv-2510.04467.png"
           image_animated: "images/papers/v6/arxiv-2510.04467.svg"
           image_static: "images/papers/v6/arxiv-2510.04467-static.svg"
@@ -540,6 +566,7 @@
         - title: "E-PINNs: Epistemic Physics-Informed Neural Networks"
           abstract_id: "paper-27"
           abstract_order: 27
+          abstract_summary: "Deterministic physics-informed neural networks do not directly express uncertainty caused by limited knowledge. E-PINNs adds an epinet to a pretrained, frozen PINN, using an epistemic index and a frozen prior component to generate prediction samples. This modular augmentation estimates epistemic uncertainty around the base solution while retaining its learned physics-informed prediction structure."
           image: "images/papers/v6/epinns-epistemic-physics-informed-networks.png"
           image_animated: "images/papers/v6/epinns-epistemic-physics-informed-networks.svg"
           image_static: "images/papers/v6/epinns-epistemic-physics-informed-networks-static.svg"
@@ -559,6 +586,7 @@
         - title: "SCORE: Statistical Certification of Regions of Attraction via Extreme Value Theory"
           abstract_id: "arxiv-2603.29658"
           abstract_order: 28
+          abstract_summary: "Assessing attraction regions becomes difficult for high-dimensional nonlinear systems. SCORE samples large Lyapunov derivatives with stochastic-gradient Langevin dynamics, fits an extreme-value model to block maxima, and bootstraps the estimated finite endpoint. Combined with an independently certified inner region, the procedure provides conditional statistical evidence for accepting or rejecting candidate regions under the stated sampling and inference assumptions."
           image: "images/papers/v6/arxiv-2603.29658.png"
           image_animated: "images/papers/v6/arxiv-2603.29658.svg"
           image_static: "images/papers/v6/arxiv-2603.29658-static.svg"
@@ -582,6 +610,7 @@
         - title: "Stability Enhanced Gaussian Process Variational Autoencoders"
           abstract_id: "arxiv-2604.09331"
           abstract_order: 29
+          abstract_summary: "Learning dynamics from video requires connecting high-dimensional observations to an interpretable state representation. This model combines a variational autoencoder with a Gaussian-process prior derived from linear dynamical systems. An unconstrained matrix parameterization restricts the learned latent dynamics to semi-contracting systems, supporting latent prediction and image reconstruction while incorporating stability structure into the learned representation."
           image: "images/papers/v6/arxiv-2604.09331.png"
           image_animated: "images/papers/v6/arxiv-2604.09331.svg"
           image_static: "images/papers/v6/arxiv-2604.09331-static.svg"
@@ -601,6 +630,7 @@
         - title: "∂CBDs: Differentiable Causal Block Diagrams"
           abstract_id: "arxiv-2602.07581"
           abstract_order: 30
+          abstract_summary: "Modular dynamical models need a common language for simulation, learning, and correctness reasoning. Differentiable Causal Block Diagrams translate interconnected causal blocks into an automatic-differentiation execution graph and express assumptions and guarantees as contract constraints. This connects trajectory generation, parameter optimization, and contract residuals within one compositional framework under the stated causal and differentiability conditions."
           image: "images/papers/v6/arxiv-2602.07581.png"
           image_animated: "images/papers/v6/arxiv-2602.07581.svg"
           image_static: "images/papers/v6/arxiv-2602.07581-static.svg"
@@ -621,6 +651,7 @@
         - title: "Safe Physics-Informed Machine Learning for Dynamics and Control"
           abstract_id: "paper-31"
           abstract_order: 31
+          abstract_summary: "Physics-informed machine learning for dynamical systems must connect model accuracy with the requirements of safe control. This tutorial organizes approaches that incorporate physical structure, estimate uncertainty, design safe controllers, and assess behavior through verification. It connects these stages into a broader modeling-and-control perspective while distinguishing the assumptions and guarantees associated with individual methods."
           image: "images/papers/v6/arxiv-2504.12952.png"
           image_animated: "images/papers/v6/arxiv-2504.12952.svg"
           image_static: "images/papers/v6/arxiv-2504.12952-static.svg"
@@ -639,6 +670,7 @@
         - title: "Learning Neural Differential Algebraic Equations via Operator Splitting"
           abstract_id: "paper-32"
           abstract_order: 32
+          abstract_summary: "Many physical systems combine evolving differential states with algebraic relationships. This work learns neural differential-algebraic models using an operator-splitting timestepper that first updates algebraic variables and then integrates the differential states. The sequential architecture incorporates partially known structure for index-1 semi-explicit systems, with learned algebraic updates approximating the consistency relationships required by the model."
           image: "images/papers/v6/arxiv-2403.12938.png"
           image_animated: "images/papers/v6/arxiv-2403.12938.svg"
           image_static: "images/papers/v6/arxiv-2403.12938-static.svg"
@@ -666,6 +698,7 @@
         - title: "End-to-End Battery Dispatch with Exact Rainflow Degradation via Mixed-Integer Differentiable Predictive Control"
           abstract_id: "arxiv-2609.12968"
           abstract_order: 33
+          abstract_summary: "Battery arbitrage must balance operating revenue against degradation from charge-discharge cycles. This mixed-integer predictive-control policy learns operating modes and power schedules through exact forward rainflow cycle costs, using sparse and proxy gradients for training. Incorporating cycle-based degradation into end-to-end learning connects scheduling decisions to battery wear, alongside architectural constraints and optional feasibility projection."
           image: "images/papers/v6/arxiv-2609.12968.png"
           image_animated: "images/papers/v6/arxiv-2609.12968.svg"
           image_static: "images/papers/v6/arxiv-2609.12968-static.svg"
@@ -687,6 +720,7 @@
         - title: "Homotopy-Guided Self-Supervised Learning of Parametric Solutions for AC Optimal Power Flow"
           abstract_id: "arxiv-2511.11677"
           abstract_order: 34
+          abstract_summary: "AC optimal power flow couples nonconvex network equations with operating limits. This self-supervised learning method trains a neural solution map while a homotopy schedule gradually deforms relaxed objectives or constraints toward the original problem. The continuation strategy guides training without labeled optimal solutions and targets improved convergence and feasibility across parameterized grid operating conditions."
           image: "images/papers/v6/arxiv-2511.11677.png"
           image_animated: "images/papers/v6/arxiv-2511.11677.svg"
           image_static: "images/papers/v6/arxiv-2511.11677-static.svg"
@@ -708,6 +742,7 @@
         - title: "Physics vs. Structure: A Systematic Benchmark of Learning Strategies for Multi-Zone Building Thermal Dynamics"
           abstract_id: "paper-35"
           abstract_order: 35
+          abstract_summary: "Choosing a thermal model for multizone building control involves tradeoffs among predictive accuracy, physical consistency, and computational cost. This benchmark compares linear state-space, multilayer-perceptron, neural state-space, neural-ODE, and physically consistent neural models using building-emulator data. It examines how data availability and zone coupling affect the value of added physical structure and model complexity."
           image: "images/papers/v6/thermal-model-benchmark-117472.png"
           image_animated: "images/papers/v6/thermal-model-benchmark-117472.svg"
           image_static: "images/papers/v6/thermal-model-benchmark-117472-static.svg"
@@ -727,6 +762,7 @@
         - title: "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning"
           abstract_id: "arxiv-2512.20880"
           abstract_order: 36
+          abstract_summary: "Day-ahead pumped-hydro scheduling must account for nonlinear hydraulic behavior while remaining practical to compute. This decision-focused framework predicts penalty weights for repeated local linearization and convex quadratic-program refinements, evaluated through nonlinear simulation. Learning the regularization from the downstream operating objective adapts the refinement strategy while retaining the discrete operating modes supplied by the initial schedule."
           image: "images/papers/v6/arxiv-2512.20880.png"
           image_animated: "images/papers/v6/arxiv-2512.20880.svg"
           image_static: "images/papers/v6/arxiv-2512.20880-static.svg"
@@ -750,6 +786,7 @@
         - title: "Mixed-Integer Nonlinear Differentiable Predictive Control for Underground Pumped Hydro Energy Storage Systems"
           abstract_id: "arxiv-2609.17964"
           abstract_order: 37
+          abstract_summary: "Underground pumped-hydro scheduling combines nonlinear hydraulic dynamics with discrete pump, idle, and turbine modes. This self-supervised framework trains a Transformer policy to produce operating modes and continuous power setpoints through a two-pass differentiable simulator. Straight-through Gumbel-Softmax decisions and parallel training rollouts connect mixed-integer schedules to the day-ahead operating objective without requiring labeled optimal schedules."
           image: "images/papers/v6/arxiv-2609.17964.png"
           image_animated: "images/papers/v6/arxiv-2609.17964.svg"
           image_static: "images/papers/v6/arxiv-2609.17964-static.svg"
@@ -773,6 +810,7 @@
         - title: "Safe Receding Horizon Mixed-Integer Differentiable Predictive Control for Degradation-Aware Battery Dispatch"
           abstract_id: "arxiv-2609.28698"
           abstract_order: 38
+          abstract_summary: "Battery dispatch must adapt to updated state information while accounting for degradation and operating limits. This receding-horizon controller combines a rainflow-trained neural mode/action policy with a one-step quadratic-program safety filter. Replanning uses current charge and forecast windows, while mode-conditioned filtering supports recursive feasibility under the stated nominal dynamics, feasible initialization, and nonempty convex constraint sets."
           image: "images/papers/v6/arxiv-2609.28698.png"
           image_animated: "images/papers/v6/arxiv-2609.28698.svg"
           image_static: "images/papers/v6/arxiv-2609.28698-static.svg"
@@ -792,6 +830,7 @@
         - title: "Data Center Chiller Plant Optimization via Mixed-Integer Nonlinear Differentiable Predictive Control"
           abstract_id: "arxiv-2603.28323"
           abstract_order: 39
+          abstract_summary: "Data-center chiller plants combine discrete equipment staging with nonlinear continuous operating decisions. This mixed-integer differentiable predictive-control framework trains separate policy heads for chiller activation, flow rates, and evaporation temperatures through thermal dynamics. Energy, cooling-tracking, and switching objectives shape the policy, while differentiable binary rounding and binary-variance regularization promote decisive equipment staging in simulated operation."
           image: "images/papers/v6/arxiv-2603.28323.png"
           image_animated: "images/papers/v6/arxiv-2603.28323.svg"
           image_static: "images/papers/v6/arxiv-2603.28323-static.svg"

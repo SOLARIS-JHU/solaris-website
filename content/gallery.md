@@ -46,7 +46,7 @@ layout: "single"
 
 <div class="gallery-grid">
   <div class="gallery-item">
-    <img src="/images/5krun.jpeg" alt="Lab members at the 5 km run in Baltimore">
+    <img src="{{< asset_url "images/5krun.jpeg" >}}" alt="Lab members at the 5 km run in Baltimore">
     <div class="gallery-caption">5 km of MPC, except the plant keeps getting tired! Baltimore, September 2026</div>
   </div>
   <!-- <div class="gallery-item">
@@ -63,7 +63,7 @@ layout: "single"
   </div> -->
   
   <div class="gallery-item">
-    <video src="/images/autorotation.mp4" controls muted></video>
+    <video src="{{< asset_url "images/autorotation.mp4" >}}" controls muted></video>
     <div class="gallery-caption">Real-world safety critical control system. France 2026</div>
   </div>
 </div>

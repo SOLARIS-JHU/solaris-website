@@ -1014,8 +1014,8 @@
       <span class="home-orbit home-orbit-one" aria-hidden="true"></span>
       <span class="home-orbit home-orbit-two" aria-hidden="true"></span>
       <div class="home-logo-reveal">
-        <img src="/images/lab-logo.png" alt="Solaris Lab" class="home-intro-logo home-intro-logo--dark">
-        <img src="/images/lab-logo-light.png" alt="" class="home-intro-logo home-intro-logo--light" aria-hidden="true">
+        <img src="{{ "images/lab-logo.png" | relURL }}" alt="Solaris Lab" class="home-intro-logo home-intro-logo--dark">
+        <img src="{{ "images/lab-logo-light.png" | relURL }}" alt="" class="home-intro-logo home-intro-logo--light" aria-hidden="true">
       </div>
     </div>
 
@@ -1051,7 +1051,7 @@
 
     {{ if fileExists "static/images/lab-pic.jpg" }}
     <figure class="home-lab-photo home-reveal">
-      <img src="/images/lab-pic.jpg" alt="Solaris Lab group" loading="lazy">
+      <img src="{{ "images/lab-pic.jpg" | relURL }}" alt="Solaris Lab group" loading="lazy">
     </figure>
     {{ end }}
 
@@ -1072,7 +1072,7 @@
         <a class="sponsor-card {{ .class }}" href="{{ .url }}" target="_blank" rel="noopener noreferrer"
           aria-label="Visit {{ .name }}">
           {{ with .logo }}
-          <img src="{{ . }}" alt="{{ $sponsor.name }}" loading="lazy" decoding="async">
+          <img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="{{ $sponsor.name }}" loading="lazy" decoding="async">
           {{ else }}
           <span class="sponsor-wordmark" aria-hidden="true">
             <strong>{{ .wordmark }}</strong>

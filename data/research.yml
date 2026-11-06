@@ -10,6 +10,17 @@
     - year: 2026
       papers:
         - title: "ML-Guided Primal Heuristics for Mixed Binary Quadratic Programs"
+          abstract_id: "arxiv-2604.23053"
+          abstract_order: 1
+          image: "images/papers/v6/arxiv-2604.23053.png"
+          image_animated: "images/papers/v6/arxiv-2604.23053.svg"
+          image_static: "images/papers/v6/arxiv-2604.23053-static.svg"
+          image_alt: "Encode the instance as a tripartite graph, predict binary assignments with graph attention, and use predictions to construct a restricted optimization subproblem. Training combines contrastive and weighted cross-entropy losses. Quadratic-aware graph representation and combined solution-prediction training. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2604.23053"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "The search marker follows existing root, branch, and leaf nodes inside the restricted solver. It holds and resets invisibly for replay; it does not show a guaranteed feasible solution or a measured search run."
+          abstract_sources: [{"url": "https://arxiv.org/html/2604.23053v3", "locator": "Methods; Neural Network Architecture; Loss Function; Inference; Fig. 1; Tripartite Graph Representation; GAT; Eq. 6; Inference"}]
           summary: "Learned solution predictions and contrastive training guide primal heuristics for mixed binary quadratic programs, improving solution quality and transfer across problem instances."
           authors: "Weimin Huang, Natalie M. Isenberg, Ján Drgoňa, Draguna L. Vrabie, Bistra Dilkina"
           links:
@@ -17,6 +28,17 @@
               url: "https://arxiv.org/abs/2604.23053"
 
         - title: "L2O-CCG: Adversarial Learning with Set Generalization for Adaptive Robust Optimization"
+          abstract_id: "arxiv-2603.22548"
+          abstract_order: 2
+          image: "images/papers/v6/arxiv-2603.22548.png"
+          image_animated: "images/papers/v6/arxiv-2603.22548.svg"
+          image_static: "images/papers/v6/arxiv-2603.22548-static.svg"
+          image_alt: "A recourse surrogate supplies gradients to a learned proximal optimizer. Set-specific projection handles uncertainty geometry. An exact recourse solve evaluates the selected scenario before the master update. Reuse a learned update rule while changing the uncertainty-set geometry. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2603.22548"}, {"text": "Code", "url": "https://github.com/Zhiyi-miyo/L2O-CCG"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "An uncertainty candidate takes a trial step and is projected back onto the depicted set. Exact candidate recourse evaluates the selected scenario before the CCG update. The trajectories illustrate the operation, not trained parameters, convergence rates, or a certified worst-case scenario."
+          abstract_sources: [{"url": "https://arxiv.org/html/2603.22548v1", "locator": "Sections III-A, III-B, IV; Algorithm 1; Algorithm 1; Eqs. 9–14; Sections III-A and III-B"}, {"url": "https://github.com/Zhiyi-miyo/L2O-CCG/blob/main/README.md", "locator": "Overview; Repository Structure; Uncertainty Sets"}, {"url": "https://github.com/Zhiyi-miyo/L2O-CCG/blob/main/l2o_ccg.py", "locator": "solve_classical_main_problem; run_l2o_ccg"}]
           summary: "A learned adversarial optimizer accelerates constraint-and-column generation for adaptive robust optimization and generalizes across changing uncertainty sets."
           authors: "Zhiyi Zhou, Ján Drgoňa, Yury Dvorkin"
           links:
@@ -26,6 +48,17 @@
     - year: 2025
       papers:
         - title: "Learning to Solve Constrained Bilevel Control Co-Design Problems"
+          abstract_id: "arxiv-2507.09050"
+          abstract_order: 3
+          image: "images/papers/v6/arxiv-2507.09050.png"
+          image_animated: "images/papers/v6/arxiv-2507.09050.svg"
+          image_static: "images/papers/v6/arxiv-2507.09050-static.svg"
+          image_alt: "Predict an upper-level design, solve the lower-level problem differentiably, and apply gradient-based corrections to coupling violations with upper-level projection. Learn design predictions while accounting explicitly for control optimality and coupling constraints. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2507.09050"}, {"text": "Code", "url": "https://github.com/anon-research-coding/Control-Design-Learning"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "The design candidate undergoes trial updates and feasible-set projection, while the lower optimizer supplies a control response. A separate schematic objective marker approaches the quadratic minimum. The outer training gradient remains distinct from finite coupling corrections."
+          abstract_sources: [{"url": "https://arxiv.org/html/2507.09050v2", "locator": "Section 3 conditions; Sections 4.1-4.3; Eqs. 3–9; Sections 4.1–4.2"}, {"url": "https://github.com/anon-research-coding/Control-Design-Learning/blob/main/README.md", "locator": "README"}, {"url": "https://github.com/anon-research-coding/Control-Design-Learning/blob/main/BQP/QP_correction.py", "locator": "x_correction"}]
           summary: "A self-supervised learning-to-optimize framework for constrained bilevel control co-design with enforced coupling constraints."
           authors: "James Kotary, Himanshu Sharma, Ethan King, Draguna Vrabie, Ferdinando Fioretto, Ján Drgoňa"
           links:
@@ -37,6 +70,17 @@
     - year: 2024
       papers:
         - title: "Learning to Optimize for Mixed-Integer Nonlinear Programming with Feasibility Guarantees"
+          abstract_id: "arxiv-2410.11061"
+          abstract_order: 4
+          image: "images/papers/v6/arxiv-2410.11061.png"
+          image_animated: "images/papers/v6/arxiv-2410.11061.svg"
+          image_static: "images/papers/v6/arxiv-2410.11061-static.svg"
+          image_alt: "A learned relaxed solution passes through integer correction. At inference, iterative violation-gradient updates alternate with the learned rounding layer. Separate learned integrality enforcement from inference-time feasibility refinement. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2410.11061"}, {"text": "Code", "url": "https://github.com/pnnl/L2O-MINLP"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "The displayed sequence alternates relaxed candidates with integer-corrected candidates and then rechecks constraint violation. All points are schematic. A feasible-looking endpoint illustrates an operation, not a universal finite-iteration guarantee."
+          abstract_sources: [{"url": "https://arxiv.org/html/2410.11061v10", "locator": "Sections 4.2-4.3; Algorithms 1-2; Section 5 Remark 1 and Assumptions 1-2; Eq. 2; Algorithms 1–2; Sections 4.2–4.3 and theory qualifications"}, {"url": "https://github.com/pnnl/L2O-MINLP/blob/master/README.md", "locator": "Methodology"}, {"url": "https://github.com/pnnl/L2O-MINLP/blob/master/src/postprocess/project.py", "locator": "gradientProjection.forward"}]
           summary: "A learning-to-optimize framework for parametric MINLP that combines adaptive integer correction with projections to guarantee feasibility."
           authors: "Bo Tang, Elias B. Khalil, Ján Drgoňa"
           links:
@@ -51,6 +95,17 @@
     - year: 2026
       papers:
         - title: "SD-DPC: Sparse Dictionary Differentiable Predictive Control"
+          abstract_id: "arxiv-2610.02466"
+          abstract_order: 5
+          image: "images/papers/v6/arxiv-2610.02466.png"
+          image_animated: "images/papers/v6/arxiv-2610.02466.svg"
+          image_static: "images/papers/v6/arxiv-2610.02466-static.svg"
+          image_alt: "Identify sparse dynamics from rollout errors, train a dictionary policy through predictive rollouts, prune coefficients, then refit retained terms. Select policy terms by closed-loop performance rather than teacher imitation. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2610.02466"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/SD-DPC"}, {"text": "Website", "url": "https://solaris-jhu.github.io/SD-DPC-website/"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Paired rollout/reference errors and red excess beyond a green admissible interval shrink during illustrative policy learning. The band itself is fixed; penalties do not guarantee feasibility for arbitrary learned policies. The sparse policy and model structure remains unchanged."
+          abstract_sources: [{"url": "https://arxiv.org/html/2610.02466v2", "locator": "Sections III-A to III-D; Algorithm 1; Assumption 1; Eqs. 4–10; Sections III-A to III-C; Algorithm 1"}, {"url": "https://github.com/SOLARIS-JHU/SD-DPC/blob/main/README.md", "locator": "Method"}, {"url": "https://github.com/SOLARIS-JHU/SD-DPC/blob/main/src/sdpc/training/policy.py", "locator": "build_policy_problem; train_policy; build_policy_problem and train_policy: sparse l1 objective, bounded_action, pruning trainer"}, {"url": "https://solaris-jhu.github.io/SD-DPC-website/", "locator": "Project page; Methodology; Algorithm 1; Sparse identification; Sparse dictionary policy; Policy learning"}, {"url": "https://github.com/SOLARIS-JHU/SD-DPC-website/blob/main/static/images/method.png", "locator": "Official graphical abstract: policy and SINDy above features, sequential thresholding, and control objective"}, {"url": "https://github.com/SOLARIS-JHU/SD-DPC/blob/main/src/sdpc/training/debias.py", "locator": "Fixed-support refit configuration; weights.l1_coef=0"}, {"url": "https://github.com/SOLARIS-JHU/SD-DPC/blob/main/src/sdpc/actions.py", "locator": "bounded_action and action_gradient_mask"}]
           summary: "Sparse dictionary policies are trained through learned dynamics and a predictive-control objective to produce compact, interpretable feedback laws for nonlinear systems."
           authors: "Ali Reza Daneshvar Garmroodi, Ján Drgoňa"
           links:
@@ -60,6 +115,17 @@
               url: "https://solaris-jhu.github.io/SD-DPC-website/"
 
         - title: "Topological Feasibility Guarantees for Differentiable Predictive Control"
+          abstract_id: "arxiv-2608.10332"
+          abstract_order: 6
+          image: "images/papers/v6/arxiv-2608.10332.png"
+          image_animated: "images/papers/v6/arxiv-2608.10332.svg"
+          image_static: "images/papers/v6/arxiv-2608.10332-static.svg"
+          image_alt: "Train with a control-barrier proxy and warm-started homotopy; use strict safety margins and continuity to extend sample feasibility to neighborhoods and a finite cover. Connect offline training samples to topological coverage of reachable safe trajectories. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2608.10332"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "The upper rollout improves toward a fixed illustrative target. Small lower probes remain within fixed neighborhoods around samples; they are local perturbations, not closed-loop trajectories or evidence that arbitrary samples certify a region."
+          abstract_sources: [{"url": "https://arxiv.org/html/2608.10332v1", "locator": "Section 3 Assumptions 3.1-3.4, Proposition 3.8, Theorem 3.10; Section 4; Eq. 6; Proposition 3.8; Theorem 3.10; Lemma 3.12; CBF-proxy training"}]
           summary: "Topological analysis and barrier-based offline training establish deterministic feasibility guarantees for differentiable predictive control from finitely many training samples."
           authors: "Guangyu Wu, Ján Drgoňa"
           links:
@@ -67,6 +133,17 @@
               url: "https://arxiv.org/abs/2608.10332"
 
         - title: "Accelerating and Scaling MPC-Guided Reinforcement Learning for Humanoid Locomotion and Manipulation"
+          abstract_id: "arxiv-2606.05687"
+          abstract_order: 7
+          image: "images/papers/v6/arxiv-2606.05687.png"
+          image_animated: "images/papers/v6/arxiv-2606.05687.svg"
+          image_static: "images/papers/v6/arxiv-2606.05687-static.svg"
+          image_alt: "A batched GPU centroidal MPC solver supplies predictive landmarks for training rewards. RL learns whole-body behavior from this guidance. Parallel MPC computation across horizons and environments enables training-time model-based guidance. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2606.05687"}, {"text": "Code", "url": "https://github.com/junhengl/mpc-rl"}, {"text": "Website", "url": "https://caltech-amber.github.io/mpc-guided-rl/"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Walking, carrying, and cart pushing are representative task illustrations, supported by the paper's application discussion. The 4.5-second display cycle is an animation choice, not measured hardware timing. The deployment row shows fixed task-specific policies, without runtime MPC or a claim that one universal policy performs every task. Representative planar articulated kinematics, not measured hardware trajectories or a dynamic simulation. The walking variants advance 104 canonical units in four alternating steps. Stance feet remain planted at each sampled pose; raised swing feet use smooth position and clearance curves. The same rigid object trajectories define both hand targets, and cart wheel angle equals translation divided by radius. All rigid parts share the same cycle: 0–92% advance, 92–95% hold, 95–99% fade, 99.2–100% hidden reset. Reach/lift/balance remain reusable examples and are not added to paper 7's reported experiments."
+          abstract_sources: [{"url": "https://arxiv.org/html/2606.05687v1", "locator": "Sections II-IV, especially II-C and IV-A; Figure 1 and Sections V-C/V-D for walking, payload carrying, and cart pushing; Eqs. 11â€“17; Sections II-C and IV"}, {"url": "https://caltech-amber.github.io/mpc-guided-rl/", "locator": "Abstract; System Architecture"}, {"url": "https://github.com/junhengl/mpc-rl/blob/main/README.md", "locator": "Overview; MPC and solvers"}, {"url": "https://github.com/junhengl/mpc-rl/blob/main/src/themis_training/mpc_grf_mdp.py", "locator": "LocoMPCCommand; MpcAngMomTracking; mpc_com_tracking"}, {"url": "https://www.unitree.com/h1/", "locator": "Manufacturer anatomy reference: compact perception hardware, articulated upper/lower links and industrial joint motors. Used for generic mechanical form only; the drawing is not an exact Unitree model."}]
           summary: "A batched GPU MPC solver provides efficient training-time guidance for reinforcement learning of humanoid locomotion and manipulation skills."
           authors: "Junheng Li, Liang Wu, Sergio A. Esteban, Lizhi Yang, Ján Drgoňa, Aaron D. Ames"
           links:
@@ -78,6 +155,17 @@
               url: "https://caltech-amber.github.io/mpc-guided-rl/"
 
         - title: "Zero-Shot Transferable Solution Method for Parametric Optimal Control Problems"
+          abstract_id: "arxiv-2509.18404"
+          abstract_order: 8
+          image: "images/papers/v6/arxiv-2509.18404.png"
+          image_animated: "images/papers/v6/arxiv-2509.18404.svg"
+          image_static: "images/papers/v6/arxiv-2509.18404-static.svg"
+          image_alt: "Learn reusable policy basis functions offline by imitation. At deployment, estimate coefficients using least squares or an optional learned parameter-to-coefficient operator. Transfer across objectives by changing coefficients while keeping policy bases fixed. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2509.18404"}, {"text": "Code", "url": "https://github.com/XJ-LI/FE_OC"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Markers evaluate fixed basis curves and illustrative policy trajectories forward. They do not retrain neural basis functions online."
+          abstract_sources: [{"url": "https://arxiv.org/html/2509.18404v2", "locator": "Section III; Algorithms 1-2; Online Phase; Theorem 2; Eqs. 5â€“8; Offline and Online phases"}, {"url": "https://github.com/XJ-LI/FE_OC/blob/main/README.md", "locator": "Commands for experiments"}, {"url": "https://github.com/XJ-LI/FE_OC/blob/main/2D_toy_control/train_ctrhill.py", "locator": "FunctionEncoder construction; model.train_model"}]
           venue: "American Control Conference 2026"
           summary: "Function-encoder policies learn reusable neural basis functions offline and adapt to new optimal-control objectives through lightweight coefficient estimation."
           authors: "Xingjian Li, Kelvin Kan, Deepanshu Verma, Krishna Kumar, Stanley Osher, Ján Drgoňa"
@@ -86,6 +174,17 @@
               url: "https://arxiv.org/abs/2509.18404"
 
         - title: "Learning to Control PDEs with Differentiable Predictive Control and Time-Integrated Neural Operators"
+          abstract_id: "arxiv-2511.08992"
+          abstract_order: 9
+          image: "images/papers/v6/arxiv-2511.08992.png"
+          image_animated: "images/papers/v6/arxiv-2511.08992.svg"
+          image_static: "images/papers/v6/arxiv-2511.08992-static.svg"
+          image_alt: "Learn a temporal-derivative operator and integrate it numerically. Freeze this surrogate, then backpropagate control loss through closed-loop rollouts to train the policy. Time-integrated DeepONet supplies differentiable PDE dynamics for offline policy optimization. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2511.08992"}, {"text": "Code", "url": "https://github.com/Centrum-IntelliPhysics/PDEControl_DPC"}, {"text": "Website", "url": "https://centrum-intelliphysics.github.io/PDEControl_DPC_website/"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Spatial fields illustrate a scalar PDE state. The frozen learned derivative operator and explicit integration remain distinct. The field is an illustrative analytic advection-diffusion solution, not a reported controlled PDE result."
+          abstract_sources: [{"url": "https://arxiv.org/html/2511.08992v3", "locator": "Sections III-A, III-B; training procedure; Eqs. 3â€“6; Figure 1; Section III"}, {"url": "https://github.com/Centrum-IntelliPhysics/PDEControl_DPC/blob/main/README.md", "locator": "Methodology; Experiments"}, {"url": "https://github.com/Centrum-IntelliPhysics/PDEControl_DPC/blob/main/HE_TT/train_dpc.py", "locator": "create_dpc_loss_fn; train_step"}, {"url": "https://centrum-intelliphysics.github.io/PDEControl_DPC_website/", "locator": "Project page"}]
           venue: "IEEE CDC 2026"
           summary: "An end-to-end framework combining Time-Integrated DeepONets with offline, self-supervised optimization of PDE control policies."
           authors: "Dibakar Roy Sarkar, Ján Drgoňa, Somdatta Goswami"
@@ -98,6 +197,17 @@
               url: "https://github.com/Centrum-IntelliPhysics/PDEControl_DPC"
 
         - title: "Learning to Solve Parametric Mixed-Integer Optimal Control Problems via Differentiable Predictive Control"
+          abstract_id: "arxiv-2506.19646"
+          abstract_order: 10
+          image: "images/papers/v6/arxiv-2506.19646.png"
+          image_animated: "images/papers/v6/arxiv-2506.19646.svg"
+          image_static: "images/papers/v6/arxiv-2506.19646-static.svg"
+          image_alt: "A shared policy splits into continuous and discrete outputs. Hard discrete decisions use surrogate gradients during offline rollout-based predictive training. Compare three differentiable rounding strategies within mixed-integer policy learning. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2506.19646"}, {"text": "Code", "url": "https://github.com/xboldocky/MI-DPC"}, {"text": "Website", "url": "https://xboldocky.github.io/midpc-web/"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Illustrative tracking residuals and bound-violation penalties diminish across rollouts. The hard rounding map and its smooth surrogate remain static. No exact gradient of hard rounding or guaranteed feasibility is asserted."
+          abstract_sources: [{"url": "https://arxiv.org/html/2506.19646v1", "locator": "Sections III-A to III-E; policy Eq. 9; Eqs. 7â€“9; Sections III-Bâ€“III-E"}, {"url": "https://github.com/xboldocky/MI-DPC/blob/main/README.md", "locator": "Overview; Objective; strategy table"}, {"url": "https://github.com/xboldocky/MI-DPC/blob/main/utils/ste.py", "locator": "thresholdBinarize; diffGumbelBinarize"}, {"url": "https://xboldocky.github.io/midpc-web/", "locator": "Project page"}]
           venue: "IFAC World Congress 2026"
           summary: "Near-optimal control for input- and state-constrained parametric mixed-integer problems using differentiable predictive control."
           authors: "Ján Boldocký, Shahriar Dadras Javan, Martin Gulan, Martin Mönnigmann, Ján Drgoňa"
@@ -108,6 +218,17 @@
               url: "https://xboldocky.github.io/midpc-web/"
 
         - title: "CINOC: Cardinality-Invariant Neural Operator Policies for Scalable PDE Control"
+          abstract_id: "paper-11"
+          abstract_order: 11
+          image: "images/papers/v6/cinoc-cardinality-invariant-control.png"
+          image_animated: "images/papers/v6/cinoc-cardinality-invariant-control.svg"
+          image_static: "images/papers/v6/cinoc-cardinality-invariant-control-static.svg"
+          image_alt: "Agents query a shared neural operator; a differentiable PDE solver couples their actions through the environment during training. Transfer a shared policy to different population sizes without retraining. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://proceedings.mlr.press/v306/zanotta26a.html"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/CINOC"}, {"text": "Website", "url": "https://solaris-jhu.github.io/CINOC-website/"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "A separate illustrative Heat2D calculation shows coordinated mobile actuators reshaping and displacing a localized thermal field through additive heating and cooling. Five and thirteen agents follow prescribed contracting formations; synthetic regularized least-squares inputs drive the heat PDE, and positive isotherms are extracted from its numerical solution. This is not a trained CINOC rollout, a reproduced experiment, passive material transport, or evidence that either displayed population guarantees tracking. The paper's shared neural operator and differentiable-PDE training architecture remain the method diagram. Both field and agents share a six-second display timeline, then fade and replay without reverse evolution. Teal/coral activity strokes indicate heating/cooling, not physical exhaust or interaction links."
+          abstract_sources: [{"url": "https://proceedings.mlr.press/v306/zanotta26a.html", "locator": "Publication metadata and abstract"}, {"url": "https://arxiv.org/html/2605.25867v1", "locator": "Sections 4, 5.1, 5.2; Algorithm 1; Section 4, Neural Operator Policy, Eq. 3: branch/trunk pairing followed by learned fusion head"}, {"url": "https://solaris-jhu.github.io/CINOC-website/", "locator": "Problem Formulation; Methodology; Cardinality Invariance; Problem formulation and methodology"}, {"url": "https://github.com/SOLARIS-JHU/CINOC/blob/main/README.md", "locator": "Overview; Repository Structure; Overview and repository structure: shared policy, environment-mediated coordination, and Heat2D examples"}, {"url": "https://github.com/SOLARIS-JHU/CINOC/blob/main/models/policy.py", "locator": "DecentralizedControlNet.__call__; DecentralizedControlNet.__call__; prior source inspection"}, {"url": "https://github.com/SOLARIS-JHU/CINOC/blob/main/tesseracts/solverHeat2D_decentralized/solver.py", "locator": "forcing_fn: scalar inputs multiply localized Gaussian kernels; adi_step: heat evolution, zero Dirichlet boundaries, and mobile-agent position update"}]
           venue: "ICML 2026"
           summary: "Decentralized neural-operator control policies for PDE systems that generalize zero-shot across different swarm cardinalities."
           authors: "Pietro Zanotta, Dibakar Roy Sarkar, Honghui Zheng, Somdatta Goswami, Ján Drgoňa"
@@ -122,6 +243,17 @@
     - year: 2025
       papers:
         - title: "Zero-Shot Function Encoder-Based Differentiable Predictive Control"
+          abstract_id: "arxiv-2511.05757"
+          abstract_order: 12
+          image: "images/papers/v6/arxiv-2511.05757.png"
+          image_animated: "images/papers/v6/arxiv-2511.05757.svg"
+          image_static: "images/papers/v6/arxiv-2511.05757-static.svg"
+          image_alt: "Learn neural-ODE basis functions and train a coefficient-conditioned DPC policy offline. Online data estimate dynamics coefficients while both neural models remain fixed. Adapt dynamics representation without retraining the predictive control policy. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2511.05757"}, {"text": "Code", "url": "https://github.com/hassaniqbal209/DPCFunctionEncoder"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Offline learning first fits FE-NODE bases, then trains a coefficient-conditioned policy through fixed learned dynamics. Online samples determine coefficients through regularized least squares; the policy weights remain fixed. Illustrative loss improvement is not a claim of monotone adaptation performance."
+          abstract_sources: [{"url": "https://arxiv.org/html/2511.05757v3", "locator": "Sections 2, 3.1, 3.2; Eq. 3; Eq. 2; online coefficient estimation; Eq. 3"}, {"url": "https://github.com/hassaniqbal209/DPCFunctionEncoder/blob/main/README.md", "locator": "Paper identity and reproduction instructions"}, {"url": "https://github.com/hassaniqbal209/DPCFunctionEncoder/blob/main/src/2.train_policy.py", "locator": "model_wrapper; model_node; closed-loop System construction"}, {"url": "https://github.com/hassaniqbal209/DPCFunctionEncoder", "locator": "Revision 4 primary reference"}]
           summary: "Function Encoder-based neural ODEs integrated with differentiable predictive control for zero-shot control of nonlinear systems."
           authors: "Hassan Iqbal, Xingjian Li, Tyler Ingebrand, Adam Thorpe, Krishna Kumar, Ufuk Topcu, Ján Drgoňa"
           links:
@@ -134,6 +266,17 @@
     - year: 2026
       papers:
         - title: "A Koopman–Polynomial Chaos Framework for SMPC of Nonlinear Stochastic Processes"
+          abstract_id: "arxiv-2610.24105"
+          abstract_order: 13
+          image: "images/papers/v6/arxiv-2610.24105.png"
+          image_animated: "images/papers/v6/arxiv-2610.24105.svg"
+          image_static: "images/papers/v6/arxiv-2610.24105-static.svg"
+          image_alt: "Learn polynomial-chaos-parametrized Koopman dynamics; precompute moment matrices; solve a condensed convex control problem. Includes both fixed parametric uncertainty and changing stochastic disturbances. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2610.24105"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Computed feasible descent through a fixed toy quadratic. The highlighted contour is the current objective value, not a changing objective. Playback is paced for visibility rather than numerical solver timing; exact keyframes use piecewise-linear browser interpolation. The curved moment slice retains the stochastic problem’s QCQP interpretation."
+          abstract_sources: [{"url": "https://arxiv.org/html/2610.24105v1", "locator": "Sections 4.1–4.3 and 5.1; Theorem 5; equations 34–35; Sections 4.1, 5.1; Eqs. (13), (14), (36); Theorem 5, Eq. (35a–d)"}]
           summary: "Polynomial-chaos Koopman models yield a condensed stochastic MPC formulation that handles uncertain parameters and disturbances without scaling online decisions with the lifted-state dimension."
           authors: "Wallace Gian Yion Tan, Efstathios Iliakis, Liang Wu, Ján Drgoňa, Richard D. Braatz"
           links:
@@ -141,6 +284,17 @@
               url: "https://arxiv.org/abs/2610.24105"
 
         - title: "Fast-DeePC: Fast Data-Enabled Predictive Control using Soft-constrained Scheme"
+          abstract_id: "arxiv-2610.12902"
+          abstract_order: 14
+          image: "images/papers/v6/arxiv-2610.12902.png"
+          image_animated: "images/papers/v6/arxiv-2610.12902.svg"
+          image_static: "images/papers/v6/arxiv-2610.12902-static.svg"
+          image_alt: "Penalize trajectory consistency with quadratic terms and ridge regularization; eliminate coefficient vector g offline; solve a fixed-size box QP online. Decouples online decision dimension from offline dataset length. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2610.12902"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Computed feasible descent through a fixed toy quadratic. The highlighted contour is the current objective value, not a changing objective. Playback is paced for visibility rather than numerical solver timing; exact keyframes use piecewise-linear browser interpolation."
+          abstract_sources: [{"url": "https://arxiv.org/html/2610.12902v1", "locator": "Section III, equations 8–15; III-A1 Woodbury reformulation; III-A2 penalty consistency; Eq. (10); Lemma 2, Eqs. (11–12); Section III-A condensed quadratic after substituting g*, and III-A1 Woodbury construction"}]
           summary: "A soft-constrained DeePC formulation eliminates trajectory coefficients offline, reducing online control to a fixed-size box-constrained quadratic program."
           authors: "Terry Zhang, Ján Drgoňa, Malika Sader, Di Liu, Liang Wu"
           links:
@@ -148,6 +302,17 @@
               url: "https://arxiv.org/abs/2610.12902"
 
         - title: "Model Predictive Control for Safety-Critical Systems Using Taylor's Theorem with Lagrange Remainder"
+          abstract_id: "arxiv-2610.06976"
+          abstract_order: 15
+          image: "images/papers/v6/arxiv-2610.06976.png"
+          image_animated: "images/papers/v6/arxiv-2610.06976.svg"
+          image_static: "images/papers/v6/arxiv-2610.06976-static.svg"
+          image_alt: "Approximate the integral Taylor remainder under zero-order-hold inputs and impose a safety margin in predictive constraints. Uses an explicit remainder approximation to form the safety constraint. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2610.06976"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Discrete predicted sample checks do not assert continuous-time intersample safety."
+          abstract_sources: [{"url": "https://arxiv.org/html/2610.06976v1", "locator": "Sections IV-A–IV-C; Remark 1; equations 14–20; Eq. (14); Eqs. (15–17); Remark 1, Eqs. (18–19)"}]
           summary: "Taylor expansions with a numerically approximated Lagrange remainder provide MPC safety constraints with fewer tuning parameters and reduced conservativeness."
           authors: "Shuo Liu, Liang Wu, Wei Xiao, Ján Drgoňa, Calin A. Belta"
           links:
@@ -155,6 +320,17 @@
               url: "https://arxiv.org/abs/2610.06976"
 
         - title: "lapanda: A Matrix-Free Differentiable Solver for Nonconvex Constrained Optimization Layers"
+          abstract_id: "arxiv-2609.33630"
+          abstract_order: 16
+          image: "images/papers/v6/arxiv-2609.33630.png"
+          image_animated: "images/papers/v6/arxiv-2609.33630.svg"
+          image_static: "images/papers/v6/arxiv-2609.33630-static.svg"
+          image_alt: "An augmented-Lagrangian outer loop calls PANDA subproblem solves; the backward pass approximates optimizer sensitivities with matrix-free operators. Combines general constraints with matrix-free forward and backward computation. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2609.33630"}, {"text": "Code", "url": "https://github.com/optiXlab1/lapanda"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Symbolic forward solution and adjoint/operator evaluation, without an invented optimizer convergence trajectory."
+          abstract_sources: [{"url": "https://arxiv.org/html/2609.33630v1", "locator": "Section 4.1, Assumption 1 and Theorem 1; Section 4.2 sensitivity alignment; Section 4.1, Eq. (4), P-sub, Algorithm 1; Theorem 2, Eq. (14); Appendix B.6"}, {"url": "https://github.com/optiXlab1/lapanda/blob/main/alm/alm.c", "locator": "README.md project summary; alm/alm.c, alm_solve_internal and Hessian/vector-product callbacks"}]
           summary: "A matrix-free augmented-Lagrangian solver enables efficient forward optimization and differentiation through nonconvex problems with general constraints."
           authors: "Yuankun Chen, Zifei Nie, Kangyu Lin, Ján Drgoňa, Liang Wu"
           links:
@@ -162,6 +338,17 @@
               url: "https://arxiv.org/abs/2609.33630"
 
         - title: "Accelerating Branch MPC with Two-Level Parallel Direct Solves on GPUs"
+          abstract_id: "arxiv-2609.29977"
+          abstract_order: 17
+          image: "images/papers/v6/arxiv-2609.29977.png"
+          image_animated: "images/papers/v6/arxiv-2609.29977.svg"
+          image_static: "images/papers/v6/arxiv-2609.29977-static.svg"
+          image_alt: "Reorder blocks for concurrent scenario-tail Cholesky factorizations and horizon-parallel triangular solves, coupling tails through the root. Parallelism spans both scenarios and time steps. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2609.29977"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Parallel tail factorizations followed by root reduction; movement is calculation order, not measured timing."
+          abstract_sources: [{"url": "https://arxiv.org/html/2609.29977v1", "locator": "Figure 1; Sections III-B and IV-A–IV-C; Algorithms 1–2; Section III-B, Eqs. (4–5); Eq. (6); Section IV-B and Algorithm 1"}]
           summary: "A GPU direct solver exploits parallelism across scenarios and prediction horizons to accelerate linear algebra in branch model predictive control."
           authors: "Fenglong Song, Luyao Zhang, Liang Wu, Ján Drgoňa, Colin N. Jones"
           links:
@@ -169,6 +356,17 @@
               url: "https://arxiv.org/abs/2609.29977"
 
         - title: "DR-MPC: Fast and Feasible Dynamics-Relaxed Model-Predictive Control for Legged Locomotion"
+          abstract_id: "arxiv-2609.20035"
+          abstract_order: 18
+          image: "images/papers/v6/arxiv-2609.20035.png"
+          image_animated: "images/papers/v6/arxiv-2609.20035.svg"
+          image_static: "images/papers/v6/arxiv-2609.20035-static.svg"
+          image_alt: "Relax dynamics and affine friction residuals into penalties; eliminate swing forces and block stance controls; solve a reduced BoxQP. Contact-aware parameterization reduces the solver's factorized control system. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2609.20035"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Computed feasible descent through a fixed toy quadratic. The highlighted contour is the current objective value, not a changing objective. Playback is paced for visibility rather than numerical solver timing; exact keyframes use piecewise-linear browser interpolation. A representative prescribed-contact diagonal trot, not output from the paper's reduced QP or a recorded robot trajectory. Body translation is 60 canonical units. FL+RR swing over normalized u intervals (0.025,0.22) and (0.505,0.70). FR+RL swing over (0.265,0.46) and (0.745,0.94). In whole-cycle percentages these are (2.30,20.24)/(46.46,64.40) and (24.38,42.32)/(68.54,86.48), respectively. All four contacts remain planted for the final advance/hold before fade. No dynamic-feasibility or unconditional-safety claim is implied."
+          abstract_sources: [{"url": "https://arxiv.org/html/2609.20035v1", "locator": "Figure 2; Sections III-A–III-B and IV; equation 7; Section III-B, Eqs. (10–11); Eqs. (6–7), Section IV; Section IV-A, Eqs. (14–16)"}, {"url": "https://dev.bostondynamics.com/docs/concepts/about_spot.html", "locator": "Manufacturer anatomy reference: equipment chassis, embedded stereo perception and hip/knee actuation. Used as a generic engineering form reference, without exact model, dimensions or performance claims."}]
           summary: "Dynamics relaxation and contact-aware input parameterization yield a feasible box-constrained MPC problem with an efficient tailored solver for legged robots."
           authors: "Run Wang, Alapati Tuerxun, Shuo Liu, Wei Xiao, Ján Drgoňa, Yilin Mo, Liang Wu"
           links:
@@ -176,6 +374,17 @@
               url: "https://arxiv.org/abs/2609.20035"
 
         - title: "Koopman-BoxQP: Solving Large-Scale NMPC at kHz Rates"
+          abstract_id: "arxiv-2602.18331"
+          abstract_order: 19
+          image: "images/papers/v6/arxiv-2602.18331.png"
+          image_animated: "images/papers/v6/arxiv-2602.18331.svg"
+          image_static: "images/papers/v6/arxiv-2602.18331-static.svg"
+          image_alt: "Eliminate lifted observables; penalize prediction residuals; solve the resulting BoxQP using structure-exploiting, warm-started Mehrotra iterations. Warm-start initialization and reduced Newton systems exploit the relaxed problem structure. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2602.18331"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Computed feasible descent through a fixed toy quadratic. The highlighted contour is the current objective value, not a changing objective. Playback is paced for visibility rather than numerical solver timing; exact keyframes use piecewise-linear browser interpolation."
+          abstract_sources: [{"url": "https://arxiv.org/html/2602.18331v1", "locator": "Sections 4.1–4.4; equation 6; initialization and reduced Newton-system discussion; Eq. (4), Eq. (6); Eq. (19); Section 4.4 reduced Newton solve following Eqs. (18–19)"}]
           venue: "L4DC 2026"
           summary: "Koopman models and a warm-started, structure-exploiting interior-point solver enable large-scale nonlinear MPC through box-constrained quadratic programs."
           authors: "Liang Wu, Wallace Gian Yion Tan, Richard D. Braatz, Ján Drgoňa"
@@ -184,6 +393,17 @@
               url: "https://arxiv.org/abs/2602.18331"
 
         - title: "Fixed-Time-Stable ODE Representation of Lasso"
+          abstract_id: "arxiv-2604.02069"
+          abstract_order: 20
+          image: "images/papers/v6/arxiv-2604.02069.png"
+          image_animated: "images/papers/v6/arxiv-2604.02069.svg"
+          image_static: "images/papers/v6/arxiv-2604.02069-static.svg"
+          image_alt: "Split coefficients into nonnegative variables, form a smooth QP, and construct a Newton-based continuous-time flow of its KKT residuals. The continuous-time settling bound is set through the flow gain. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://ieeexplore.ieee.org/document/11523518"}, {"text": "Preprint", "url": "https://arxiv.org/abs/2604.02069"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "The x_minus=0 nonnegative slice has its own valid projected descent to the slice optimum; it is not claimed to be a slice of the full positive primal-dual Newton trajectory. Those original Newton trajectories retain their mathematical time sampling."
+          abstract_sources: [{"url": "https://arxiv.org/html/2604.02069v1", "locator": "Section III-A; Section III-B, Propositions III.4 and III.6, Theorem III.7; Section III-C; Eqs. (12–15), Proposition III.2; Eqs. (17–19); Eq. (20), Propositions III.4 and III.6, Theorem III.7"}]
           venue: "IEEE L-CSS / CDC 2026"
           summary: "A smooth, projection-free ODE formulation of Lasso with a prescribed convergence time that is independent of the problem data."
           authors: "Liang Wu, Yunhong Che, Wallace Gian Yion Tan, Efstathios Iliakis, Richard D. Braatz, Ján Drgoňa"
@@ -194,6 +414,17 @@
               url: "https://arxiv.org/abs/2604.02069"
 
         - title: "Koopman-Based Linear MPC for Safe Control using Control Barrier Functions"
+          abstract_id: "arxiv-2603.21070"
+          abstract_order: 21
+          image: "images/papers/v6/arxiv-2603.21070.png"
+          image_animated: "images/papers/v6/arxiv-2603.21070.svg"
+          image_static: "images/papers/v6/arxiv-2603.21070-static.svg"
+          image_alt: "Augment the system with its barrier value; learn a lifted predictor; impose linear relaxed barrier constraints in a QP. Lift dynamics and barrier together to obtain a tractable predictive constraint. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2603.21070"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Verified projected descent in a fixed box-plus-halfspace toy QP. Only the current cost level is highlighted dynamically; the objective and constraints remain fixed. This is not a physical-safety certificate for the learned predictor."
+          abstract_sources: [{"url": "https://arxiv.org/html/2603.21070v4", "locator": "Sections IV-A–IV-C; equations 11–22; Theorem 2; Eqs. (11), (13–14), (19); Theorem 2 and Eqs. (22e–f)"}]
           venue: "IEEE CDC 2026"
           summary: "A Koopman lifting framework that turns nonlinear safety-constrained MPC with discrete-time control barrier functions into an efficient quadratic program."
           authors: "Shuo Liu, Liang Wu, Dawei Zhang, Ján Drgoňa, Calin A. Belta"
@@ -202,6 +433,17 @@
               url: "https://arxiv.org/abs/2603.21070"
 
         - title: "Polynomial Parametric Koopman Operators for Stochastic MPC"
+          abstract_id: "arxiv-2604.00935"
+          abstract_order: 22
+          image: "images/papers/v6/arxiv-2604.00935.png"
+          image_animated: "images/papers/v6/arxiv-2604.00935.svg"
+          image_static: "images/papers/v6/arxiv-2604.00935-static.svg"
+          image_alt: "Represent Koopman matrices with polynomial-chaos coefficients, learn them from data, and condense expected costs and moment constraints. Online variables scale with input dimension and horizon rather than lifted-state or polynomial-basis size. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2604.00935"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Computed feasible descent through a fixed toy quadratic. The highlighted contour is the current objective value, not a changing objective. Playback is paced for visibility rather than numerical solver timing; exact keyframes use piecewise-linear browser interpolation. The curved moment slice retains the stochastic problem’s QCQP interpretation."
+          abstract_sources: [{"url": "https://arxiv.org/html/2604.00935v1", "locator": "Sections V–VII; equations 15–21; VIII examples; Eqs. (16), (18–21); Eq. (26), condensed PCE-SMPC"}]
           venue: "IEEE CDC 2026"
           summary: "A polynomial-chaos-parametrized Koopman model with a compact deterministic reformulation for efficient stochastic MPC of nonlinear systems."
           authors: "Efstathios Iliakis, Wallace Gian Yion Tan, Liang Wu, Ján Drgoňa, Richard D. Braatz"
@@ -210,6 +452,17 @@
               url: "https://arxiv.org/abs/2604.00935"
 
         - title: "Time-Certified and Efficient NMPC via Koopman Operator"
+          abstract_id: "arxiv-2602.15596"
+          abstract_order: 23
+          image: "images/papers/v6/arxiv-2602.15596.png"
+          image_animated: "images/papers/v6/arxiv-2602.15596.svg"
+          image_static: "images/papers/v6/arxiv-2602.15596-static.svg"
+          image_alt: "Use dynamics relaxation to obtain a structured BoxQP; apply a certified predictor-corrector IPM with reduced Newton systems. Combines a finite iteration budget with control-specific linear algebra. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2602.15596"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Computed feasible descent through a fixed toy quadratic. The highlighted contour is the current objective value, not a changing objective. Playback is paced for visibility rather than numerical solver timing; exact keyframes use piecewise-linear browser interpolation."
+          abstract_sources: [{"url": "https://arxiv.org/html/2602.15596v1", "locator": "Sections 4 and 5.1–5.3; Algorithm 1; execution-time discussion in Section 1; Section 4, Eq. (7); Section 5.3, Eqs. (19), (22) block discussion and Remark 3; Algorithm 1 and Eq. (21)"}]
           venue: "IFAC World Congress 2026"
           summary: "A Koopman-based NMPC formulation that yields structured box-constrained quadratic programs with certified execution times."
           authors: "Liang Wu, Yunhong Che, Bo Yang, Kangyu Lin, Ján Drgoňa"
@@ -218,6 +471,17 @@
               url: "https://arxiv.org/abs/2602.15596"
 
         - title: "πMPC: A Parallel-in-Horizon and Construction-Free NMPC Solver"
+          abstract_id: "arxiv-2601.14414"
+          abstract_order: 24
+          image: "images/papers/v6/arxiv-2601.14414.png"
+          image_animated: "images/papers/v6/arxiv-2601.14414.svg"
+          image_static: "images/papers/v6/arxiv-2601.14414-static.svg"
+          image_alt: "Use variable splitting and a velocity-based representation to obtain closed-form ADMM updates across time stages. Operates directly on system matrices without assembling a general MPC-to-QP formulation. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2601.14414"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/PiMPC.jl"}, {"text": "Website", "url": "https://solaris-jhu.github.io/solaris-website/images/research/pimpc-admm-gpu.html"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "The previously verified reference-matched ADMM phase schedule, dependency reads, projection, GPU-array work and reduction are unchanged."
+          abstract_sources: [{"url": "https://arxiv.org/html/2601.14414v2", "locator": "Section IV and Theorems 1–2; Section IV-A equations 10–11; Theorem 2, Eq. (10); Eq. (11), Eq. (12a); Eq. (12c) scaled multiplier updates"}, {"url": "https://github.com/SOLARIS-JHU/PiMPC.jl/blob/main/src/solver.jl", "locator": "README.md formulation; src/solver.jl, solve!, _solve_cpu, _solve_gpu"}, {"url": "https://github.com/SOLARIS-JHU/solaris-website/blob/main/static/images/research/pimpc-admm-gpu.html", "locator": "Fetched and rendered full HTML/SVG reference; blob 9b8f85b80b2d9000526eda4c4fb341c26f59cfe8"}, {"url": "https://github.com/SOLARIS-JHU/solaris-website/blob/main/static/images/research/pimpc-admm-gpu-animated.svg", "locator": "Rendered graphic; blob b78df6ebb6f65d160fdc8a36797e8a7b21dca2d0"}, {"url": "https://github.com/SOLARIS-JHU/PiMPC.jl/blob/6aa0950d42b2ee78616bcbfe2f3dc6f12d51ae67/src/solver.jl#L251", "locator": "Implementation linked by the official reference; algorithm/GPU schedule"}]
           summary: "A variable-splitting nonlinear MPC solver designed for efficient parallel execution directly on system matrices."
           authors: "Liang Wu, Bo Yang, Junheng Li, Xu Yang, Yilin Mo, Yang Shi, Aaron D. Ames, Ján Drgoňa"
           links:
@@ -227,6 +491,17 @@
               url: "https://github.com/SOLARIS-JHU/PiMPC.jl"
 
         - title: "Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control"
+          abstract_id: "arxiv-2601.11901"
+          abstract_order: 25
+          image: "images/papers/v6/arxiv-2601.11901.png"
+          image_animated: "images/papers/v6/arxiv-2601.11901.svg"
+          image_static: "images/papers/v6/arxiv-2601.11901-static.svg"
+          image_alt: "Fit the condensed multi-step mapping by convex least squares, decomposed by horizon and state coordinate; optionally prune dictionary entries. Bypasses repeated application of a fitted one-step operator. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2601.11901"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/Multi-step-Koopman"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Independent regression work builds the direct multistep map; no recursive one-step rollout is introduced."
+          abstract_sources: [{"url": "https://arxiv.org/html/2601.11901v1", "locator": "Section 3 equations 12–15; Section 4.1 assumptions; Section 5 practical guidelines; Section 3, Eqs. (12), (14–15); Section 3.1 lower-triangular causal structure"}, {"url": "https://github.com/SOLARIS-JHU/Multi-step-Koopman/blob/main/Final%20Paper%20Experiments/koopman_workflow.py", "locator": "README.md method; causal_multistep_from_normal_equations and direct_predict"}]
           summary: "A convex multi-step Koopman framework for long-horizon dynamics learning that avoids compounding single-step prediction errors."
           authors: "Liang Wu, Wallace Gian Yion Tan, Leqi Zhou, Richard D. Braatz, Ján Drgoňa"
           links:
@@ -238,6 +513,17 @@
     - year: 2025
       papers:
         - title: "A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP"
+          abstract_id: "paper-26"
+          abstract_order: 26
+          image: "images/papers/v6/arxiv-2510.04467.png"
+          image_animated: "images/papers/v6/arxiv-2510.04467.svg"
+          image_static: "images/papers/v6/arxiv-2510.04467-static.svg"
+          image_alt: "Initialize strictly feasible variables, alternate adaptive predictor and full corrector steps, and stop at the duality-gap tolerance. Pairs practical predictor-corrector steps with a data-independent iteration certificate. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://ieeexplore.ieee.org/abstract/document/11313851"}, {"text": "Code", "url": "https://github.com/liangwu2019/PC_BoxQP"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Computed feasible descent through a fixed toy quadratic. The highlighted contour is the current objective value, not a changing objective. Playback is paced for visibility rather than numerical solver timing; exact keyframes use piecewise-linear browser interpolation."
+          abstract_sources: [{"url": "https://arxiv.org/html/2510.04467v1", "locator": "Sections II-A–II-C; Algorithm 1; equations 7–11; Eq. (1); Eqs. (8a–c); Algorithm 1 and Eq. (11)"}, {"url": "https://github.com/liangwu2019/PC_BoxQP/blob/main/PC_BoxQP_Matlab.m", "locator": "README.md; PC_BoxQP_Matlab.m predictor/corrector blocks and duality-gap termination"}]
           summary: "A predictor-corrector interior-point method with deterministic execution-time and iteration-complexity guarantees for real-time MPC."
           authors: "Liang Wu, Yunhong Che, Richard D. Braatz, Ján Drgoňa"
           links:
@@ -252,6 +538,17 @@
     - year: 2026
       papers:
         - title: "E-PINNs: Epistemic Physics-Informed Neural Networks"
+          abstract_id: "paper-27"
+          abstract_order: 27
+          image: "images/papers/v6/epinns-epistemic-physics-informed-networks.png"
+          image_animated: "images/papers/v6/epinns-epistemic-physics-informed-networks.svg"
+          image_static: "images/papers/v6/epinns-epistemic-physics-informed-networks-static.svg"
+          image_alt: "Pretrain and freeze the base PINN, then train an additive epinet with a frozen prior component. Uncertainty estimation added to an existing deterministic PINN. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://doi.org/10.1007/s44379-026-00086-8"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "A one-dimensional illustrative epinet family u(x,z)=b(x)+z phi(x), with b=241+51 sin(0.066i+0.4) and phi=11+10 sin²(0.033i) in drawing coordinates. The same four index values drive marker and curve, with a one-way fade/reset. It is a mechanism illustration, not paper prediction data or calibrated uncertainty."
+          abstract_sources: [{"url": "https://link.springer.com/article/10.1007/s44379-026-00086-8", "locator": "Section 2.3, Eq. 8, Fig. 1 and Algorithm 1; §2.3, Eqs. (8), (9), (10b), feature-vector definition; Fig. 1"}]
           venue: "Machine Learning for Computational Science and Engineering"
           summary: "A compact epinet augments pretrained physics-informed neural networks to estimate epistemic uncertainty with modest additional computational cost."
           authors: "Bruno Jacob, Ashish S. Nair, Amanda A. Howard, Ján Drgoňa, Panos Stinis"
@@ -260,6 +557,17 @@
               url: "https://doi.org/10.1007/s44379-026-00086-8"
 
         - title: "SCORE: Statistical Certification of Regions of Attraction via Extreme Value Theory"
+          abstract_id: "arxiv-2603.29658"
+          abstract_order: 28
+          image: "images/papers/v6/arxiv-2603.29658.png"
+          image_animated: "images/papers/v6/arxiv-2603.29658.svg"
+          image_static: "images/papers/v6/arxiv-2603.29658-static.svg"
+          image_alt: "Sample large Lyapunov derivatives with PSGLD, fit a GEV model to block maxima, and bootstrap its finite endpoint. Estimates worst-case decrease using extreme-value statistics. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2603.29658"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/SCORE"}, {"text": "Website", "url": "https://solaris-jhu.github.io/score-website/"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Blue vectors and the teal trajectory use dx=-y, dy=x+(x²−1)y. The local candidate is explicitly illustrative: V=xᵀPx, P=[[1.5,-0.5],[-0.5,1]], with 0.04≤V≤0.38. Purple samples follow projected noisy ascent of Vdot in z=Lᵀx, P=LLᵀ, where exact annular projection is simple. Block markers select actual maxima of the local demonstration's 21 chain endpoints. The GEV is an illustrative density with mu=-0.24, sigma=0.04, xi=-0.5, not a fit to published data or the small demonstration sample; U=-0.08 is a schematic confidence-bound position."
+          abstract_sources: [{"url": "https://arxiv.org/html/2603.29658v2", "locator": "Sections III-B–III-E; Corollary 1; Algorithm 1; §II; Eq. (1); §III-C block maxima and confidence estimation; Corollary 1"}, {"url": "https://github.com/SOLARIS-JHU/SCORE/blob/main/experiments/van_der_pol/EVT/verify_evt_new.py", "locator": "compute_V_Vdot, volume_attack_batch, analyze_evt_block_maxima"}, {"url": "https://github.com/SOLARIS-JHU/SCORE/blob/main/README.md", "locator": "What the results mean"}, {"url": "https://github.com/SOLARIS-JHU/SCORE/blob/main/experiments/van_der_pol/EVT/commons.py", "locator": "VanDerPol.vector_field; mu=1.0."}, {"url": "https://github.com/SOLARIS-JHU/SCORE/blob/main/experiments/van_der_pol/EVT/verify_evt_sos_new.py", "locator": "compute_V_Vdot and volume_attack_batch; ascent versus physical flow."}]
           venue: "IEEE CDC 2026"
           summary: "A scalable statistical framework combining stochastic sampling and extreme value theory to certify regions of attraction in high-dimensional nonlinear systems."
           authors: "Pietro Zanotta, Panos Stinis, Ján Drgoňa"
@@ -272,6 +580,17 @@
               url: "https://solaris-jhu.github.io/score-website/"
 
         - title: "Stability Enhanced Gaussian Process Variational Autoencoders"
+          abstract_id: "arxiv-2604.09331"
+          abstract_order: 29
+          image: "images/papers/v6/arxiv-2604.09331.png"
+          image_animated: "images/papers/v6/arxiv-2604.09331.svg"
+          image_static: "images/papers/v6/arxiv-2604.09331-static.svg"
+          image_alt: "A VAE encoder supplies latent observations to an LTI-derived Gaussian-process prior; a decoder reconstructs images. An unconstrained matrix parameterization restricts learned dynamics to semi-contracting systems. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2604.09331"}, {"text": "Code", "url": "https://github.com/pnnl/COPIP"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Video and latent particles trace explicitly damped rotational curves, not learned experimental trajectories. Each curve is a linear image of exp(-a t)(cos(omega t),sin(omega t)), hence compatible with a stable two-state LTI example. Moving particles advance and fade/reset instead of reversing the dynamics."
+          abstract_sources: [{"url": "https://arxiv.org/html/2604.09331v2", "locator": "Sections III–V; Theorem 3; Fig. 1; Eq. (6), Theorem 1 Eqs. (7)–(9), Theorem 2 Eq. (10), Theorem 3 Eq. (12), Fig. 1"}, {"url": "https://github.com/pnnl/COPIP/blob/master/Code/SEGP/SEGP.py", "locator": "SEGP.__init__ and get_AP"}, {"url": "https://github.com/pnnl/COPIP/blob/master/README.md", "locator": "Overview"}]
           venue: "IEEE CDC 2026"
           summary: "A stability-enhanced Gaussian-process VAE that learns interpretable, semi-contracting latent linear dynamics from high-dimensional video data."
           authors: "Carl R. Richardson, Jichen Zhang, Ethan King, Ján Drgoňa"
@@ -280,6 +599,17 @@
               url: "https://arxiv.org/abs/2604.09331"
 
         - title: "∂CBDs: Differentiable Causal Block Diagrams"
+          abstract_id: "arxiv-2602.07581"
+          abstract_order: 30
+          image: "images/papers/v6/arxiv-2602.07581.png"
+          image_animated: "images/papers/v6/arxiv-2602.07581.svg"
+          image_static: "images/papers/v6/arxiv-2602.07581-static.svg"
+          image_alt: "Translate composed causal blocks to an automatic-differentiation execution graph and optimize with differentiable contract constraints. Unifies assume–guarantee reasoning and gradient-based learning. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://www.arxiv.org/abs/2602.07581"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/Differentiable-CBDs"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Heterogeneous block primitives illustrate Section2.4, rather than a claimed reproduction of a reported case study. The stable focus obeys xdot=[[-0.3,-1],[1,-0.3]]x. The QP solves min0.5[(u-.8)^2+2(v-.8)^2] over0<=u,v<=1,u+v<=1.2. Display speed is remapped along the valid iterate path; it is not wall-clock solver timing. Shrinking colored contours are levels f(x_k) of the same fixed objective."
+          abstract_sources: [{"url": "https://arxiv.org/html/2602.07581v1", "locator": "Sections 2.1–2.5; Fig. 1; Eq. 2; §2.3 Definitions 2.12–2.15; §2.4 Eq. (1); §2.5 CBD-constrained optimization Eq. (2)"}, {"url": "https://github.com/SOLARIS-JHU/Differentiable-CBDs", "locator": "Companion repository and three example scripts identified; repository inventory read2026-11-06."}]
           summary: "A framework that combines causal block diagrams, differentiable learning, and contract-based verification."
           authors: "Thomas Beckers, Ján Drgoňa, Truong X. Nghiem"
           links:
@@ -289,6 +619,17 @@
     - year: 2025
       papers:
         - title: "Safe Physics-Informed Machine Learning for Dynamics and Control"
+          abstract_id: "paper-31"
+          abstract_order: 31
+          image: "images/papers/v6/arxiv-2504.12952.png"
+          image_animated: "images/papers/v6/arxiv-2504.12952.svg"
+          image_static: "images/papers/v6/arxiv-2504.12952-static.svg"
+          image_alt: "Tutorial synthesizes structural priors, uncertainty estimation, safe control and verification methods. Connects model learning, control design and safety assessment. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://ieeexplore.ieee.org/abstract/document/11107836"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Separate conceptual examples for modeling, control and verification. The controlled state follows a safe illustrative polyline; reachable-state markers follow the displayed overapproximation sequence. The tutorial's methods are not presented as one algorithm."
+          abstract_sources: [{"url": "https://arxiv.org/html/2504.12952v2", "locator": "Sections II–IV, especially III-B; §II-A Eq. (7); §III-B Eq. (19); §IV-A set propagation"}]
           summary: "A tutorial overview of physics-informed machine learning methods for safe modeling and control of dynamical systems."
           authors: "Ján Drgoňa, Truong X. Nghiem, Thomas Beckers, Mahyar Fazlyab, Enrique Mallada, Colin N. Jones, Draguna L. Vrabie, Steven L. Brunton, Rolf Findeisen"
           links:
@@ -296,6 +637,17 @@
               url: "https://ieeexplore.ieee.org/abstract/document/11107836"
 
         - title: "Learning Neural Differential Algebraic Equations via Operator Splitting"
+          abstract_id: "paper-32"
+          abstract_order: 32
+          image: "images/papers/v6/arxiv-2403.12938.png"
+          image_animated: "images/papers/v6/arxiv-2403.12938.svg"
+          image_static: "images/papers/v6/arxiv-2403.12938-static.svg"
+          image_alt: "First update algebraic variables with a neural surrogate; then integrate differential states using those updated values. A sequential operator-splitting timestepper for partially known DAEs. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://ieeexplore.ieee.org/abstract/document/11312239"}, {"text": "Code", "url": "https://github.com/pnnl/NeuralDAEs"}, {"text": "Website", "url": "https://drgona.github.io/NeuralDAEs/"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "The lower inset uses a defined illustrative residual e_j=24(0.61)^j+2 pixels: its magnitude decreases but stays nonzero, matching an approximate algebraic solve. Tank waves are qualitative equal-head surface motion, not a mass-balance simulation. The ODE step uses the updated algebraic variable."
+          abstract_sources: [{"url": "https://arxiv.org/html/2403.12938v3", "locator": "Sections III–IV; Eq. 7; Fig. 1; Eq. (1), Eq. (7a)–(7b), Eq. (9), Fig. 1; §V-A tank-manifold example"}, {"url": "https://github.com/pnnl/NeuralDAEs/blob/master/training/train_manifold.py", "locator": "model_ode, model_algebra and EulerDAE construction"}, {"url": "https://drgona.github.io/NeuralDAEs/", "locator": "Method"}]
           summary: "An operator-splitting integration scheme for learning neural differential-algebraic equation models from data."
           authors: "James Koch, Madelyn Shapiro, Himanshu Sharma, Draguna Vrabie, Ján Drgoňa"
           links:
@@ -312,6 +664,17 @@
     - year: 2026
       papers:
         - title: "End-to-End Battery Dispatch with Exact Rainflow Degradation via Mixed-Integer Differentiable Predictive Control"
+          abstract_id: "arxiv-2609.12968"
+          abstract_order: 33
+          image: "images/papers/v6/arxiv-2609.12968.png"
+          image_animated: "images/papers/v6/arxiv-2609.12968.svg"
+          image_static: "images/papers/v6/arxiv-2609.12968-static.svg"
+          image_alt: "A mixed-integer policy produces a trajectory; exact forward rainflow costs train it using mixed sparse and proxy gradients. Differentiable training through otherwise discrete cycle counting. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://doi.org/10.1109/TSG.2026.3737375"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/Battery-MI-DPC"}, {"text": "Preprint", "url": "https://arxiv.org/abs/2609.12968"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "The moving marker scans a fixed synthetic SOC history. The two highlighted rainflow pairs satisfy the four-point inner-cycle rule; unclosed residual half-cycles are not falsely paired. Forecast and proxy-gradient waves are qualitative analytic examples, not numerical training results."
+          abstract_sources: [{"url": "https://arxiv.org/html/2609.12968v1", "locator": "Sections III-B, III-C, III-E.2 and III-G; Eq. (2d); Eqs. (18), (25)–(29); §III-C.7 rainflow; Fig. 2"}, {"url": "https://github.com/SOLARIS-JHU/Battery-MI-DPC/blob/main/Battery-MI-DPC.ipynb", "locator": "RainflowFunction.forward/backward; L2O.forward; project_to_feasible"}]
           venue: "IEEE Transactions on Smart Grid"
           summary: "A differentiable rainflow layer trains mixed-integer battery-dispatch policies on exact cycle degradation, with a safety filter enforcing operating constraints."
           authors: "Eshagh Safarzadeh Ravajiri, Ján Drgoňa, Mahdi Mehrtash, Benjamin F. Hobbs"
@@ -322,6 +685,17 @@
               url: "https://arxiv.org/abs/2609.12968"
 
         - title: "Homotopy-Guided Self-Supervised Learning of Parametric Solutions for AC Optimal Power Flow"
+          abstract_id: "arxiv-2511.11677"
+          abstract_order: 34
+          image: "images/papers/v6/arxiv-2511.11677.png"
+          image_animated: "images/papers/v6/arxiv-2511.11677.svg"
+          image_static: "images/papers/v6/arxiv-2511.11677-static.svg"
+          image_alt: "Train a neural solution map while gradually deforming relaxed objectives or constraints toward the original AC-OPF problem. A continuation schedule guides self-supervised learning. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://doi.org/10.1109/PESGM58988.2026.11693405"}, {"text": "Preprint", "url": "https://arxiv.org/abs/2511.11677"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Each stage is a schematic quadratic objective 0.5(dx²+2dy²); errors shrink as dx_j=-42(0.72)^j, dy_j=35(0.44)^j, equivalent to gradient descent with step 0.28. The three minima shift with continuation. This is a mathematical teaching motif, not the nonconvex AC-OPF loss surface or paper solver iterates."
+          abstract_sources: [{"url": "https://arxiv.org/html/2511.11677v1", "locator": "Sections IV-A–IV-D; Fig. 2; Eqs. 4–11; §IV-A parametric policy; Eqs. (6), (9), (10); Fig. 2"}]
           venue: "IEEE PES General Meeting 2026"
           summary: "Homotopy-guided self-supervised training gradually restores AC optimal power-flow constraints to improve convergence and feasibility without labeled optimal solutions."
           authors: "Shimiao Li, Aaron Tuor, Draguna Vrabie, Larry Pileggi, Ján Drgoňa"
@@ -332,6 +706,17 @@
               url: "https://arxiv.org/abs/2511.11677"
 
         - title: "Physics vs. Structure: A Systematic Benchmark of Learning Strategies for Multi-Zone Building Thermal Dynamics"
+          abstract_id: "paper-35"
+          abstract_order: 35
+          image: "images/papers/v6/thermal-model-benchmark-117472.png"
+          image_animated: "images/papers/v6/thermal-model-benchmark-117472.svg"
+          image_static: "images/papers/v6/thermal-model-benchmark-117472-static.svg"
+          image_alt: "Benchmark linear state-space, MLP, neural state-space, neural ODE and physically consistent neural models. Evaluates when extra structure or complexity helps a control-oriented thermal model. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://www.sciencedirect.com/science/article/pii/S0378778826005323"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing. This overview was prepared from accessible abstract-level material and does not depict comparative results."
+          abstract_animation: "Qualitative inter-zone exchange and a periodic common evaluation signal illustrate benchmark organization. No temperature evolution, solver speed, prediction ranking or model superiority is asserted."
+          abstract_sources: [{"url": "https://www.sciencedirect.com/science/article/abs/pii/S0378778826005323", "locator": "Publisher abstract and indexed highlights; Publisher abstract and indexed highlights; full text unavailable"}]
           venue: "Energy and Buildings"
           summary: "A benchmark of five system-identification approaches examines how data availability, zone coupling, and physical structure affect building thermal-model accuracy and cost."
           authors: "Soumya Vasisht, Cary Faulkner, Elad Michael, Aaron Tuor, Ján Drgoňa, Draguna Vrabie"
@@ -340,6 +725,17 @@
               url: "https://www.sciencedirect.com/science/article/pii/S0378778826005323"
 
         - title: "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning"
+          abstract_id: "arxiv-2512.20880"
+          abstract_order: 36
+          image: "images/papers/v6/arxiv-2512.20880.png"
+          image_animated: "images/papers/v6/arxiv-2512.20880.svg"
+          image_static: "images/papers/v6/arxiv-2512.20880-static.svg"
+          image_alt: "A neural predictor chooses penalty weights; repeated local linearization and convex QP solves refine the schedule, which nonlinear simulation scores. Learn regularization through the downstream operating objective. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://doi.org/10.1109/TSTE.2026.3722492"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/DFL-UPHES"}, {"text": "Preprint", "url": "https://arxiv.org/abs/2512.20880"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "The polytope and quadratic are fixed. The highlighted contour is the actual level f(x_k); it shrinks until tangent to the active constraint at the constrained optimum. Display time is rescaled along the path, not a measured solver runtime."
+          abstract_sources: [{"url": "https://arxiv.org/html/2512.20880v2", "locator": "Section IV; Fig. 3; Algorithm 1; Section V-E; Algorithm 1; Eqs. (12), (13), (17)–(19), (23); Fig. 3"}, {"url": "https://github.com/SOLARIS-JHU/DFL-UPHES/blob/main/DFL/core/pipeline.py", "locator": "RecursiveLinearizationPipeline.forward"}, {"url": "https://github.com/SOLARIS-JHU/DFL-UPHES/blob/main/README.md", "locator": "The DFL Framework; reproducibility note"}]
           venue: "IEEE Transactions on Sustainable Energy"
           summary: "A decision-focused learning framework that guides recursive linearization for fast, high-quality day-ahead scheduling of underground pumped hydro energy storage."
           authors: "Honghui Zheng, Pietro Favaro, Yury Dvorkin, Ján Drgoňa"
@@ -352,6 +748,17 @@
               url: "https://github.com/SOLARIS-JHU/DFL-UPHES"
 
         - title: "Mixed-Integer Nonlinear Differentiable Predictive Control for Underground Pumped Hydro Energy Storage Systems"
+          abstract_id: "arxiv-2609.17964"
+          abstract_order: 37
+          image: "images/papers/v6/arxiv-2609.17964.png"
+          image_animated: "images/papers/v6/arxiv-2609.17964.svg"
+          image_static: "images/papers/v6/arxiv-2609.17964-static.svg"
+          image_alt: "Train a Transformer policy through straight-through Gumbel-Softmax decisions and a two-pass differentiable simulator. Direct learned mixed-integer schedules with temporal attention and parallel training rollouts. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2609.17964"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/MI-DPC-UPHES"}, {"text": "Website", "url": "https://solaris-jhu.github.io/MI-DPC-UPHES/"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Fixed logits (0.15,-0.05,0.05) and reproducible independent Gumbel draws g=-log(-log U) generate s=softmax((logits+g)/tau) at 81 temperatures decreasing geometrically from 5 to 0.05. Points are true barycentric combinations of the P/I/T vertices and are colored by invariant hard mode. The finite-temperature near-tie samples correctly remain partly mixed instead of being snapped to vertices. This matches the project-page illustration, not its two-stage training schedule or measured mode frequencies."
+          abstract_sources: [{"url": "https://arxiv.org/html/2609.17964v1", "locator": "Sections III-B–III-E; Algorithms 1–2; Eqs. (4), (5), (10), (13)–(15); Algorithms 1–2"}, {"url": "https://github.com/SOLARIS-JHU/MI-DPC-UPHES/blob/main/DPC/system.py", "locator": "build_oneshot_system"}, {"url": "https://solaris-jhu.github.io/MI-DPC-UPHES/", "locator": "Differentiable mode selection"}]
           venue: "IEEE CDC 2026"
           summary: "A self-supervised mixed-integer control policy for nonlinear pumped-hydro scheduling, using differentiable simulation, Transformers, and Gumbel-Softmax decisions."
           authors: "Honghui Zheng, Ján Boldocký, Yury Dvorkin, Ján Drgoňa"
@@ -364,6 +771,17 @@
               url: "https://github.com/SOLARIS-JHU/MI-DPC-UPHES"
 
         - title: "Safe Receding Horizon Mixed-Integer Differentiable Predictive Control for Degradation-Aware Battery Dispatch"
+          abstract_id: "arxiv-2609.28698"
+          abstract_order: 38
+          image: "images/papers/v6/arxiv-2609.28698.png"
+          image_animated: "images/papers/v6/arxiv-2609.28698.svg"
+          image_static: "images/papers/v6/arxiv-2609.28698-static.svg"
+          image_alt: "A neural mode/action policy replans each step; a one-step QP filter enforces nominal state and power bounds. Combines rainflow-trained dispatch with feedback and recursive nominal feasibility. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2609.28698"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "An infeasible proposed power is projected to the fixed feasible interval. Its squared distance from the proposal increases until feasibility is reached; the animation explicitly does not claim descent starting at the infeasible unconstrained minimizer."
+          abstract_sources: [{"url": "https://arxiv.org/html/2609.28698v1", "locator": "Sections III-E and IV-B; Theorems 1–2; Remark 2; Eqs. (12)–(20); Algorithms 1–2; Theorems 1–2; Remark 2"}]
           venue: "IEEE CDC 2026"
           summary: "A receding-horizon neural battery-dispatch controller with differentiable degradation physics and a safety filter that guarantees recursive feasibility."
           authors: "Eshagh Safarzadeh Ravajiri, Ján Drgoňa, Benjamin F. Hobbs"
@@ -372,6 +790,17 @@
               url: "https://arxiv.org/abs/2609.28698"
 
         - title: "Data Center Chiller Plant Optimization via Mixed-Integer Nonlinear Differentiable Predictive Control"
+          abstract_id: "arxiv-2603.28323"
+          abstract_order: 39
+          image: "images/papers/v6/arxiv-2603.28323.png"
+          image_animated: "images/papers/v6/arxiv-2603.28323.svg"
+          image_static: "images/papers/v6/arxiv-2603.28323-static.svg"
+          image_alt: "Separate policy heads and differentiable binary rounding train through thermal dynamics with energy, tracking and switching objectives. Binary-variance regularization promotes decisive staging. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2603.28323"}, {"text": "Code", "url": "https://github.com/pnnl/MI-DPC"}, {"text": "Website", "url": "https://xboldocky.github.io/chiller-plant-MIDPC/"}]
+          abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
+          abstract_animation: "Periodic load and server-activity motifs accompany fan rotation in a schematic cooling operating state. There is no claimed thermal simulation or switching schedule. The hard threshold, smooth backward surrogate and squared binary-variance penalty are fixed, correctly shaped functions."
+          abstract_sources: [{"url": "https://arxiv.org/html/2603.28323v1", "locator": "Sections 3.1–3.4; Eqs. 7–8; Eqs. (1a), (1b), (7c)–(7g), (8)–(10); §3.3"}, {"url": "https://github.com/pnnl/MI-DPC/blob/master/MIDPC.py", "locator": "relaxed_binary, round_fn and Neuromancer node assembly"}, {"url": "https://xboldocky.github.io/chiller-plant-MIDPC/", "locator": "Methodology; Binary-Variance Regularization"}]
           venue: "IFAC World Congress 2026"
           summary: "A mixed-integer differentiable predictive control framework for real-time optimization of nonlinear multi-chiller plants."
           authors: "Ján Boldocký, Cary Faulkner, Elad Michael, Martin Gulan, Aaron Tuor, Ján Drgoňa"
@@ -380,3 +809,4 @@
               url: "https://arxiv.org/abs/2603.28323"
             - text: "Website"
               url: "https://xboldocky.github.io/chiller-plant-MIDPC/"
+

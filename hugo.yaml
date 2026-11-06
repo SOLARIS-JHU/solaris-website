@@ -1,9 +1,9 @@
-﻿baseURL: "https://SOLARIS-JHU.github.io/solaris-website/"
+baseURL: "https://SOLARIS-JHU.github.io/solaris-website/"
 languageCode: "en-us"
 title: "Solaris Lab"
 theme: "PaperMod"
 
-relativeURLs: true
+relativeURLs: false
 uglyURLs: true
 
 enableInlineShortcodes: true

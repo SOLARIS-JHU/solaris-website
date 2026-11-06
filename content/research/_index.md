@@ -25,8 +25,8 @@ description: "The Solaris Lab develops learning-enabled optimization and control
     </div>
     <figure class="research-direction-media">
       <div class="research-figure-frame research-figure-frame--flush research-figure-frame--animation">
-        <a class="research-figure-link research-cinoc-embed" href="/images/research/cinoc-field-control.html" target="_blank" rel="noopener noreferrer" aria-label="Open the interactive CINOC field-control animation">
-          <iframe src="/images/research/cinoc-field-control.html?embed=1&amp;v=clickable-20261105" title="CINOC field-control animation" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        <a class="research-figure-link research-cinoc-embed" href="{{< asset_url "images/research/cinoc-field-control.html" >}}" target="_blank" rel="noopener noreferrer" aria-label="Open the interactive CINOC field-control animation">
+          <iframe src="{{< asset_url "images/research/cinoc-field-control.html?embed=1&v=clickable-20261105" >}}" title="CINOC field-control animation" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
         </a>
       </div>
       <figcaption><strong>CINOC</strong> learns scalable neural-operator policies for control of physical systems governed by partial differential equations (PDEs).</figcaption>
@@ -49,8 +49,8 @@ description: "The Solaris Lab develops learning-enabled optimization and control
     </div>
     <figure class="research-direction-media">
       <div class="research-figure-frame research-figure-frame--flush research-figure-frame--animation">
-        <a class="research-figure-link" href="/images/research/pimpc-admm-gpu.html" target="_blank" rel="noopener noreferrer" aria-label="Open the interactive piMPC ADMM and GPU animation">
-          <img src="/images/research/pimpc-admm-gpu-animated.svg" alt="Six piMPC horizon stages execute ADMM updates in parallel, with neighboring-stage reads, a global residual check, and a synchronized schematic of GPU work allocation" width="2250" height="1277" loading="lazy" decoding="async">
+        <a class="research-figure-link" href="{{< asset_url "images/research/pimpc-admm-gpu.html" >}}" target="_blank" rel="noopener noreferrer" aria-label="Open the interactive piMPC ADMM and GPU animation">
+          <img src="{{< asset_url "images/research/pimpc-admm-gpu-animated.svg" >}}" alt="Six piMPC horizon stages execute ADMM updates in parallel, with neighboring-stage reads, a global residual check, and a synchronized schematic of GPU work allocation" width="2250" height="1277" loading="lazy" decoding="async">
         </a>
       </div>
       <figcaption><strong>&pi;MPC</strong> executes optimization updates across the prediction horizon in parallel enabling GPU acceleration.</figcaption>
@@ -73,7 +73,7 @@ description: "The Solaris Lab develops learning-enabled optimization and control
     </div>
     <figure class="research-direction-media">
       <div class="research-figure-frame research-figure-frame--flush">
-        <img src="/images/research/energy-systems-grid.svg?v=69360a538d41" alt="Pumped-hydro storage, batteries, a data center, and building cooling connected through a substation, transformers, and electrical feeders" width="1671" height="941" loading="lazy" decoding="async">
+        <img src="{{< asset_url "images/research/energy-systems-grid.svg?v=69360a538d41" >}}" alt="Pumped-hydro storage, batteries, a data center, and building cooling connected through a substation, transformers, and electrical feeders" width="1671" height="941" loading="lazy" decoding="async">
       </div>
       <figcaption><strong>Connected energy systems:</strong> power grid, pumped hydro, batteries, buildings, HVAC, and data-center cooling.</figcaption>
     </figure>

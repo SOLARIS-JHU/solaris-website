@@ -1,0 +1,236 @@
+{
+  "arxiv-2604.23053": {
+    "key": "v9-mbqp",
+    "number": 1,
+    "title": "ML-Guided Primal Heuristics for Mixed Binary Quadratic Programs",
+    "preview": "images/papers/v13/arxiv-2604.23053.svg"
+  },
+  "arxiv-2603.22548": {
+    "key": "v9-ccg",
+    "number": 2,
+    "title": "L2O-CCG: Adversarial Learning with Set Generalization for Adaptive Robust Optimization",
+    "preview": "images/papers/v13/arxiv-2603.22548.svg"
+  },
+  "arxiv-2507.09050": {
+    "key": "v9-bilevel",
+    "number": 3,
+    "title": "Learning to Solve Constrained Bilevel Control Co-Design Problems",
+    "preview": "images/papers/v13/arxiv-2507.09050.svg"
+  },
+  "arxiv-2410.11061": {
+    "key": "v9-minlp",
+    "number": 4,
+    "title": "Learning to Optimize for Mixed-Integer Nonlinear Programming with Feasibility Guarantees",
+    "preview": "images/papers/v13/arxiv-2410.11061.svg"
+  },
+  "arxiv-2610.02466": {
+    "key": "v9-sddpc",
+    "number": 5,
+    "title": "SD-DPC: Sparse Dictionary Differentiable Predictive Control",
+    "preview": "images/papers/v13/arxiv-2610.02466.svg"
+  },
+  "arxiv-2608.10332": {
+    "key": "v9-topology",
+    "number": 6,
+    "title": "Topological Feasibility Guarantees for Differentiable Predictive Control",
+    "preview": "images/papers/v13/arxiv-2608.10332.svg"
+  },
+  "arxiv-2606.05687": {
+    "key": "v9-mpcrl",
+    "number": 7,
+    "title": "Accelerating and Scaling MPC-Guided Reinforcement Learning for Humanoid Locomotion and Manipulation",
+    "preview": "images/papers/v13/arxiv-2606.05687.svg"
+  },
+  "arxiv-2509.18404": {
+    "key": "v9-policyfe",
+    "number": 8,
+    "title": "Zero-Shot Transferable Solution Method for Parametric Optimal Control Problems",
+    "preview": "images/papers/v13/arxiv-2509.18404.svg"
+  },
+  "arxiv-2511.08992": {
+    "key": "v9-tipde",
+    "number": 9,
+    "title": "Learning to Control PDEs with Differentiable Predictive Control and Time-Integrated Neural Operators",
+    "preview": "images/papers/v13/arxiv-2511.08992.svg"
+  },
+  "arxiv-2506.19646": {
+    "key": "v9-midpc",
+    "number": 10,
+    "title": "Learning to Solve Parametric Mixed-Integer Optimal Control Problems via Differentiable Predictive Control",
+    "preview": "images/papers/v13/arxiv-2506.19646.svg"
+  },
+  "paper-11": {
+    "key": "v9-cinoc",
+    "number": 11,
+    "title": "CINOC: Cardinality-Invariant Neural Operator Policies for Scalable PDE Control",
+    "preview": "images/papers/v13/paper-11.svg"
+  },
+  "arxiv-2511.05757": {
+    "key": "v9-fedpc",
+    "number": 12,
+    "title": "Zero-Shot Function Encoder-Based Differentiable Predictive Control",
+    "preview": "images/papers/v13/arxiv-2511.05757.svg"
+  },
+  "arxiv-2610.24105": {
+    "key": "opt13",
+    "number": 13,
+    "title": "A Koopman–Polynomial Chaos Framework for SMPC of Nonlinear Stochastic Processes",
+    "preview": "images/papers/v13/arxiv-2610.24105.svg"
+  },
+  "arxiv-2610.12902": {
+    "key": "opt14",
+    "number": 14,
+    "title": "Fast-DeePC: Fast Data-Enabled Predictive Control using Soft-constrained Scheme",
+    "preview": "images/papers/v13/arxiv-2610.12902.svg"
+  },
+  "arxiv-2610.06976": {
+    "key": "opt15",
+    "number": 15,
+    "title": "Model Predictive Control for Safety-Critical Systems Using Taylor's Theorem with Lagrange Remainder",
+    "preview": "images/papers/v13/arxiv-2610.06976.svg"
+  },
+  "arxiv-2609.33630": {
+    "key": "opt16",
+    "number": 16,
+    "title": "lapanda: A Matrix-Free Differentiable Solver for Nonconvex Constrained Optimization Layers",
+    "preview": "images/papers/v13/arxiv-2609.33630.svg"
+  },
+  "arxiv-2609.29977": {
+    "key": "opt17",
+    "number": 17,
+    "title": "Accelerating Branch MPC with Two-Level Parallel Direct Solves on GPUs",
+    "preview": "images/papers/v13/arxiv-2609.29977.svg"
+  },
+  "arxiv-2609.20035": {
+    "key": "opt18",
+    "number": 18,
+    "title": "DR-MPC: Fast and Feasible Dynamics-Relaxed Model-Predictive Control for Legged Locomotion",
+    "preview": "images/papers/v13/arxiv-2609.20035.svg"
+  },
+  "arxiv-2602.18331": {
+    "key": "opt19",
+    "number": 19,
+    "title": "Koopman-BoxQP: Solving Large-Scale NMPC at kHz Rates",
+    "preview": "images/papers/v13/arxiv-2602.18331.svg"
+  },
+  "arxiv-2604.02069": {
+    "key": "opt20",
+    "number": 20,
+    "title": "Fixed-Time-Stable ODE Representation of Lasso",
+    "preview": "images/papers/v13/arxiv-2604.02069.svg"
+  },
+  "arxiv-2603.21070": {
+    "key": "opt21",
+    "number": 21,
+    "title": "Koopman-Based Linear MPC for Safe Control using Control Barrier Functions",
+    "preview": "images/papers/v13/arxiv-2603.21070.svg"
+  },
+  "arxiv-2604.00935": {
+    "key": "opt22",
+    "number": 22,
+    "title": "Polynomial Parametric Koopman Operators for Stochastic MPC",
+    "preview": "images/papers/v13/arxiv-2604.00935.svg"
+  },
+  "arxiv-2602.15596": {
+    "key": "opt23",
+    "number": 23,
+    "title": "Time-Certified and Efficient NMPC via Koopman Operator",
+    "preview": "images/papers/v13/arxiv-2602.15596.svg"
+  },
+  "arxiv-2601.14414": {
+    "key": "parallel-pimpc",
+    "number": 24,
+    "title": "πMPC: A Parallel-in-Horizon and Construction-Free NMPC Solver",
+    "preview": "images/papers/v13/arxiv-2601.14414.svg"
+  },
+  "arxiv-2601.11901": {
+    "key": "opt25",
+    "number": 25,
+    "title": "Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control",
+    "preview": "images/papers/v13/arxiv-2601.11901.svg"
+  },
+  "paper-26": {
+    "key": "math-ipm",
+    "number": 26,
+    "title": "A Time-Certified Predictor-Corrector IPM Algorithm for Box-QP",
+    "preview": "images/papers/v13/paper-26.svg"
+  },
+  "paper-27": {
+    "key": "v11-epinn",
+    "number": 27,
+    "title": "E-PINNs: Epistemic Physics-Informed Neural Networks",
+    "preview": "images/papers/v13/paper-27.svg"
+  },
+  "arxiv-2603.29658": {
+    "key": "v10-score",
+    "number": 28,
+    "title": "SCORE: Statistical Certification of Regions of Attraction via Extreme Value Theory",
+    "preview": "images/papers/v13/arxiv-2603.29658.svg"
+  },
+  "arxiv-2604.09331": {
+    "key": "v10-gpvae",
+    "number": 29,
+    "title": "Stability Enhanced Gaussian Process Variational Autoencoders",
+    "preview": "images/papers/v13/arxiv-2604.09331.svg"
+  },
+  "arxiv-2602.07581": {
+    "key": "v10-cbd",
+    "number": 30,
+    "title": "∂CBDs: Differentiable Causal Block Diagrams",
+    "preview": "images/papers/v13/arxiv-2602.07581.svg"
+  },
+  "paper-31": {
+    "key": "v9-safe-physics",
+    "number": 31,
+    "title": "Safe Physics-Informed Machine Learning for Dynamics and Control",
+    "preview": "images/papers/v13/paper-31.svg"
+  },
+  "paper-32": {
+    "key": "v10-neural-dae",
+    "number": 32,
+    "title": "Learning Neural Differential Algebraic Equations via Operator Splitting",
+    "preview": "images/papers/v13/paper-32.svg"
+  },
+  "arxiv-2609.12968": {
+    "key": "v11-rainflow",
+    "number": 33,
+    "title": "End-to-End Battery Dispatch with Exact Rainflow Degradation via Mixed-Integer Differentiable Predictive Control",
+    "preview": "images/papers/v13/arxiv-2609.12968.svg"
+  },
+  "arxiv-2511.11677": {
+    "key": "v10-acopf",
+    "number": 34,
+    "title": "Homotopy-Guided Self-Supervised Learning of Parametric Solutions for AC Optimal Power Flow",
+    "preview": "images/papers/v13/arxiv-2511.11677.svg"
+  },
+  "paper-35": {
+    "key": "v9-building",
+    "number": 35,
+    "title": "Physics vs. Structure: A Systematic Benchmark of Learning Strategies for Multi-Zone Building Thermal Dynamics",
+    "preview": "images/papers/v13/paper-35.svg"
+  },
+  "arxiv-2512.20880": {
+    "key": "v11-hydro-dfl",
+    "number": 36,
+    "title": "Accelerating Underground Pumped Hydro Energy Storage Scheduling with Decision-Focused Learning",
+    "preview": "images/papers/v13/arxiv-2512.20880.svg"
+  },
+  "arxiv-2609.17964": {
+    "key": "v10-hydro-midpc",
+    "number": 37,
+    "title": "Mixed-Integer Nonlinear Differentiable Predictive Control for Underground Pumped Hydro Energy Storage Systems",
+    "preview": "images/papers/v13/arxiv-2609.17964.svg"
+  },
+  "arxiv-2609.28698": {
+    "key": "v10-safe-battery",
+    "number": 38,
+    "title": "Safe Receding Horizon Mixed-Integer Differentiable Predictive Control for Degradation-Aware Battery Dispatch",
+    "preview": "images/papers/v13/arxiv-2609.28698.svg"
+  },
+  "arxiv-2603.28323": {
+    "key": "v10-chiller",
+    "number": 39,
+    "title": "Data Center Chiller Plant Optimization via Mixed-Integer Nonlinear Differentiable Predictive Control",
+    "preview": "images/papers/v13/arxiv-2603.28323.svg"
+  }
+}

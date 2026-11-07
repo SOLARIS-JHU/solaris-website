@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ "css/papers.css" | relURL }}?v=10">
+<link rel="stylesheet" href="{{ "css/papers.css" | relURL }}?v=13">
 <section class="solaris-papers" data-papers-gallery aria-label="Research papers">
   <div class="spg-overview-controls"><button type="button" data-spg-overview-play>Pause animations</button></div>
   <nav class="papers-mobile-nav" aria-label="Paper research areas">
@@ -30,14 +30,14 @@
               {{ range $yearGroup.papers }}
                 {{ $paper := . }}
                 {{ $resources := .abstract_links | default .links }}
-                {{ $animated := .image_animated | default .image }}
-                {{ $static := .image_static | default .image }}
-                {{ $openURL := .image_animated | default .image_static | default .image }}
                 {{ $id := .abstract_id | default (.title | urlize) }}
-                <article class="spg-card" data-spg-card data-paper-id="{{ $id }}" data-paper-year="{{ $year }}"
-                  data-animated="{{ with .image_animated }}{{ . | relURL }}{{ end }}"
-                  data-static="{{ with .image_static }}{{ . | relURL }}{{ end }}"
-                  data-thumbnail="{{ with .image }}{{ . | relURL }}{{ end }}">
+                {{ $scene := index $.Site.Data.abstracts_v13 $id }}
+                {{ $static := $scene.preview | default .image_static | default .image }}
+                {{ $animated := $static }}
+                {{ $openURL := $static }}
+                <article class="spg-card" data-spg-card data-paper-id="{{ $id }}" data-paper-year="{{ $year }}" data-scene="{{ $scene.key }}"
+                  data-static="{{ $static | relURL }}"
+                  data-thumbnail="{{ $static | relURL }}">
                   {{ with $animated }}
                     <a class="spg-art" data-spg-open href="{{ $openURL | relURL }}" target="_blank" rel="noopener" aria-label="Open graphical abstract for {{ $paper.title }}" aria-haspopup="dialog" aria-controls="spg-viewer">
                       <picture>
@@ -54,10 +54,10 @@
                       <nav class="spg-resource-links" aria-label="Resources for {{ .title }}">
                         {{ range $resources }}
                           {{ $label := .text | default .label }}
-                          {{ if not $paper.abstract_links }}
-                            {{ if in (slice "Preprint" "Journal") $label }}{{ $label = "Paper" }}{{ end }}
-                            {{ if eq $label "GitHub" }}{{ $label = "Code" }}{{ end }}
-                          {{ end }}
+                          {{ $label = lower $label }}
+                          {{ if in (slice "preprint" "journal" "paper") $label }}{{ $label = "paper" }}{{ end }}
+                          {{ if in (slice "github" "code") $label }}{{ $label = "code" }}{{ end }}
+                          {{ if in (slice "project" "website" "web") $label }}{{ $label = "website" }}{{ end }}
                           <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ $label }}<span aria-hidden="true"> ↗</span></a>
                         {{ end }}
                       </nav>
@@ -86,9 +86,11 @@
     <div class="spg-controls" role="group" aria-label="Graphical abstract controls">
       <button type="button" data-spg-play disabled>Pause</button><button type="button" data-spg-restart disabled>Restart</button>
       <span class="spg-paper-navigation"><button type="button" data-spg-previous aria-label="Previous paper"><span aria-hidden="true">←</span></button><button type="button" data-spg-next aria-label="Next paper"><span aria-hidden="true">→</span></button></span>
-      <span class="spg-control-spacer"></span><a data-spg-animated download target="_blank" rel="noopener">Animated SVG</a><a data-spg-static download target="_blank" rel="noopener">Static SVG</a>
+      <span class="spg-control-spacer"></span><a data-spg-static download target="_blank" rel="noopener">Static SVG</a>
     </div>
     <div class="spg-abstract" data-spg-science></div>
   </dialog>
 </section>
-<script src="{{ "js/papers.js" | relURL }}?v=9" defer></script>
+<script src="{{ "js/paper-abstracts-v13.js" | relURL }}" defer></script>
+<script src="{{ "js/papers.js" | relURL }}?v=13" defer></script>
+

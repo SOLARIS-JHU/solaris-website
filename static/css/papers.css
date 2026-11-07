@@ -252,3 +252,8 @@ body.spg-modal-open { overflow: hidden; }
 @media (max-width: 640px) {
   .papers-area { margin-bottom: 3.5rem; }
 }
+
+
+/* Approved v13 SVGs retain their own scientific styling; cards inherit the site. */
+.spg-art > .spg-live-art, .spg-stage > .spg-live-art { display: block; width: 100%; height: 100%; }
+.spg-art > .spg-live-art { position: absolute; inset: 0; }

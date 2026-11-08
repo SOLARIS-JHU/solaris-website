@@ -46,6 +46,10 @@ layout: "single"
 
 <div class="gallery-grid">
   <div class="gallery-item">
+    <img src="{{< asset_url "images/climbing.jpeg" >}}" alt="Lab members climbing in Baltimore" style="object-position: center;">
+    <div class="gallery-caption">Gradient ascent, but the gradients are holds and the loss is grip. Baltimore, November 2026</div>
+  </div>
+  <div class="gallery-item">
     <img src="{{< asset_url "images/5krun.jpeg" >}}" alt="Lab members at the 5 km run in Baltimore">
     <div class="gallery-caption">5 km of MPC, except the plant keeps getting tired! Baltimore, September 2026</div>
   </div>

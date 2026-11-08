@@ -152,7 +152,7 @@ div[style*="border-left"]:hover {
 
 .research-vision,
 .research-directions {
-    width: min(1160px, calc(100vw - 3rem));
+    width: min(1280px, calc(100vw - 3rem));
     margin-right: 0;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -205,13 +205,13 @@ div[style*="border-left"]:hover {
     position: relative;
     display: grid;
     overflow: hidden;
-    padding: clamp(1.4rem, 3.5vw, 2.5rem);
+    padding: clamp(1.4rem, 3vw, 2.1rem);
     border: 1px solid var(--solaris-border);
     border-radius: 18px;
     background: linear-gradient(125deg, rgba(var(--solaris-accent-rgb), 0.065), transparent 36%), var(--solaris-bg);
     box-shadow: 0 14px 45px rgba(2, 11, 26, 0.12), 0 0 24px rgba(var(--solaris-accent-rgb), 0.06);
-    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
-    gap: clamp(1.8rem, 5vw, 4rem);
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.22fr);
+    gap: clamp(1.8rem, 4vw, 3rem);
     align-items: center;
     isolation: isolate;
     transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
@@ -235,6 +235,10 @@ div[style*="border-left"]:hover {
     border-color: var(--solaris-border-strong);
     box-shadow: 0 18px 50px rgba(2, 11, 26, 0.16), 0 0 30px rgba(var(--solaris-accent-rgb), 0.12);
     transform: translateY(-3px);
+}
+
+.research-direction--reverse {
+    grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.88fr);
 }
 
 .research-direction--reverse .research-direction-copy {
@@ -345,6 +349,57 @@ div[style*="border-left"]:hover {
     max-height: 430px;
     border-radius: 9px;
     object-fit: contain;
+}
+
+.research-figure-frame.research-figure-frame--flush {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.research-figure-frame.research-figure-frame--flush img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+.research-figure-frame.research-figure-frame--animation {
+    background: #f5f8fc;
+}
+
+.research-cinoc-embed {
+    position: relative;
+    width: 100%;
+    padding-top: 53.7622%;
+}
+
+.research-cinoc-embed iframe {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    pointer-events: none;
+}
+
+.research-figure-frame .research-figure-link {
+    display: block;
+    border-radius: inherit;
+    line-height: 0;
+    box-shadow: none;
+}
+
+.research-figure-link:focus-visible {
+    outline: 3px solid var(--solaris-accent);
+    outline-offset: -3px;
 }
 
 .research-direction-media figcaption {
@@ -581,7 +636,7 @@ div[style*="border-left"]:hover {
     background: var(--solaris-accent-soft);
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
     .research-vision,
     .research-directions {
         width: 100%;

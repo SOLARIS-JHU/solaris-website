@@ -63,7 +63,7 @@
                       </nav>
                       <span class="spg-paper-year" title="Publication year">{{ $year }}</span>
                     </div>
-                    <template data-spg-details><p>{{ .abstract_summary | default .summary }}</p></template>
+                    <template data-spg-details><p>{{ .abstract_summary | default .summary }}</p>{{ with .abstract_preprint }}<p><a href="{{ . }}" target="_blank" rel="noopener noreferrer">arXiv preprint ↗</a></p>{{ end }}</template>
                   </div>
                 </article>
               {{ end }}
@@ -92,5 +92,7 @@
   </dialog>
 </section>
 <script src="{{ "js/paper-abstracts-v13.js" | relURL }}" defer></script>
+<script src="{{ "js/paper-abstract-tqpnet.js" | relURL }}" defer></script>
 <script src="{{ "js/papers.js" | relURL }}?v=13" defer></script>
+
 

@@ -9,6 +9,33 @@
   years:
     - year: 2026
       papers:
+        - title: "Neural Compression of Long ADMM Trajectory for Multiparametric Quadratic Program"
+          abstract_id: "arxiv-2610.38079"
+          abstract_order: 40
+          abstract_summary: "TQPNet learns compact warm starts for multiparametric quadratic programs by combining a multilayer perceptron with derived, low-dimensional ADMM–ReLU refinement layers. Offline training uses an optimality-condition residual without solver-generated labels. During online batch inference, the residual is checked for each instance, and only instances above the requested tolerance receive additional refinement. The resulting architecture supports fast, parallel solution of QPs arising in model predictive control."
+          abstract_preprint: "https://arxiv.org/abs/2610.38079"
+          publication_date: "2026-10-27"
+          venue: "NeurIPS 2026"
+          image: "images/papers/tqpnet/tqpnet-static.svg"
+          image_animated: "images/papers/tqpnet/tqpnet-animated.svg"
+          image_static: "images/papers/tqpnet/tqpnet-static.svg"
+          image_alt: "TQPNet: projected parameter samples train a learned warm start through derived ADMM-ReLU layers and a KKT residual loss. Online, only batch instances failing the residual tolerance receive extra refinement and are rechecked."
+          image_fit: "contain"
+          abstract_links: [{"text": "Paper", "url": "https://neurips.cc/virtual/2026/loc/sydney/poster/149158"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/TQPNet"}, {"text": "Website", "url": "https://solaris-jhu.github.io/TQPNet/"}]
+          abstract_scope: "The animation uses a computed two-dimensional illustrative problem, not reported benchmark results. Finite residual tolerance does not imply exact feasibility."
+          abstract_animation: "Training checkpoints change network weights and residuals. Online ADMM-ReLU updates refine three batch instances selectively; passing instances stop updating."
+          summary: "Self-supervised neural compression of ADMM trajectories for fast multiparametric QP solution with residual-checked online refinement."
+          authors: "Liang Wu, Honghui Zheng, Bo Yang, Xu Yang, Yilin Mo, Ján Drgoňa"
+          links:
+            - text: "Paper"
+              url: "https://neurips.cc/virtual/2026/loc/sydney/poster/149158"
+            - text: "Preprint"
+              url: "https://arxiv.org/abs/2610.38079"
+            - text: "GitHub"
+              url: "https://github.com/SOLARIS-JHU/TQPNet"
+            - text: "Website"
+              url: "https://solaris-jhu.github.io/TQPNet/"
+
         - title: "ML-Guided Primal Heuristics for Mixed Binary Quadratic Programs"
           abstract_id: "arxiv-2604.23053"
           abstract_order: 1
@@ -848,4 +875,5 @@
               url: "https://arxiv.org/abs/2603.28323"
             - text: "Website"
               url: "https://xboldocky.github.io/chiller-plant-MIDPC/"
+
 

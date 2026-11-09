@@ -232,5 +232,11 @@
     "number": 39,
     "title": "Data Center Chiller Plant Optimization via Mixed-Integer Nonlinear Differentiable Predictive Control",
     "preview": "images/papers/v13/arxiv-2603.28323.svg"
+  },
+  "arxiv-2610.38079": {
+    "key": "tqpnet-2610-38079",
+    "number": 40,
+    "title": "Neural Compression of Long ADMM Trajectory for Multiparametric Quadratic Program",
+    "preview": "images/papers/tqpnet/tqpnet-static.svg"
   }
 }

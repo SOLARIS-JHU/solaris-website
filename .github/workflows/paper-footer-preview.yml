@@ -16,7 +16,7 @@ jobs:
         with:
           hugo-version: '0.155.2'
           extended: true
-      - run: hugo --minify
+      - run: hugo --minify --baseURL http://127.0.0.1:8765/
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -33,8 +33,6 @@ jobs:
             const reports = [];
             for (const width of [1440,1280,1024,900,768,390,320]) {
               const page = await browser.newPage({ viewport: {width,height:1100}, reducedMotion:'reduce' });
-              await page.route('https://solaris-jhu.github.io/solaris-website/**', route => route.continue({url:route.request().url().replace('https://solaris-jhu.github.io/solaris-website/','http://127.0.0.1:8765/')}));
-              await page.route('http://127.0.0.1:8765/solaris-website/**', route => route.continue({url:route.request().url().replace('/solaris-website/','/')}));
               await page.goto('http://127.0.0.1:8765/papers.html',{waitUntil:'networkidle'});
               await page.evaluate(()=>document.fonts.ready);
               const report = await page.evaluate(() => {

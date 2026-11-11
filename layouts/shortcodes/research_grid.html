@@ -55,7 +55,8 @@
                         {{ range $resources }}
                           {{ $label := .text | default .label }}
                           {{ $label = lower $label }}
-                          {{ if in (slice "preprint" "journal" "paper") $label }}{{ $label = "paper" }}{{ end }}
+                          {{ if in (slice "journal" "paper") $label }}{{ $label = "paper" }}{{ end }}
+                          {{ if findRE "^https?://(www\\.)?arxiv\\.org/" (lower .url) }}{{ $label = "arXiv" }}{{ end }}
                           {{ if in (slice "github" "code") $label }}{{ $label = "code" }}{{ end }}
                           {{ if in (slice "project" "website" "web") $label }}{{ $label = "website" }}{{ end }}
                           <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ $label }}<span aria-hidden="true"> ↗</span></a>
@@ -94,5 +95,6 @@
 <script src="{{ "js/paper-abstracts-v13.js" | relURL }}" defer></script>
 <script src="{{ "js/paper-abstract-tqpnet.js" | relURL }}" defer></script>
 <script src="{{ "js/papers.js" | relURL }}?v=13" defer></script>
+
 
 

@@ -85,7 +85,7 @@
           image_static: "images/papers/v6/arxiv-2507.09050-static.svg"
           image_alt: "Predict an upper-level design, solve the lower-level problem differentiably, and apply gradient-based corrections to coupling violations with upper-level projection. Learn design predictions while accounting explicitly for control optimality and coupling constraints. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
           image_fit: "contain"
-          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2507.09050"}, {"text": "Code", "url": "https://github.com/anon-research-coding/Control-Design-Learning"}]
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2507.09050"}, {"text": "Code", "url": "https://github.com/anon-research-coding/Control-Design-Learning"}, {"text": "Website", "url": "https://solaris-jhu.github.io/Learning-Control-Co-Design-page/"}]
           abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
           abstract_animation: "The design candidate undergoes trial updates and feasible-set projection, while the lower optimizer supplies a control response. A separate schematic objective marker approaches the quadratic minimum. The outer training gradient remains distinct from finite coupling corrections."
           abstract_sources: [{"url": "https://arxiv.org/html/2507.09050v2", "locator": "Section 3 conditions; Sections 4.1-4.3; Eqs. 3–9; Sections 4.1–4.2"}, {"url": "https://github.com/anon-research-coding/Control-Design-Learning/blob/main/README.md", "locator": "README"}, {"url": "https://github.com/anon-research-coding/Control-Design-Learning/blob/main/BQP/QP_correction.py", "locator": "x_correction"}]
@@ -96,6 +96,8 @@
               url: "https://arxiv.org/abs/2507.09050"
             - text: "GitHub"
               url: "https://github.com/anon-research-coding/Control-Design-Learning"
+            - text: "Website"
+              url: "https://solaris-jhu.github.io/Learning-Control-Co-Design-page/"
 
     - year: 2024
       papers:
@@ -197,7 +199,7 @@
           image_static: "images/papers/v6/arxiv-2509.18404-static.svg"
           image_alt: "Learn reusable policy basis functions offline by imitation. At deployment, estimate coefficients using least squares or an optional learned parameter-to-coefficient operator. Transfer across objectives by changing coefficients while keeping policy bases fixed. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
           image_fit: "contain"
-          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2509.18404"}, {"text": "Code", "url": "https://github.com/XJ-LI/FE_OC"}]
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2509.18404"}, {"text": "Code", "url": "https://github.com/XJ-LI/FE_OC"}, {"text": "Website", "url": "https://solaris-jhu.github.io/FE-OC-website/"}]
           abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
           abstract_animation: "Markers evaluate fixed basis curves and illustrative policy trajectories forward. They do not retrain neural basis functions online."
           abstract_sources: [{"url": "https://arxiv.org/html/2509.18404v2", "locator": "Section III; Algorithms 1-2; Online Phase; Theorem 2; Eqs. 5â€“8; Offline and Online phases"}, {"url": "https://github.com/XJ-LI/FE_OC/blob/main/README.md", "locator": "Commands for experiments"}, {"url": "https://github.com/XJ-LI/FE_OC/blob/main/2D_toy_control/train_ctrhill.py", "locator": "FunctionEncoder construction; model.train_model"}]
@@ -207,6 +209,8 @@
           links:
             - text: "Preprint"
               url: "https://arxiv.org/abs/2509.18404"
+            - text: "Website"
+              url: "https://solaris-jhu.github.io/FE-OC-website/"
 
         - title: "Learning to Control PDEs with Differentiable Predictive Control and Time-Integrated Neural Operators"
           abstract_id: "arxiv-2511.08992"
@@ -289,7 +293,7 @@
           image_static: "images/papers/v6/arxiv-2511.05757-static.svg"
           image_alt: "Learn neural-ODE basis functions and train a coefficient-conditioned DPC policy offline. Online data estimate dynamics coefficients while both neural models remain fixed. Adapt dynamics representation without retraining the predictive control policy. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
           image_fit: "contain"
-          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2511.05757"}, {"text": "Code", "url": "https://github.com/hassaniqbal209/DPCFunctionEncoder"}]
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2511.05757"}, {"text": "Code", "url": "https://github.com/hassaniqbal209/DPCFunctionEncoder"}, {"text": "Website", "url": "https://solaris-jhu.github.io/FE-DPC-website/"}]
           abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
           abstract_animation: "Offline learning first fits FE-NODE bases, then trains a coefficient-conditioned policy through fixed learned dynamics. Online samples determine coefficients through regularized least squares; the policy weights remain fixed. Illustrative loss improvement is not a claim of monotone adaptation performance."
           abstract_sources: [{"url": "https://arxiv.org/html/2511.05757v3", "locator": "Sections 2, 3.1, 3.2; Eq. 3; Eq. 2; online coefficient estimation; Eq. 3"}, {"url": "https://github.com/hassaniqbal209/DPCFunctionEncoder/blob/main/README.md", "locator": "Paper identity and reproduction instructions"}, {"url": "https://github.com/hassaniqbal209/DPCFunctionEncoder/blob/main/src/2.train_policy.py", "locator": "model_wrapper; model_node; closed-loop System construction"}, {"url": "https://github.com/hassaniqbal209/DPCFunctionEncoder", "locator": "Revision 4 primary reference"}]
@@ -298,6 +302,8 @@
           links:
             - text: "Preprint"
               url: "https://arxiv.org/abs/2511.05757"
+            - text: "Website"
+              url: "https://solaris-jhu.github.io/FE-DPC-website/"
 
 - area: "Optimization and Model Predictive Control"
   description: "Fast, time-certified, and parallel algorithms for real-time optimization and predictive control."
@@ -795,7 +801,7 @@
           image_static: "images/papers/v6/arxiv-2512.20880-static.svg"
           image_alt: "A neural predictor chooses penalty weights; repeated local linearization and convex QP solves refine the schedule, which nonlinear simulation scores. Learn regularization through the downstream operating objective. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
           image_fit: "contain"
-          abstract_links: [{"text": "Paper", "url": "https://doi.org/10.1109/TSTE.2026.3722492"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/DFL-UPHES"}, {"text": "Preprint", "url": "https://arxiv.org/abs/2512.20880"}]
+          abstract_links: [{"text": "Paper", "url": "https://doi.org/10.1109/TSTE.2026.3722492"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/DFL-UPHES"}, {"text": "Preprint", "url": "https://arxiv.org/abs/2512.20880"}, {"text": "Website", "url": "https://solaris-jhu.github.io/DFL-UPHES/"}]
           abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
           abstract_animation: "The polytope and quadratic are fixed. The highlighted contour is the actual level f(x_k); it shrinks until tangent to the active constraint at the constrained optimum. Display time is rescaled along the path, not a measured solver runtime."
           abstract_sources: [{"url": "https://arxiv.org/html/2512.20880v2", "locator": "Section IV; Fig. 3; Algorithm 1; Section V-E; Algorithm 1; Eqs. (12), (13), (17)–(19), (23); Fig. 3"}, {"url": "https://github.com/SOLARIS-JHU/DFL-UPHES/blob/main/DFL/core/pipeline.py", "locator": "RecursiveLinearizationPipeline.forward"}, {"url": "https://github.com/SOLARIS-JHU/DFL-UPHES/blob/main/README.md", "locator": "The DFL Framework; reproducibility note"}]
@@ -809,6 +815,8 @@
               url: "https://arxiv.org/abs/2512.20880"
             - text: "GitHub"
               url: "https://github.com/SOLARIS-JHU/DFL-UPHES"
+            - text: "Website"
+              url: "https://solaris-jhu.github.io/DFL-UPHES/"
 
         - title: "Mixed-Integer Nonlinear Differentiable Predictive Control for Underground Pumped Hydro Energy Storage Systems"
           abstract_id: "arxiv-2609.17964"
@@ -875,5 +883,6 @@
               url: "https://arxiv.org/abs/2603.28323"
             - text: "Website"
               url: "https://xboldocky.github.io/chiller-plant-MIDPC/"
+
 
 

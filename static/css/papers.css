@@ -30,7 +30,7 @@
   font-size: .75rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
 }
 .spg-overview-controls button:hover { border-color: var(--solaris-accent); background: var(--solaris-accent-soft); color: var(--solaris-text); }
-.spg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 1rem; }
+.spg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr)); gap: 1rem; }
 .spg-card {
   display: flex; flex-direction: column; min-width: 0; overflow: hidden;
   container-type: inline-size;
@@ -55,12 +55,12 @@
   background: #fffffff2; opacity: 0; transition: opacity .18s ease;
 }
 .spg-art:hover .spg-expand, .spg-art:focus-visible .spg-expand { opacity: 1; }
-.spg-card-body { display: flex; flex: none; flex-direction: column; height: 15.5rem; padding: .95rem 1.2rem 1.05rem; }
+.spg-card-body { display: flex; flex: 1; flex-direction: column; min-height: 15.5rem; padding: .95rem 1.2rem 1.05rem; }
 @container (min-width: 330px) {
-  .spg-card-body { height: 13.5rem; }
+  .spg-card-body { min-height: 13.5rem; }
 }
 @container (min-width: 338px) {
-  .spg-card-body { height: 12rem; }
+  .spg-card-body { min-height: 12rem; }
 }
 .solaris-papers .spg-paper-title {
   margin: 0; padding: 0; border: 0; font-size: .98rem; line-height: 1.35;
@@ -73,10 +73,10 @@
   font-size: .76rem; line-height: 1.42; overflow-wrap: anywhere;
 }
 .spg-resource-links { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: auto; }
-.spg-card-footer { display: flex; align-items: flex-end; gap: .65rem; margin-top: auto; }
-.spg-card-footer .spg-resource-links { flex: 1; min-width: 0; margin-top: 0; }
+.spg-card-footer { display: flex; align-items: center; gap: .5rem; margin-top: auto; white-space: nowrap; }
+.spg-card-footer .spg-resource-links { flex: 1; min-width: 0; margin-top: 0; flex-wrap: nowrap; gap: .35rem; }
 .spg-paper-year {
-  flex: none; padding-bottom: .3rem; color: var(--solaris-muted);
+  flex: none; color: var(--solaris-muted);
   font-size: .78rem; font-weight: 700; line-height: 1.4; font-variant-numeric: tabular-nums;
 }
 .solaris-papers .spg-resource-links a {
@@ -86,6 +86,16 @@
   font-weight: 700; letter-spacing: .04em; text-transform: uppercase; line-height: 1.4;
 }
 .solaris-papers .spg-resource-links a:hover { border-color: var(--solaris-accent); background: var(--solaris-accent-soft); color: var(--solaris-text) !important; text-shadow: 0 0 8px rgba(var(--solaris-accent-rgb), .38); }
+.solaris-papers .spg-card-footer .spg-resource-links a {
+  flex: 0 0 auto; white-space: nowrap; padding-inline: .45rem; letter-spacing: .025em;
+}
+@container (max-width: 380px) {
+  .spg-card-body { padding-inline: .6rem; }
+  .spg-card-footer { gap: .35rem; }
+  .spg-card-footer .spg-resource-links { gap: .25rem; }
+  .solaris-papers .spg-card-footer .spg-resource-links a { padding-inline: .35rem; letter-spacing: 0; }
+  .spg-card-footer .spg-resource-links a > span[aria-hidden="true"] { display: none; }
+}
 body.spg-modal-open { overflow: hidden; }
 .spg-viewer {
   width: min(1440px, calc(100vw - 36px)); max-width: none; max-height: calc(100dvh - 36px);
@@ -232,7 +242,7 @@ body.spg-modal-open { overflow: hidden; }
   line-height: 1.65;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .papers-mobile-nav {
     display: flex; gap: .5rem; margin: 0 0 1.5rem; padding: 0 0 .7rem;
     overflow-x: auto; scrollbar-width: thin;

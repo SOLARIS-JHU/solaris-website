@@ -1,6 +1,8 @@
 {{- $labStyleVersion := readFile "static/css/lab-style.css" | sha256 -}}
 <link rel="stylesheet" href="{{ "css/lab-style.css" | relURL }}?v={{ $labStyleVersion }}">
-{{- if and .File (in (slice "papers" "software" "activities" "gallery" "join-us") .File.BaseFileName) }}
+{{- if and .File (eq .File.BaseFileName "papers") }}
+<style>.main { --main-width: 1280px; }</style>
+{{- else if and .File (in (slice "software" "activities" "gallery" "join-us") .File.BaseFileName) }}
 <style>.main { --main-width: 1040px; }</style>
 {{- end }}
 {{- if and .File (eq .File.BaseFileName "join-us") }}

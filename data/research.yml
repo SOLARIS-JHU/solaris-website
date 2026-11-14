@@ -759,7 +759,7 @@
           image_static: "images/papers/v6/arxiv-2511.11677-static.svg"
           image_alt: "Train a neural solution map while gradually deforming relaxed objectives or constraints toward the original AC-OPF problem. A continuation schedule guides self-supervised learning. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
           image_fit: "contain"
-          abstract_links: [{"text": "Paper", "url": "https://doi.org/10.1109/PESGM58988.2026.11693405"}, {"text": "Preprint", "url": "https://arxiv.org/abs/2511.11677"}]
+          abstract_links: [{"text": "Paper", "url": "https://doi.org/10.1109/PESGM58988.2026.11693405"}, {"text": "Preprint", "url": "https://arxiv.org/abs/2511.11677"}, {"text": "Website", "url": "https://solaris-jhu.github.io/homotopy-opf-website/"}]
           abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
           abstract_animation: "Each stage is a schematic quadratic objective 0.5(dx²+2dy²); errors shrink as dx_j=-42(0.72)^j, dy_j=35(0.44)^j, equivalent to gradient descent with step 0.28. The three minima shift with continuation. This is a mathematical teaching motif, not the nonconvex AC-OPF loss surface or paper solver iterates."
           abstract_sources: [{"url": "https://arxiv.org/html/2511.11677v1", "locator": "Sections IV-A–IV-D; Fig. 2; Eqs. 4–11; §IV-A parametric policy; Eqs. (6), (9), (10); Fig. 2"}]
@@ -771,6 +771,8 @@
               url: "https://doi.org/10.1109/PESGM58988.2026.11693405"
             - text: "Preprint"
               url: "https://arxiv.org/abs/2511.11677"
+            - text: "Website"
+              url: "https://solaris-jhu.github.io/homotopy-opf-website/"
 
         - title: "Physics vs. Structure: A Systematic Benchmark of Learning Strategies for Multi-Zone Building Thermal Dynamics"
           abstract_id: "paper-35"

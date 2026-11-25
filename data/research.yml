@@ -649,7 +649,7 @@
           image_static: "images/papers/v6/arxiv-2604.09331-static.svg"
           image_alt: "A VAE encoder supplies latent observations to an LTI-derived Gaussian-process prior; a decoder reconstructs images. An unconstrained matrix parameterization restricts learned dynamics to semi-contracting systems. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
           image_fit: "contain"
-          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2604.09331"}, {"text": "Code", "url": "https://github.com/pnnl/COPIP"}]
+          abstract_links: [{"text": "Paper", "url": "https://arxiv.org/abs/2604.09331"}, {"text": "Code", "url": "https://github.com/pnnl/COPIP"}, {"text": "Website", "url": "https://solaris-jhu.github.io/SEGP-VAE-webpage/"}]
           abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
           abstract_animation: "Video and latent particles trace explicitly damped rotational curves, not learned experimental trajectories. Each curve is a linear image of exp(-a t)(cos(omega t),sin(omega t)), hence compatible with a stable two-state LTI example. Moving particles advance and fade/reset instead of reversing the dynamics."
           abstract_sources: [{"url": "https://arxiv.org/html/2604.09331v2", "locator": "Sections III–V; Theorem 3; Fig. 1; Eq. (6), Theorem 1 Eqs. (7)–(9), Theorem 2 Eq. (10), Theorem 3 Eq. (12), Fig. 1"}, {"url": "https://github.com/pnnl/COPIP/blob/master/Code/SEGP/SEGP.py", "locator": "SEGP.__init__ and get_AP"}, {"url": "https://github.com/pnnl/COPIP/blob/master/README.md", "locator": "Overview"}]
@@ -659,6 +659,8 @@
           links:
             - text: "Preprint"
               url: "https://arxiv.org/abs/2604.09331"
+            - text: "Website"
+              url: "https://solaris-jhu.github.io/SEGP-VAE-webpage/"
 
         - title: "∂CBDs: Differentiable Causal Block Diagrams"
           abstract_id: "arxiv-2602.07581"

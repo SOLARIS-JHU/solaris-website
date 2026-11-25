@@ -737,7 +737,7 @@
           image_static: "images/papers/v6/arxiv-2609.12968-static.svg"
           image_alt: "A mixed-integer policy produces a trajectory; exact forward rainflow costs train it using mixed sparse and proxy gradients. Differentiable training through otherwise discrete cycle counting. Motion illustrates algorithm steps or system behavior; it does not reproduce reported numerical results."
           image_fit: "contain"
-          abstract_links: [{"text": "Paper", "url": "https://doi.org/10.1109/TSG.2026.3737375"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/Battery-MI-DPC"}, {"text": "Preprint", "url": "https://arxiv.org/abs/2609.12968"}]
+          abstract_links: [{"text": "Paper", "url": "https://doi.org/10.1109/TSG.2026.3737375"}, {"text": "Code", "url": "https://github.com/SOLARIS-JHU/Battery-MI-DPC"}, {"text": "Preprint", "url": "https://arxiv.org/abs/2609.12968"}, {"text": "Website", "url": "https://solaris-jhu.github.io/Battery-MI-DPC/"}]
           abstract_scope: "Illustrative graphical abstract: motion explains the method and does not reproduce measured results or benchmark timing."
           abstract_animation: "The moving marker scans a fixed synthetic SOC history. The two highlighted rainflow pairs satisfy the four-point inner-cycle rule; unclosed residual half-cycles are not falsely paired. Forecast and proxy-gradient waves are qualitative analytic examples, not numerical training results."
           abstract_sources: [{"url": "https://arxiv.org/html/2609.12968v1", "locator": "Sections III-B, III-C, III-E.2 and III-G; Eq. (2d); Eqs. (18), (25)–(29); §III-C.7 rainflow; Fig. 2"}, {"url": "https://github.com/SOLARIS-JHU/Battery-MI-DPC/blob/main/Battery-MI-DPC.ipynb", "locator": "RainflowFunction.forward/backward; L2O.forward; project_to_feasible"}]
@@ -750,6 +750,8 @@
             - text: "Preprint"
               url: "https://arxiv.org/abs/2609.12968"
 
+            - text: "Website"
+              url: "https://solaris-jhu.github.io/Battery-MI-DPC/"
         - title: "Homotopy-Guided Self-Supervised Learning of Parametric Solutions for AC Optimal Power Flow"
           abstract_id: "arxiv-2511.11677"
           abstract_order: 34

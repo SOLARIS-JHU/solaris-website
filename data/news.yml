@@ -1,4 +1,10 @@
 - date: "November 2026"
+  title: "Minisymposium presentation at SIAM MDS26"
+  summary: "Pietro presented 'CINOC: Cardinality-Invariant Neural Operator Policies for Scalable PDE Control' in the 'LEADS: LEarning-Accelerated Domain Science' minisymposium at the SIAM Conference on Mathematics of Data Science."
+  url: "https://meetings.siam.org/sess/dsp_talk.cfm?p=158974"
+  type: "Talk"
+
+- date: "November 2026"
   title: "NeuroMANCER Wins the 2026 COIN-OR Cup"
   summary: "NeuroMANCER has won the 2026 COIN-OR Cup. Congratulations to Ján Drgoňa and the Pacific Northwest National Laboratory team, including Aaron Tuor, James Koch, Madelyn Shapiro, Rahul Birmiwal, Bruno Jacob, and Draguna Vrabie. The open-source software combines deep learning, physics, and optimization for modeling and control of complex systems."
   url: "https://lnkd.in/p/epZbMBV5"
@@ -10,8 +16,8 @@
   type: "Team"
 
 - date: "October 2026"
-  title: "Welcome, Gaoyuang"
-  summary: "Welcome to Gaoyuang, which is joining the lab as a postdoctoral researcher."
+  title: "Welcome, Gaoyuan"
+  summary: "Welcome to Gaoyuan, which is joining the lab as a postdoctoral researcher."
   type: "Team"
 
 - date: "October 2026"
